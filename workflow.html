@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inbox Audit Workflow — Levi Higgs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #FFFFFF;
+      --paper-subtle: #FAF9F5;
+      --ink: #0A0A0A;
+      --ink-mid: #4A4945;
+      --rule: #E6E4DD;
+      --c-built: #7ED49E;
+      --c-passed: #F9BF7F;
+      --c-interview: #8C97D8;
+      --c-rejected: #F4937A;
+      --c-silence: #DEDBD2;
+    }
+    body.dark {
+      --paper: #111110;
+      --paper-subtle: #1A1A18;
+      --ink: #F5F3EC;
+      --ink-mid: #A8A59D;
+      --rule: #2E2D2A;
+      --c-silence: #4A4945;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.5;
+      transition: background 0.15s, color 0.15s;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 28px 64px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: 24px 0 18px;
+      border-bottom: 1.5px solid var(--ink);
+    }
+    .brand {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.75rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .nav-actions a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.73rem;
+      color: var(--ink);
+      text-decoration: none;
+      margin-right: 6px;
+    }
+    .ink-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      padding: 7px 12px;
+      background: var(--paper);
+      color: var(--ink);
+      border: 1.2px solid var(--ink);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ink-btn:hover {
+      box-shadow: 2px 2px 0 var(--ink);
+      transform: translate(-1px, -1px);
+    }
+    .cta-mint {
+      background: var(--c-built);
+      color: #0A0A0A;
+      font-weight: 500;
+    }
+
+    .hero {
+      padding: 34px 0 24px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .hero h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+      font-weight: 400;
+      line-height: 1.12;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 0.94rem;
+      color: var(--ink-mid);
+      max-width: 720px;
+      margin-bottom: 18px;
+    }
+    .export-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 8px;
+    }
+    .drop-zone {
+      margin-top: 16px;
+      padding: 12px 16px;
+      border: 1.2px dashed var(--ink);
+      background: var(--paper-subtle);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      color: var(--ink-mid);
+    }
+
+    /* Grid of Visualizations */
+    .viz-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 28px;
+    }
+    @media (max-width: 820px) {
+      .viz-grid { grid-template-columns: 1fr; }
+    }
+    .card {
+      border: 1.5px solid var(--ink);
+      background: var(--paper);
+      padding: 20px;
+    }
+    .card.full {
+      grid-column: 1 / -1;
+    }
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      gap: 10px;
+    }
+    .card-head h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+    .card-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--ink-mid);
+    }
+
+    /* SVG & Bar Charts */
+    .bar-list {
+      display: grid;
+      gap: 10px;
+    }
+    .bar-row {
+      display: grid;
+      grid-template-columns: 150px 1fr 48px;
+      gap: 10px;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+    }
+    .bar-track {
+      height: 18px;
+      background: var(--paper-subtle);
+      border: 1px solid var(--ink);
+      position: relative;
+    }
+    .bar-fill {
+      height: 100%;
+      border-right: 1px solid var(--ink);
+    }
+    .bar-val {
+      text-align: right;
+      font-weight: 500;
+    }
+
+    /* Sector Summary */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+      gap: 12px;
+    }
+    .sector-box {
+      border: 1px solid var(--rule);
+      padding: 12px;
+      background: var(--paper-subtle);
+    }
+    .sector-box strong {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.12rem;
+      font-weight: 400;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .sector-box span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--ink-mid);
+      display: block;
+    }
+
+    /* Ranked Table */
+    .table-controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .table-controls input, .table-controls select {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      padding: 7px 10px;
+      border: 1.2px solid var(--ink);
+      background: var(--paper);
+      color: var(--ink);
+    }
+    .table-wrap {
+      max-height: 360px;
+      overflow-y: auto;
+      border: 1px solid var(--rule);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+    th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      background: var(--paper-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      border-bottom: 1.5px solid var(--ink);
+    }
+    .pill-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.66rem;
+      padding: 2px 7px;
+      border: 1px solid var(--ink);
+      color: #0A0A0A;
+      white-space: nowrap;
+    }
+
+    /* Print Spec & Quickstart */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+    }
+    .spec-box {
+      border: 1px solid var(--rule);
+      padding: 12px;
+    }
+    .spec-box strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+    .spec-box span {
+      color: var(--ink-mid);
+      display: block;
+      line-height: 1.5;
+    }
+
+    /* Poster Mode */
+    body.poster .wrap {
+      max-width: 1320px;
+      border: 2px solid var(--ink);
+      margin: 24px auto;
+      padding: 36px;
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+    body.poster .no-poster {
+      display: none !important;
+    }
+
+    .pitch-footer {
+      margin-top: 32px;
+      border: 1.5px solid var(--ink);
+      box-shadow: 5px 5px 0 var(--ink);
+      padding: 24px 28px;
+      background: var(--paper-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    .pitch-footer h3 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+    .pitch-footer p {
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+      max-width: 640px;
+    }
+
+    @media print {
+      .no-print, header .nav-actions, .export-bar, .table-controls, .pitch-footer, .drop-zone {
+        display: none !important;
+      }
+      body { background: #FFFFFF !important; color: #0A0A0A !important; }
+      .card { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="index.html" class="brand">Inbox Audit</a>
+      <div class="nav-actions">
+        
+        <a href="index.html">← Back to Levi Higgs</a>
+        <button class="ink-btn" onclick="toggleTheme()" id="themeBtn">Dark Ink</button>
+        <button class="ink-btn" onclick="togglePoster()" id="posterBtn">Poster View</button>
+        <a class="ink-btn cta-mint" href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener">Get Everything ($19) ↗</a>
+        
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Your inbox, audited — without giving anyone your password.</h1>
+      <p>Live demo running on my 250-company dataset. Everything you see here—local .mbox + .csv parser, all charts, PNG/SVG/PDF exports, poster layouts, light & dark themes, and print specs—ships in the $19 download.</p>
+      <div class="export-bar no-print">
+        <button class="ink-btn" onclick="exportPNG()">Export PNG ↓</button>
+        <button class="ink-btn" onclick="exportSVG()">Export SVG ↓</button>
+        <button class="ink-btn" onclick="downloadCSV()">Download Audit CSV ↓</button>
+        <button class="ink-btn" onclick="window.print()">Print / Save PDF ↗</button>
+      </div>
+      
+    </section>
+
+    <div class="viz-grid" id="vizGrid">
+      <!-- 1. Application Funnel -->
+      <div class="card">
+        <div class="card-head">
+          <h2>01 · Application Funnel</h2>
+          <span class="card-tag">Deduplicated stages</span>
+        </div>
+        <div class="bar-list" id="funnelBars"></div>
+      </div>
+
+      <!-- 2. Response-Time Chart -->
+      <div class="card">
+        <div class="card-head">
+          <h2>02 · Response Time</h2>
+          <span class="card-tag">Days to first reply</span>
+        </div>
+        <div class="bar-list" id="rtBars"></div>
+      </div>
+
+      <!-- 3. Rejection Wording Count -->
+      <div class="card">
+        <div class="card-head">
+          <h2>03 · Rejection Wording</h2>
+          <span class="card-tag">Recurring corporate phrases</span>
+        </div>
+        <div class="bar-list" id="phraseBars"></div>
+      </div>
+
+      <!-- 4. Applications Over Time -->
+      <div class="card">
+        <div class="card-head">
+          <h2>04 · Applications Over Time</h2>
+          <span class="card-tag">Bursts, gaps &amp; responses</span>
+        </div>
+        <svg id="timelineSvg" viewBox="0 0 460 210" style="width:100%;height:auto;display:block;"></svg>
+      </div>
+
+      <!-- 5. One-Page Career Summary -->
+      <div class="card full">
+        <div class="card-head">
+          <h2>05 · One-Page Career Summary</h2>
+          <span class="card-tag">Roles pursued &amp; outcomes by sector</span>
+        </div>
+        <div class="sector-grid" id="sectorGrid"></div>
+      </div>
+
+      <!-- 6. Company List Ranked by Responsiveness -->
+      <div class="card full no-poster">
+        <div class="card-head">
+          <h2>06 · Companies Ranked by Responsiveness</h2>
+          <span class="card-tag" id="tableCountTag">250 companies</span>
+        </div>
+        <div class="table-controls">
+          <input type="text" id="searchBox" placeholder="Filter company or role..." oninput="renderTable()" />
+          <select id="outcomeSelect" onchange="renderTable()">
+            <option value="all">All outcomes</option>
+            <option value="built">Accepted</option>
+            <option value="i_passed">I Passed</option>
+            <option value="interviewed">Interviewed</option>
+            <option value="they_passed">They Passed</option>
+            <option value="silence">Silence</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Sector</th>
+                <th>Role</th>
+                <th>Stage</th>
+                <th>Outcome</th>
+                <th>Days</th>
+              </tr>
+            </thead>
+            <tbody id="companyTbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 7. Print Specification & Quick-Start -->
+      <div class="card full">
+        <div class="card-head">
+          <h2>07 · Print Spec &amp; Local Quick-Start</h2>
+          <span class="card-tag">18×24 / 24×36 · 300 DPI · Zero OAuth</span>
+        </div>
+        <div class="spec-grid">
+          <div class="spec-box">
+            <strong>Poster Layouts</strong>
+            <span>18 × 24 in (0.75 in margin) or 24 × 36 in (1.0 in margin) · 0.125 in bleed · 300 DPI.</span>
+          </div>
+          <div class="spec-box">
+            <strong>Paper Stock</strong>
+            <span>100 lb uncoated matte cover or cotton rag. Use Export SVG for Illustrator / Figma.</span>
+          </div>
+          <div class="spec-box">
+            <strong>Local .mbox / .csv CLI</strong>
+            <span><code>python parse_inbox.py --mbox All_mail.mbox</code> or <code>--csv tracker.csv</code></span>
+          </div>
+          <div class="spec-box">
+            <strong>Privacy Guarantee</strong>
+            <span>Runs 100% offline. Strips personal names, emails, and phone numbers before export.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <section class="pitch-footer">
+      <div>
+        <h3>Everything included — $19, once.</h3>
+        <p>Local <code>.mbox</code> + <code>.csv</code> parser (no OAuth, no login), local web app, full CSV audit table, PNG/SVG/PDF vector exports, 18×24 &amp; 24×36 poster layouts, light &amp; dark themes, print spec sheet, and quick-start guide.</p>
+      </div>
+      <a class="ink-btn cta-mint" href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener">Download the Kit ($19) ↗</a>
+    </section>
+        
+  </div>
+
+  <script>
+    let DATA = {"summary": {"total_companies": 250, "accepted": 8, "i_passed": 11, "interviewed": 22, "they_passed": 78, "silence": 131}, "funnel": [{"stage": "Applications", "count": 250}, {"stage": "Acknowledgments", "count": 119}, {"stage": "Interviews", "count": 41}, {"stage": "Finals & Offers", "count": 19}, {"stage": "Accepted", "count": 8}], "response_times": [{"bucket": "0-3d", "count": 26}, {"bucket": "4-7d", "count": 30}, {"bucket": "8-14d", "count": 32}, {"bucket": "15-30d", "count": 24}, {"bucket": "31+d", "count": 7}, {"bucket": "Never", "count": 131}], "rejection_phrases": [{"phrase": "unfortunately", "count": 132}, {"phrase": "thank you for applying", "count": 118}, {"phrase": "careful consideration", "count": 64}, {"phrase": "other candidates", "count": 51}, {"phrase": "not moving forward", "count": 46}, {"phrase": "at this time", "count": 43}, {"phrase": "keep your resume on file", "count": 29}, {"phrase": "high volume", "count": 24}], "timeline": [{"period": "W01", "applied": 18, "interviews": 3, "rejections": 5}, {"period": "W02", "applied": 26, "interviews": 4, "rejections": 8}, {"period": "W03", "applied": 12, "interviews": 2, "rejections": 4}, {"period": "W04", "applied": 8, "interviews": 1, "rejections": 3}, {"period": "W05", "applied": 31, "interviews": 6, "rejections": 10}, {"period": "W06", "applied": 24, "interviews": 5, "rejections": 9}, {"period": "W07", "applied": 14, "interviews": 3, "rejections": 6}, {"period": "W08", "applied": 9, "interviews": 2, "rejections": 3}, {"period": "W09", "applied": 34, "interviews": 7, "rejections": 11}, {"period": "W10", "applied": 29, "interviews": 4, "rejections": 9}, {"period": "W11", "applied": 25, "interviews": 2, "rejections": 6}, {"period": "W12", "applied": 20, "interviews": 2, "rejections": 4}], "companies": [{"company": "YouTube (Google)", "role": "Trust & Safety Policy / Product", "sector": "Tech & AI", "date": "Cycle 01", "stage": "Accepted", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5, "days_elapsed": 4}, {"company": "TikTok (ByteDance)", "role": "Team Lead, Trust & Safety", "sector": "Consumer Social", "date": "Cycle 02", "stage": "Accepted", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5, "days_elapsed": 6}, {"company": "Teachers Pay Teachers", "role": "Content Moderation Specialist", "sector": "EdTech & Education", "date": "Cycle 03", "stage": "Accepted", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5, "days_elapsed": 8}, {"company": "RebelBase", "role": "Content Writer", "sector": "SaaS & Startups", "date": "Cycle 04", "stage": "Accepted", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5, "days_elapsed": 10}, {"company": "Scale AI", "role": "AI Red-Teaming & Evaluation", "sector": "Tech & AI", "date": "Cycle 05", "stage": "Accepted", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5, "days_elapsed": 14}, {"company": "ELC Shanghai", "role": "Headmaster", "sector": "EdTech & Education", "date": "Cycle 06", "stage": "Accepted", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5, "days_elapsed": 18}, {"company": "YBM ECC (Seoul)", "role": "English Instructor", "sector": "EdTech & Education", "date": "Cycle 07", "stage": "Accepted", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5, "days_elapsed": 4}, {"company": "OMSI", "role": "Outdoor Science Instructor", "sector": "EdTech & Education", "date": "Cycle 08", "stage": "Accepted", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5, "days_elapsed": 6}, {"company": "DoubleVerify", "role": "Trust & Safety / Brand Safety", "sector": "SaaS & Cyber", "date": "Cycle 09", "stage": "Offer / Final (Declined)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4, "days_elapsed": 5}, {"company": "OpenSea", "role": "Trust & Safety Policy", "sector": "Fintech & Web3", "date": "Cycle 10", "stage": "Offer / Final (Declined)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4, "days_elapsed": 7}, {"company": "Pathrise", "role": "Admissions Operations", "sector": "EdTech & Education", "date": "Cycle 11", "stage": "Offer / Final (Declined)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4, "days_elapsed": 10}, {"company": "Outlier AI", "role": "Dolphin Genesis Expert", "sector": "Tech & AI", "date": "Cycle 12", "stage": "Offer / Final (Declined)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4, "days_elapsed": 15}, {"company": "Seocho Avalon (Seoul)", "role": "English Instructor (Gangnam)", "sector": "EdTech & Education", "date": "Cycle 01", "stage": "Offer / Final (Declined)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4, "days_elapsed": 2}, {"company": "Berlitz Japan (Tokyo)", "role": "Instructor (Minato-ku, Tokyo)", "sector": "EdTech & Education", "date": "Cycle 02", "stage": "Offer / Final (Declined)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4, "days_elapsed": 4}, {"company": "Urban Teachers", "role": "Teaching Fellow", "sector": "EdTech & Education", "date": "Cycle 03", "stage": "Offer / Final (Declined)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4, "days_elapsed": 5}, {"company": "Epic Systems", "role": "Project Manager / Operations", "sector": "SaaS & Cyber", "date": "Cycle 04", "stage": "Offer / Final (Declined)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4, "days_elapsed": 7}, {"company": "Amity Corp (Japan)", "role": "Instructor (Japan)", "sector": "EdTech & Education", "date": "Cycle 05", "stage": "Offer / Final (Declined)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4, "days_elapsed": 10}, {"company": "Wang Law Office", "role": "Mandarin-Speaking Paralegal", "sector": "Policy & Legal", "date": "Cycle 06", "stage": "Offer / Final (Declined)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4, "days_elapsed": 15}, {"company": "FedEx Ground", "role": "Operations", "sector": "Operations", "date": "Cycle 07", "stage": "Offer / Final (Declined)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4, "days_elapsed": 2}, {"company": "Meta", "role": "Policy / Integrity Operations", "sector": "Tech & AI", "date": "Cycle 08", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 7}, {"company": "Amazon", "role": "Senior Program Manager", "sector": "Tech & AI", "date": "Cycle 09", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 9}, {"company": "Etsy", "role": "Senior Manager, Marketplace Safety", "sector": "Marketplaces", "date": "Cycle 10", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 12}, {"company": "DoorDash", "role": "Manager, Trust & Safety", "sector": "Marketplaces", "date": "Cycle 11", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 16}, {"company": "Vimeo", "role": "Manager, Trust & Safety", "sector": "Media & Streaming", "date": "Cycle 12", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 21}, {"company": "Shutterstock", "role": "Director, Content & Policy", "sector": "Media & Streaming", "date": "Cycle 01", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 3}, {"company": "Match Group", "role": "Trust & Safety", "sector": "Consumer Social", "date": "Cycle 02", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 4}, {"company": "Trend Micro (Taipei)", "role": "Technical Writer (Taipei)", "sector": "SaaS & Cyber", "date": "Cycle 03", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 6}, {"company": "brightwheel", "role": "Sales Development", "sector": "EdTech & Education", "date": "Cycle 04", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 7}, {"company": "micro1", "role": "AI Specialist", "sector": "Tech & AI", "date": "Cycle 05", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 9}, {"company": "NYC Teaching Collaborative", "role": "Partner Teacher Fellow", "sector": "EdTech & Education", "date": "Cycle 06", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 12}, {"company": "Interstate Logistics", "role": "Account Executive", "sector": "Operations", "date": "Cycle 07", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 16}, {"company": "Catalyst Leadership", "role": "Campaign Development", "sector": "Operations", "date": "Cycle 08", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 21}, {"company": "Sumdog", "role": "Marketing Assistant", "sector": "EdTech & Education", "date": "Cycle 09", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 3}, {"company": "Book Land School (Seoul)", "role": "English Instructor (Mapo)", "sector": "EdTech & Education", "date": "Cycle 10", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 4}, {"company": "Gwacheon JLS (Korea)", "role": "English Instructor", "sector": "EdTech & Education", "date": "Cycle 11", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 6}, {"company": "Meten English", "role": "English Instructor (Shenzhen)", "sector": "EdTech & Education", "date": "Cycle 12", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 7}, {"company": "Varsity Tutors", "role": "Instructor / Tutor", "sector": "EdTech & Education", "date": "Cycle 01", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 9}, {"company": "New Oriental", "role": "Instructor", "sector": "EdTech & Education", "date": "Cycle 02", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 12}, {"company": "Tennessee General Assembly", "role": "Legislative Bill Clerk / Proofreader", "sector": "Policy & Legal", "date": "Cycle 03", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 16}, {"company": "Murfreesboro City Schools", "role": "Educator", "sector": "EdTech & Education", "date": "Cycle 04", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 21}, {"company": "Adventure Teaching", "role": "Instructor Abroad", "sector": "EdTech & Education", "date": "Cycle 05", "stage": "Interview", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3, "days_elapsed": 3}, {"company": "Anthropic", "role": "Applied", "sector": "Tech & AI", "date": "Cycle 06", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 19}, {"company": "Character.AI", "role": "Applied", "sector": "Tech & AI", "date": "Cycle 07", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 26}, {"company": "Runway", "role": "Applied", "sector": "Tech & AI", "date": "Cycle 08", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 34}, {"company": "Grammarly", "role": "Applied", "sector": "Tech & AI", "date": "Cycle 09", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 1}, {"company": "Dataiku", "role": "Applied", "sector": "Tech & AI", "date": "Cycle 10", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 2}, {"company": "Coinbase", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 11", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 3}, {"company": "Cash App (Block)", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 12", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 5}, {"company": "SoFi", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 01", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 6}, {"company": "Visa", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 02", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 8}, {"company": "Citi", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 03", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 11}, {"company": "Robinhood", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 04", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 14}, {"company": "OpenFin", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 05", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 19}, {"company": "Gemini", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 06", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 26}, {"company": "Discord", "role": "Applied", "sector": "Consumer Social", "date": "Cycle 07", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 34}, {"company": "Reddit", "role": "Applied", "sector": "Consumer Social", "date": "Cycle 08", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 1}, {"company": "X (Twitter)", "role": "Applied", "sector": "Consumer Social", "date": "Cycle 09", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 2}, {"company": "Snap Inc.", "role": "Applied", "sector": "Consumer Social", "date": "Cycle 10", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 3}, {"company": "Spotify", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 11", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 5}, {"company": "Frame.io", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 12", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 6}, {"company": "Jellysmack", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 01", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 8}, {"company": "Deezer", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 02", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 11}, {"company": "Epic Games", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 03", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 14}, {"company": "Riot Games", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 04", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 19}, {"company": "BMI (Broadcast Music)", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 05", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 26}, {"company": "Dailymotion", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 06", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 34}, {"company": "Airbnb", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 07", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 1}, {"company": "Thumbtack", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 08", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 2}, {"company": "Whatnot", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 09", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 3}, {"company": "Grailed", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 10", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 5}, {"company": "BARK (BarkBox)", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 11", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 6}, {"company": "ASOS", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 12", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 8}, {"company": "Salesforce", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 01", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 11}, {"company": "Zoom", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 02", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 14}, {"company": "Klaviyo", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 03", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 19}, {"company": "BetterCloud", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 04", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 26}, {"company": "Superhuman", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 05", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 34}, {"company": "Navan (TripActions)", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 06", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 1}, {"company": "BigCommerce", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 07", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 2}, {"company": "Eventbrite", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 08", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 3}, {"company": "GoDaddy", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 09", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 5}, {"company": "Veriff", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 10", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 6}, {"company": "Amobee", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 11", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 8}, {"company": "Aeolus Robotics", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 12", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 11}, {"company": "Cond\u00e9 Nast", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 01", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 14}, {"company": "FORTUNE", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 02", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 19}, {"company": "The Motley Fool", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 03", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 26}, {"company": "Wieden+Kennedy", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 04", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 34}, {"company": "Genius", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 05", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 1}, {"company": "SmartNews", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 06", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 2}, {"company": "Free Agency", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 07", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 3}, {"company": "VAWAA", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 08", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 5}, {"company": "Kickstarter", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 09", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 6}, {"company": "MasterClass", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 10", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 8}, {"company": "Skillshare", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 11", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 11}, {"company": "Udemy", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 12", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 14}, {"company": "Multiverse", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 01", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 19}, {"company": "Brainly", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 02", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 26}, {"company": "Kahoot!", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 03", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 34}, {"company": "NoRedInk", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 04", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 1}, {"company": "Renaissance Learning", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 05", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 2}, {"company": "Teachable", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 06", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 3}, {"company": "Kaplan International", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 07", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 5}, {"company": "Uncommon Schools", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 08", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 6}, {"company": "WorldStrides", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 09", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 8}, {"company": "McKinsey & Company", "role": "Applied", "sector": "Policy & Legal", "date": "Cycle 10", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 11}, {"company": "PwC", "role": "Applied", "sector": "Policy & Legal", "date": "Cycle 11", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 14}, {"company": "New Sector Alliance", "role": "Applied", "sector": "Policy & Legal", "date": "Cycle 12", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 19}, {"company": "Bridgestone", "role": "Applied", "sector": "Operations", "date": "Cycle 01", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 26}, {"company": "Public Storage", "role": "Applied", "sector": "Operations", "date": "Cycle 02", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 34}, {"company": "Ramsey Solutions", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 03", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 1}, {"company": "Rev.com", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 04", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 2}, {"company": "Shane Co.", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 05", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 3}, {"company": "Soltanian & Company", "role": "Applied", "sector": "Operations", "date": "Cycle 06", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 5}, {"company": "MJH Life Sciences", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 07", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 6}, {"company": "TTEC", "role": "Applied", "sector": "Operations", "date": "Cycle 08", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 8}, {"company": "Hoops HR", "role": "Applied", "sector": "Operations", "date": "Cycle 09", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 11}, {"company": "Allure Marketing", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 10", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 14}, {"company": "Luxe NYC", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 11", "stage": "Rejected", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "days_elapsed": 19}, {"company": "OpenAI", "role": "Applied", "sector": "Tech & AI", "date": "Cycle 12", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Netflix", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 01", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Tesla", "role": "Applied", "sector": "Tech & AI", "date": "Cycle 02", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Microsoft", "role": "Applied", "sector": "Tech & AI", "date": "Cycle 03", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Mozilla", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 04", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Slack", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 05", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Figma", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 06", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "MongoDB", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 07", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Dell Technologies", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 08", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Auth0", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 09", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "UiPath", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 10", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "TripleLift", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 11", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "WeTransfer", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 12", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "LogRhythm", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 01", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Smarsh", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 02", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Zeta Global", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 03", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Intuit", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 04", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "IDEMIA", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 05", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Hologram", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 06", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Postlight", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 07", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Calendly", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 08", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "JumpCloud", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 09", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "LivePerson", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 10", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Procore", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 11", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Veeva Systems", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 12", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Acquia", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 01", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "ADP", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 02", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Degreed", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 03", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "HackerOne", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 04", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Slab", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 05", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Vitally", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 06", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Textline", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 07", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Indicative", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 08", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Avochato", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 09", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Chameleon", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 10", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Cumul.io", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 11", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Digify", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 12", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "EasyLlama", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 01", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Instnt", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 02", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Negotiatus", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 03", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Occupier", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 04", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Orbiit", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 05", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Staffbase", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 06", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Synology", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 07", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Betterworks", "role": "Applied", "sector": "SaaS & Cyber", "date": "Cycle 08", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "HBO", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 09", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Bumble", "role": "Applied", "sector": "Consumer Social", "date": "Cycle 10", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "rednote", "role": "Applied", "sector": "Consumer Social", "date": "Cycle 11", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Patreon", "role": "Applied", "sector": "Consumer Social", "date": "Cycle 12", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Strava", "role": "Applied", "sector": "Consumer Social", "date": "Cycle 01", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Blind", "role": "Applied", "sector": "Consumer Social", "date": "Cycle 02", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "MrBeast", "role": "Applied", "sector": "Consumer Social", "date": "Cycle 03", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Rockstar Games", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 04", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Angel Studios", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 05", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "BSE Global (Nets)", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 06", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Major League Soccer", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 07", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Overtime", "role": "Applied", "sector": "Media & Streaming", "date": "Cycle 08", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Forbes Media", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 09", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Morning Brew", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 10", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Dotdash Meredith", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 11", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Group Nine Media", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 12", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Wasserman", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 01", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Laundry Service", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 02", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Hypebeast", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 03", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Culture Trip", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 04", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "E.W. Scripps", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 05", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "FOX", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 06", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Highwire PR", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 07", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "RAPP", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 08", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "SUAVV Magazine", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 09", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "The Hill", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 10", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "The Hustle", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 11", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "McKinney", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 12", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Dirty Work Media", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 01", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "CM Group", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 02", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Alchemy Worx", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 03", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Creadits", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 04", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Insense", "role": "Applied", "sector": "Editorial & Agencies", "date": "Cycle 05", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Binance", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 06", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Crypto.com", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 07", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "ConsenSys", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 08", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Polymarket", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 09", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Plaid", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 10", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Chainalysis", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 11", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Magic Eden", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 12", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Acorns", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 01", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Simply Wall St", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 02", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Wise", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 03", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "American Express", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 04", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Returnly", "role": "Applied", "sector": "Fintech & Web3", "date": "Cycle 05", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Instacart", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 06", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "KAYAK", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 07", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Compass", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 08", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Allbirds", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 09", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Rent the Runway", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 10", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Redbubble", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 11", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "TeePublic", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 12", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "WeWork", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 01", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Cider", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 02", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Bear Mattress", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 03", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Hairstory", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 04", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Taika", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 05", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Perfect Day", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 06", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Nutrabolt", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 07", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Zoomo", "role": "Applied", "sector": "Marketplaces", "date": "Cycle 08", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Deloitte", "role": "Applied", "sector": "Policy & Legal", "date": "Cycle 09", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Council on Foreign Relations", "role": "Applied", "sector": "Policy & Legal", "date": "Cycle 10", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "United Nations", "role": "Applied", "sector": "Policy & Legal", "date": "Cycle 11", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "AmeriCorps", "role": "Applied", "sector": "Policy & Legal", "date": "Cycle 12", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Special Olympics", "role": "Applied", "sector": "Policy & Legal", "date": "Cycle 01", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Recidiviz", "role": "Applied", "sector": "Policy & Legal", "date": "Cycle 02", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Paladin", "role": "Applied", "sector": "Policy & Legal", "date": "Cycle 03", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "LawTrades", "role": "Applied", "sector": "Policy & Legal", "date": "Cycle 04", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Chegg", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 05", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Newsela", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 06", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "IXL Learning", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 07", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "360Learning", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 08", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Curriculum Associates", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 09", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Mystery Science", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 10", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "BetterLesson", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 11", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "BrainPOP", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 12", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Scholastic", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 01", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Screencastify", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 02", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "BASIS International", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 03", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "iTutorGroup", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 04", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "EF Education First", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 05", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "SayABC", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 06", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "JET Program USA", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 07", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "Chateau School (Tokyo)", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 08", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "CodeCombat", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 09", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}, {"company": "LearnCube", "role": "Applied", "sector": "EdTech & Education", "date": "Cycle 10", "stage": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "days_elapsed": null}]};
+
+    const COLORS = {
+      built: '#7ED49E',
+      i_passed: '#F9BF7F',
+      interviewed: '#8C97D8',
+      they_passed: '#F4937A',
+      silence: '#DEDBD2'
+    };
+
+    function renderAll() {
+      renderBars('funnelBars', DATA.funnel.map((d, i) => ({
+        label: d.stage,
+        count: d.count,
+        color: ['#DEDBD2', '#8C97D8', '#8C97D8', '#F9BF7F', '#7ED49E'][i % 5]
+      })));
+
+      renderBars('rtBars', DATA.response_times.map(d => ({
+        label: d.bucket === 'Never' ? 'Never Replied' : d.bucket,
+        count: d.count,
+        color: d.bucket === 'Never' ? '#DEDBD2' : '#F9BF7F'
+      })));
+
+      const phrases = (DATA.rejection_phrases || []).slice(0, 8);
+      renderBars('phraseBars', phrases.length ? phrases.map(d => ({
+        label: '“' + d.phrase + '”',
+        count: d.count,
+        color: '#F4937A'
+      })) : [{ label: 'No phrases found', count: 0, color: '#DEDBD2' }]);
+
+      renderTimeline();
+      renderSectors();
+      renderTable();
+    }
+
+    function renderBars(elId, items) {
+      const el = document.getElementById(elId);
+      const max = Math.max(1, ...items.map(i => i.count));
+      el.innerHTML = items.map(i => {
+        const pct = Math.round((i.count / max) * 100);
+        return `
+          <div class="bar-row">
+            <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${i.label}">${i.label}</span>
+            <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${i.color};"></div></div>
+            <span class="bar-val">${i.count}</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderTimeline() {
+      const svg = document.getElementById('timelineSvg');
+      const tl = DATA.timeline || [];
+      if (!tl.length) { svg.innerHTML = ''; return; }
+      const maxVal = Math.max(1, ...tl.map(d => d.applied));
+      const padL = 28, padB = 26, w = 460 - padL - 12, h = 210 - padB - 16;
+      const bw = Math.max(8, (w / tl.length) - 6);
+      const ink = getComputedStyle(document.body).getPropertyValue('--ink').trim() || '#0A0A0A';
+
+      let html = `<line x1="${padL}" y1="${16 + h}" x2="448" y2="${16 + h}" stroke="${ink}" stroke-width="1.2"/>`;
+      tl.forEach((d, idx) => {
+        const x = padL + idx * (w / tl.length) + 3;
+        const bh = (d.applied / maxVal) * h;
+        const ih = (d.interviews / maxVal) * h;
+        const rh = (d.rejections / maxVal) * h;
+        html += `<rect x="${x}" y="${16 + h - bh}" width="${bw}" height="${bh}" fill="#DEDBD2" stroke="${ink}" stroke-width="0.9"/>`;
+        if (rh > 0) html += `<rect x="${x}" y="${16 + h - rh}" width="${bw * 0.5}" height="${rh}" fill="#F4937A" stroke="${ink}" stroke-width="0.7"/>`;
+        if (ih > 0) html += `<rect x="${x + bw * 0.5}" y="${16 + h - ih}" width="${bw * 0.5}" height="${ih}" fill="#7ED49E" stroke="${ink}" stroke-width="0.7"/>`;
+        html += `<text x="${x + bw / 2}" y="${16 + h + 14}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" fill="${ink}">${d.period}</text>`;
+      });
+      svg.innerHTML = html;
+    }
+
+    function renderSectors() {
+      const map = {};
+      DATA.companies.forEach(c => {
+        const s = c.sector || 'General';
+        if (!map[s]) map[s] = { total: 0, human: 0, offers: 0 };
+        map[s].total++;
+        if (c.stage_depth >= 3) map[s].human++;
+        if (c.stage_depth >= 4) map[s].offers++;
+      });
+      const el = document.getElementById('sectorGrid');
+      el.innerHTML = Object.entries(map)
+        .sort((a, b) => b[1].total - a[1].total)
+        .map(([sec, v]) => `
+          <div class="sector-box">
+            <strong>${sec}</strong>
+            <span>${v.total} companies · ${v.human} interviewed · ${v.offers} offers/finals</span>
+          </div>
+        `).join('');
+    }
+
+    function renderTable() {
+      const q = (document.getElementById('searchBox').value || '').toLowerCase();
+      const filt = document.getElementById('outcomeSelect').value;
+      const rows = DATA.companies.filter(c => {
+        if (filt !== 'all' && c.outcome !== filt) return false;
+        if (q && !c.company.toLowerCase().includes(q) && !(c.role || '').toLowerCase().includes(q)) return false;
+        return true;
+      });
+      document.getElementById('tableCountTag').textContent = rows.length + ' companies';
+      const tbody = document.getElementById('companyTbody');
+      tbody.innerHTML = rows.map(c => `
+        <tr>
+          <td><strong>${c.company}</strong></td>
+          <td>${c.sector || ''}</td>
+          <td>${c.role || ''}</td>
+          <td>${c.stage || ''}</td>
+          <td><span class="pill-tag" style="background:${COLORS[c.outcome] || '#DEDBD2'}">${c.outcome_label}</span></td>
+          <td style="font-family:'JetBrains Mono',monospace;">${c.days_elapsed === null || c.days_elapsed === undefined ? '—' : c.days_elapsed + 'd'}</td>
+        </tr>
+      `).join('');
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      document.getElementById('themeBtn').textContent = document.body.classList.contains('dark') ? 'Light Ink' : 'Dark Ink';
+      renderTimeline();
+    }
+
+    function togglePoster() {
+      document.body.classList.toggle('poster');
+      document.getElementById('posterBtn').textContent = document.body.classList.contains('poster') ? 'Standard View' : 'Poster View';
+    }
+
+    function downloadBlob(content, filename, mime) {
+      const blob = new Blob([content], { type: mime });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    function downloadCSV() {
+      const header = 'company,role,sector,date,stage,outcome,days_elapsed\n';
+      const lines = DATA.companies.map(c => [
+        c.company, c.role, c.sector, c.date || '', c.stage, c.outcome_label,
+        c.days_elapsed === null || c.days_elapsed === undefined ? '' : c.days_elapsed
+      ].map(v => '"' + String(v).replace(/"/g, '""') + '"').join(','));
+      downloadBlob(header + lines.join('\n'), 'audit_table.csv', 'text/csv;charset=utf-8;');
+    }
+
+    function buildExportSVGString() {
+      const s = DATA.summary;
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+        <rect width="900" height="520" fill="#FFFFFF"/>
+        <rect x="20" y="20" width="860" height="480" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+        <text x="48" y="68" font-family="Georgia, serif" font-size="30" fill="#0A0A0A">Inbox Audit — ${s.total_companies} Companies</text>
+        <text x="48" y="96" font-family="monospace" font-size="13" fill="#4A4945">Accepted: ${s.accepted} · I Passed: ${s.i_passed} · Interviewed: ${s.interviewed} · They Passed: ${s.they_passed} · Silence: ${s.silence}</text>
+        ${DATA.funnel.map((f, i) => {
+          const y = 140 + i * 62;
+          const w = Math.max(12, Math.round((f.count / Math.max(1, s.total_companies)) * 560));
+          const col = ['#DEDBD2', '#8C97D8', '#8C97D8', '#F9BF7F', '#7ED49E'][i % 5];
+          return `<text x="48" y="${y + 22}" font-family="monospace" font-size="13" fill="#0A0A0A">${f.stage}</text>
+                  <rect x="210" y="${y}" width="${w}" height="34" fill="${col}" stroke="#0A0A0A" stroke-width="1.5"/>
+                  <text x="${222 + w}" y="${y + 22}" font-family="monospace" font-size="13" fill="#0A0A0A">${f.count}</text>`;
+        }).join('')}
+      </svg>`;
+    }
+
+    function exportSVG() {
+      downloadBlob(buildExportSVGString(), 'inbox-audit-summary.svg', 'image/svg+xml;charset=utf-8;');
+    }
+
+    function exportPNG() {
+      const svgStr = buildExportSVGString();
+      const img = new Image();
+      const svgBlob = new Blob([svgStr], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(svgBlob);
+      img.onload = () => {
+        const c = document.createElement('canvas');
+        c.width = 1800;
+        c.height = 1040;
+        const ctx = c.getContext('2d');
+        ctx.drawImage(img, 0, 0, 1800, 1040);
+        URL.revokeObjectURL(url);
+        c.toBlob(blob => {
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = 'inbox-audit-summary.png';
+          a.click();
+        }, 'image/png');
+      };
+      img.src = url;
+    }
+
+    function handleFileUpload(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          if (file.name.endsWith('.json')) {
+            DATA = JSON.parse(reader.result);
+            renderAll();
+          }
+        } catch (err) {
+          alert('Could not parse file: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    renderAll();
+  </script>
+</body>
+</html>

@@ -397,37 +397,46 @@
     .envelope-return {
       position: absolute;
       top: 18px;
-      left: 20px;
+      left: 18px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid var(--ink);
+      padding: 8px 12px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      line-height: 1.45;
+      font-size: 0.76rem;
+      line-height: 1.5;
       color: var(--ink);
       z-index: 5;
+      box-shadow: 2px 2px 0 var(--ink);
     }
     .envelope-stamp {
       position: absolute;
       top: 16px;
       right: 18px;
-      width: 54px;
-      height: 64px;
-      border: 1.2px solid var(--ink);
+      width: 68px;
+      height: 80px;
       background: #fff;
-      padding: 4px;
+      border: 1.5px solid var(--ink);
+      outline: 2px dashed #fff;
+      outline-offset: -4px;
+      box-shadow: 2px 2px 0 var(--ink);
+      padding: 5px;
       z-index: 5;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
     }
-    .envelope-stamp img {
+    .envelope-stamp svg {
       width: 100%;
-      height: 40px;
-      object-fit: cover;
+      height: 50px;
+      display: block;
     }
     .envelope-stamp span {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.52rem;
-      letter-spacing: 0.05em;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--ink);
     }
     .envelope-seal {
       position: absolute;
@@ -662,11 +671,11 @@
     <header>
       <div class="brand">
         <a href="#" class="brand-name">Levi Higgs</a>
-        <span class="brand-sub">New York · Product, Policy &amp; Ink</span>
+        <span class="brand-sub">New York · AI Product, Policy &amp; Operations</span>
       </div>
       <nav>
         <a href="#index">250 Companies</a>
-        <a href="#workflow">Workflow</a>
+        <a href="workflow.html">Workflow Demo</a>
         <a href="#cv">CV</a>
         <a href="mailto:levijameshiggs@gmail.com">levijameshiggs@gmail.com</a>
       </nav>
@@ -721,7 +730,7 @@
       <div class="octopus-frame">
         <img src="art/protestopus.jpg" alt="Protestopus — India ink and watercolor" />
         <div class="octopus-cap">
-          <span class="octopus-quote">“I used all my ink to make these.”</span>
+          <span class="octopus-quote" style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;font-style:normal;color:var(--ink-mid);">Ask me about my art.</span>
           <div class="palette-strip" title="Site palette pulled from Protestopus">
             <span class="palette-chip" style="background:#FCE883"></span>
             <span class="palette-chip" style="background:#F4937A"></span>
@@ -758,9 +767,14 @@
             <span>Includes the single-file HTML canvas chart styled in gallery ink and watercolor.</span>
           </div>
         </div>
-        <a class="ink-btn" href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener">
-          Get the Inbox Parser Workflow ↗
-        </a>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <a class="ink-btn" href="workflow.html">
+            More Info &amp; Live Demo →
+          </a>
+          <a class="ink-btn" style="background:var(--c-built);" href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener">
+            Get Everything Included ($19) ↗
+          </a>
+        </div>
       </div>
     </section>
 
@@ -783,8 +797,16 @@
             New York, NY<br />
             levijameshiggs@gmail.com
           </div>
-          <div class="envelope-stamp">
-            <img src="art/protestopus.jpg" alt="Protestopus stamp" />
+          <div class="envelope-stamp" aria-hidden="true">
+            <svg viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="56" height="48" fill="#FAF9F5" stroke="#0A0A0A" stroke-width="1.2"/>
+              <path d="M10 42 A20 20 0 0 1 50 42" stroke="#7ED49E" stroke-width="4" fill="none"/>
+              <path d="M15 42 A15 15 0 0 1 45 42" stroke="#F9BF7F" stroke-width="3.5" fill="none"/>
+              <path d="M20 42 A10 10 0 0 1 40 42" stroke="#8C97D8" stroke-width="3" fill="none"/>
+              <path d="M30 8 L35 20 L30 24 L25 20 Z" fill="#0A0A0A"/>
+              <line x1="30" y1="8" x2="30" y2="17" stroke="#FFFFFF" stroke-width="1.2"/>
+              <circle cx="30" cy="42" r="2.5" fill="#0A0A0A"/>
+            </svg>
             <span>NYC · INK</span>
           </div>
           <div class="envelope-seal">LH</div>
