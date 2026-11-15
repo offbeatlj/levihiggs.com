@@ -4692,40 +4692,40 @@
       "name": "YouTube (Google)",
       "sector": "Tech & AI",
       "role": "Trust & Safety Policy / Product",
-      "note": "Joined Aug 2022 in New York. Scaled Youth, Violent Extremism & Hate Speech enforcement; launched external VVR transparency metric; built GenAI policy red-teaming frameworks.",
+      "note": "Joined in New York. Scaled Youth, Violent Extremism & Hate Speech enforcement; launched external VVR transparency metric; built GenAI policy red-teaming frameworks.",
       "url": "https://transparencyreport.google.com/youtube-policy/featured-policies/violent-extremism",
       "outcome": "built",
-      "outcome_label": "Built Here",
+      "outcome_label": "Accepted",
       "stage_depth": 5
     },
     {
       "name": "TikTok (ByteDance)",
       "sector": "Consumer Social",
       "role": "Team Lead, Trust & Safety",
-      "note": "Onboarded Jan 2021 (initially via Atrium), promoted to full-time Team Lead Apr 2021 ('TikTok Verbal Offer - Team Lead, Trust & Safety' from Peter Ludden). Led 18-analyst team to 95.38% accuracy.",
+      "note": "Onboarded via staffing partner, then converted to full-time Team Lead in Trust & Safety. Led an 18-analyst team to 95.38% accuracy.",
       "url": "https://www.tiktok.com/transparency",
       "outcome": "built",
-      "outcome_label": "Built Here",
+      "outcome_label": "Accepted",
       "stage_depth": 5
     },
     {
       "name": "Teachers Pay Teachers",
       "sector": "EdTech & Education",
       "role": "Content Moderation Specialist",
-      "note": "Hired 2020 and invited back Jan 2021 by Marketplace Integrity Lead Paul Santos Boulat ('Thank you for all your work last year! And I hope you'll join us for a final push'). Audited 5,000+ K-12 assets.",
+      "note": "Audited 5,000+ K-12 marketplace assets and returned for a second contract push in Marketplace Integrity.",
       "url": "https://www.teacherspayteachers.com/",
       "outcome": "built",
-      "outcome_label": "Built Here",
+      "outcome_label": "Accepted",
       "stage_depth": 5
     },
     {
       "name": "RebelBase",
       "sector": "SaaS & Startups",
       "role": "Content Writer",
-      "note": "Offer Feb 9, 2021 from Tiffany Kwan & COO Tuba Erbil ('Congrats, I heard you aced the interview with Tuba and Kapila and you beat out almost 200 candidates... granted 7,500 stock options').",
+      "note": "Selected out of nearly 200 applicants for a Product & Content role; awarded 7,500 stock options.",
       "url": "https://www.rebelbase.co/",
       "outcome": "built",
-      "outcome_label": "Built Here",
+      "outcome_label": "Accepted",
       "stage_depth": 5
     },
     {
@@ -4735,44 +4735,44 @@
       "note": "Adversarial prompt engineering, safety rubric design, and multimodal LLM evaluation.",
       "url": "https://scale.com/",
       "outcome": "built",
-      "outcome_label": "Built Here",
+      "outcome_label": "Accepted",
       "stage_depth": 5
     },
     {
       "name": "ELC Shanghai",
       "sector": "EdTech & Education",
       "role": "Headmaster",
-      "note": "Recruited via WeChat (2018\u20132019). Helped found and lead a 12-person learning center in Shanghai; grew enrollment 35% in year one.",
+      "note": "Recruited via WeChat. Co-founded and led a 12-person learning center in Shanghai; grew enrollment 35% in year one.",
       "url": "https://www.smartshanghai.com/",
       "outcome": "built",
-      "outcome_label": "Built Here",
+      "outcome_label": "Accepted",
       "stage_depth": 5
     },
     {
       "name": "YBM ECC (Seoul)",
       "sector": "EdTech & Education",
       "role": "English Instructor",
-      "note": "Taught 80+ elementary and middle school students in Seoul, South Korea (2017\u20132018); authored 60-page parent handbook.",
+      "note": "Taught 80+ elementary and middle school students in Seoul, South Korea; authored a 60-page parent handbook.",
       "url": "https://www.ybmecc.com/",
       "outcome": "built",
-      "outcome_label": "Built Here",
+      "outcome_label": "Accepted",
       "stage_depth": 5
     },
     {
       "name": "OMSI",
       "sector": "EdTech & Education",
       "role": "Outdoor Science Instructor",
-      "note": "Oregon Museum of Science and Industry (2017). Led multi-day field ecology, geology, and astronomy programs across Oregon.",
+      "note": "Oregon Museum of Science and Industry. Led multi-day field ecology, geology, and astronomy programs across Oregon.",
       "url": "https://omsi.edu/",
       "outcome": "built",
-      "outcome_label": "Built Here",
+      "outcome_label": "Accepted",
       "stage_depth": 5
     },
     {
       "name": "DoubleVerify",
       "sector": "SaaS & Cyber",
       "role": "Trust & Safety / Brand Safety",
-      "note": "Received offer + revised counter-offer on Jul 15, 2022 ('$160k base salary + 15% bonus + $120k equity'). Declined on Jul 20, 2022 to join Google ('I have chosen to work at Google, but it was not an easy decision').",
+      "note": "Received an offer and a revised counter-offer ($160k base + 15% bonus + $120k equity). Declined to join Google.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4781,7 +4781,7 @@
       "name": "OpenSea",
       "sector": "Fintech & Web3",
       "role": "Trust & Safety Policy",
-      "note": "Received verbal offer after virtual onsite; Head of T&S Pascal emailed Feb 19, 2022 ('I heard we made you an offer! That's great! I really hope you accept the offer and we start working together!'). Declined offer.",
+      "note": "Received a verbal Trust & Safety offer after the virtual onsite. Declined offer.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4790,7 +4790,7 @@
       "name": "Pathrise",
       "sector": "EdTech & Education",
       "role": "Admissions Operations",
-      "note": "Invited to final-round mock offer call & Ops interview (Jan 29, 2021). Withdrew Jan 28, 2021 ('Unfortunately, I have accepted a competing offer with another company so will not be moving forward' \u2014 TikTok).",
+      "note": "Invited to a final-round mock offer call and Ops interview. Withdrew after accepting TikTok.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4799,7 +4799,7 @@
       "name": "Outlier AI",
       "sector": "Tech & AI",
       "role": "Dolphin Genesis Expert",
-      "note": "Matched and onboarded to Dolphin Genesis Experts (2024); chose not to proceed.",
+      "note": "Matched and onboarded to an expert evaluation track; chose not to proceed.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4808,7 +4808,7 @@
       "name": "Seocho Avalon (Seoul)",
       "sector": "EdTech & Education",
       "role": "English Instructor (Gangnam)",
-      "note": "Offered 2.5M KRW/mo + housing in Gangnam after in-person interview (Sep 2, 2018: 'Seocho Avalon wants to hire you under the following conditions'). Declined to become Headmaster at ELC Shanghai.",
+      "note": "Offered a teaching contract with housing in Gangnam after an in-person interview. Declined to lead ELC Shanghai.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4817,7 +4817,7 @@
       "name": "Berlitz Japan (Tokyo)",
       "sector": "EdTech & Education",
       "role": "Instructor (Minato-ku, Tokyo)",
-      "note": "Passed screening & invited to Tokyo HQ interview at Shin Aoyama Bldg (Sep 13, 2018). Withdrew after accepting ELC Shanghai.",
+      "note": "Passed screening and was invited to Tokyo HQ for an in-person interview. Withdrew after accepting ELC Shanghai.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4826,7 +4826,7 @@
       "name": "Urban Teachers",
       "sector": "EdTech & Education",
       "role": "Teaching Fellow",
-      "note": "Invited to Final Interview Day (Feb 26, 2020); withdrew application on Feb 25, 2020 ('We are disappointed that you have decided to withdraw your application this year').",
+      "note": "Invited to Final Interview Day; withdrew application to pursue other offers.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4835,7 +4835,7 @@
       "name": "Epic Systems",
       "sector": "SaaS & Cyber",
       "role": "Project Manager / Operations",
-      "note": "Recruiter Tiffany Schultz sent 4 phone interview requests (Jan\u2013Feb 2020), ending with 'Did you see our last email? Is a question about the position, application process, or Epic holding you back?' Passed.",
+      "note": "Received four consecutive phone interview invitations from recruiting; chose not to proceed.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4844,7 +4844,7 @@
       "name": "Amity Corp (Japan)",
       "sector": "EdTech & Education",
       "role": "Instructor (Japan)",
-      "note": "Sent 7 consecutive video interview invitations via Spark Hire (Dec 2019); chose not to proceed.",
+      "note": "Received seven automated video interview invitations; chose not to proceed.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4853,7 +4853,7 @@
       "name": "Wang Law Office",
       "sector": "Policy & Legal",
       "role": "Mandarin-Speaking Paralegal",
-      "note": "Victor Manibo, Esq. scheduled in-person Pasadena interview (Sep 9, 2019). Canceled by Levi ('I am still currently in Shanghai, China... so you can cancel the interview slot').",
+      "note": "Invited for an in-person interview in Pasadena; canceled while still living in Shanghai.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4862,7 +4862,7 @@
       "name": "FedEx Ground",
       "sector": "Operations",
       "role": "Operations",
-      "note": "Received 'Welcome to FedEx Ground!' & Form I-9 onboarding (Dec 19, 2020) weeks before landing TikTok; passed.",
+      "note": "Completed initial onboarding paperwork weeks before accepting TikTok; passed.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4871,7 +4871,7 @@
       "name": "Meta",
       "sector": "Tech & AI",
       "role": "Policy / Integrity Operations",
-      "note": "Multi-round interviews scheduled with Meta recruiting (Emilie Michaelson, Sanjana R, Bharath Kualladi).",
+      "note": "Completed multi-round interviews with Trust & Safety / Policy recruiting.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4880,7 +4880,7 @@
       "name": "Amazon",
       "sector": "Tech & AI",
       "role": "Senior Program Manager",
-      "note": "Completed phone screen & interview loop prep with Amazon recruiting (Marisa Pabon).",
+      "note": "Completed phone screen and interview loop preparation.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4889,7 +4889,7 @@
       "name": "Etsy",
       "sector": "Marketplaces",
       "role": "Senior Manager, Marketplace Safety",
-      "note": "Google Meet interview rounds scheduled with Etsy Global Talent Acquisition (Stephan Cantave).",
+      "note": "Completed Google Meet interview rounds with Talent Acquisition.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4898,7 +4898,7 @@
       "name": "DoorDash",
       "sector": "Marketplaces",
       "role": "Manager, Trust & Safety",
-      "note": "Phone screen with Jeralyn Fix (Apr 2022) and Zoom interview with Jessica Morse, Sr. Manager of Marketplace Quality (Jun 2022); passed Jul 1, 2022.",
+      "note": "Completed phone screen and Marketplace Quality manager interview before they passed.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4907,7 +4907,7 @@
       "name": "Vimeo",
       "sector": "Media & Streaming",
       "role": "Manager, Trust & Safety",
-      "note": "Zoom interview with Lindsay Randall, Manager of Trust & Safety teams (Apr 30, 2021); passed May 3, 2021 with follow-up feedback call.",
+      "note": "Completed Trust & Safety manager interview and a follow-up feedback call.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4916,7 +4916,7 @@
       "name": "Shutterstock",
       "sector": "Media & Streaming",
       "role": "Director, Content & Policy",
-      "note": "Executive interview scheduled with Shutterstock recruiting.",
+      "note": "Completed executive recruiting interview stage.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4925,7 +4925,7 @@
       "name": "Match Group",
       "sector": "Consumer Social",
       "role": "Trust & Safety",
-      "note": "Phone interview with Christie Linebarger (Mar 4, 2022); update sent Mar 29, 2022.",
+      "note": "Completed initial phone interview before they passed.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4934,7 +4934,7 @@
       "name": "Trend Micro (Taipei)",
       "sector": "SaaS & Cyber",
       "role": "Technical Writer (Taipei)",
-      "note": "Submitted 500-word essay & portfolio; invited to 2-hour Zoom test with Taipei (Nov 13, 2019). Joined 1 hour early due to Nashville CST vs. Taipei CST mixup while traveling; HR declined to reschedule.",
+      "note": "Submitted a 500-word technical writing essay and joined a 2-hour Taipei Zoom test an hour early due to a Central Standard Time vs. China Standard Time mix-up while traveling.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4943,7 +4943,7 @@
       "name": "brightwheel",
       "sector": "EdTech & Education",
       "role": "Sales Development",
-      "note": "Phone screen with Michael Hernandez (Jan 26, 2021) + 1.5-hour virtual onsite role-play with SDR Managers Kristi Bordner & Jordann Mitchell (Jan 27, 2021), the same week TikTok extended its offer.",
+      "note": "Completed phone screen and a 1.5-hour virtual onsite role-play the same week TikTok extended its offer.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4952,7 +4952,7 @@
       "name": "micro1",
       "sector": "Tech & AI",
       "role": "AI Specialist",
-      "note": "Completed AI technical interview with micro1.",
+      "note": "Completed AI technical interview.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4961,7 +4961,7 @@
       "name": "NYC Teaching Collaborative",
       "sector": "EdTech & Education",
       "role": "Partner Teacher Fellow",
-      "note": "Completed NYCTC phone interview (Oct 2019); not selected for January cohort.",
+      "note": "Completed phone interview; not selected for the winter cohort.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4970,7 +4970,7 @@
       "name": "Interstate Logistics",
       "sector": "Operations",
       "role": "Account Executive",
-      "note": "Completed 2-hour on-site interview in Murfreesboro with VP Josh Osinski (Aug 27, 2020).",
+      "note": "Completed a 2-hour on-site interview in Murfreesboro.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4979,7 +4979,7 @@
       "name": "Catalyst Leadership",
       "sector": "Operations",
       "role": "Campaign Development",
-      "note": "Completed preliminary Zoom interview (Dec 11, 2020) and 2nd-round interview with CEO Colleen (Dec 12, 2020).",
+      "note": "Completed preliminary and second-round executive interviews.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4988,7 +4988,7 @@
       "name": "Sumdog",
       "sector": "EdTech & Education",
       "role": "Marketing Assistant",
-      "note": "Completed video interview for Sumdog Ltd (Dec 10, 2020).",
+      "note": "Completed video interview for an education role.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4997,7 +4997,7 @@
       "name": "Book Land School (Seoul)",
       "sector": "EdTech & Education",
       "role": "English Instructor (Mapo)",
-      "note": "Pitched by Korean agency Edu Appletree; completed Skype interview on Jul 11, 2018 ('The interview went well! Some technical difficulties, but not a problem').",
+      "note": "Completed Skype interview via an overseas recruiting agency.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -5006,7 +5006,7 @@
       "name": "Gwacheon JLS (Korea)",
       "sector": "EdTech & Education",
       "role": "English Instructor",
-      "note": "Invited to in-person interview via VivaCom Korea (Aug 20, 2018).",
+      "note": "Invited to an in-person interview in Korea.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -5015,7 +5015,7 @@
       "name": "Meten English",
       "sector": "EdTech & Education",
       "role": "English Instructor (Shenzhen)",
-      "note": "Skype interview invitation with recruiter Ben Nie (Aug 2018).",
+      "note": "Invited to a Skype interview with recruiting.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -5024,7 +5024,7 @@
       "name": "Varsity Tutors",
       "sector": "EdTech & Education",
       "role": "Instructor / Tutor",
-      "note": "HireVue video interview rounds (Dec 2019).",
+      "note": "Completed video interview rounds.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -5033,7 +5033,7 @@
       "name": "New Oriental",
       "sector": "EdTech & Education",
       "role": "Instructor",
-      "note": "Interview scheduled Dec 6, 2019.",
+      "note": "Scheduled interview stage in China.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -5042,7 +5042,7 @@
       "name": "Tennessee General Assembly",
       "sector": "Policy & Legal",
       "role": "Legislative Bill Clerk / Proofreader",
-      "note": "Referred via Senate Research Analyst Trevin Ayers; resume forwarded to House & Senate Chief Clerks by Director Connie Ridley (Dec 2019\u2013Jan 2020).",
+      "note": "Referred for a legislative research role; resume forwarded to House and Senate leadership.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -5051,7 +5051,7 @@
       "name": "Murfreesboro City Schools",
       "sector": "EdTech & Education",
       "role": "Educator",
-      "note": "In-person interview at MCS Administrative Offices with Cindy Walker (Aug 27, 2020).",
+      "note": "Completed an in-person interview at the district administrative offices.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -5060,7 +5060,7 @@
       "name": "Adventure Teaching",
       "sector": "EdTech & Education",
       "role": "Instructor Abroad",
-      "note": "Admissions interview with Adventure Teaching (Aug 6, 2018).",
+      "note": "Completed admissions interview.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
