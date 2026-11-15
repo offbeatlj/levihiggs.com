@@ -179,10 +179,10 @@
     .canvas-holder {
       position: relative;
       width: 100%;
-      height: 540px;
+      height: 450px;
     }
     @media (max-width: 700px) {
-      .canvas-holder { height: 420px; }
+      .canvas-holder { height: 340px; }
     }
     canvas#inkStage {
       width: 100%;
@@ -1042,39 +1042,57 @@
     let animPhase = 0; // 0..1 drop into fan
 
     function initNodes() {
-      // Sort companies by outcome order, then sector, then name for a clean radial fan
-      const sorted = [...COMPANIES].sort((a, b) => {
-        const oa = ORDER.indexOf(a.outcome) - ORDER.indexOf(b.outcome);
-        if (oa !== 0) return oa;
-        return a.sector.localeCompare(b.sector) || a.name.localeCompare(b.name);
+      // Group companies by outcome so each outcome forms a full 180-degree concentric arch
+      const byOutcome = {
+        built: [],
+        i_passed: [],
+        interviewed: [],
+        they_passed: [],
+        silence: []
+      };
+      COMPANIES.forEach(c => {
+        if (byOutcome[c.outcome]) byOutcome[c.outcome].push(c);
       });
 
-      nodes = sorted.map((c, idx) => {
-        // Assign angle across 180-degree arch (PI to 0)
-        const t = idx / Math.max(1, sorted.length - 1);
-        const angle = Math.PI * (1 - t * 0.96 - 0.02);
-        // Concentric ring band based on outcome so inner rings are high-signal outcomes
-        let ringFrac = 0.88;
-        let radiusPx = 4.2;
-        if (c.outcome === 'built') { ringFrac = 0.34 + (idx % 2) * 0.07; radiusPx = 8.5; }
-        else if (c.outcome === 'i_passed') { ringFrac = 0.46 + (idx % 2) * 0.06; radiusPx = 7.2; }
-        else if (c.outcome === 'interviewed') { ringFrac = 0.58 + (idx % 3) * 0.05; radiusPx = 5.8; }
-        else if (c.outcome === 'they_passed') { ringFrac = 0.71 + (idx % 4) * 0.04; radiusPx = 4.5; }
-        else { ringFrac = 0.84 + (idx % 5) * 0.032; radiusPx = 3.7; }
+      const ringConfig = {
+        built:       { baseR: 0.30, subRows: 1, rowStep: 0.00, rPx: 8.5, padAngle: 0.14 },
+        i_passed:    { baseR: 0.47, subRows: 1, rowStep: 0.00, rPx: 7.2, padAngle: 0.10 },
+        interviewed: { baseR: 0.63, subRows: 1, rowStep: 0.00, rPx: 5.8, padAngle: 0.07 },
+        they_passed: { baseR: 0.77, subRows: 2, rowStep: 0.045, rPx: 4.5, padAngle: 0.04 },
+        silence:     { baseR: 0.90, subRows: 2, rowStep: 0.045, rPx: 3.8, padAngle: 0.03 }
+      };
 
-        return {
-          data: c,
-          idx,
-          angle,
-          ringFrac,
-          r: radiusPx,
-          // Initial drop physics state from top nib
-          x: 0,
-          y: 0,
-          tx: 0,
-          ty: 0,
-          delay: Math.min(0.55, idx * 0.0019),
-        };
+      nodes = [];
+      let globalIdx = 0;
+      ORDER.forEach(outcome => {
+        const list = byOutcome[outcome];
+        const cfg = ringConfig[outcome];
+        const totalInRing = list.length;
+
+        list.forEach((c, i) => {
+          const subRow = i % cfg.subRows;
+          const idxInSubRow = Math.floor(i / cfg.subRows);
+          const countInSubRow = Math.ceil((totalInRing - subRow) / cfg.subRows);
+          const t = countInSubRow <= 1 ? 0.5 : idxInSubRow / (countInSubRow - 1);
+          const span = Math.PI * (1 - cfg.padAngle * 2);
+          const angle = Math.PI * (1 - cfg.padAngle) - t * span;
+          const ringFrac = cfg.baseR + subRow * cfg.rowStep;
+
+          nodes.push({
+            data: c,
+            idx: globalIdx,
+            iInRing: i,
+            angle,
+            ringFrac,
+            r: cfg.rPx,
+            x: 0,
+            y: 0,
+            tx: 0,
+            ty: 0,
+            delay: Math.min(0.55, globalIdx * 0.0018),
+          });
+          globalIdx++;
+        });
       });
     }
 
@@ -1091,8 +1109,8 @@
 
     function computeTargets() {
       const cx = W * 0.5;
-      const cy = H - 34;
-      const maxR = Math.min(W * 0.45, H - 78);
+      const cy = H - 32;
+      const maxR = Math.min(W * 0.46, H - 56);
 
       nodes.forEach(n => {
         const rad = maxR * n.ringFrac;
@@ -1116,27 +1134,27 @@
       ctx.clearRect(0, 0, W, H);
 
       const cx = W * 0.5;
-      const cy = H - 34;
-      const maxR = Math.min(W * 0.45, H - 78);
+      const cy = H - 32;
+      const maxR = Math.min(W * 0.46, H - 56);
 
-      // Architectural baseline & subtle semi-circular ink guides (inspired by day.jpg)
+      // Architectural semi-circular ink guides
       ctx.strokeStyle = '#E6E4DD';
       ctx.lineWidth = 1;
-      [0.36, 0.48, 0.60, 0.74, 0.88].forEach(rf => {
+      [0.30, 0.47, 0.63, 0.79, 0.92].forEach(rf => {
         ctx.beginPath();
         ctx.arc(cx, cy, maxR * rf, Math.PI, 0, false);
         ctx.stroke();
       });
 
-      // Top ink nib / funnel origin
-      const nibY = 22;
+      // Top ink nib positioned right above the outer arch
+      const archTopY = Math.max(18, cy - maxR - 14);
       ctx.strokeStyle = '#0A0A0A';
       ctx.lineWidth = 1.2;
       ctx.beginPath();
-      ctx.moveTo(cx - 18, 6);
-      ctx.lineTo(cx - 3, nibY);
-      ctx.moveTo(cx + 18, 6);
-      ctx.lineTo(cx + 3, nibY);
+      ctx.moveTo(cx - 14, archTopY - 12);
+      ctx.lineTo(cx - 2, archTopY);
+      ctx.moveTo(cx + 14, archTopY - 12);
+      ctx.lineTo(cx + 2, archTopY);
       ctx.stroke();
 
       // Horizon ground rule
@@ -1153,23 +1171,22 @@
         const localT = Math.max(0, Math.min(1, (elapsed - n.delay) / 1.15));
         const e = easeOutCubic(localT);
 
-        // Two-stage trajectory: drop from nib to horizon, then fan out to target
-        if (localT < 0.42) {
-          const d = localT / 0.42;
+        if (localT < 0.38) {
+          const d = localT / 0.38;
           const dropEase = d * d;
-          n.x = cx + (n.tx - cx) * 0.12 * d;
-          n.y = nibY + (cy - nibY) * dropEase;
+          n.x = cx + (n.tx - cx) * 0.08 * d;
+          n.y = archTopY + (cy - archTopY) * dropEase;
         } else {
-          const f = (localT - 0.42) / 0.58;
+          const f = (localT - 0.38) / 0.62;
           const fanEase = easeOutCubic(f);
-          const midX = cx + (n.tx - cx) * 0.12;
+          const midX = cx + (n.tx - cx) * 0.08;
           n.x = midX + (n.tx - midX) * fanEase;
           n.y = cy + (n.ty - cy) * fanEase;
         }
 
-        if (e > 0.45 && (n.data.stage_depth >= 3 || activeFilter !== 'all')) {
+        if (e > 0.42 && (n.data.stage_depth >= 3 || activeFilter !== 'all')) {
           ctx.save();
-          ctx.strokeStyle = match ? 'rgba(10,10,10,0.13)' : 'rgba(10,10,10,0.03)';
+          ctx.strokeStyle = match ? 'rgba(10,10,10,0.14)' : 'rgba(10,10,10,0.03)';
           ctx.lineWidth = n.data.stage_depth >= 4 ? 1.1 : 0.7;
           ctx.beginPath();
           ctx.moveTo(cx, cy);
@@ -1179,14 +1196,15 @@
         }
       });
 
-      // Draw nodes
-      nodes.forEach(n => {
+      // Draw nodes (outer rings first so inner high-signal rings sit on top)
+      for (let i = nodes.length - 1; i >= 0; i--) {
+        const n = nodes[i];
         const match = activeFilter === 'all' || n.data.outcome === activeFilter;
         const isSel = selectedCompany && selectedCompany.name === n.data.name;
         const isHov = hoveredNode === n;
 
         ctx.save();
-        ctx.globalAlpha = match ? 1 : 0.14;
+        ctx.globalAlpha = match ? 1 : 0.13;
         ctx.fillStyle = COLORS[n.data.outcome] || '#DEDBD2';
         ctx.strokeStyle = '#0A0A0A';
         ctx.lineWidth = (isSel || isHov) ? 2.2 : 1.15;
@@ -1197,38 +1215,42 @@
         ctx.fill();
         ctx.stroke();
 
-        // Direct ink labels for Built Here, I Passed, or when filtered
+        // Direct ink labels for Built Here, or when filtered to a specific ring, or hovered/selected
         const showLabel = match && (
           n.data.outcome === 'built' ||
-          n.data.outcome === 'i_passed' ||
+          (activeFilter === 'i_passed' && n.data.outcome === 'i_passed') ||
           (activeFilter === 'interviewed' && n.data.outcome === 'interviewed') ||
           isSel || isHov
         );
 
-        if (showLabel && elapsed > 0.9) {
-          ctx.font = (n.data.stage_depth >= 4 || isSel) ? '500 11px "JetBrains Mono", monospace' : '400 10px "JetBrains Mono", monospace';
+        if (showLabel && elapsed > 0.85 && W > 520) {
+          ctx.font = (n.data.stage_depth >= 4 || isSel || isHov) ? '500 10.5px "JetBrains Mono", monospace' : '400 9.5px "JetBrains Mono", monospace';
           ctx.fillStyle = '#0A0A0A';
-          const labelX = n.x + (n.x >= cx ? rad + 5 : -(rad + 5));
-          ctx.textAlign = n.x >= cx ? 'left' : 'right';
+          const dy = (n.iInRing % 2 === 0 ? -1 : 1) * (rad + 8);
+          ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
-          ctx.fillText(n.data.name, labelX, n.y);
+          const textW = ctx.measureText(n.data.name).width;
+          ctx.fillStyle = 'rgba(255,255,255,0.86)';
+          ctx.fillRect(n.x - textW / 2 - 3, n.y + dy - 6, textW + 6, 12);
+          ctx.fillStyle = '#0A0A0A';
+          ctx.fillText(n.data.name, n.x, n.y + dy);
         }
         ctx.restore();
-      });
+      }
 
       // Center pivot ink dot
       ctx.fillStyle = '#0A0A0A';
       ctx.beginPath();
-      ctx.arc(cx, cy, 4, 0, Math.PI * 2);
+      ctx.arc(cx, cy, 4.5, 0, Math.PI * 2);
       ctx.fill();
 
       // Horizon labels
       ctx.fillStyle = '#4A4945';
       ctx.font = '400 10.5px "JetBrains Mono", monospace';
       ctx.textAlign = 'left';
-      ctx.fillText('← BUILT HERE (8) · I PASSED (11) · INTERVIEWED (22)', 26, cy + 18);
+      ctx.fillText('INNER RINGS: BUILT HERE (8) · I PASSED (11) · INTERVIEWED (22)', 26, cy + 18);
       ctx.textAlign = 'right';
-      ctx.fillText('THEY PASSED (78) · SILENCE (131) →', W - 26, cy + 18);
+      ctx.fillText('OUTER RINGS: THEY PASSED (78) · SILENCE (131)', W - 26, cy + 18);
 
       if (elapsed < 1.85) {
         requestAnimationFrame(tick);
