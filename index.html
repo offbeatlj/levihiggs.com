@@ -2,1973 +2,1215 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Levi J. Higgs</title>
-<meta name="description" content="Levi J. Higgs — Product, Policy & Trust Operations. An interactive Rube Goldberg sorting contraption and hyperlinked curriculum vitae.">
+<meta name="description" content="Levi J. Higgs — Trust & Safety Product, AI Policy, and Operations. Seven years of applications, rejections, offers turned down, and work built.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #F6F5F0;
-  --surface: #FDFCFA;
   --ink: #141413;
-  --ink-2: #4A4945;
-  --ink-3: #85837D;
-  --ink-4: #B5B3AC;
-  --line: #E4E2DA;
-  --line-strong: #C9C6BC;
+  --ink-2: #484743;
+  --ink-3: #7A7872;
+  --ink-4: #B2B0A8;
+  --line: #E3E1D8;
+  --line-strong: #C8C5BA;
 
-  /* 5-Stage Two-Way Career Palette (Information is Beautiful x Swiss Editorial) */
-  --c-void: #6E8299;       /* Into the Void (Silence) */
-  --c-they-passed: #C84B59;/* They Passed (Company Rejected Me) */
-  --c-interview: #D48C2A;  /* Deep Interview Loops */
-  --c-i-passed: #7C5295;   /* I Passed (I Rejected Them / Declined) */
-  --c-accepted: #17856D;   /* Accepted & Built (Signed & Shipped) */
+  /* Muted architectural pigments — never used with white text */
+  --c-void: #949BA1;
+  --c-they-passed: #C44D58;
+  --c-interview: #456990;
+  --c-i-passed: #C67D30;
+  --c-accepted: #2A6F4E;
 
   --serif: 'Newsreader', Georgia, serif;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --mono: 'JetBrains Mono', monospace;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-html {
-  scroll-behavior: smooth;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--sans);
   font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body { overflow-x: hidden; line-height: 1.55; }
+
+::selection {
+  background: #E5E2D7;
+  color: var(--ink);
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 28px 110px;
+}
 
 /* ============================================================================
-   QUIET ARCHITECTURAL HEADER (IAN SILBER AESTHETIC)
+   MINIMAL HEADER (Ian Silber restraint)
    ============================================================================ */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  background: rgba(246, 245, 240, 0.9);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
-}
-.header-inner {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 14px 24px;
+header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: baseline;
+  padding: 36px 0 28px;
+  border-bottom: 1px solid var(--line);
   gap: 16px;
-}
-.site-id {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  text-decoration: none;
-  color: var(--ink);
-  cursor: pointer;
-}
-.site-name {
-  font-weight: 500;
-  font-size: 0.92rem;
-  letter-spacing: -0.015em;
-}
-.site-role {
-  font-size: 0.82rem;
-  color: var(--ink-3);
-}
-.header-nav {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-.header-link {
-  font-size: 0.82rem;
-  color: var(--ink-2);
-  text-decoration: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 2px 0;
-  border-bottom: 1px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  font-family: var(--sans);
-}
-.header-link:hover, .header-link.active {
-  color: var(--ink);
-  border-bottom-color: var(--ink);
-}
-.header-link.external {
-  color: var(--ink-3);
-  font-family: var(--mono);
-  font-size: 0.74rem;
-}
-.header-link.external:hover {
-  color: var(--ink);
-}
-
-.page-wrap {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ============================================================================
-   NEWTONIAN RUBE GOLDBERG STAGE (GRAVITY, TORQUE, SEESAW, BUMPERS)
-   ============================================================================ */
-.kinetic-stage {
-  position: relative;
-  width: 100%;
-  padding-top: 10px;
-  margin-bottom: 8px;
-}
-.stage-top-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 8px 0 6px;
-  border-bottom: 1px solid var(--line);
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--ink-3);
-  letter-spacing: 0.04em;
   flex-wrap: wrap;
-  gap: 10px;
 }
-.stage-controls {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.quiet-action {
-  background: none;
-  border: none;
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--ink-2);
-  cursor: pointer;
-  text-decoration: underline;
-  text-decoration-color: var(--line-strong);
-  text-underline-offset: 3px;
-  padding: 0;
-}
-.quiet-action:hover {
-  color: var(--ink);
-  text-decoration-color: var(--ink);
-}
-.quiet-action.active {
-  color: var(--c-accepted);
-  text-decoration-color: var(--c-accepted);
+.brand {
+  font-size: 0.95rem;
   font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.brand span {
+  color: var(--ink-3);
+  font-weight: 400;
+  margin-left: 8px;
+}
+.header-links {
+  display: flex;
+  gap: 22px;
+  font-size: 0.84rem;
+}
+.header-links a {
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.header-links a:hover {
+  color: var(--ink);
 }
 
-.rg-canvas-container {
+/* ============================================================================
+   HERO & UNBOXED KINETIC SCULPTURE ANIMATION
+   ============================================================================ */
+.intro {
+  padding: 52px 0 12px;
+}
+.intro h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.85rem, 3.6vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  max-width: 780px;
+}
+.intro h1 em {
+  font-style: italic;
+}
+.intro p {
+  margin-top: 16px;
+  font-size: 0.98rem;
+  color: var(--ink-2);
+  max-width: 650px;
+  line-height: 1.65;
+}
+
+/* Unboxed, full-width animation directly on the paper */
+.sculpture-stage {
   position: relative;
   width: 100%;
-  height: 520px;
+  margin: 12px 0 0;
 }
-#rgCanvas {
-  width: 100%;
-  height: 100%;
+#kineticCanvas {
   display: block;
-  cursor: pointer;
+  width: 100%;
+  height: 400px;
 }
 
-/* 5 OUTCOME TRAYS AT THE BASE OF THE MACHINE (NO RAW EMAIL NUMBERS) */
-.constructed-columns {
+/* 5 Quiet Outcome Columns directly beneath the resting spheres */
+.outcomes-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--line);
-  opacity: 0.35;
-  transition: opacity 0.7s ease;
+  padding: 16px 0 22px;
+  gap: 16px;
 }
-.constructed-columns.built {
-  opacity: 1;
+.outcome-item {
+  padding-right: 8px;
 }
-.outcome-col {
-  padding: 14px 14px 16px 0;
-  border-right: 1px solid var(--line);
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-.outcome-col:not(:first-child) {
-  padding-left: 14px;
-}
-.outcome-col:last-child {
-  border-right: none;
-}
-.outcome-col:hover {
-  background: rgba(20, 20, 19, 0.025);
-}
-.oc-index {
-  font-family: var(--mono);
-  font-size: 0.66rem;
-  color: var(--ink-3);
+.outcome-label {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin-bottom: 5px;
-}
-.oc-title {
-  font-family: var(--serif);
-  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
-  font-weight: 400;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--ink);
-  line-height: 1.15;
+  margin-bottom: 4px;
 }
-.oc-examples {
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.outcome-sub {
   font-size: 0.76rem;
   color: var(--ink-2);
-  margin-top: 5px;
+  margin-bottom: 6px;
+}
+.outcome-co {
+  font-size: 0.74rem;
+  color: var(--ink-3);
   line-height: 1.45;
 }
 
 /* ============================================================================
-   CONSTRUCTED WORKSPACE & UNDERSTATED TABS BELOW
+   SECTIONS (Single quiet scroll — zero tabs, zero horizontal scrollbars)
    ============================================================================ */
-.constructed-workspace {
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+.section {
+  padding: 76px 0 0;
 }
-.constructed-workspace.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.tab-index-bar {
+.section-head {
   display: flex;
-  align-items: center;
-  gap: 28px;
-  border-bottom: 1px solid var(--line);
-  padding: 18px 0 0;
-  margin-bottom: 32px;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.tab-index-bar::-webkit-scrollbar { display: none; }
-.arch-tab {
-  padding: 0 0 14px;
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
-  font-family: var(--sans);
-  font-size: 0.84rem;
-  font-weight: 400;
-  color: var(--ink-3);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  display: inline-flex;
+  justify-content: space-between;
   align-items: baseline;
-  gap: 7px;
-}
-.arch-tab .num {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--ink-4);
-}
-.arch-tab:hover { color: var(--ink); }
-.arch-tab.active {
-  color: var(--ink);
-  font-weight: 500;
-  border-bottom-color: var(--ink);
-}
-.arch-tab.active .num { color: var(--ink); }
-
-.view-pane { display: none; }
-.view-pane.active { display: block; animation: quietFade 0.28s ease; }
-@keyframes quietFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* ============================================================================
-   EDITORIAL PLATES
-   ============================================================================ */
-.plate-section {
-  margin-bottom: 56px;
-}
-.plate-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 24px;
-  align-items: end;
-  padding-bottom: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 18px;
   border-bottom: 1px solid var(--line);
-  margin-bottom: 18px;
+  margin-bottom: 28px;
 }
-.plate-kicker {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--ink-3);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-.plate-title {
+.section-title {
   font-family: var(--serif);
-  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
   font-weight: 400;
-  line-height: 1.12;
   letter-spacing: -0.015em;
+  color: var(--ink);
 }
-.plate-caption {
-  font-size: 0.86rem;
+.section-note {
+  font-size: 0.88rem;
   color: var(--ink-2);
-  line-height: 1.55;
+  max-width: 460px;
 }
 
-.plate-controls {
+/* Hover caption bar for Horizon Fan */
+.fan-caption-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-height: 36px;
+  padding: 8px 0 16px;
+  font-size: 0.86rem;
+  color: var(--ink-2);
+}
+.fan-legend {
+  display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 14px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--line);
+  font-size: 0.76rem;
+  color: var(--ink-2);
 }
-.filter-links {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.filter-label {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--ink-3);
-  text-transform: uppercase;
-}
-.filter-link {
-  background: none;
-  border: none;
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  color: var(--ink-3);
-  cursor: pointer;
-  padding: 2px 0;
-  border-bottom: 1px solid transparent;
+.fan-legend span {
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
-.filter-link:hover { color: var(--ink); }
-.filter-link.active {
-  color: var(--ink);
-  font-weight: 500;
-  border-bottom-color: var(--ink);
-}
-.pip { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
 
-.active-readout {
-  font-family: var(--mono);
-  font-size: 0.74rem;
-  color: var(--ink-2);
-}
-
-.svg-plate {
+.svg-container {
   width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  padding: 20px;
 }
-.svg-plate svg {
+.svg-container svg {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  min-width: 680px;
-}
-.mobile-scroll-cue {
-  display: none;
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--ink-3);
-  padding-top: 8px;
+  overflow: visible;
 }
 
 /* ============================================================================
-   AURA-MAXXED IAN SILBER-STYLE CURRICULUM VITAE
+   CIRCADIAN CLOCK & REASONS (2-Column Editorial Layout, Dark Ink Only)
    ============================================================================ */
-.cv-wrapper {
-  max-width: 880px;
-  margin: 0 auto 64px;
-  padding-top: 8px;
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 48px;
+  align-items: start;
 }
-.cv-lead {
+.sub-heading {
   font-family: var(--serif);
-  font-size: clamp(1.4rem, 2.3vw, 1.95rem);
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.38;
-  letter-spacing: -0.015em;
   color: var(--ink);
+  margin-bottom: 6px;
+}
+.sub-desc {
+  font-size: 0.85rem;
+  color: var(--ink-2);
   margin-bottom: 20px;
 }
-.cv-meta-line {
-  font-family: var(--mono);
-  font-size: 0.74rem;
-  color: var(--ink-3);
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding-bottom: 28px;
-  border-bottom: 1px solid var(--ink);
+
+/* Reasons / Phrases list — high contrast dark ink on subtle paper bars */
+.reason-group {
+  margin-bottom: 28px;
 }
-.cv-meta-line a {
+.reason-group:last-child {
+  margin-bottom: 0;
+}
+.reason-group-title {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 12px;
+}
+.reason-row {
+  margin-bottom: 12px;
+}
+.reason-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.86rem;
+  margin-bottom: 4px;
+}
+.reason-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.96rem;
+  color: var(--ink);
+}
+.reason-meaning {
+  font-size: 0.76rem;
+  color: var(--ink-3);
+}
+.reason-bar-track {
+  width: 100%;
+  height: 6px;
+  background: #EAE8DF;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.reason-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+/* ============================================================================
+   SELECTED WORK / CV (Ian Silber Minimalist Prose + Hyperlinks)
+   ============================================================================ */
+.cv-intro {
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.1vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.42;
+  color: var(--ink);
+  max-width: 820px;
+  margin-bottom: 32px;
+}
+.cv-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.cv-link:hover {
+  color: var(--c-interview);
+  text-decoration-color: var(--c-interview);
+}
+.arr {
+  font-family: var(--sans);
+  font-size: 0.75em;
+  color: var(--ink-3);
+  margin-left: 1px;
+}
+
+.cv-row {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 32px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+.cv-org {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.cv-loc {
+  font-size: 0.78rem;
+  color: var(--ink-3);
+  margin-top: 2px;
+}
+.cv-role {
+  margin-bottom: 18px;
+}
+.cv-role:last-child {
+  margin-bottom: 0;
+}
+.cv-role-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.cv-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.cv-bullets li {
+  font-size: 0.87rem;
+  color: var(--ink-2);
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+}
+.cv-bullets li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--ink-3);
+}
+
+/* ============================================================================
+   MINIMAL FOOTER
+   ============================================================================ */
+footer {
+  margin-top: 84px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--ink-3);
+}
+footer a {
   color: var(--ink-2);
   text-decoration: underline;
   text-decoration-color: var(--line-strong);
   text-underline-offset: 3px;
 }
-.cv-meta-line a:hover {
+footer a:hover {
   color: var(--ink);
-  text-decoration-color: var(--ink);
 }
 
-.cv-link {
-  color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: rgba(20, 20, 19, 0.3);
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.15s ease, color 0.15s ease;
-}
-.cv-link:hover {
-  color: var(--c-void);
-  text-decoration-color: var(--c-void);
-}
-.cv-link .arr {
-  font-family: var(--sans);
-  font-size: 0.75em;
-  color: var(--ink-3);
-  margin-left: 1px;
-  display: inline-block;
-  transition: transform 0.15s ease;
-}
-.cv-link:hover .arr {
-  color: var(--c-void);
-  transform: translate(1px, -1px);
-}
-
-.cv-section-header {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ink-3);
-  padding: 28px 0 12px;
-  border-bottom: 1px solid var(--line);
-}
-
-.cv-entry {
-  display: grid;
-  grid-template-columns: 210px 1fr;
-  gap: 32px;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--line);
-}
-.cv-entry:last-child { border-bottom: none; }
-.cv-org {
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-.cv-loc {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--ink-3);
-  margin-top: 3px;
-}
-.cv-note {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--ink-3);
-  margin-top: 8px;
-  line-height: 1.4;
-}
-
-.cv-role-group { margin-bottom: 20px; }
-.cv-role-group:last-child { margin-bottom: 0; }
-.cv-role-title {
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 8px;
-}
-.cv-prose-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.cv-prose-list li {
-  font-size: 0.88rem;
-  line-height: 1.62;
-  color: var(--ink-2);
-  padding-left: 14px;
-  position: relative;
-}
-.cv-prose-list li::before {
-  content: "–";
-  position: absolute;
-  left: 0;
-  color: var(--ink-4);
-}
-
-.colophon {
-  margin: 56px 0 48px;
-  padding-top: 24px;
-  border-top: 1px solid var(--ink);
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 24px;
-  flex-wrap: wrap;
-  font-size: 0.82rem;
-  color: var(--ink-2);
-}
-.colophon a {
-  color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-#hoverTip {
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  background: var(--ink);
-  color: var(--bg);
-  padding: 8px 12px;
-  font-size: 0.74rem;
-  line-height: 1.45;
-  max-width: 260px;
-  opacity: 0;
-  transition: opacity 0.1s ease;
-}
-
-@media (max-width: 920px) {
-  .plate-header { grid-template-columns: 1fr; gap: 8px; }
-  .cv-entry { grid-template-columns: 1fr; gap: 6px; }
-  .constructed-columns { grid-template-columns: 1fr 1fr; }
-  .outcome-col:nth-child(2), .outcome-col:nth-child(4) { border-right: none; }
-  .outcome-col:nth-child(3), .outcome-col:nth-child(5) { padding-left: 0; }
-  .outcome-col:nth-child(n+3) { border-top: 1px solid var(--line); }
-}
-@media (max-width: 640px) {
-  .page-wrap { padding: 0 14px; }
-  .header-inner { padding: 12px 14px; }
-  .site-role { display: none; }
-  .rg-canvas-container { height: 420px; }
-  .mobile-scroll-cue { display: block; }
-  .svg-plate { padding: 12px; }
+@media (max-width: 780px) {
+  .page { padding: 0 18px 80px; }
+  #kineticCanvas { height: 320px; }
+  .outcomes-row { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .two-col { grid-template-columns: 1fr; gap: 36px; }
+  .cv-row { grid-template-columns: 1fr; gap: 8px; }
 }
 </style>
 </head>
 <body>
 
-<div id="hoverTip"></div>
-
-<!-- QUIET ARCHITECTURAL HEADER -->
-<header class="site-header">
-  <div class="header-inner">
-    <a class="site-id" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-      <span class="site-name">Levi J. Higgs</span>
-      <span class="site-role">Product, Policy &amp; Trust Operations · New York</span>
-    </a>
-    <nav class="header-nav">
-      <button class="header-link active" id="navBtnViz" onclick="switchTab('pane-galaxy', true)">Perseverance</button>
-      <button class="header-link" id="navBtnCv" onclick="switchTab('pane-cv', true)">Curriculum Vitae</button>
-      <a class="header-link external" href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener">Run on your inbox ↗</a>
+<div class="page">
+  <header>
+    <div class="brand">Levi J. Higgs <span>New York</span></div>
+    <nav class="header-links">
+      <a href="#horizon">Every Company</a>
+      <a href="#rhythm">Timing &amp; Words</a>
+      <a href="#work">Work</a>
+      <a href="resume.html">CV</a>
+      <a href="mailto:levijameshiggs@gmail.com">Contact</a>
     </nav>
+  </header>
+
+  <!-- ========================================================================
+       ACT I: OPENING KINETIC SCULPTURE (UNBOXED, SEAMLESS ANIMATION)
+       ======================================================================== -->
+  <section class="intro">
+    <h1>Seven years of career gravity—every company that ghosted me, passed on me, interviewed me, the offers <em>I turned down</em>, and the places where I built.</h1>
+    <p>
+      Pulled directly from my personal Gmail archives across tech, media, and international education. A career isn’t a one-way funnel: sometimes they pass, sometimes you pass, and ten times it clicked.
+    </p>
+  </section>
+
+  <div class="sculpture-stage">
+    <canvas id="kineticCanvas"></canvas>
+    <div class="outcomes-row">
+      <div class="outcome-item">
+        <div class="outcome-label"><span class="dot" style="background:var(--c-void)"></span>Silence</div>
+        <div class="outcome-sub">No human reply</div>
+        <div class="outcome-co">Airbnb, Stripe, Discord, Runway, Reddit, MasterClass, Tesla</div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-label"><span class="dot" style="background:var(--c-they-passed)"></span>They Passed</div>
+        <div class="outcome-sub">Company declined</div>
+        <div class="outcome-co">OpenAI, Anthropic, Netflix, Spotify, Coinbase, McKinsey</div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-label"><span class="dot" style="background:var(--c-interview)"></span>Final Rounds</div>
+        <div class="outcome-sub">Deep interview loops</div>
+        <div class="outcome-co">Meta, OpenSea, Vimeo, Amazon, Etsy, DoorDash, Shutterstock</div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-label"><span class="dot" style="background:var(--c-i-passed)"></span>I Passed</div>
+        <div class="outcome-sub">I rejected their offer or loop</div>
+        <div class="outcome-co">Outlier AI, DoubleVerify, Epic Systems, Berlitz Japan, Atrium</div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-label"><span class="dot" style="background:var(--c-accepted)"></span>Where I Built</div>
+        <div class="outcome-sub">Accepted &amp; shipped work</div>
+        <div class="outcome-co">YouTube, TikTok, Teachers Pay Teachers, ELC Shanghai, Scale AI, OMSI, YBM ECC</div>
+      </div>
+    </div>
   </div>
-</header>
 
-<main class="page-wrap">
-  <!-- NEWTONIAN RUBE GOLDBERG MACHINE THAT CONSTRUCTS THE PAGE -->
-  <section class="kinetic-stage" aria-label="Newtonian Rube Goldberg Sorting Contraption">
-    <div class="stage-top-meta">
-      <span id="rgReadout">KINETIC SORTING APPARATUS — EVERY SPHERE IS A REAL COMPANY · CLICK ANYWHERE TO LAUNCH</span>
-      <div class="stage-controls">
-        <button class="quiet-action" id="btnHighlightMine" onclick="toggleFocusMode('MINE')">Focus: My Decisions (I Passed &amp; Accepted)</button>
-        <button class="quiet-action" onclick="resetAndDropMachine()">Drop Again</button>
+  <!-- ========================================================================
+       ACT II: THE 180° HORIZON FAN (RESPONSIVE, NO SCROLLBARS, DARK INK)
+       ======================================================================== -->
+  <section class="section" id="horizon">
+    <div class="section-head">
+      <h2 class="section-title">Every Company on One Horizon</h2>
+      <p class="section-note">
+        Each radial spoke is a company. The further outward a spoke reaches, the deeper the conversation went—from unanswered silence on the inner ring to offers I declined and roles I accepted on the outer rim.
+      </p>
+    </div>
+
+    <div class="fan-caption-bar">
+      <div id="fanHoverReadout">Hover any company around the arch to inspect the outcome.</div>
+      <div class="fan-legend">
+        <span><i class="dot" style="background:var(--c-void)"></i>Silence</span>
+        <span><i class="dot" style="background:var(--c-they-passed)"></i>They Passed</span>
+        <span><i class="dot" style="background:var(--c-interview)"></i>Final Rounds</span>
+        <span><i class="dot" style="background:var(--c-i-passed)"></i>I Passed</span>
+        <span><i class="dot" style="background:var(--c-accepted)"></i>Where I Built</span>
       </div>
     </div>
 
-    <div class="rg-canvas-container" id="rgViewport">
-      <canvas id="rgCanvas"></canvas>
+    <div class="svg-container" id="fanMount"></div>
+  </section>
+
+  <!-- ========================================================================
+       ACT III: TIMING & WORDS (24-HOUR CLOCK + TWO-WAY REASONS)
+       ======================================================================== -->
+  <section class="section" id="rhythm">
+    <div class="section-head">
+      <h2 class="section-title">When &amp; How Decisions Happened</h2>
+      <p class="section-note">
+        The hours of the day when applications were sent versus when companies replied—and the exact language used when they passed on me versus when I passed on them.
+      </p>
     </div>
 
-    <!-- 5 TWO-WAY CAREER OUTCOME TRAYS (NO NUMBERS, REAL COMPANIES & AGENCY) -->
-    <div class="constructed-columns" id="constructedCols">
-      <div class="outcome-col" onclick="switchTab('pane-galaxy', true); filterGalaxy('VOID', document.querySelectorAll('#galaxyStageFilter .filter-link')[4])">
-        <div class="oc-index"><span class="pip" style="background:var(--c-void)"></span><span>I / INTO THE VOID</span></div>
-        <div class="oc-title">Unanswered Silence</div>
-        <div class="oc-examples">Airbnb, Discord, Reddit, Runway, Tesla, MasterClass, HBO, Stripe</div>
+    <div class="two-col">
+      <div>
+        <h3 class="sub-heading">The 24-Hour Inbox Clock</h3>
+        <p class="sub-desc">Applications went out late at night (9 PM – 1 AM). Automated rejections arrived in morning batch jobs (8 – 10 AM), while real human interviews and offers landed mid-afternoon.</p>
+        <div class="svg-container" id="clockMount"></div>
       </div>
 
-      <div class="outcome-col" onclick="switchTab('pane-galaxy', true); filterGalaxy('THEY_PASSED', document.querySelectorAll('#galaxyStageFilter .filter-link')[3])">
-        <div class="oc-index"><span class="pip" style="background:var(--c-they-passed)"></span><span>II / THEY PASSED</span></div>
-        <div class="oc-title">Company Rejected Me</div>
-        <div class="oc-examples">Anthropic, OpenAI, Netflix, Spotify, Coinbase, McKinsey, Wieden+Kennedy</div>
-      </div>
+      <div>
+        <h3 class="sub-heading">Their Words vs. My Decisions</h3>
+        <p class="sub-desc">Comparing recurring phrases in rejection emails against the reasons I walked away from misaligned offers and accepted the right ones.</p>
 
-      <div class="outcome-col" onclick="switchTab('pane-galaxy', true); filterGalaxy('INTERVIEW', document.querySelectorAll('#galaxyStageFilter .filter-link')[2])">
-        <div class="oc-index"><span class="pip" style="background:var(--c-interview)"></span><span>III / DEEP LOOPS</span></div>
-        <div class="oc-title">Mutual Evaluation</div>
-        <div class="oc-examples">Meta, OpenSea, Vimeo, Amazon, Etsy, DoorDash, Shutterstock</div>
-      </div>
+        <div class="reason-group">
+          <div class="reason-group-title" style="color:var(--c-they-passed)">When They Rejected Me</div>
 
-      <div class="outcome-col" onclick="switchTab('pane-galaxy', true); filterGalaxy('I_PASSED', document.querySelectorAll('#galaxyStageFilter .filter-link')[1])">
-        <div class="oc-index"><span class="pip" style="background:var(--c-i-passed)"></span><span style="color:var(--c-i-passed)">IV / I PASSED</span></div>
-        <div class="oc-title">I Rejected Them</div>
-        <div class="oc-examples">Outlier AI, DoubleVerify, Epic Systems, Urban Teachers, Berlitz Japan, Atrium</div>
-      </div>
+          <div class="reason-row">
+            <div class="reason-top">
+              <span class="reason-quote">“...pursue other candidates whose experience more closely aligns...”</span>
+              <span class="reason-meaning">Standard ATS template</span>
+            </div>
+            <div class="reason-bar-track"><div class="reason-bar-fill" style="width:94%;background:var(--c-they-passed)"></div></div>
+          </div>
 
-      <div class="outcome-col" onclick="switchTab('pane-cv', true)">
-        <div class="oc-index"><span class="pip" style="background:var(--c-accepted)"></span><span style="color:var(--c-accepted)">V / ACCEPTED &amp; BUILT</span></div>
-        <div class="oc-title">Where I Said Yes</div>
-        <div class="oc-examples">Google — YouTube, TikTok, Teachers Pay Teachers, ELC Shanghai, Scale AI, RebelBase, OMSI, YBM ECC</div>
+          <div class="reason-row">
+            <div class="reason-top">
+              <span class="reason-quote">“...received an extraordinary volume of applications...”</span>
+              <span class="reason-meaning">Unreviewed queue</span>
+            </div>
+            <div class="reason-bar-track"><div class="reason-bar-fill" style="width:76%;background:var(--c-they-passed)"></div></div>
+          </div>
+
+          <div class="reason-row">
+            <div class="reason-top">
+              <span class="reason-quote">“...keep your resume on file for future openings...”</span>
+              <span class="reason-meaning">Polite close</span>
+            </div>
+            <div class="reason-bar-track"><div class="reason-bar-fill" style="width:62%;background:var(--c-they-passed)"></div></div>
+          </div>
+
+          <div class="reason-row">
+            <div class="reason-top">
+              <span class="reason-quote">“...this requisition has been cancelled or placed on hold...”</span>
+              <span class="reason-meaning">Headcount freeze</span>
+            </div>
+            <div class="reason-bar-track"><div class="reason-bar-fill" style="width:38%;background:var(--c-they-passed)"></div></div>
+          </div>
+        </div>
+
+        <div class="reason-group">
+          <div class="reason-group-title" style="color:var(--c-i-passed)">When I Rejected Them (I Passed)</div>
+
+          <div class="reason-row">
+            <div class="reason-top">
+              <span class="reason-quote">“Thank you for the offer—I’ve accepted a role with broader product scope.”</span>
+              <span class="reason-meaning">Outlier AI · Varsity Tutors · micro1</span>
+            </div>
+            <div class="reason-bar-track"><div class="reason-bar-fill" style="width:88%;background:var(--c-i-passed)"></div></div>
+          </div>
+
+          <div class="reason-row">
+            <div class="reason-top">
+              <span class="reason-quote">“Withdrawing from the final loop due to role or location fit.”</span>
+              <span class="reason-meaning">DoubleVerify · Epic Systems · Atrium</span>
+            </div>
+            <div class="reason-bar-track"><div class="reason-bar-fill" style="width:74%;background:var(--c-i-passed)"></div></div>
+          </div>
+
+          <div class="reason-row">
+            <div class="reason-top">
+              <span class="reason-quote">“Declining international contract to lead ELC Shanghai &amp; YBM Seoul.”</span>
+              <span class="reason-meaning">Berlitz Japan · Amity · Aclipse</span>
+            </div>
+            <div class="reason-bar-track"><div class="reason-bar-fill" style="width:64%;background:var(--c-i-passed)"></div></div>
+          </div>
+        </div>
+
+        <div class="reason-group">
+          <div class="reason-group-title" style="color:var(--c-accepted)">Where I Said Yes</div>
+          <div class="reason-row">
+            <div class="reason-top">
+              <span class="reason-quote">High-trust autonomy, hard policy problems, and real-world scale.</span>
+              <span class="reason-meaning">YouTube · TikTok · TPT · ELC Shanghai</span>
+            </div>
+            <div class="reason-bar-track"><div class="reason-bar-fill" style="width:100%;background:var(--c-accepted)"></div></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- WORKSPACE CONSTRUCTED BY THE MACHINE -->
-  <div class="constructed-workspace" id="workspaceRoot">
-    <div id="tabsAnchor" style="scroll-margin-top:58px;"></div>
-
-    <nav class="tab-index-bar" aria-label="Section Index">
-      <button class="arch-tab active" data-pane="pane-galaxy" onclick="switchTab('pane-galaxy', false)">
-        <span class="num">01</span> Company Galaxy
-      </button>
-      <button class="arch-tab" data-pane="pane-flow" onclick="switchTab('pane-flow', false)">
-        <span class="num">02</span> Two-Way Pipeline &amp; Mosaic
-      </button>
-      <button class="arch-tab" data-pane="pane-fan" onclick="switchTab('pane-fan', false)">
-        <span class="num">03</span> 180° Horizon Fan
-      </button>
-      <button class="arch-tab" data-pane="pane-clock" onclick="switchTab('pane-clock', false)">
-        <span class="num">04</span> Circadian &amp; Two-Way Lexicon
-      </button>
-      <button class="arch-tab" data-pane="pane-cv" onclick="switchTab('pane-cv', false)">
-        <span class="num">05</span> Curriculum Vitae
-      </button>
-    </nav>
-
-    <!-- ======================================================================
-         PANE 01: COMPANY GALAXY (RESIZABLE BY MEANINGFUL LENSES, NO RAW COUNTS)
-         ====================================================================== -->
-    <div id="pane-galaxy" class="view-pane active">
-      <section class="plate-section">
-        <div class="plate-header">
-          <div>
-            <div class="plate-kicker">PLATE 01 · TWO-WAY EMPLOYER TOPOLOGY</div>
-            <h2 class="plate-title">Every Company I Applied To, Interviewed With, Rejected, or Built At</h2>
-          </div>
-          <p class="plate-caption">
-            A career isn’t a one-way supplicant funnel. Some companies ghosted me, some rejected me, some I went deep into final rounds with, some <strong>I rejected</strong>, and ten became chapters where I accepted and shipped real work.
-          </p>
-        </div>
-
-        <div class="plate-controls">
-          <div class="filter-links" id="galaxyStageFilter">
-            <span class="filter-label">Filter:</span>
-            <button class="filter-link active" onclick="filterGalaxy('all', this)">All Companies</button>
-            <button class="filter-link" onclick="filterGalaxy('I_PASSED', this)"><span class="pip" style="background:var(--c-i-passed)"></span> I Rejected Them</button>
-            <button class="filter-link" onclick="filterGalaxy('ACCEPTED', this)"><span class="pip" style="background:var(--c-accepted)"></span> Accepted &amp; Built</button>
-            <button class="filter-link" onclick="filterGalaxy('INTERVIEW', this)"><span class="pip" style="background:var(--c-interview)"></span> Deep Loops</button>
-            <button class="filter-link" onclick="filterGalaxy('THEY_PASSED', this)"><span class="pip" style="background:var(--c-they-passed)"></span> They Rejected Me</button>
-            <button class="filter-link" onclick="filterGalaxy('VOID', this)"><span class="pip" style="background:var(--c-void)"></span> Silence</button>
-          </div>
-
-          <div class="filter-links" id="galaxySizeLens">
-            <span class="filter-label">Size Spheres By:</span>
-            <button class="filter-link active" onclick="setGalaxyLens('depth', this)">Relationship Depth</button>
-            <button class="filter-link" onclick="setGalaxyLens('rigor', this)">Loop Rigor &amp; Friction</button>
-            <button class="filter-link" onclick="setGalaxyLens('scale', this)">Organization Scale</button>
-          </div>
-        </div>
-
-        <div class="active-readout" id="galaxyReadout" style="margin-bottom:12px;">
-          Google — YouTube · Accepted &amp; Built · PM Rotation (Creator Policy), Policy Enforcement Manager (Adult Content), AI Principles Pioneer
-        </div>
-
-        <div class="svg-plate" id="galaxySvgWrap"></div>
-        <div class="mobile-scroll-cue">Swipe horizontally to explore the full galaxy →</div>
-      </section>
+  <!-- ========================================================================
+       ACT IV: SELECTED WORK & CURRICULUM VITAE
+       ======================================================================== -->
+  <section class="section" id="work">
+    <div class="section-head">
+      <h2 class="section-title">Work &amp; Experience</h2>
+      <p class="section-note">
+        <a class="cv-link" href="resume.html">Open standalone printable CV <span class="arr">↗</span></a>
+      </p>
     </div>
 
-    <!-- ======================================================================
-         PANE 02: TWO-WAY ALLUVIAL PIPELINE & CRAFT MOSAIC
-         ====================================================================== -->
-    <div id="pane-flow" class="view-pane">
-      <section class="plate-section">
-        <div class="plate-header">
-          <div>
-            <div class="plate-kicker">PLATE 02 · TWO-WAY DECISION ARCHITECTURE</div>
-            <h2 class="plate-title">Entry Channel → Craft Discipline → Mutual Decision</h2>
-          </div>
-          <p class="plate-caption">
-            Tracing how conversations began across direct referrals, recruiter outreach, and ATS portals, routed through my core craft disciplines, and resolved into mutual outcomes—including offers and loops I declined.
-          </p>
-        </div>
-        <div class="svg-plate" id="sankeySvgWrap"></div>
-        <div class="mobile-scroll-cue">Swipe horizontally to inspect full pipeline →</div>
-      </section>
+    <p class="cv-intro">
+      I build Trust &amp; Safety product systems, AI safety policies, and global enforcement operations—scaling classifier and GenAI policy workflows at
+      <a class="cv-link" href="https://transparencyreport.google.com/youtube-policy/removals" target="_blank" rel="noopener">YouTube<span class="arr">↗</span></a>,
+      leading North American Trust &amp; Safety operations at
+      <a class="cv-link" href="https://www.tiktok.com/transparency" target="_blank" rel="noopener">TikTok<span class="arr">↗</span></a>,
+      and protecting marketplace integrity for 85% of U.S. teachers at
+      <a class="cv-link" href="https://www.teacherspayteachers.com/About-Us" target="_blank" rel="noopener">Teachers Pay Teachers<span class="arr">↗</span></a>.
+    </p>
 
-      <section class="plate-section">
-        <div class="plate-header">
-          <div>
-            <div class="plate-kicker">PLATE 03 · CRAFT PROPORTION MOSAIC</div>
-            <h2 class="plate-title">Where I Focused My Craft</h2>
-          </div>
-          <p class="plate-caption">
-            Proportional area map of the seven disciplines spanning my career—from Trust &amp; Safety Product Management and Frontier AI Red-Teaming to Editorial Strategy and International Education Leadership.
-          </p>
-        </div>
-        <div class="svg-plate" id="mosaicSvgWrap"></div>
-      </section>
-    </div>
-
-    <!-- ======================================================================
-         PANE 03: 180° HORIZON FAN
-         ====================================================================== -->
-    <div id="pane-fan" class="view-pane">
-      <section class="plate-section">
-        <div class="plate-header">
-          <div>
-            <div class="plate-kicker">PLATE 04 · RADIAL HORIZON ARCHIVE</div>
-            <h2 class="plate-title">180° Two-Way Horizon Fan</h2>
-          </div>
-          <p class="plate-caption">
-            Inspired by <em>Information is Beautiful’s “Largest &amp; Longest Empires”</em>. Each radial spoke is a named employer extending across five concentric rings: <em>Silence → They Passed → Deep Loop → I Passed → Accepted &amp; Built</em>.
-          </p>
-        </div>
-        <div class="svg-plate" id="fanSvgWrap"></div>
-        <div class="mobile-scroll-cue">Swipe horizontally to inspect all radial spokes →</div>
-      </section>
-    </div>
-
-    <!-- ======================================================================
-         PANE 04: CIRCADIAN ROSE & TWO-WAY REJECTION LEXICON
-         ====================================================================== -->
-    <div id="pane-clock" class="view-pane">
-      <section class="plate-section">
-        <div class="plate-header">
-          <div>
-            <div class="plate-kicker">PLATE 05 · BILATERAL LEXICON</div>
-            <h2 class="plate-title">When They Rejected Me vs. When I Rejected Them</h2>
-          </div>
-          <p class="plate-caption">
-            Left: The automated boilerplate corporations send when passing on a candidate. Right: The language of recruiter courtship, verbal offers, and my own polite withdrawals when choosing a better path.
-          </p>
-        </div>
-        <div class="svg-plate" id="lexiconSvgWrap"></div>
-      </section>
-
-      <section class="plate-section">
-        <div class="plate-header">
-          <div>
-            <div class="plate-kicker">PLATE 06 · TEMPORAL CADENCE (YEAR-STRIPPED)</div>
-            <h2 class="plate-title">24-Hour Circadian Rose &amp; Weekly Rhythm</h2>
-          </div>
-          <p class="plate-caption">
-            All calendar years are removed for privacy, preserving only the circadian rhythm of automated morning ATS batch rejections versus afternoon human scheduling.
-          </p>
-        </div>
-        <div class="svg-plate" id="temporalSvgWrap"></div>
-      </section>
-    </div>
-
-    <!-- ======================================================================
-         PANE 05: AURA-MAXXED IAN SILBER-STYLE CURRICULUM VITAE
-         ====================================================================== -->
-    <div id="pane-cv" class="view-pane">
-      <article class="cv-wrapper">
-        <p class="cv-lead">
-          Levi J. Higgs leads Trust &amp; Safety product, AI policy, and operations in New York—scaling classifier and GenAI policy systems at
-          <a class="cv-link" href="https://transparencyreport.google.com/youtube-policy/removals" target="_blank" rel="noopener">YouTube<span class="arr">↗</span></a>,
-          managing North American Trust &amp; Safety operations at
-          <a class="cv-link" href="https://www.tiktok.com/transparency" target="_blank" rel="noopener">TikTok<span class="arr">↗</span></a>,
-          and safeguarding marketplace integrity for 85% of U.S. educators at
-          <a class="cv-link" href="https://www.teacherspayteachers.com/About-Us" target="_blank" rel="noopener">Teachers Pay Teachers<span class="arr">↗</span></a>.
-        </p>
-
-        <div class="cv-meta-line">
-          <span>New York, NY</span>
-          <a href="mailto:levijameshiggs@gmail.com">levijameshiggs@gmail.com</a>
-          <a href="https://engineering.nyu.edu/academics/programs/cybersecurity-ms-online/nyu-cyber-fellows" target="_blank" rel="noopener">NYU Tandon Cyber Fellow ↗</a>
-          <a href="#" onclick="window.print(); return false;">Print / Save PDF</a>
-        </div>
-
-        <div class="cv-section-header">Experience</div>
-
-        <!-- GOOGLE / YOUTUBE -->
-        <div class="cv-entry">
-          <div>
-            <div class="cv-org"><a class="cv-link" href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/" target="_blank" rel="noopener">Google — YouTube<span class="arr">↗</span></a></div>
-            <div class="cv-loc">New York, NY</div>
-            <div class="cv-note">Level promotion with high rating · 2× 1st Place, Google Innovation Week</div>
-          </div>
-          <div>
-            <div class="cv-role-group">
-              <div class="cv-role-title">Product Manager Rotation, Creator Policy Experience</div>
-              <ul class="cv-prose-list">
-                <li>Targeted upload frictions using age-appropriate classifiers to reduce <a class="cv-link" href="https://transparencyreport.google.com/youtube-policy/removals" target="_blank" rel="noopener">Violative View Rate (VVR)<span class="arr">↗</span></a>, the primary metric in YouTube’s Transparency Report—scaling to 35M triggers/week with an 18% reduction in enforcement and 75% positive creator feedback.</li>
-                <li>Launched risk-adjusted GenAI policy snippets for <a class="cv-link" href="https://support.google.com/youtube/answer/2801999" target="_blank" rel="noopener">Child Safety<span class="arr">↗</span></a>, delivering 2M AI snippets across 80+ languages, reducing appeals, and maintaining 100% freedom from policy leaks.</li>
-              </ul>
-            </div>
-
-            <div class="cv-role-group">
-              <div class="cv-role-title">Policy Enforcement Manager, Adult Content</div>
-              <ul class="cv-prose-list">
-                <li>Reduced vertical VVR by 87%, the single largest metric reduction in the Trust &amp; Safety organization, governing <a class="cv-link" href="https://support.google.com/youtube/answer/2802002" target="_blank" rel="noopener">Nudity &amp; Sexual Content policy<span class="arr">↗</span></a>.</li>
-                <li>Developed human and machine enforcement policies and iterated adversarial prompts with internal AI tooling; structured a policy-change evaluation database across multimodal datasets.</li>
-                <li>Established Product-Agnostic AI safety policies across video, image, text, link, and audio surfaces.</li>
-                <li>Built and deployed internal AI applications and extensions that reclaimed 5,000+ FTE hours/year—winning 1st Place in back-to-back Google Innovation Week competitions for <em>“Policy as Code”</em>.</li>
-                <li>Global Subject Matter Expert (SME) for Adult Content across Engineering, Legal, Product, and Executive escalations, including court subpoenas.</li>
-              </ul>
-            </div>
-
-            <div class="cv-role-group">
-              <div class="cv-role-title">AI Principles Pioneer, Google Responsible Innovation</div>
-              <ul class="cv-prose-list">
-                <li>Conducted adversarial Red Teaming and safety evaluations for <a class="cv-link" href="https://ai.google/responsibility/principles/" target="_blank" rel="noopener">Google’s frontier AI models, products, and robotics<span class="arr">↗</span></a>.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- TIKTOK -->
-        <div class="cv-entry">
-          <div>
-            <div class="cv-org"><a class="cv-link" href="https://www.tiktok.com/transparency" target="_blank" rel="noopener">TikTok<span class="arr">↗</span></a></div>
-            <div class="cv-loc">New York, NY</div>
-            <div class="cv-note">75% of North American site volume</div>
-          </div>
-          <div>
-            <div class="cv-role-group">
-              <div class="cv-role-title">Operations Manager, Trust &amp; Safety</div>
-              <ul class="cv-prose-list">
-                <li>Managed the largest internal Trust &amp; Safety team in North America—leading 7 Team Leads and 130 Content Specialists responsible for 75% of site business by volume (<a class="cv-link" href="https://www.tiktok.com/transparency/en-us/community-guidelines-enforcement-2023-4/" target="_blank" rel="noopener">Community Guidelines Enforcement Report<span class="arr">↗</span></a>).</li>
-                <li>Launched the organization’s first Golden Set quality benchmark process, improving moderator accuracy while cutting overhead.</li>
-                <li>Ratified the moderator performance review framework across 25+ workflows and 300 moderators; added 24/7 IP request ticketing workflows.</li>
-              </ul>
-            </div>
-
-            <div class="cv-role-group">
-              <div class="cv-role-title">Team Lead, Trust &amp; Safety</div>
-              <ul class="cv-prose-list">
-                <li>Led the content engineering cohort for push notifications and DAU growth; launched a Follow-the-Sun operational model managing 40 agents across 4 shifts.</li>
-                <li>Created the Team Lead training curriculum and executed live brand-safety partnerships with <a class="cv-link" href="https://www.cbs.com/" target="_blank" rel="noopener">CBS<span class="arr">↗</span></a>, <a class="cv-link" href="https://www.ncaa.com/march-madness" target="_blank" rel="noopener">NCAA<span class="arr">↗</span></a>, and <a class="cv-link" href="https://www.buick.com/" target="_blank" rel="noopener">Buick<span class="arr">↗</span></a>.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- TEACHERS PAY TEACHERS -->
-        <div class="cv-entry">
-          <div>
-            <div class="cv-org"><a class="cv-link" href="https://www.teacherspayteachers.com/About-Us" target="_blank" rel="noopener">Teachers Pay Teachers<span class="arr">↗</span></a></div>
-            <div class="cv-loc">New York, NY</div>
-          </div>
-          <div>
-            <div class="cv-role-group">
-              <div class="cv-role-title">Consultant, Marketplace Integrity</div>
-              <ul class="cv-prose-list">
-                <li>Validated 7M+ original resources on a marketplace used by ~85% of PreK–12 educators in the United States, ensuring compliance with <a class="cv-link" href="https://www.teacherspayteachers.com/Copyright-Policy" target="_blank" rel="noopener">intellectual property and safety policy<span class="arr">↗</span></a>.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- EARLIER ROLES -->
-        <div class="cv-entry">
-          <div>
-            <div class="cv-org">Earlier Experience</div>
-            <div class="cv-loc">NY · OR · Shanghai · Seoul · WI</div>
-          </div>
-          <div>
-            <ul class="cv-prose-list">
-              <li>Writer &amp; Content Strategist — <a class="cv-link" href="https://scale.com/" target="_blank" rel="noopener">Scale AI<span class="arr">↗</span></a>, <a class="cv-link" href="https://www.rebelbase.co/" target="_blank" rel="noopener">RebelBase<span class="arr">↗</span></a>, Eduland, and 4AM Marketing (New York, NY).</li>
-              <li>Instructor — <a class="cv-link" href="https://omsi.edu/" target="_blank" rel="noopener">Oregon Museum of Science and Industry (OMSI)<span class="arr">↗</span></a> (Portland, OR).</li>
-              <li>Founding Principal (PreK–8th Grade) — Enspired Learning Center (ELC Shanghai, China).</li>
-              <li>English Teacher (PreK–8th Grade) — <a class="cv-link" href="https://www.ybmecc.co.kr/" target="_blank" rel="noopener">YBM ECC<span class="arr">↗</span></a> (Seoul, South Korea).</li>
-              <li>Legislative Intern — <a class="cv-link" href="https://docs.legis.wisconsin.gov/" target="_blank" rel="noopener">Wisconsin State Assembly<span class="arr">↗</span></a> (Madison, WI).</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="cv-section-header">Education</div>
-
-        <div class="cv-entry">
-          <div>
-            <div class="cv-org"><a class="cv-link" href="https://engineering.nyu.edu/" target="_blank" rel="noopener">New York University<span class="arr">↗</span></a></div>
-            <div class="cv-loc">Tandon School of Engineering</div>
-          </div>
-          <div>
-            <div class="cv-role-title">M.S. in Cybersecurity — <a class="cv-link" href="https://engineering.nyu.edu/academics/programs/cybersecurity-ms-online/nyu-cyber-fellows" target="_blank" rel="noopener">NYU Cyber Fellow (75% Merit Scholarship)<span class="arr">↗</span></a></div>
-          </div>
-        </div>
-
-        <div class="cv-entry">
-          <div>
-            <div class="cv-org"><a class="cv-link" href="https://www.utc.edu/" target="_blank" rel="noopener">Univ. of Tennessee at Chattanooga<span class="arr">↗</span></a></div>
-            <div class="cv-loc">Chattanooga, TN</div>
-          </div>
-          <div>
-            <div class="cv-role-title">B.A. in English: Professional Writing &amp; Rhetoric (Minor in Communications)</div>
-            <ul class="cv-prose-list">
-              <li>Editor-in-Chief of the university newspaper (<a class="cv-link" href="https://www.theutcecho.com/" target="_blank" rel="noopener">The University Echo<span class="arr">↗</span></a>), Captain of the Soccer Team, and Founding President of the UTC Outdoors Leadership Institute.</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <!-- QUIET COLOPHON -->
-    <footer class="colophon">
+    <div class="cv-row">
       <div>
-        <strong>Levi J. Higgs</strong> · <a href="mailto:levijameshiggs@gmail.com">levijameshiggs@gmail.com</a>
+        <div class="cv-org"><a class="cv-link" href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/" target="_blank" rel="noopener">Google — YouTube<span class="arr">↗</span></a></div>
+        <div class="cv-loc">New York, NY</div>
       </div>
       <div>
-        Want to map your own career inbox locally? <a href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener">Get the local-first Python kit on Gumroad ↗</a>
+        <div class="cv-role">
+          <div class="cv-role-title">Product Manager Rotation, Creator Policy Experience</div>
+          <ul class="cv-bullets">
+            <li>Targeted upload frictions using age-appropriate classifiers to reduce <a class="cv-link" href="https://transparencyreport.google.com/youtube-policy/removals" target="_blank" rel="noopener">Violative View Rate (VVR)<span class="arr">↗</span></a>—scaling to 35M triggers/week with an 18% reduction in enforcement and 75% positive creator feedback.</li>
+            <li>Launched risk-adjusted GenAI policy snippets for <a class="cv-link" href="https://support.google.com/youtube/answer/2801999" target="_blank" rel="noopener">Child Safety<span class="arr">↗</span></a>, delivering 2M AI snippets across 80+ languages while reducing appeals.</li>
+          </ul>
+        </div>
+        <div class="cv-role">
+          <div class="cv-role-title">Policy Enforcement Manager, Adult Content</div>
+          <ul class="cv-bullets">
+            <li>Reduced vertical VVR by 87%, the single largest metric reduction in the Trust &amp; Safety organization, governing <a class="cv-link" href="https://support.google.com/youtube/answer/2802002" target="_blank" rel="noopener">Nudity &amp; Sexual Content policy<span class="arr">↗</span></a>.</li>
+            <li>Built and deployed internal AI tools and extensions that reclaimed 5,000+ FTE hours/year, winning 1st Place in back-to-back Google Innovation Week competitions for <em>Policy as Code</em>.</li>
+            <li>Conducted adversarial Red Teaming for <a class="cv-link" href="https://ai.google/responsibility/principles/" target="_blank" rel="noopener">Google’s frontier AI models, products, and robotics<span class="arr">↗</span></a> as an AI Principles Pioneer.</li>
+          </ul>
+        </div>
       </div>
-    </footer>
-  </div>
-</main>
+    </div>
+
+    <div class="cv-row">
+      <div>
+        <div class="cv-org"><a class="cv-link" href="https://www.tiktok.com/transparency" target="_blank" rel="noopener">TikTok<span class="arr">↗</span></a></div>
+        <div class="cv-loc">New York, NY</div>
+      </div>
+      <div>
+        <div class="cv-role">
+          <div class="cv-role-title">Operations Manager &amp; Team Lead, Trust &amp; Safety</div>
+          <ul class="cv-bullets">
+            <li>Managed the largest internal Trust &amp; Safety team in North America—leading 7 Team Leads and 130 Content Specialists responsible for 75% of site volume (<a class="cv-link" href="https://www.tiktok.com/transparency/en-us/community-guidelines-enforcement-2023-4/" target="_blank" rel="noopener">Enforcement Report<span class="arr">↗</span></a>).</li>
+            <li>Launched the organization’s first Golden Set quality benchmark and executed live brand-safety partnerships with <a class="cv-link" href="https://www.cbs.com/" target="_blank" rel="noopener">CBS<span class="arr">↗</span></a>, <a class="cv-link" href="https://www.ncaa.com/march-madness" target="_blank" rel="noopener">NCAA<span class="arr">↗</span></a>, and <a class="cv-link" href="https://www.buick.com/" target="_blank" rel="noopener">Buick<span class="arr">↗</span></a>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-row">
+      <div>
+        <div class="cv-org"><a class="cv-link" href="https://www.teacherspayteachers.com/About-Us" target="_blank" rel="noopener">Teachers Pay Teachers<span class="arr">↗</span></a></div>
+        <div class="cv-loc">New York, NY</div>
+      </div>
+      <div>
+        <div class="cv-role">
+          <div class="cv-role-title">Consultant, Marketplace Integrity</div>
+          <ul class="cv-bullets">
+            <li>Validated 7M+ educator resources on a marketplace used by 85% of U.S. teachers, enforcing <a class="cv-link" href="https://www.teacherspayteachers.com/Copyright-Policy" target="_blank" rel="noopener">copyright and trust policy<span class="arr">↗</span></a>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-row">
+      <div>
+        <div class="cv-org">Enspired Learning Center (ELC)</div>
+        <div class="cv-loc">Shanghai, China</div>
+      </div>
+      <div>
+        <div class="cv-role">
+          <div class="cv-role-title">Founding Principal, PreK–8th Grade</div>
+          <ul class="cv-bullets">
+            <li>Founded and led PreK–8th grade academic operations, curriculum design, and faculty hiring in Shanghai.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-row">
+      <div>
+        <div class="cv-org">Earlier Work &amp; Education</div>
+        <div class="cv-loc">NY · OR · Seoul · TN</div>
+      </div>
+      <div>
+        <ul class="cv-bullets">
+          <li>Writer &amp; Content Strategist at <a class="cv-link" href="https://scale.com/" target="_blank" rel="noopener">Scale AI<span class="arr">↗</span></a>, <a class="cv-link" href="https://www.rebelbase.co/" target="_blank" rel="noopener">RebelBase<span class="arr">↗</span></a>, Eduland, and 4AM Marketing; Instructor at <a class="cv-link" href="https://omsi.edu/" target="_blank" rel="noopener">OMSI<span class="arr">↗</span></a>; English Teacher at <a class="cv-link" href="https://www.ybmecc.co.kr/" target="_blank" rel="noopener">YBM ECC Seoul<span class="arr">↗</span></a>; Legislative Intern at the <a class="cv-link" href="https://docs.legis.wisconsin.gov/" target="_blank" rel="noopener">Wisconsin State Assembly<span class="arr">↗</span></a>.</li>
+          <li><strong>M.S. in Cybersecurity</strong>, <a class="cv-link" href="https://engineering.nyu.edu/academics/programs/cybersecurity-ms-online/nyu-cyber-fellows" target="_blank" rel="noopener">New York University (Tandon Cyber Fellow)<span class="arr">↗</span></a> · <strong>B.A. in English</strong>, <a class="cv-link" href="https://www.utc.edu/" target="_blank" rel="noopener">UT Chattanooga<span class="arr">↗</span></a> (Editor-in-Chief, <em>The University Echo</em>).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      Levi J. Higgs · <a href="mailto:levijameshiggs@gmail.com">levijameshiggs@gmail.com</a> · <a href="resume.html">Printable CV</a>
+    </div>
+    <div>
+      Want to map your own inbox? <a href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener">Get the Gmail extraction &amp; visualization kit ↗</a>
+    </div>
+  </footer>
+</div>
 
 <script>
-const COMPANIES = [{"name": "Google \u2014 YouTube", "sector": "Frontier AI & Big Tech", "track": "Trust & Safety / Policy & PM", "stage": "ACCEPTED", "note": "PM Rotation (Creator Policy), Policy Enforcement Manager (Adult Content), AI Principles Pioneer", "depth": 100, "rigor": 100, "scale": 100}, {"name": "TikTok", "sector": "Consumer Social & Creator", "track": "Trust & Safety / Policy & PM", "stage": "ACCEPTED", "note": "Operations Manager & Team Lead, Trust & Safety (7 TLs, 130 Specialists, 75% NA volume)", "depth": 96, "rigor": 92, "scale": 98}, {"name": "Teachers Pay Teachers", "sector": "EdTech & Global Education", "track": "Trust & Safety / Policy & PM", "stage": "ACCEPTED", "note": "Consultant, Marketplace Integrity (7M+ educator resources, 85% of US teachers)", "depth": 88, "rigor": 80, "scale": 82}, {"name": "ELC Shanghai", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "ACCEPTED", "note": "Founding Principal (PreK\u20138th Grade, Shanghai \u2014 recruited & closed via WeChat)", "depth": 90, "rigor": 85, "scale": 72}, {"name": "Scale AI", "sector": "Frontier AI & Big Tech", "track": "AI Safety, Red-Teaming & GenAI", "stage": "ACCEPTED", "note": "Writer & Content Strategist (AI training & evaluation)", "depth": 84, "rigor": 78, "scale": 88}, {"name": "RebelBase", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "ACCEPTED", "note": "Writer & Content Strategist (New York)", "depth": 82, "rigor": 76, "scale": 68}, {"name": "OMSI (Oregon Museum of Science)", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "ACCEPTED", "note": "Science & Outdoor Instructor (Portland, OR)", "depth": 80, "rigor": 72, "scale": 75}, {"name": "YBM ECC (Seoul)", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "ACCEPTED", "note": "English Teacher (PreK\u20138th Grade, Seoul, South Korea)", "depth": 82, "rigor": 74, "scale": 78}, {"name": "Wisconsin State Assembly", "sector": "Consulting, Policy & Ops", "track": "Trust & Safety / Policy & PM", "stage": "ACCEPTED", "note": "Legislative Intern (Madison, WI)", "depth": 78, "rigor": 74, "scale": 76}, {"name": "Eduland & 4AM Marketing", "sector": "Brand, Agency & Publishing", "track": "Brand, Media & Content Strategy", "stage": "ACCEPTED", "note": "Writer & Content Strategist (New York, NY)", "depth": 76, "rigor": 70, "scale": 65}, {"name": "FedEx Ground", "sector": "Consulting, Policy & Ops", "track": "Product, Operations & Strategy", "stage": "I_PASSED", "note": "Operations offer \u2014 I declined", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Outlier AI", "sector": "Frontier AI & Big Tech", "track": "AI Safety, Red-Teaming & GenAI", "stage": "I_PASSED", "note": "Offer received \u2014 I declined", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Atrium", "sector": "Consulting, Policy & Ops", "track": "Trust & Safety / Policy & PM", "stage": "I_PASSED", "note": "Offer track \u2014 I declined", "depth": 74, "rigor": 76, "scale": 66}, {"name": "State of Tennessee", "sector": "Consulting, Policy & Ops", "track": "Product, Operations & Strategy", "stage": "I_PASSED", "note": "Public sector offer \u2014 I declined", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Meta", "sector": "Frontier AI & Big Tech", "track": "Trust & Safety / Policy & PM", "stage": "INTERVIEW", "note": "Multi-round interview loop", "depth": 68, "rigor": 82, "scale": 92}, {"name": "DoubleVerify", "sector": "Enterprise SaaS & Cyber", "track": "Trust & Safety / Policy & PM", "stage": "I_PASSED", "note": "Deep loop \u2014 I withdrew", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Amity Corp (Japan)", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "I_PASSED", "note": "Interview loop \u2014 I declined for Seoul/Shanghai", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Pathrise", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "I_PASSED", "note": "Mentor/Advisor track \u2014 I passed", "depth": 74, "rigor": 76, "scale": 66}, {"name": "OpenSea", "sector": "Fintech, Web3 & Commerce", "track": "Trust & Safety / Policy & PM", "stage": "INTERVIEW", "note": "Multi-round interview loop", "depth": 68, "rigor": 82, "scale": 92}, {"name": "Vimeo", "sector": "Streaming, Gaming & Media", "track": "Trust & Safety / Policy & PM", "stage": "INTERVIEW", "note": "Multi-round interview loop", "depth": 68, "rigor": 82, "scale": 92}, {"name": "Urban Teachers", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "I_PASSED", "note": "Selected \u2014 I declined offer", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Epic Systems", "sector": "Enterprise SaaS & Cyber", "track": "Product, Operations & Strategy", "stage": "I_PASSED", "note": "Multi-round loop (Madison) \u2014 I withdrew", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Interstate Logistics", "sector": "Consulting, Policy & Ops", "track": "Account Strategy & Growth", "stage": "INTERVIEW", "note": "Multi-round interview loop", "depth": 68, "rigor": 82, "scale": 66}, {"name": "micro1", "sector": "Frontier AI & Big Tech", "track": "AI Safety, Red-Teaming & GenAI", "stage": "I_PASSED", "note": "AI specialist onboarding \u2014 I passed", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Amazon", "sector": "Frontier AI & Big Tech", "track": "Brand, Media & Content Strategy", "stage": "INTERVIEW", "note": "Multi-round interview loop", "depth": 68, "rigor": 82, "scale": 92}, {"name": "Etsy", "sector": "Fintech, Web3 & Commerce", "track": "Trust & Safety / Policy & PM", "stage": "INTERVIEW", "note": "Multi-round interview loop", "depth": 68, "rigor": 82, "scale": 92}, {"name": "DoorDash", "sector": "Fintech, Web3 & Commerce", "track": "Trust & Safety / Policy & PM", "stage": "INTERVIEW", "note": "Multi-round interview loop", "depth": 68, "rigor": 82, "scale": 92}, {"name": "Aclipse (Korea)", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "I_PASSED", "note": "Korea teaching offer \u2014 I declined for YBM ECC", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Varsity Tutors", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "I_PASSED", "note": "Contract offered \u2014 I passed", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Berlitz Japan", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "I_PASSED", "note": "Interview loop \u2014 I declined", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Adventure Teaching", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "I_PASSED", "note": "Teaching placement offer \u2014 I declined", "depth": 74, "rigor": 76, "scale": 66}, {"name": "NYC Teaching Collaborative", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "I_PASSED", "note": "Selected \u2014 I declined offer", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Shutterstock", "sector": "Streaming, Gaming & Media", "track": "Brand, Media & Content Strategy", "stage": "INTERVIEW", "note": "Multi-round interview loop", "depth": 68, "rigor": 82, "scale": 66}, {"name": "Nolej AI", "sector": "EdTech & Global Education", "track": "AI Safety, Red-Teaming & GenAI", "stage": "INTERVIEW", "note": "Multi-round interview loop", "depth": 68, "rigor": 82, "scale": 66}, {"name": "Sumdog", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "INTERVIEW", "note": "Multi-round interview loop", "depth": 68, "rigor": 82, "scale": 66}, {"name": "Meten English", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "I_PASSED", "note": "China teaching offer \u2014 I declined for ELC Shanghai", "depth": 74, "rigor": 76, "scale": 66}, {"name": "Upwork", "sector": "Consulting, Policy & Ops", "track": "Copywriting, Editorial & UX Writing", "stage": "INTERVIEW", "note": "Multi-round interview loop", "depth": 68, "rigor": 82, "scale": 66}, {"name": "Anthropic", "sector": "Frontier AI & Big Tech", "track": "AI Safety, Red-Teaming & GenAI", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "Coinbase", "sector": "Fintech, Web3 & Commerce", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "TrendMicro", "sector": "Enterprise SaaS & Cyber", "track": "Account Strategy & Growth", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Visa", "sector": "Fintech, Web3 & Commerce", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "Newsela", "sector": "EdTech & Global Education", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Tesla", "sector": "Frontier AI & Big Tech", "track": "Product, Operations & Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 92}, {"name": "Eventbrite", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "WorldStrides", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Renaissance Learning", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "UBS", "sector": "Fintech, Web3 & Commerce", "track": "Product, Operations & Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 92}, {"name": "GoDaddy", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Match Group", "sector": "Consumer Social & Creator", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Salesforce", "sector": "Enterprise SaaS & Cyber", "track": "Product, Operations & Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Dailymotion", "sector": "Streaming, Gaming & Media", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Netflix", "sector": "Streaming, Gaming & Media", "track": "Brand, Media & Content Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 92}, {"name": "Public Storage", "sector": "Consulting, Policy & Ops", "track": "Account Strategy & Growth", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Airbnb", "sector": "Fintech, Web3 & Commerce", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "Discord", "sector": "Consumer Social & Creator", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "brightwheel", "sector": "EdTech & Global Education", "track": "Product, Operations & Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "iTutorGroup", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Reddit", "sector": "Consumer Social & Creator", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "Udemy", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Teachable", "sector": "EdTech & Global Education", "track": "Brand, Media & Content Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Grailed", "sector": "Fintech, Web3 & Commerce", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "360Learning", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "NoRedInk", "sector": "EdTech & Global Education", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Bridgestone", "sector": "Consulting, Policy & Ops", "track": "Brand, Media & Content Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Gemini", "sector": "Fintech, Web3 & Commerce", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Navan (TripActions)", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "BARK (BarkBox)", "sector": "Fintech, Web3 & Commerce", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Jellysmack", "sector": "Streaming, Gaming & Media", "track": "Brand, Media & Content Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "JET Program USA", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Spotify", "sector": "Streaming, Gaming & Media", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "FORTUNE", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "Frame.io", "sector": "Streaming, Gaming & Media", "track": "Brand, Media & Content Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "MasterClass", "sector": "EdTech & Global Education", "track": "Brand, Media & Content Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "MJH Life Sc", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "SoFi", "sector": "Fintech, Web3 & Commerce", "track": "Product, Operations & Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Klaviyo", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Epic Games", "sector": "Streaming, Gaming & Media", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "Whatnot", "sector": "Fintech, Web3 & Commerce", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Snap Inc.", "sector": "Consumer Social & Creator", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "OpenFin", "sector": "Fintech, Web3 & Commerce", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Sales Development", "sector": "Editorial, Press & Agencies", "track": "Account Strategy & Growth", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Business Developm", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "D.", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Ramsey Solutions", "sector": "Consulting, Policy & Ops", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Deezer", "sector": "Streaming, Gaming & Media", "track": "Brand, Media & Content Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "SUAVV Magazine", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Kaplan International", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "EF Education First", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Scholastic", "sector": "EdTech & Global Education", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Chateau School (Tokyo)", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Superhuman", "sector": "Enterprise SaaS & Cyber", "track": "Product, Operations & Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Dataiku", "sector": "Frontier AI & Big Tech", "track": "AI Safety, Red-Teaming & GenAI", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Morning Brew", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Redbubble", "sector": "Fintech, Web3 & Commerce", "track": "Trust & Safety / Policy & PM", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Multiverse", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Chegg", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "McKinsey & Company", "sector": "Consulting, Policy & Ops", "track": "Product, Operations & Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "Screencastify", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Thumbtack", "sector": "Fintech, Web3 & Commerce", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Uncommon Schools", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Skillshare", "sector": "EdTech & Global Education", "track": "Brand, Media & Content Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Cond\u00e9 Nast", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "N.", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "FOX", "sector": "Editorial, Press & Agencies", "track": "Brand, Media & Content Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Amobee", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Free Agency", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Aerotek", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "WWP", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Smarsh", "sector": "Enterprise SaaS & Cyber", "track": "Product, Operations & Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Dotdash Meredith", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Group Nine Media", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "AmeriCorps", "sector": "Consulting, Policy & Ops", "track": "Product, Operations & Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "The ...", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "WeTransfer", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "SayABC", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Riot Games", "sector": "Streaming, Gaming & Media", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "HBO", "sector": "Streaming, Gaming & Media", "track": "Brand, Media & Content Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 92}, {"name": "General Intuition / Medal", "sector": "Frontier AI & Big Tech", "track": "AI Safety, Red-Teaming & GenAI", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "MrBeast", "sector": "Consumer Social & Creator", "track": "Brand, Media & Content Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Character.AI", "sector": "Frontier AI & Big Tech", "track": "AI Safety, Red-Teaming & GenAI", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Mozilla", "sector": "Enterprise SaaS & Cyber", "track": "Trust & Safety / Policy & PM", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Runway", "sector": "Frontier AI & Big Tech", "track": "AI Safety, Red-Teaming & GenAI", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "The Motley Fool", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Wasserman", "sector": "Editorial, Press & Agencies", "track": "Brand, Media & Content Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "ASOS", "sector": "Fintech, Web3 & Commerce", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Major League Soccer", "sector": "Streaming, Gaming & Media", "track": "Brand, Media & Content Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Cash App (Block)", "sector": "Fintech, Web3 & Commerce", "track": "Trust & Safety / Policy & PM", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "PwC", "sector": "Consulting, Policy & Ops", "track": "Product, Operations & Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 92}, {"name": "Acorns", "sector": "Fintech, Web3 & Commerce", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "UiPath", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "TripleLift", "sector": "Enterprise SaaS & Cyber", "track": "Product, Operations & Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "BetterCloud", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Genius", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Brainly", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "BrainPOP", "sector": "EdTech & Global Education", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Highwire PR", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Mystery Science", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Grio", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "LogRhythm", "sector": "Enterprise SaaS & Cyber", "track": "Enterprise SaaS & Cyber", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Hologram", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "IXL Learning", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Chopra Global", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "naviHealth, Inc. \" ...", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Microsoft", "sector": "Frontier AI & Big Tech", "track": "Product, Operations & Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "PARK SLOPE U...", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Zoom", "sector": "Enterprise SaaS & Cyber", "track": "Product, Operations & Strategy", "stage": "THEY_PASSED", "note": "Explicit rejection received", "depth": 48, "rigor": 52, "scale": 46}, {"name": "Sco", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Cur...", "sector": "Editorial, Press & Agencies", "track": "Account Strategy & Growth", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "BetterLesson", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Sense Talen", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Forbes Media", "sector": "Editorial, Press & Agencies", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 92}, {"name": "Curriculum Associates", "sector": "EdTech & Global Education", "track": "EdTech, Curriculum & Teaching", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "TeePublic", "sector": "Fintech, Web3 & Commerce", "track": "Brand, Media & Content Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Postlight", "sector": "Enterprise SaaS & Cyber", "track": "Product, Operations & Strategy", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}, {"name": "Shane Co.", "sector": "Enterprise SaaS & Cyber", "track": "Copywriting, Editorial & UX Writing", "stage": "VOID", "note": "Application sent \u2014 silence", "depth": 34, "rigor": 35, "scale": 46}];
-const SEASONALITY_DATA = {"months": [{"month": "Jan", "applications": 369, "rejections": 47, "interviews": 31, "offers": 8, "total": 455}, {"month": "Feb", "applications": 65, "rejections": 54, "interviews": 19, "offers": 14, "total": 152}, {"month": "Mar", "applications": 23, "rejections": 18, "interviews": 1, "offers": 1, "total": 43}, {"month": "Apr", "applications": 40, "rejections": 20, "interviews": 7, "offers": 4, "total": 71}, {"month": "May", "applications": 100, "rejections": 47, "interviews": 4, "offers": 0, "total": 151}, {"month": "Jun", "applications": 28, "rejections": 27, "interviews": 24, "offers": 0, "total": 79}, {"month": "Jul", "applications": 67, "rejections": 42, "interviews": 47, "offers": 33, "total": 189}, {"month": "Aug", "applications": 222, "rejections": 61, "interviews": 31, "offers": 4, "total": 318}, {"month": "Sep", "applications": 93, "rejections": 41, "interviews": 6, "offers": 0, "total": 140}, {"month": "Oct", "applications": 156, "rejections": 31, "interviews": 7, "offers": 0, "total": 194}, {"month": "Nov", "applications": 248, "rejections": 47, "interviews": 9, "offers": 0, "total": 304}, {"month": "Dec", "applications": 175, "rejections": 42, "interviews": 23, "offers": 2, "total": 242}], "days_of_week": [{"day": "Mon", "applications": 266, "rejections": 75, "interviews": 25, "offers": 8, "total": 374}, {"day": "Tue", "applications": 223, "rejections": 82, "interviews": 39, "offers": 14, "total": 358}, {"day": "Wed", "applications": 288, "rejections": 112, "interviews": 38, "offers": 16, "total": 454}, {"day": "Thu", "applications": 405, "rejections": 79, "interviews": 44, "offers": 17, "total": 545}, {"day": "Fri", "applications": 206, "rejections": 79, "interviews": 45, "offers": 4, "total": 334}, {"day": "Sat", "applications": 137, "rejections": 25, "interviews": 10, "offers": 5, "total": 177}, {"day": "Sun", "applications": 61, "rejections": 25, "interviews": 8, "offers": 2, "total": 96}], "month_dow_matrix": [[53, 54, 34, 253, 45, 9, 7], [11, 32, 37, 24, 27, 18, 3], [4, 14, 6, 6, 12, 1, 0], [7, 23, 10, 21, 5, 3, 2], [27, 31, 18, 25, 12, 24, 14], [23, 12, 17, 9, 5, 6, 7], [23, 38, 34, 34, 41, 14, 5], [53, 47, 35, 87, 72, 7, 17], [56, 21, 15, 14, 24, 3, 7], [57, 38, 17, 26, 46, 6, 4], [38, 18, 115, 20, 27, 65, 21], [22, 30, 116, 26, 18, 21, 9]], "month_dow_by_cat": {"applications": [[46, 37, 22, 223, 36, 3, 2], [5, 14, 13, 8, 8, 16, 1], [2, 11, 1, 3, 5, 1, 0], [2, 19, 2, 12, 3, 2, 0], [20, 24, 4, 16, 5, 19, 12], [11, 3, 3, 4, 0, 3, 4], [11, 10, 7, 22, 6, 9, 2], [33, 34, 23, 60, 58, 5, 9], [45, 13, 7, 8, 12, 3, 5], [51, 23, 14, 22, 41, 4, 1], [29, 16, 94, 9, 22, 58, 20], [11, 19, 98, 18, 10, 14, 5]], "rejections": [[4, 8, 6, 16, 5, 4, 4], [4, 9, 18, 6, 14, 1, 2], [2, 2, 5, 2, 7, 0, 0], [2, 4, 6, 3, 2, 1, 2], [7, 7, 12, 9, 6, 4, 2], [8, 6, 7, 1, 2, 2, 1], [5, 12, 4, 5, 15, 0, 1], [15, 6, 10, 15, 7, 1, 7], [11, 5, 8, 5, 11, 0, 1], [4, 12, 3, 4, 3, 2, 3], [7, 2, 19, 8, 3, 7, 1], [6, 9, 14, 5, 4, 3, 1]], "interviews": [[2, 7, 5, 13, 3, 1, 0], [2, 7, 1, 3, 5, 1, 0], [0, 1, 0, 0, 0, 0, 0], [2, 0, 2, 3, 0, 0, 0], [0, 0, 2, 0, 1, 1, 0], [4, 3, 7, 4, 3, 1, 2], [1, 7, 13, 3, 18, 4, 1], [5, 6, 2, 11, 6, 0, 1], [0, 3, 0, 1, 1, 0, 1], [2, 3, 0, 0, 2, 0, 0], [2, 0, 2, 3, 2, 0, 0], [5, 2, 4, 3, 4, 2, 3]], "offers": [[1, 2, 1, 1, 1, 1, 1], [0, 2, 5, 7, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0], [1, 0, 0, 3, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [6, 9, 10, 4, 2, 1, 1], [0, 1, 0, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 2, 0]]}, "hour_by_cat": {"applications": [108, 79, 71, 79, 75, 88, 73, 37, 42, 66, 35, 32, 52, 44, 90, 76, 86, 73, 56, 62, 72, 48, 88, 54], "rejections": [18, 5, 5, 4, 6, 9, 7, 6, 15, 22, 23, 23, 27, 29, 34, 41, 36, 26, 35, 35, 18, 18, 19, 16], "interviews": [1, 8, 3, 13, 1, 7, 1, 2, 1, 9, 12, 10, 10, 19, 14, 20, 12, 10, 8, 14, 9, 11, 6, 8], "offers": [0, 0, 1, 0, 1, 0, 2, 0, 1, 5, 5, 11, 1, 4, 6, 6, 5, 1, 6, 4, 1, 5, 1, 0], "total": [127, 92, 80, 96, 83, 104, 83, 45, 59, 102, 75, 76, 90, 96, 144, 143, 139, 110, 105, 115, 100, 82, 114, 78]}};
-
+// ============================================================================
+// DATASET: REAL COMPANIES ACROSS ALL 5 STAGES (NO RAW EMAIL COUNTS)
+// ============================================================================
 const STAGE_COLORS = {
-  "VOID": "#6E8299",
-  "THEY_PASSED": "#C84B59",
-  "INTERVIEW": "#D48C2A",
-  "I_PASSED": "#7C5295",
-  "ACCEPTED": "#17856D"
+  VOID: '#949BA1',
+  THEY_PASSED: '#C44D58',
+  INTERVIEW: '#456990',
+  I_PASSED: '#C67D30',
+  ACCEPTED: '#2A6F4E'
 };
 
 const STAGE_LABELS = {
-  "VOID": "Into the Void (Silence)",
-  "THEY_PASSED": "They Rejected Me",
-  "INTERVIEW": "Deep Interview Loop",
-  "I_PASSED": "I Rejected Them (Declined)",
-  "ACCEPTED": "Accepted & Built"
+  VOID: 'Silence (No Human Reply)',
+  THEY_PASSED: 'They Passed',
+  INTERVIEW: 'Final Rounds',
+  I_PASSED: 'I Passed (Declined Offer / Loop)',
+  ACCEPTED: 'Where I Built (Accepted)'
 };
 
-const STAGE_BIN = {
-  "VOID": 0,
-  "THEY_PASSED": 1,
-  "INTERVIEW": 2,
-  "I_PASSED": 3,
-  "ACCEPTED": 4
-};
+const COMPANIES = [
+  // ACCEPTED & BUILT (10)
+  { name: "Google — YouTube", stage: "ACCEPTED", weight: 1.0, note: "Accepted · PM Rotation (Creator Policy), Policy Enforcement Manager (Adult Content), AI Principles Pioneer" },
+  { name: "TikTok", stage: "ACCEPTED", weight: 0.96, note: "Accepted · Operations Manager & Team Lead, Trust & Safety (130 specialists, 75% NA volume)" },
+  { name: "Teachers Pay Teachers", stage: "ACCEPTED", weight: 0.90, note: "Accepted · Consultant, Marketplace Integrity (7M+ resources)" },
+  { name: "ELC Shanghai", stage: "ACCEPTED", weight: 0.90, note: "Accepted (via WeChat) · Founding Principal, PreK–8th Grade in Shanghai, China" },
+  { name: "Scale AI", stage: "ACCEPTED", weight: 0.84, note: "Accepted · Writer & AI Red-Teaming / Evaluation Strategist" },
+  { name: "RebelBase", stage: "ACCEPTED", weight: 0.80, note: "Accepted · Writer & Content Strategist (New York)" },
+  { name: "OMSI", stage: "ACCEPTED", weight: 0.80, note: "Accepted · Science Instructor (Portland, OR)" },
+  { name: "YBM ECC Seoul", stage: "ACCEPTED", weight: 0.82, note: "Accepted · English Teacher, PreK–8th Grade (Seoul, South Korea)" },
+  { name: "Wisconsin State Assembly", stage: "ACCEPTED", weight: 0.76, note: "Accepted · Legislative Intern (Madison, WI)" },
+  { name: "Eduland & 4AM", stage: "ACCEPTED", weight: 0.75, note: "Accepted · Editorial & Content Strategy (New York)" },
 
-const tipEl = document.getElementById('hoverTip');
-function showTip(evt, html) {
-  tipEl.innerHTML = html;
-  tipEl.style.opacity = '1';
-  const cx = evt.clientX || (evt.touches && evt.touches[0] ? evt.touches[0].clientX : 140);
-  const cy = evt.clientY || (evt.touches && evt.touches[0] ? evt.touches[0].clientY : 140);
-  tipEl.style.left = Math.min(window.innerWidth - 270, Math.max(10, cx + 14)) + 'px';
-  tipEl.style.top = Math.min(window.innerHeight - 110, Math.max(10, cy + 14)) + 'px';
-}
-function hideTip() { tipEl.style.opacity = '0'; }
+  // I PASSED / I REJECTED THEM (14)
+  { name: "Outlier AI", stage: "I_PASSED", weight: 0.84, note: "I Passed · Declined AI evaluation offer in favor of full-time product & policy leadership" },
+  { name: "DoubleVerify", stage: "I_PASSED", weight: 0.82, note: "I Passed · Stepped back from late-stage Brand Safety & Ad-Fraud loop" },
+  { name: "Epic Systems", stage: "I_PASSED", weight: 0.80, note: "I Passed · Declined Madison relocation track to build in New York" },
+  { name: "Urban Teachers", stage: "I_PASSED", weight: 0.78, note: "I Passed · Declined residency fellowship offer" },
+  { name: "NYC Teaching Collab", stage: "I_PASSED", weight: 0.76, note: "I Passed · Declined cohort offer to lead international schools in Asia" },
+  { name: "Berlitz Japan", stage: "I_PASSED", weight: 0.76, note: "I Passed · Declined Tokyo instructor contract" },
+  { name: "Amity Corp Japan", stage: "I_PASSED", weight: 0.75, note: "I Passed · Declined Japan teaching contract" },
+  { name: "Pathrise", stage: "I_PASSED", weight: 0.74, note: "I Passed · Declined mentor fellowship offer" },
+  { name: "Varsity Tutors", stage: "I_PASSED", weight: 0.72, note: "I Passed · Declined contract offer" },
+  { name: "Atrium", stage: "I_PASSED", weight: 0.74, note: "I Passed · Withdrew from operations recruiting loop" },
+  { name: "Aclipse Korea", stage: "I_PASSED", weight: 0.72, note: "I Passed · Declined Chungdahm contract in favor of YBM ECC Seoul" },
+  { name: "Adventure Teaching", stage: "I_PASSED", weight: 0.70, note: "I Passed · Declined placement offer" },
+  { name: "Meten English", stage: "I_PASSED", weight: 0.72, note: "I Passed · Declined Shenzhen contract to serve as Founding Principal at ELC Shanghai" },
+  { name: "micro1", stage: "I_PASSED", weight: 0.72, note: "I Passed · Declined AI RLHF specialist contract" },
 
-/* ============================================================================
-   TRUE NEWTONIAN RIGID-BODY RUBE GOLDBERG ENGINE (WITH SLEEPING TRAYS)
-   - Real gravitational acceleration g = 0.22
-   - Real rolling acceleration down inclined rails (a = g * sin(theta))
-   - Real parabolic free-fall arcs off ramp lips
-   - Real torque transfer to a free-spinning Escapement Paddle Wheel
-   - Real weight-driven tipping on a spring-restored Seesaw Lever
-   - Real elastic bounces off acoustic brass pins
-   - Damped one-bounce sleeping lock in the 5 trays so balls NEVER jitter!
-   ============================================================================ */
-const rgCanvas = document.getElementById('rgCanvas');
-const rgCtx = rgCanvas.getContext('2d');
-let rgW = 1180, rgH = 520, rgDpr = 1;
-let rgBalls = [];
-let rgRamps = [];
-let rgWheel = { x: 0, y: 0, r: 34, angle: 0, omega: 0.01 };
-let rgSeesaw = { x: 0, y: 0, halfLen: 72, angle: -0.08, omega: 0 };
-let rgPins = [];
-let rgRings = [];
-let rgGateOpen = false;
-let rgGateAngle = 0;
-let rgBootTime = 0;
-let rgFocusMine = false;
-let rgRevealed = false;
-let rgPointer = { x: -999, y: -999 };
+  // FINAL ROUNDS / DEEP LOOPS (16)
+  { name: "Meta", stage: "INTERVIEW", weight: 0.88, note: "Final Rounds · Integrity & Product Policy interview loop" },
+  { name: "OpenSea", stage: "INTERVIEW", weight: 0.84, note: "Final Rounds · Marketplace Trust & Safety multi-stage loop" },
+  { name: "Vimeo", stage: "INTERVIEW", weight: 0.82, note: "Final Rounds · Video Policy & Moderation leadership loop" },
+  { name: "Amazon", stage: "INTERVIEW", weight: 0.84, note: "Final Rounds · Risk & Marketplace Integrity interview loop" },
+  { name: "Etsy", stage: "INTERVIEW", weight: 0.80, note: "Final Rounds · Marketplace Policy & Seller Integrity interviews" },
+  { name: "DoorDash", stage: "INTERVIEW", weight: 0.78, note: "Final Rounds · Strategy & Trust Operations loop" },
+  { name: "Shutterstock", stage: "INTERVIEW", weight: 0.76, note: "Final Rounds · Content Operations & AI Contributor Policy interviews" },
+  { name: "Wrapbook", stage: "INTERVIEW", weight: 0.74, note: "Final Rounds · Operations & Compliance interviews" },
+  { name: "Toptal", stage: "INTERVIEW", weight: 0.72, note: "Final Rounds · Product & Operations screening" },
+  { name: "Allstate", stage: "INTERVIEW", weight: 0.70, note: "Final Rounds · Digital Operations interviews" },
+  { name: "Concentrix", stage: "INTERVIEW", weight: 0.68, note: "Final Rounds · Global Trust & Safety Vendor Leadership loop" },
+  { name: "B Lab", stage: "INTERVIEW", weight: 0.72, note: "Final Rounds · Standards & Policy evaluation loop" },
+  { name: "Houghton Mifflin", stage: "INTERVIEW", weight: 0.72, note: "Final Rounds · Curriculum & Editorial Product loop" },
+  { name: "Success Academy", stage: "INTERVIEW", weight: 0.70, note: "Final Rounds · Academic Leadership loop" },
+  { name: "Peace Corps", stage: "INTERVIEW", weight: 0.74, note: "Final Rounds · International Education & Service evaluation" },
+  { name: "Change.org", stage: "INTERVIEW", weight: 0.74, note: "Final Rounds · Platform Policy & Trust interviews" },
 
-function setupRubeGoldbergWorld() {
-  const wrap = document.getElementById('rgViewport');
-  const rect = wrap.getBoundingClientRect();
-  rgW = Math.max(320, rect.width || 1120);
-  rgH = Math.max(400, rect.height || 520);
-  rgDpr = Math.min(window.devicePixelRatio || 1, 2);
-  rgCanvas.width = Math.round(rgW * rgDpr);
-  rgCanvas.height = Math.round(rgH * rgDpr);
-  rgCtx.setTransform(rgDpr, 0, 0, rgDpr, 0, 0);
+  // THEY PASSED (22)
+  { name: "OpenAI", stage: "THEY_PASSED", weight: 0.76, note: "They Passed · Trust & Safety / AI Policy application" },
+  { name: "Anthropic", stage: "THEY_PASSED", weight: 0.76, note: "They Passed · Safeguards & Trust Policy application" },
+  { name: "Netflix", stage: "THEY_PASSED", weight: 0.72, note: "They Passed · Content & Platform Operations application" },
+  { name: "Spotify", stage: "THEY_PASSED", weight: 0.72, note: "They Passed · Trust & Safety Policy application" },
+  { name: "Coinbase", stage: "THEY_PASSED", weight: 0.70, note: "They Passed · Compliance & Risk Operations application" },
+  { name: "McKinsey", stage: "THEY_PASSED", weight: 0.70, note: "They Passed · Management Consulting application" },
+  { name: "Wieden+Kennedy", stage: "THEY_PASSED", weight: 0.68, note: "They Passed · Strategy & Copywriting application" },
+  { name: "Cloudflare", stage: "THEY_PASSED", weight: 0.68, note: "They Passed · Trust & Safety Policy application" },
+  { name: "HubSpot", stage: "THEY_PASSED", weight: 0.66, note: "They Passed · Product Operations application" },
+  { name: "DraftKings", stage: "THEY_PASSED", weight: 0.64, note: "They Passed · Risk & Player Safety Operations" },
+  { name: "Robinhood", stage: "THEY_PASSED", weight: 0.66, note: "They Passed · Operations & Compliance application" },
+  { name: "Grammarly", stage: "THEY_PASSED", weight: 0.66, note: "They Passed · AI Product & Editorial Strategy" },
+  { name: "Squarespace", stage: "THEY_PASSED", weight: 0.64, note: "They Passed · Trust & Abuse Operations application" },
+  { name: "Vox Media", stage: "THEY_PASSED", weight: 0.64, note: "They Passed · Editorial & Audience Operations" },
+  { name: "Axios", stage: "THEY_PASSED", weight: 0.64, note: "They Passed · Communications & Editorial strategy" },
+  { name: "Duolingo", stage: "THEY_PASSED", weight: 0.66, note: "They Passed · Learning & Trust Product application" },
+  { name: "Coursera", stage: "THEY_PASSED", weight: 0.64, note: "They Passed · Academic & Platform Operations" },
+  { name: "Medium", stage: "THEY_PASSED", weight: 0.64, note: "They Passed · Trust & Curation Policy application" },
+  { name: "Match Group", stage: "THEY_PASSED", weight: 0.66, note: "They Passed · Member Safety & Trust Product" },
+  { name: "Okta", stage: "THEY_PASSED", weight: 0.62, note: "They Passed · Security & Trust Operations" },
+  { name: "Lyft", stage: "THEY_PASSED", weight: 0.64, note: "They Passed · Rider & Driver Safety Policy" },
+  { name: "Affirm", stage: "THEY_PASSED", weight: 0.62, note: "They Passed · Risk Operations application" },
 
-  const mobile = rgW < 640;
+  // SILENCE / INTO THE VOID (22)
+  { name: "Airbnb", stage: "VOID", weight: 0.56, note: "Silence · Marketplace Trust & Safety application" },
+  { name: "Stripe", stage: "VOID", weight: 0.56, note: "Silence · Risk & Policy Operations application" },
+  { name: "Discord", stage: "VOID", weight: 0.56, note: "Silence · Trust & Safety Policy application" },
+  { name: "Runway", stage: "VOID", weight: 0.56, note: "Silence · GenAI Safety & Policy application" },
+  { name: "Reddit", stage: "VOID", weight: 0.54, note: "Silence · Threat & Safety Operations application" },
+  { name: "MasterClass", stage: "VOID", weight: 0.52, note: "Silence · Editorial & Content Strategy application" },
+  { name: "Tesla", stage: "VOID", weight: 0.52, note: "Silence · Operations & Communications application" },
+  { name: "HBO", stage: "VOID", weight: 0.52, note: "Silence · Production & Content Operations" },
+  { name: "Patreon", stage: "VOID", weight: 0.52, note: "Silence · Creator Trust & Policy application" },
+  { name: "Substack", stage: "VOID", weight: 0.52, note: "Silence · Writer Relations & Trust Policy" },
+  { name: "Notion", stage: "VOID", weight: 0.52, note: "Silence · Product Operations application" },
+  { name: "Figma", stage: "VOID", weight: 0.52, note: "Silence · Product & Community Operations" },
+  { name: "Calm", stage: "VOID", weight: 0.50, note: "Silence · Content Strategy application" },
+  { name: "Peloton", stage: "VOID", weight: 0.50, note: "Silence · Community Operations application" },
+  { name: "Kickstarter", stage: "VOID", weight: 0.50, note: "Silence · Trust & Integrity Operations" },
+  { name: "NY Times", stage: "VOID", weight: 0.52, note: "Silence · Editorial & Digital Operations" },
+  { name: "Conde Nast", stage: "VOID", weight: 0.50, note: "Silence · Digital Strategy application" },
+  { name: "Vice Media", stage: "VOID", weight: 0.48, note: "Silence · Editorial Operations" },
+  { name: "Palantir", stage: "VOID", weight: 0.52, note: "Silence · Deployment & Operations application" },
+  { name: "Datadog", stage: "VOID", weight: 0.50, note: "Silence · Product & Security Operations" },
+  { name: "Twilio", stage: "VOID", weight: 0.50, note: "Silence · Messaging Anti-Abuse Policy" },
+  { name: "Dropbox", stage: "VOID", weight: 0.50, note: "Silence · Trust & Product Operations" }
+];
 
-  // 1. Inclined Steel Rails
-  rgRamps = [
-    // Ramp I: Upper-left Hopper -> slopes down-right to feed the TOP of the Escapement Wheel
-    { x1: rgW * 0.07, y1: rgH * 0.15, x2: rgW * 0.57, y2: rgH * 0.23, label: "I · INTAKE INCLINE" },
-    // Ramp II: Right catch chute below Wheel -> slopes down-left to feed the Seesaw
-    { x1: rgW * 0.76, y1: rgH * 0.34, x2: rgW * 0.41, y2: rgH * 0.44, label: "II · SCREENING SWITCHBACK" }
-  ];
+// ============================================================================
+// 1. UNBOXED CALDER-STYLE KINETIC SCULPTURE ANIMATION
+//    Smooth, serene, choreographed curves with tilting balance levers.
+//    Zero pinball chaos, zero jitter, zero borders.
+// ============================================================================
+const STAGE_BIN = { VOID: 0, THEY_PASSED: 1, INTERVIEW: 2, I_PASSED: 3, ACCEPTED: 4 };
+let kCanvas, kCtx, kW = 920, kH = 400, kDpr = 1;
+let kParticles = [];
+let kStartTime = 0;
 
-  // 2. Heavy Free-Spinning Escapement Paddle Wheel (driven by ball impacts!)
-  rgWheel = {
-    x: rgW * 0.62,
-    y: rgH * 0.28,
-    r: mobile ? 26 : 34,
-    angle: 0.2,
-    omega: 0.008
+function initKineticSculpture() {
+  kCanvas = document.getElementById('kineticCanvas');
+  if (!kCanvas) return;
+  kCtx = kCanvas.getContext('2d');
+
+  const resize = () => {
+    const rect = kCanvas.getBoundingClientRect();
+    kW = Math.max(320, rect.width || 920);
+    kH = Math.max(280, rect.height || 400);
+    kDpr = Math.min(window.devicePixelRatio || 1, 2);
+    kCanvas.width = kW * kDpr;
+    kCanvas.height = kH * kDpr;
+    kCtx.setTransform(kDpr, 0, 0, kDpr, 0, 0);
+    buildSculpturePaths();
   };
 
-  // 3. Spring-Loaded Tipping Seesaw Fulcrum
-  rgSeesaw = {
-    x: rgW * 0.35,
-    y: rgH * 0.49,
-    halfLen: mobile ? 56 : 92,
-    angle: -0.12,
-    omega: 0
-  };
-
-  // 4. Staggered Brass Acoustic Deflector Pins
-  rgPins = [];
-  const pinCols = mobile ? 5 : 9;
-  for (let r = 0; r < 2; r++) {
-    for (let c = 0; c < pinCols; c++) {
-      const px = rgW * 0.14 + ((c + (r % 2) * 0.5) / pinCols) * (rgW * 0.72);
-      const py = rgH * 0.58 + r * (rgH * 0.07);
-      rgPins.push({ x: px, y: py, r: mobile ? 4.5 : 5.5, pulse: 0 });
-    }
-  }
+  resize();
+  window.addEventListener('resize', resize);
+  kStartTime = performance.now();
+  requestAnimationFrame(renderKineticSculpture);
 }
 
-function spawnPhysicsBalls() {
-  setupRubeGoldbergWorld();
-  rgBalls = [];
-  rgRings = [];
-  rgGateOpen = false;
-  rgGateAngle = 0;
-  rgBootTime = performance.now();
+function buildSculpturePaths() {
+  kParticles = [];
+  const colW = kW / 5;
+  const mobile = kW < 640;
+  const floorY = kH - 12;
+  const colsPerBin = mobile ? [4, 4, 3, 3, 2] : [6, 6, 4, 4, 3];
+  const spacing = mobile ? 11 : 14;
+  const counts = [0, 0, 0, 0, 0];
 
-  const mobile = rgW < 640;
-  const colW = rgW / 5;
-  const trayFloorY = rgH - 16;
-  const slotCounts = [0, 0, 0, 0, 0];
-  const colsPerBin = mobile ? [6, 5, 4, 4, 3] : [11, 9, 6, 5, 4];
-  const spacing = mobile ? 9.5 : 12.5;
+  // Top origin sphere center
+  const originX = kW * 0.5;
+  const originY = 44;
 
-  // Release chamber above Ramp I
-  const chamberX = rgW * 0.13;
-  const chamberY = rgH * 0.09;
+  // Three serene architectural balance fulcrums
+  const topPivot = { x: kW * 0.5, y: kH * 0.30 };
+  const leftPivot = { x: kW * 0.26, y: kH * 0.55 };
+  const rightPivot = { x: kW * 0.74, y: kH * 0.55 };
 
   COMPANIES.forEach((co, idx) => {
-    const bin = STAGE_BIN[co.stage] ?? 0;
-    const sIdx = slotCounts[bin]++;
+    const bin = STAGE_BIN[co.stage];
+    const sIdx = counts[bin]++;
     const cpr = colsPerBin[bin];
     const row = Math.floor(sIdx / cpr);
     const col = sIdx % cpr;
 
     const binCenterX = (bin + 0.5) * colW;
     const gridW = (cpr - 1) * spacing;
-    const restX = binCenterX - gridW * 0.5 + col * spacing;
-    const restY = trayFloorY - row * spacing;
+    const endX = binCenterX - gridW * 0.5 + col * spacing;
+    const endY = floorY - row * spacing;
 
-    // Radius sized by Career Gravity / Engagement Depth (NOT email counts!)
-    const baseR = mobile ? 3.2 : 4.0;
-    const r = baseR + (co.depth / 100) * (mobile ? 3.2 : 4.6);
+    // Intermediate waypoint through the Calder balance levers
+    let mid1X, mid1Y, mid2X, mid2Y;
+    if (bin <= 1) {
+      mid1X = topPivot.x - 42 + (idx % 5) * 4;
+      mid1Y = topPivot.y + 8;
+      mid2X = leftPivot.x + (bin === 0 ? -36 : 36);
+      mid2Y = leftPivot.y + 12;
+    } else if (bin === 2) {
+      mid1X = topPivot.x + (idx % 3 - 1) * 8;
+      mid1Y = topPivot.y + 14;
+      mid2X = kW * 0.5 + (col - 1.5) * 8;
+      mid2Y = kH * 0.60;
+    } else {
+      mid1X = topPivot.x + 42 - (idx % 5) * 4;
+      mid1Y = topPivot.y + 8;
+      mid2X = rightPivot.x + (bin === 3 ? -36 : 36);
+      mid2Y = rightPivot.y + 12;
+    }
 
-    // Pack inside the release chamber initially
-    const angle = idx * 2.39996;
-    const rad = Math.min(24, Math.sqrt(idx) * 2.1);
+    // Golden-angle spiral inside the initial sphere before release
+    const ga = idx * 2.39996;
+    const gr = Math.sqrt(idx / COMPANIES.length) * (mobile ? 18 : 24);
 
-    rgBalls.push({
+    kParticles.push({
       ...co,
       bin,
-      r,
+      r: (mobile ? 3.5 : 4.6) * (0.78 + co.weight * 0.35),
       color: STAGE_COLORS[co.stage],
-      x: chamberX + Math.cos(angle) * rad,
-      y: chamberY + Math.sin(angle) * rad,
-      vx: 0,
-      vy: 0,
-      restX,
-      restY,
-      releaseDelay: 300 + idx * 10, // Smooth gravity release stream when latch opens
-      released: false,
-      inTray: false,
-      sleeping: false,
-      bouncesInTray: 0,
-      airTicks: 0
+      startX: originX + Math.cos(ga) * gr,
+      startY: originY + Math.sin(ga) * gr,
+      mid1X, mid1Y,
+      mid2X, mid2Y,
+      endX, endY,
+      delay: 550 + idx * 22,
+      duration: 1850 + (idx % 7) * 90
     });
   });
 }
 
-function resetAndDropMachine() {
-  spawnPhysicsBalls();
+// Smooth quintic ease-in-out for silk-like motion
+function easeSilk(t) {
+  return t < 0.5 ? 16 * t * t * t * t * t : 1 - Math.pow(-2 * t + 2, 5) / 2;
 }
 
-function toggleFocusMode() {
-  rgFocusMine = !rgFocusMine;
-  const btn = document.getElementById('btnHighlightMine');
-  if (btn) btn.classList.toggle('active', rgFocusMine);
+// Evaluate 4-point cubic Bézier curve
+function bezier4(p0, p1, p2, p3, t) {
+  const u = 1 - t;
+  return u*u*u*p0 + 3*u*u*t*p1 + 3*u*t*t*p2 + t*t*t*p3;
 }
 
-function stepNewtonianRubeGoldberg(now) {
-  const elapsedMs = now - rgBootTime;
-  if (elapsedMs > 360 && !rgGateOpen) {
-    rgGateOpen = true;
-    rgRings.push({ x: rgW * 0.13, y: rgH * 0.09, r: 22, maxR: 130, alpha: 0.45 });
+function renderKineticSculpture(now) {
+  const elapsed = now - kStartTime;
+  kCtx.clearRect(0, 0, kW, kH);
+
+  const originX = kW * 0.5;
+  const originY = 44;
+  const topPivot = { x: kW * 0.5, y: kH * 0.30 };
+  const leftPivot = { x: kW * 0.26, y: kH * 0.55 };
+  const rightPivot = { x: kW * 0.74, y: kH * 0.55 };
+
+  // Compute gentle harmonic tilt of the 3 Calder balance beams as spheres flow past
+  const activeWave = Math.max(0, Math.min(1, (elapsed - 600) / 3200));
+  const envelope = Math.sin(activeWave * Math.PI);
+  const topTilt = Math.sin(elapsed * 0.0022) * 0.09 * envelope;
+  const leftTilt = -Math.cos(elapsed * 0.0026) * 0.11 * envelope - 0.03 * activeWave;
+  const rightTilt = Math.sin(elapsed * 0.0024 + 1.1) * 0.11 * envelope + 0.04 * activeWave;
+
+  // 1. Draw hair-thin architectural guide paths (Calder mobile wires)
+  kCtx.strokeStyle = '#E2DFD5';
+  kCtx.lineWidth = 1;
+
+  // Vertical suspension wire from origin to top fulcrum
+  kCtx.beginPath();
+  kCtx.moveTo(originX, originY + 28);
+  kCtx.lineTo(topPivot.x, topPivot.y);
+  kCtx.stroke();
+
+  // Arched suspension wires to left, center, and right branches
+  const colW = kW / 5;
+  for (let b = 0; b < 5; b++) {
+    const bx = (b + 0.5) * colW;
+    const startP = b <= 1 ? leftPivot : (b === 2 ? topPivot : rightPivot);
+    kCtx.beginPath();
+    kCtx.moveTo(startP.x, startP.y);
+    kCtx.quadraticCurveTo(bx, startP.y + 40, bx, kH - 6);
+    kCtx.stroke();
   }
-  if (rgGateOpen && rgGateAngle < 1.2) {
-    rgGateAngle += (1.25 - rgGateAngle) * 0.14;
+
+  // 2. Draw the three tilting architectural balance beams
+  function drawBalanceBeam(pivot, halfSpan, angle) {
+    kCtx.save();
+    kCtx.translate(pivot.x, pivot.y);
+    kCtx.rotate(angle);
+    kCtx.strokeStyle = '#141413';
+    kCtx.lineWidth = 1.5;
+    kCtx.beginPath();
+    kCtx.moveTo(-halfSpan, 0);
+    kCtx.lineTo(halfSpan, 0);
+    kCtx.stroke();
+
+    // Small fulcrum triangle
+    kCtx.fillStyle = '#F6F5F0';
+    kCtx.beginPath();
+    kCtx.arc(0, 0, 3.5, 0, Math.PI * 2);
+    kCtx.fill();
+    kCtx.stroke();
+    kCtx.restore();
   }
 
-  // Wheel & Seesaw passive rotational dynamics
-  rgWheel.angle += rgWheel.omega;
-  rgWheel.omega *= 0.985; // Rotational bearing friction
-  if (rgWheel.omega < 0.004) rgWheel.omega = 0.004;
+  const span = kW < 640 ? 48 : 84;
+  drawBalanceBeam(topPivot, span * 1.15, topTilt);
+  drawBalanceBeam(leftPivot, span, leftTilt);
+  drawBalanceBeam(rightPivot, span, rightTilt);
 
-  // Spring-damper restoring torque on the Seesaw lever
-  const targetRestAngle = -0.06;
-  rgSeesaw.omega += (targetRestAngle - rgSeesaw.angle) * 0.018;
-  rgSeesaw.omega *= 0.90;
-  rgSeesaw.angle = Math.max(-0.34, Math.min(0.38, rgSeesaw.angle + rgSeesaw.omega));
+  // Origin ring at top center (fades softly as spheres stream out)
+  const ringOpacity = Math.max(0.15, 1 - Math.max(0, (elapsed - 400) / 2200));
+  kCtx.strokeStyle = `rgba(20, 20, 19, ${ringOpacity * 0.45})`;
+  kCtx.lineWidth = 1;
+  kCtx.beginPath();
+  kCtx.arc(originX, originY, kW < 640 ? 22 : 28, 0, Math.PI * 2);
+  kCtx.stroke();
 
-  const sx1 = rgSeesaw.x - Math.cos(rgSeesaw.angle) * rgSeesaw.halfLen;
-  const sy1 = rgSeesaw.y - Math.sin(rgSeesaw.angle) * rgSeesaw.halfLen;
-  const sx2 = rgSeesaw.x + Math.cos(rgSeesaw.angle) * rgSeesaw.halfLen;
-  const sy2 = rgSeesaw.y + Math.sin(rgSeesaw.angle) * rgSeesaw.halfLen;
+  // 3. Draw each company sphere along its smooth cubic trajectory
+  let movingCount = 0;
+  for (let i = 0; i < kParticles.length; i++) {
+    const p = kParticles[i];
+    let rawT = (elapsed - p.delay) / p.duration;
+    let x, y;
 
-  const trayTopY = rgH * 0.72;
-  const g = 0.21; // True Newtonian gravity
-
-  let settledCount = 0;
-
-  for (let i = 0; i < rgBalls.length; i++) {
-    const b = rgBalls[i];
-    if (b.sleeping) {
-      settledCount++;
-      continue;
-    }
-
-    if (!b.released) {
-      if (elapsedMs >= b.releaseDelay) {
-        b.released = true;
-        // Pop out of release gate with initial launch impulse onto Ramp I
-        b.vx = 1.4 + (i % 5) * 0.22;
-        b.vy = 0.5;
-      } else {
-        // Subtle compression vibration inside chamber before latch opens
-        continue;
-      }
-    }
-
-    b.airTicks++;
-
-    // Apply Gravity
-    b.vy += g;
-    b.vx *= 0.995;
-    b.vy *= 0.995;
-
-    // Once entering the lower sorting manifold, guide smoothly into its true resting slot
-    if (b.y >= trayTopY || b.airTicks > 230) {
-      b.inTray = true;
-    }
-
-    if (!b.inTray) {
-      // 1. Inclined Steel Ramps (True Downhill Gravity Rolling + Lip Launch!)
-      for (let rIdx = 0; rIdx < rgRamps.length; rIdx++) {
-        const rm = rgRamps[rIdx];
-        const rx = rm.x2 - rm.x1;
-        const ry = rm.y2 - rm.y1;
-        const len2 = rx * rx + ry * ry;
-        const t = ((b.x - rm.x1) * rx + (b.y - rm.y1) * ry) / len2;
-        if (t >= 0 && t <= 1) {
-          const cx = rm.x1 + t * rx;
-          const cy = rm.y1 + t * ry;
-          const dy = b.y - cy;
-          if (dy >= -(b.r + 8) && dy <= Math.max(9, b.vy + 4) && b.vy >= -1.5) {
-            const len = Math.sqrt(len2);
-            const tx = rx / len; // Unit downhill tangent
-            const ty = ry / len;
-            const sinTheta = ty; // Slope sine
-            b.y = cy - b.r - 1.5;
-            // Project velocity along slope + add gravitational slope acceleration!
-            const vDotT = b.vx * tx + b.vy * ty;
-            const rollSpeed = Math.max(1.9, vDotT + g * sinTheta * 4.2);
-            b.vx = tx * rollSpeed;
-            b.vy = ty * rollSpeed;
-          }
-        }
-      }
-
-      // 2. Physical Collision & Torque Transfer with Free-Spinning Escapement Wheel
-      const wdx = b.x - rgWheel.x;
-      const wdy = b.y - rgWheel.y;
-      const wDist = Math.hypot(wdx, wdy);
-      if (wDist < rgWheel.r + b.r && wDist > 0.1) {
-        const nx = wdx / wDist;
-        const ny = wdy / wDist;
-        b.x = rgWheel.x + Math.abs(nx) * (rgWheel.r + b.r + 1);
-        b.y = rgWheel.y - Math.abs(ny) * (rgWheel.r + b.r) * 0.45;
-        // Transfer angular momentum to the wheel!
-        rgWheel.omega = Math.min(0.12, rgWheel.omega + 0.0095);
-        // Carry ball clockwise over the wheel in a parabolic arc onto Switchback Ramp II
-        b.vx = 2.4 + (i % 4) * 0.28;
-        b.vy = -1.0;
-      }
-
-      // 3. Physical Collision & Torque Transfer with Counterweighted Seesaw Lever
-      const sdx = sx2 - sx1, sdy = sy2 - sy1;
-      const sLen2 = sdx * sdx + sdy * sdy;
-      const st = ((b.x - sx1) * sdx + (b.y - sy1) * sdy) / sLen2;
-      if (st >= 0 && st <= 1) {
-        const scx = sx1 + st * sdx;
-        const scy = sy1 + st * sdy;
-        if (Math.abs(b.y - scy) < b.r + Math.max(7, b.vy + 3) && b.vy > -0.5) {
-          b.y = scy - b.r - 4.5;
-          // Apply weight torque to seesaw based on lever arm!
-          const leverArm = (b.x - rgSeesaw.x) / rgSeesaw.halfLen;
-          rgSeesaw.omega += leverArm * 0.024;
-          // Bounce & slide along tilted seesaw
-          b.vy = -Math.abs(b.vy) * 0.44 - 0.5;
-          b.vx += Math.sin(rgSeesaw.angle) * 2.8 + (b.restX - b.x) * 0.009;
-        }
-      }
-
-      // 4. Elastic Bounces off Staggered Brass Deflector Pins
-      for (let pIdx = 0; pIdx < rgPins.length; pIdx++) {
-        const p = rgPins[pIdx];
-        const dx = b.x - p.x;
-        const dy = b.y - p.y;
-        const minD = p.r + b.r;
-        if (dx * dx + dy * dy < minD * minD) {
-          const d = Math.hypot(dx, dy) || 1;
-          const nx = dx / d, ny = dy / d;
-          b.x = p.x + nx * (minD + 0.8);
-          b.y = p.y + ny * (minD + 0.8);
-          const vDotN = b.vx * nx + b.vy * ny;
-          if (vDotN < 0) {
-            const restitution = 0.58;
-            b.vx -= (1 + restitution) * vDotN * nx;
-            b.vy -= (1 + restitution) * vDotN * ny;
-          }
-          // Gentle horizontal nudge toward target bin column
-          b.vx += (b.restX - b.x) * 0.006;
-          if (p.pulse < 0.2) {
-            rgRings.push({ x: p.x, y: p.y, r: p.r, maxR: 26, alpha: 0.35 });
-          }
-          p.pulse = 1.0;
-        }
-      }
-
-      // Manifold guidance below pins (0.58 * rgH to 0.72 * rgH)
-      if (b.y > rgH * 0.56) {
-        b.vx += (b.restX - b.x) * 0.022;
-        b.vx *= 0.92;
-      }
-
-      b.x += b.vx;
-      b.y += b.vy;
-
-      // Side walls
-      if (b.x < b.r + 6) { b.x = b.r + 6; b.vx = Math.abs(b.vx) * 0.6; }
-      if (b.x > rgW - b.r - 6) { b.x = rgW - b.r - 6; b.vx = -Math.abs(b.vx) * 0.6; }
+    if (rawT <= 0) {
+      movingCount++;
+      // Gentle breathing before release
+      const breathe = Math.sin(elapsed * 0.004 + i) * 0.8;
+      x = p.startX + breathe;
+      y = p.startY + breathe;
+    } else if (rawT >= 1) {
+      x = p.endX;
+      y = p.endY;
     } else {
-      // IN TRAY: Smooth Newtonian drop into its exact resting notch with 1 damped bounce, then SLEEP (zero jitter!)
-      b.vx = (b.restX - b.x) * 0.22;
-      b.x += b.vx;
-      b.y += b.vy;
-
-      if (b.y >= b.restY) {
-        b.y = b.restY;
-        if (b.bouncesInTray < 1 && Math.abs(b.vy) > 1.4) {
-          b.vy = -Math.abs(b.vy) * 0.28; // Single crisp damped bounce
-          b.bouncesInTray++;
-        } else {
-          b.x = b.restX;
-          b.y = b.restY;
-          b.vx = 0;
-          b.vy = 0;
-          b.sleeping = true;
-          settledCount++;
-        }
-      }
-    }
-  }
-
-  // Draw Frame
-  rgCtx.clearRect(0, 0, rgW, rgH);
-
-  const colW = rgW / 5;
-  const trayLineY = rgH * 0.72;
-
-  // 1. Draw 5 Outcome Tray Dividers & Subtle Labels
-  const trayTitles = [
-    "I · INTO THE VOID",
-    "II · THEY PASSED",
-    "III · DEEP LOOPS",
-    "IV · I PASSED (REJECTED THEM)",
-    "V · ACCEPTED & BUILT"
-  ];
-  for (let c = 0; c < 5; c++) {
-    const cx = (c + 0.5) * colW;
-    if (c > 0) {
-      rgCtx.strokeStyle = '#DFDDD4';
-      rgCtx.lineWidth = 1;
-      rgCtx.beginPath();
-      rgCtx.moveTo(c * colW, trayLineY);
-      rgCtx.lineTo(c * colW, rgH);
-      rgCtx.stroke();
-    }
-    rgCtx.fillStyle = '#85837D';
-    rgCtx.font = "500 8.5px 'JetBrains Mono', monospace";
-    rgCtx.textAlign = 'center';
-    rgCtx.fillText(trayTitles[c], cx, trayLineY + 14);
-  }
-
-  // 2. Draw Release Chamber & Swinging Latch Gate at Top-Left
-  const chX = rgW * 0.13, chY = rgH * 0.09;
-  rgCtx.strokeStyle = '#141413';
-  rgCtx.lineWidth = 1.5;
-  rgCtx.beginPath();
-  rgCtx.arc(chX, chY, 28, Math.PI * 0.35, Math.PI * 1.85);
-  rgCtx.stroke();
-
-  // Swinging mechanical latch arm
-  rgCtx.save();
-  rgCtx.translate(chX + Math.cos(-0.45) * 28, chY + Math.sin(-0.45) * 28);
-  rgCtx.rotate(rgGateAngle);
-  rgCtx.strokeStyle = '#C84B59';
-  rgCtx.lineWidth = 2;
-  rgCtx.beginPath();
-  rgCtx.moveTo(0, 0);
-  rgCtx.lineTo(-10, 26);
-  rgCtx.stroke();
-  rgCtx.restore();
-
-  rgCtx.fillStyle = '#85837D';
-  rgCtx.font = "500 9px 'JetBrains Mono', monospace";
-  rgCtx.textAlign = 'left';
-  rgCtx.fillText("00 / RELEASE HOPPER & LATCH", chX + 36, chY + 3);
-
-  // 3. Draw Inclined Steel Rails with Architectural Ticks
-  rgRamps.forEach(rm => {
-    rgCtx.strokeStyle = '#141413';
-    rgCtx.lineWidth = 2.2;
-    rgCtx.beginPath();
-    rgCtx.moveTo(rm.x1, rm.y1);
-    rgCtx.lineTo(rm.x2, rm.y2);
-    rgCtx.stroke();
-
-    // Parallel support truss hairline
-    rgCtx.strokeStyle = '#C9C6BC';
-    rgCtx.lineWidth = 1;
-    rgCtx.beginPath();
-    rgCtx.moveTo(rm.x1, rm.y1 + 5);
-    rgCtx.lineTo(rm.x2, rm.y2 + 5);
-    rgCtx.stroke();
-
-    const mx = (rm.x1 + rm.x2) * 0.5;
-    const my = (rm.y1 + rm.y2) * 0.5 - 8;
-    rgCtx.fillStyle = '#85837D';
-    rgCtx.font = "500 8.5px 'JetBrains Mono', monospace";
-    rgCtx.textAlign = 'center';
-    rgCtx.fillText(rm.label, mx, my);
-  });
-
-  // 4. Draw Torque-Driven Escapement Paddle Wheel
-  rgCtx.save();
-  rgCtx.translate(rgWheel.x, rgWheel.y);
-  rgCtx.strokeStyle = '#B5B3AC';
-  rgCtx.lineWidth = 1;
-  rgCtx.beginPath();
-  rgCtx.arc(0, 0, rgWheel.r, 0, Math.PI * 2);
-  rgCtx.stroke();
-
-  rgCtx.strokeStyle = '#141413';
-  rgCtx.lineWidth = 1.6;
-  for (let k = 0; k < 6; k++) {
-    const a = rgWheel.angle + (k * Math.PI) / 3;
-    rgCtx.beginPath();
-    rgCtx.moveTo(0, 0);
-    rgCtx.lineTo(Math.cos(a) * rgWheel.r, Math.sin(a) * rgWheel.r);
-    rgCtx.stroke();
-  }
-  rgCtx.fillStyle = '#F6F5F0';
-  rgCtx.beginPath();
-  rgCtx.arc(0, 0, 5, 0, Math.PI * 2);
-  rgCtx.fill();
-  rgCtx.stroke();
-
-  rgCtx.fillStyle = '#85837D';
-  rgCtx.font = "500 8.5px 'JetBrains Mono', monospace";
-  rgCtx.textAlign = 'center';
-  rgCtx.fillText("III · ESCAPEMENT WHEEL", 0, -rgWheel.r - 8);
-  rgCtx.restore();
-
-  // 5. Draw Weight-Tipping Seesaw Lever & Fulcrum
-  rgCtx.strokeStyle = '#141413';
-  rgCtx.lineWidth = 2.5;
-  rgCtx.beginPath();
-  rgCtx.moveTo(sx1, sy1);
-  rgCtx.lineTo(sx2, sy2);
-  rgCtx.stroke();
-
-  rgCtx.fillStyle = '#141413';
-  rgCtx.beginPath();
-  rgCtx.moveTo(rgSeesaw.x, rgSeesaw.y);
-  rgCtx.lineTo(rgSeesaw.x - 8, rgSeesaw.y + 12);
-  rgCtx.lineTo(rgSeesaw.x + 8, rgSeesaw.y + 12);
-  rgCtx.closePath();
-  rgCtx.fill();
-
-  rgCtx.fillStyle = '#85837D';
-  rgCtx.font = "500 8.5px 'JetBrains Mono', monospace";
-  rgCtx.textAlign = 'center';
-  rgCtx.fillText("IV · COUNTERWEIGHT FULCRUM", rgSeesaw.x, rgSeesaw.y + 24);
-
-  // 6. Draw Acoustic Brass Pins & Expanding Impact Rings
-  rgPins.forEach(p => {
-    if (p.pulse > 0) p.pulse = Math.max(0, p.pulse - 0.06);
-    rgCtx.beginPath();
-    rgCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    rgCtx.fillStyle = p.pulse > 0.1 ? '#141413' : '#85837D';
-    rgCtx.fill();
-  });
-
-  rgRings.forEach(rg => {
-    rg.r += (rg.maxR - rg.r) * 0.12;
-    rg.alpha *= 0.90;
-    if (rg.alpha > 0.02) {
-      rgCtx.save();
-      rgCtx.beginPath();
-      rgCtx.arc(rg.x, rg.y, rg.r, 0, Math.PI * 2);
-      rgCtx.strokeStyle = `rgba(20, 20, 19, ${rg.alpha})`;
-      rgCtx.lineWidth = 1;
-      rgCtx.stroke();
-      rgCtx.restore();
-    }
-  });
-
-  // 7. Draw All Company Spheres
-  let hovered = null;
-  for (let i = 0; i < rgBalls.length; i++) {
-    const b = rgBalls[i];
-    const isMine = b.stage === 'ACCEPTED' || b.stage === 'I_PASSED';
-    const dim = rgFocusMine && !isMine;
-    rgCtx.globalAlpha = dim ? 0.14 : 0.92;
-
-    if (b.stage === 'ACCEPTED' || b.stage === 'I_PASSED') {
-      rgCtx.beginPath();
-      rgCtx.arc(b.x, b.y, b.r + 3, 0, Math.PI * 2);
-      rgCtx.strokeStyle = b.stage === 'ACCEPTED' ? 'rgba(23, 133, 109, 0.35)' : 'rgba(124, 82, 149, 0.35)';
-      rgCtx.lineWidth = 1.2;
-      rgCtx.stroke();
+      movingCount++;
+      const t = easeSilk(rawT);
+      x = bezier4(p.startX, p.mid1X, p.mid2X, p.endX, t);
+      y = bezier4(p.startY, p.mid1Y, p.mid2Y, p.endY, t);
     }
 
-    rgCtx.beginPath();
-    rgCtx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
-    rgCtx.fillStyle = b.color;
-    rgCtx.fill();
-
-    if (Math.hypot(b.x - rgPointer.x, b.y - rgPointer.y) <= b.r + 6) {
-      hovered = b;
-    }
-  }
-  rgCtx.globalAlpha = 1;
-
-  // Floating Company Callouts on Key Active Balls
-  let callouts = 0;
-  for (let i = 0; i < rgBalls.length; i++) {
-    const b = rgBalls[i];
-    if (!b.released || b.sleeping) continue;
-    if ((b.stage === 'ACCEPTED' || b.stage === 'I_PASSED') && callouts < 7) {
-      callouts++;
-      rgCtx.font = "500 9.5px 'Inter', sans-serif";
-      rgCtx.fillStyle = '#141413';
-      rgCtx.textAlign = 'left';
-      rgCtx.fillText(b.name, b.x + b.r + 5, b.y + 3);
-    }
+    kCtx.fillStyle = p.color;
+    kCtx.beginPath();
+    kCtx.arc(x, y, p.r, 0, Math.PI * 2);
+    kCtx.fill();
   }
 
-  if (hovered) {
-    rgCtx.beginPath();
-    rgCtx.arc(hovered.x, hovered.y, hovered.r + 4, 0, Math.PI * 2);
-    rgCtx.strokeStyle = '#141413';
-    rgCtx.lineWidth = 1.5;
-    rgCtx.stroke();
-  }
-
-  // Progressively reveal the 5 columns and the workspace below as balls flow through the machine
-  if (elapsedMs > 900) {
-    document.getElementById('constructedCols').classList.add('built');
-  }
-  if (!rgRevealed && (elapsedMs > 1500 || settledCount > 15)) {
-    rgRevealed = true;
-    document.getElementById('workspaceRoot').classList.add('revealed');
-  }
-
-  requestAnimationFrame(stepNewtonianRubeGoldberg);
-}
-
-// Click canvas to launch a wave of resting balls back up into the seesaw & pins with real gravity!
-rgCanvas.addEventListener('click', e => {
-  const rect = rgCanvas.getBoundingClientRect();
-  const cx = e.clientX - rect.left;
-  rgBalls.forEach((b, i) => {
-    if (b.sleeping && (Math.abs(b.x - cx) < 160 || i % 4 === 0)) {
-      b.sleeping = false;
-      b.inTray = false;
-      b.bouncesInTray = 0;
-      b.airTicks = 120;
-      b.vy = -6.5 - (i % 5) * 1.1;
-      b.vx = (rgSeesaw.x - b.x) * 0.025;
-    }
-  });
-});
-
-rgCanvas.addEventListener('mousemove', e => {
-  const rect = rgCanvas.getBoundingClientRect();
-  rgPointer.x = e.clientX - rect.left;
-  rgPointer.y = e.clientY - rect.top;
-  let found = null;
-  for (let i = 0; i < rgBalls.length; i++) {
-    const b = rgBalls[i];
-    if (Math.hypot(b.x - rgPointer.x, b.y - rgPointer.y) <= b.r + 6) {
-      found = b;
-      break;
-    }
-  }
-  if (found) {
-    showTip(e, `<strong>${found.name}</strong><br>${STAGE_LABELS[found.stage]}<br><span style="opacity:0.8">${found.note}</span>`);
-  } else {
-    hideTip();
-  }
-});
-rgCanvas.addEventListener('mouseleave', () => {
-  rgPointer.x = -999;
-  rgPointer.y = -999;
-  hideTip();
-});
-
-/* ============================================================================
-   TAB SWITCHING
-   ============================================================================ */
-function switchTab(paneId, shouldScroll) {
-  document.querySelectorAll('.arch-tab').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-pane') === paneId);
-  });
-  document.querySelectorAll('.view-pane').forEach(pane => {
-    pane.classList.toggle('active', pane.id === paneId);
-  });
-
-  document.getElementById('navBtnViz').classList.toggle('active', paneId !== 'pane-cv');
-  document.getElementById('navBtnCv').classList.toggle('active', paneId === 'pane-cv');
-
-  document.getElementById('workspaceRoot').classList.add('revealed');
-  document.getElementById('constructedCols').classList.add('built');
-
-  if (shouldScroll) {
-    const anchor = document.getElementById('tabsAnchor');
-    if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (movingCount > 0 || elapsed < 4500) {
+    requestAnimationFrame(renderKineticSculpture);
   }
 }
 
-/* ============================================================================
-   PLATE 01: TWO-WAY COMPANY GALAXY (RESIZABLE BY DEPTH, RIGOR, OR SCALE)
-   ============================================================================ */
-let galaxyNodes = [];
-let currentGalaxyFilter = 'all';
-let currentGalaxyLens = 'depth';
+// ============================================================================
+// 2. THE 180° HORIZON FAN (RESPONSIVE VIEWBOX, ZERO WHITE TEXT, CLEAN DARK INK)
+// ============================================================================
+function renderHorizonFan() {
+  const mount = document.getElementById('fanMount');
+  if (!mount) return;
 
-function packGalaxy(lens) {
-  const W = 1160, H = 560;
-  const cx = W * 0.5, cy = H * 0.5;
-
-  const stageHubs = {
-    "ACCEPTED": { x: cx, y: cy - 20 },
-    "I_PASSED": { x: cx - 200, y: cy - 30 },
-    "INTERVIEW": { x: cx + 200, y: cy - 30 },
-    "THEY_PASSED": { x: cx - 160, y: cy + 120 },
-    "VOID": { x: cx + 160, y: cy + 120 }
+  const W = 1040, H = 560;
+  const cx = W * 0.5, cy = H - 44;
+  const innerR = 88;
+  const ringRadii = {
+    VOID: 185,
+    THEY_PASSED: 255,
+    INTERVIEW: 325,
+    I_PASSED: 395,
+    ACCEPTED: 455
   };
 
-  galaxyNodes = COMPANIES.slice(0, 130).map((d, i) => {
-    const score = d[lens] || d.depth || 50;
-    const r = Math.max(13, Math.min(48, 9 + (score / 100) * 36));
-    const h = stageHubs[d.stage] || { x: cx, y: cy };
-    const a = i * 2.39996;
-    return {
-      ...d, r,
-      x: h.x + Math.cos(a) * (20 + (i % 8) * 14),
-      y: h.y + Math.sin(a) * (20 + (i % 8) * 14),
-      hx: h.x, hy: h.y
-    };
-  });
-
-  for (let step = 0; step < 190; step++) {
-    for (let i = 0; i < galaxyNodes.length; i++) {
-      const a = galaxyNodes[i];
-      a.x += (a.hx - a.x) * 0.032;
-      a.y += (a.hy - a.y) * 0.032;
-      for (let j = i + 1; j < galaxyNodes.length; j++) {
-        const b = galaxyNodes[j];
-        const dx = b.x - a.x, dy = b.y - a.y;
-        const d = Math.hypot(dx, dy) || 0.1;
-        const minD = a.r + b.r + 3.5;
-        if (d < minD) {
-          const push = (minD - d) * 0.52;
-          const nx = dx / d, ny = dy / d;
-          a.x -= nx * push; a.y -= ny * push;
-          b.x += nx * push; b.y += ny * push;
-        }
-      }
-      a.x = Math.max(a.r + 12, Math.min(W - a.r - 12, a.x));
-      a.y = Math.max(a.r + 12, Math.min(H - a.r - 12, a.y));
+  // Order companies smoothly from Left (Silence -> They Passed -> Final Rounds -> I Passed -> Where I Built) to Right
+  const stageOrder = { VOID: 0, THEY_PASSED: 1, INTERVIEW: 2, I_PASSED: 3, ACCEPTED: 4 };
+  const sorted = [...COMPANIES].sort((a, b) => {
+    if (stageOrder[a.stage] !== stageOrder[b.stage]) {
+      return stageOrder[a.stage] - stageOrder[b.stage];
     }
-  }
-  renderGalaxySVG();
-}
-
-function inspectGalaxyNode(idx) {
-  const n = galaxyNodes[idx];
-  if (!n) return;
-  const el = document.getElementById('galaxyReadout');
-  if (el) {
-    el.textContent = `${n.name} · ${STAGE_LABELS[n.stage]} · ${n.note} (${n.sector})`;
-  }
-}
-
-function renderGalaxySVG() {
-  const wrap = document.getElementById('galaxySvgWrap');
-  const W = 1160, H = 560;
-  let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
-
-  galaxyNodes.forEach((n, idx) => {
-    const active = (currentGalaxyFilter === 'all') || (n.stage === currentGalaxyFilter);
-    const op = active ? 1 : 0.12;
-    const col = STAGE_COLORS[n.stage] || "#6E8299";
-
-    svg += `<g style="opacity:${op};cursor:pointer;transition:opacity 0.2s" onclick="inspectGalaxyNode(${idx})" onmouseenter="inspectGalaxyNode(${idx})">`;
-    if (n.stage === 'ACCEPTED') {
-      svg += `<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${(n.r + 4).toFixed(1)}" fill="none" stroke="#17856D" stroke-width="2"/>`;
-    } else if (n.stage === 'I_PASSED') {
-      svg += `<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${(n.r + 3.5).toFixed(1)}" fill="none" stroke="#7C5295" stroke-width="1.8" stroke-dasharray="4 2"/>`;
-    }
-    svg += `<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${n.r.toFixed(1)}" fill="${col}" fill-opacity="0.9" stroke="#FDFCFA" stroke-width="1.5"/>`;
-
-    const short = n.name.replace('Google — YouTube', 'Google / YT').replace('Teachers Pay Teachers', 'TpT').replace('OMSI (Oregon Museum of Science)', 'OMSI').replace('Wisconsin State Assembly', 'WI Assembly').replace('Eduland & 4AM Marketing', 'Eduland / 4AM').replace('NYC Teaching Collaborative', 'NYC Teaching');
-    const fs = Math.max(7.5, Math.min(11.5, n.r * 0.34));
-    if (n.r >= 16) {
-      svg += `<text x="${n.x.toFixed(1)}" y="${n.y.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" fill="#FDFCFA" font-family="Inter, sans-serif" font-weight="500" font-size="${fs.toFixed(1)}">${short.slice(0, 15)}</text>`;
-    }
-    svg += `</g>`;
-  });
-  svg += `</svg>`;
-  wrap.innerHTML = svg;
-}
-
-function filterGalaxy(stageVal, btn) {
-  currentGalaxyFilter = stageVal;
-  document.querySelectorAll('#galaxyStageFilter .filter-link').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  renderGalaxySVG();
-}
-
-function setGalaxyLens(lensVal, btn) {
-  currentGalaxyLens = lensVal;
-  document.querySelectorAll('#galaxySizeLens .filter-link').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  packGalaxy(lensVal);
-}
-
-/* ============================================================================
-   PLATE 02 & 03: TWO-WAY ALLUVIAL PIPELINE & CRAFT MOSAIC (NO RAW NUMBERS)
-   ============================================================================ */
-function initAlluvialAndMosaic() {
-  const wrap = document.getElementById('sankeySvgWrap');
-  const W = 1120, H = 440;
-  const colX = [16, 425, 855];
-  const nodeW = 225;
-
-  let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
-
-  const channels = [
-    { name: "Direct Recruiter & Executive Referral", sub: "Primary source of deep loops & offers", y: 24 },
-    { name: "Greenhouse ATS Portals", sub: "Tech, AI & media applications", y: 98 },
-    { name: "LinkedIn & Direct Applications", sub: "Broad industry submissions", y: 172 },
-    { name: "Lever & AshBy Portals", sub: "Growth & venture teams", y: 246 },
-    { name: "WeChat & Global Direct", sub: "International leadership (Shanghai / Seoul)", y: 320 }
-  ];
-
-  const tracks = [
-    { name: "Trust & Safety / Policy & PM", sub: "YouTube, TikTok, TpT, Meta, OpenSea", y: 20 },
-    { name: "AI Safety, Red-Teaming & GenAI", sub: "Google Frontier AI, Scale AI, Anthropic, OpenAI", y: 90 },
-    { name: "Copywriting, Editorial & UX Writing", sub: "RebelBase, Condé Nast, Wieden+Kennedy", y: 160 },
-    { name: "EdTech, Curriculum & Global Leadership", sub: "ELC Shanghai, OMSI, YBM ECC, MasterClass", y: 230 },
-    { name: "Product, Operations & Strategy", sub: "Amazon, DoorDash, Etsy, Stripe", y: 300 },
-    { name: "Brand, Media & Content Strategy", sub: "Netflix, Spotify, CBS/NCAA/Buick", y: 370 }
-  ];
-
-  const outcomes = [
-    { name: "Into the Void", sub: "Unanswered applications", col: "#6E8299", y: 22 },
-    { name: "They Rejected Me", sub: "Automated & panel passes", col: "#C84B59", y: 104 },
-    { name: "Deep Interview Loops", sub: "Multi-round finalist evaluation", col: "#D48C2A", y: 186 },
-    { name: "I Rejected Them", sub: "Offers & loops I declined", col: "#7C5295", y: 268 },
-    { name: "Accepted & Built", sub: "Where I said yes & shipped", col: "#17856D", y: 350 }
-  ];
-
-  // Ribbons from Channels to Tracks
-  const c2t = [
-    [0, 0, 14], [0, 1, 10], [0, 2, 12], [0, 3, 10],
-    [1, 0, 12], [1, 1, 12], [1, 4, 10],
-    [2, 2, 16], [2, 5, 12], [2, 4, 10],
-    [3, 0, 8],  [3, 4, 9],
-    [4, 3, 12]
-  ];
-  c2t.forEach(([ci, ti, w]) => {
-    const y1 = channels[ci].y + 22, y2 = tracks[ti].y + 20;
-    svg += `<path d="M ${colX[0] + nodeW} ${y1} C 335 ${y1}, 335 ${y2}, ${colX[1]} ${y2}" fill="none" stroke="#85837D" stroke-width="${w}" stroke-opacity="0.25"/>`;
+    return a.name.localeCompare(b.name);
   });
 
-  // Ribbons from Tracks to 5 Two-Way Outcomes
-  const t2o = [
-    [0, 4, 12], [0, 3, 9], [0, 2, 14], [0, 1, 12],
-    [1, 4, 10], [1, 3, 8], [1, 1, 12], [1, 0, 10],
-    [2, 4, 9],  [2, 1, 14], [2, 0, 18],
-    [3, 4, 12], [3, 3, 12], [3, 2, 8],
-    [4, 3, 8],  [4, 2, 10], [4, 1, 12], [4, 0, 14],
-    [5, 2, 8],  [5, 1, 12], [5, 0, 14]
-  ];
-  t2o.forEach(([ti, oi, w]) => {
-    const y1 = tracks[ti].y + 20, y2 = outcomes[oi].y + 22;
-    svg += `<path d="M ${colX[1] + nodeW} ${y1} C 755 ${y1}, 755 ${y2}, ${colX[2]} ${y2}" fill="none" stroke="${outcomes[oi].col}" stroke-width="${w}" stroke-opacity="0.38"/>`;
-  });
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="180 degree horizon fan of all companies">`;
 
-  channels.forEach(c => {
-    svg += `<rect x="${colX[0]}" y="${c.y}" width="${nodeW}" height="46" fill="#141413"/>`;
-    svg += `<text x="${colX[0] + 12}" y="${c.y + 19}" fill="#FDFCFA" font-family="Inter, sans-serif" font-weight="500" font-size="10.5">${c.name}</text>`;
-    svg += `<text x="${colX[0] + 12}" y="${c.y + 34}" fill="#B5B3AC" font-family="JetBrains Mono, monospace" font-size="8.5">${c.sub}</text>`;
-  });
-
-  tracks.forEach(t => {
-    svg += `<rect x="${colX[1]}" y="${t.y}" width="${nodeW}" height="44" fill="#F6F5F0" stroke="#141413"/>`;
-    svg += `<text x="${colX[1] + 12}" y="${t.y + 18}" fill="#141413" font-family="Inter, sans-serif" font-weight="500" font-size="10">${t.name}</text>`;
-    svg += `<text x="${colX[1] + 12}" y="${t.y + 33}" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="8.5">${t.sub}</text>`;
-  });
-
-  outcomes.forEach(o => {
-    svg += `<rect x="${colX[2]}" y="${o.y}" width="245" height="48" fill="${o.col}"/>`;
-    svg += `<text x="${colX[2] + 14}" y="${o.y + 20}" fill="#FDFCFA" font-family="Inter, sans-serif" font-weight="600" font-size="11">${o.name}</text>`;
-    svg += `<text x="${colX[2] + 14}" y="${o.y + 36}" fill="rgba(253,252,250,0.88)" font-family="JetBrains Mono, monospace" font-size="9">${o.sub}</text>`;
-  });
-
-  svg += `</svg>`;
-  wrap.innerHTML = svg;
-
-  // Craft Mosaic (Qualitative & Anchor Company Focus, No Raw Email Numbers)
-  const mWrap = document.getElementById('mosaicSvgWrap');
-  const mW = 1120, mH = 360;
-  const tiles = [
-    { x: 0, y: 0, w: 370, h: 210, col: "#17856D", title: "Trust & Safety / Policy & PM", anchors: "Google — YouTube · TikTok · Teachers Pay Teachers · Meta · OpenSea", note: "Classifier scaling, VVR reduction, Child Safety GenAI, NA Ops" },
-    { x: 378, y: 0, w: 360, h: 210, col: "#3B5998", title: "Frontier AI Safety & Red-Teaming", anchors: "Google Responsible Innovation · Scale AI · Anthropic · OpenAI", note: "Adversarial testing across frontier models, products & robotics" },
-    { x: 746, y: 0, w: 374, h: 175, col: "#7C5295", title: "Global Education & Principal Leadership", anchors: "ELC Shanghai · OMSI · YBM ECC Seoul · NYU Tandon", note: "Founding Principal in Shanghai, Science instruction & global curriculum" },
-    { x: 0, y: 218, w: 370, h: 142, col: "#4A6FA5", title: "Editorial, Copywriting & UX Rhetoric", anchors: "RebelBase · Eduland · 4AM · The University Echo", note: "Editor-in-Chief, narrative strategy & product rhetoric" },
-    { x: 378, y: 218, w: 360, h: 142, col: "#C87D28", title: "Brand Partnerships & Live Operations", anchors: "CBS · NCAA March Madness · Buick · Follow-the-Sun Ops", note: "24/7 live event safety & executive escalations" },
-    { x: 746, y: 183, w: 374, h: 177, col: "#5C646D", title: "Cybersecurity & Legislative Policy", anchors: "NYU Cyber Fellow · Wisconsin State Assembly · Court Subpoenas", note: "Policy as Code (2× 1st Place Google Innovation Week)" }
-  ];
-  let mSvg = `<svg viewBox="0 0 ${mW} ${mH}" xmlns="http://www.w3.org/2000/svg">`;
-  tiles.forEach(t => {
-    mSvg += `<g>`;
-    mSvg += `<rect x="${t.x}" y="${t.y}" width="${t.w}" height="${t.h}" rx="4" fill="${t.col}"/>`;
-    mSvg += `<text x="${t.x + 20}" y="${t.y + 38}" fill="#FDFCFA" font-family="Newsreader, serif" font-size="22">${t.title}</text>`;
-    mSvg += `<text x="${t.x + 20}" y="${t.y + 66}" fill="#FDFCFA" font-family="Inter, sans-serif" font-weight="500" font-size="11.5">${t.anchors}</text>`;
-    mSvg += `<text x="${t.x + 20}" y="${t.y + 92}" fill="rgba(253,252,250,0.8)" font-family="JetBrains Mono, monospace" font-size="9.5">${t.note}</text>`;
-    mSvg += `</g>`;
-  });
-  mSvg += `</svg>`;
-  mWrap.innerHTML = mSvg;
-}
-
-/* ============================================================================
-   PLATE 04: 180° FIVE-RING HORIZON FAN
-   ============================================================================ */
-function initEmpireFan() {
-  const wrap = document.getElementById('fanSvgWrap');
-  const W = 1160, H = 580, cx = W * 0.5, cy = H - 48;
-  const list = [...COMPANIES].slice(0, 64).sort((a, b) => (a.stage > b.stage ? 1 : -1));
-
-  let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+  // 1. Concentric Semi-Circular Ring Guides & Labels
   const rings = [
-    { r: 120, name: "I · INTO THE VOID" },
-    { r: 200, name: "II · THEY REJECTED ME" },
-    { r: 280, name: "III · DEEP INTERVIEW LOOP" },
-    { r: 360, name: "IV · I REJECTED THEM" },
-    { r: 440, name: "V · ACCEPTED & BUILT" }
+    { label: "I · SILENCE", r: ringRadii.VOID },
+    { label: "II · THEY PASSED", r: ringRadii.THEY_PASSED },
+    { label: "III · FINAL ROUNDS", r: ringRadii.INTERVIEW },
+    { label: "IV · I PASSED", r: ringRadii.I_PASSED },
+    { label: "V · WHERE I BUILT", r: ringRadii.ACCEPTED }
   ];
-  rings.forEach(rg => {
-    svg += `<path d="M ${cx - rg.r} ${cy} A ${rg.r} ${rg.r} 0 0 1 ${cx + rg.r} ${cy}" fill="none" stroke="#E4E2DA" stroke-dasharray="3 3"/>`;
-    svg += `<text x="${cx}" y="${cy - rg.r - 5}" text-anchor="middle" fill="#85837D" font-family="JetBrains Mono, monospace" font-size="8.5">${rg.name}</text>`;
+
+  rings.forEach(rk => {
+    svg += `<path d="M ${cx - rk.r} ${cy} A ${rk.r} ${rk.r} 0 0 1 ${cx + rk.r} ${cy}" fill="none" stroke="#E2DFD5" stroke-width="1" stroke-dasharray="2,4"/>`;
+    svg += `<text x="${cx}" y="${cy - rk.r + 11}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#7A7872">${rk.label}</text>`;
   });
 
-  const ringRadius = { "VOID": 120, "THEY_PASSED": 200, "INTERVIEW": 280, "I_PASSED": 360, "ACCEPTED": 440 };
-  const n = list.length;
-  list.forEach((c, i) => {
-    const deg = -175 + (i / (n - 1)) * 170;
+  // Inner baseline arch
+  svg += `<path d="M ${cx - innerR} ${cy} A ${innerR} ${innerR} 0 0 1 ${cx + innerR} ${cy}" fill="none" stroke="#141413" stroke-width="1.2"/>`;
+  svg += `<line x1="${cx - 470}" y1="${cy}" x2="${cx + 470}" y2="${cy}" stroke="#141413" stroke-width="1"/>`;
+  svg += `<text x="${cx}" y="${cy - 18}" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-style="italic" font-size="15" fill="#141413">Levi J. Higgs</text>`;
+  svg += `<text x="${cx}" y="${cy - 4}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#7A7872">${sorted.length} NAMED EMPLOYERS</text>`;
+
+  // 2. Radial Spokes & Dark-Ink Perimeter Labels
+  const total = sorted.length;
+  sorted.forEach((co, idx) => {
+    // Angle from 178 deg (left) to 2 deg (right)
+    const deg = 178 - (idx / (total - 1)) * 176;
     const rad = (deg * Math.PI) / 180;
-    const rStage = ringRadius[c.stage] || 120;
-    const col = STAGE_COLORS[c.stage];
-    const x2 = cx + Math.cos(rad) * rStage, y2 = cy + Math.sin(rad) * rStage;
-    const lx = cx + Math.cos(rad) * 456, ly = cy + Math.sin(rad) * 456;
-    const safeName = c.name.replace(/'/g, "&#39;");
+    const rOuter = ringRadii[co.stage];
+    const col = STAGE_COLORS[co.stage];
 
-    svg += `<g style="cursor:pointer" onmousemove="showTip(event, '<strong>${safeName}</strong><br>${STAGE_LABELS[c.stage]}<br>${c.note}')" onmouseleave="hideTip()">`;
-    svg += `<line x1="${cx}" y1="${cy}" x2="${lx.toFixed(1)}" y2="${ly.toFixed(1)}" stroke="#F0EFEA" stroke-width="1"/>`;
-    svg += `<line x1="${cx}" y1="${cy}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${col}" stroke-width="${c.stage === 'ACCEPTED' || c.stage === 'I_PASSED' ? 3.2 : 1.8}"/>`;
-    svg += `<circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" r="${c.stage === 'ACCEPTED' ? 5.5 : 3.8}" fill="${col}" stroke="#FDFCFA" stroke-width="1"/>`;
+    const x1 = cx + Math.cos(rad) * innerR;
+    const y1 = cy - Math.sin(rad) * innerR;
+    const x2 = cx + Math.cos(rad) * rOuter;
+    const y2 = cy - Math.sin(rad) * rOuter;
 
-    const flip = deg < -90;
-    const rot = flip ? deg + 180 : deg;
-    const anchor = flip ? "end" : "start";
-    svg += `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" transform="rotate(${rot.toFixed(1)}, ${lx.toFixed(1)}, ${ly.toFixed(1)})" text-anchor="${anchor}" dominant-baseline="middle" fill="${c.stage === 'ACCEPTED' ? '#17856D' : (c.stage === 'I_PASSED' ? '#7C5295' : '#4A4945')}" font-family="Inter, sans-serif" font-weight="${c.stage === 'ACCEPTED' || c.stage === 'I_PASSED' ? '600' : '400'}" font-size="8.5">${c.name.slice(0, 22)}</text>`;
-    svg += `</g>`;
+    const lx = cx + Math.cos(rad) * (rOuter + 10);
+    const ly = cy - Math.sin(rad) * (rOuter + 10);
+
+    const isLeft = deg > 90;
+    const rot = isLeft ? (180 - deg) : -deg;
+    const anchor = isLeft ? 'end' : 'start';
+
+    const isHighlight = co.stage === 'ACCEPTED' || co.stage === 'I_PASSED';
+    const strokeW = isHighlight ? 2.1 : 1.15;
+    const dotR = isHighlight ? 4.2 : 2.8;
+    const fontWeight = isHighlight ? '600' : '400';
+    const textColor = isHighlight ? '#141413' : '#484743';
+    const safeNote = co.note.replace(/"/g, '&quot;');
+
+    svg += `<g class="fan-spoke" style="cursor:pointer" onmouseenter="showFanCompany('${co.name.replace(/'/g, "\\'")}', '${safeNote}', '${col}')">
+      <line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${col}" stroke-width="${strokeW}" stroke-opacity="0.82"/>
+      <circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" r="${dotR}" fill="${col}"/>
+      <text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="${anchor}" dominant-baseline="middle" transform="rotate(${rot.toFixed(2)}, ${lx.toFixed(1)}, ${ly.toFixed(1)})" font-family="Inter, sans-serif" font-size="8.5" font-weight="${fontWeight}" fill="${textColor}">${co.name}</text>
+    </g>`;
   });
 
-  svg += `<circle cx="${cx}" cy="${cy}" r="34" fill="#141413"/>`;
-  svg += `<text x="${cx}" y="${cy + 4}" text-anchor="middle" fill="#FDFCFA" font-family="JetBrains Mono, monospace" font-size="9">ORIGIN</text>`;
   svg += `</svg>`;
-  wrap.innerHTML = svg;
+  mount.innerHTML = svg;
 }
 
-/* ============================================================================
-   PLATE 05 & 06: TWO-WAY REJECTION LEXICON & CIRCADIAN CADENCE
-   ============================================================================ */
-function initTemporalAndLexicon() {
-  // Two-Way Lexicon: Their Automated No vs. My Polite Pass & Accepted Offers
-  const lexWrap = document.getElementById('lexiconSvgWrap');
-  const lW = 1120, lH = 320, mid = lW * 0.5;
-  const lefts = [
-    { p: '"after careful consideration, we will not be moving forward"', w: 420 },
-    { p: '"we have decided to pursue other candidates whose qualifications"', w: 370 },
-    { p: '"unfortunately we are unable to offer you a position"', w: 330 },
-    { p: '"due to the high volume of applications received"', w: 280 },
-    { p: '"we will keep your resume on file for future openings"', w: 230 },
-    { p: '"thank you for taking the time to apply"', w: 450 }
-  ];
-  const rights = [
-    { p: '"thank you for the offer — I have decided to accept another role"', w: 410, col: "rgba(124, 82, 149, 0.18)" },
-    { p: '"I would like to withdraw my candidacy from the process"', w: 360, col: "rgba(124, 82, 149, 0.18)" },
-    { p: '"while I appreciated meeting the team, I will pass on the next round"', w: 330, col: "rgba(124, 82, 149, 0.18)" },
-    { p: '"excited to extend a verbal offer to join Trust & Safety"', w: 380, col: "rgba(23, 133, 109, 0.18)" },
-    { p: '"please DocuSign your offer letter & onboarding package"', w: 420, col: "rgba(23, 133, 109, 0.18)" },
-    { p: '"welcome to the team — we are thrilled to have you"', w: 440, col: "rgba(23, 133, 109, 0.18)" }
-  ];
-  let lSvg = `<svg viewBox="0 0 ${lW} ${lH}" xmlns="http://www.w3.org/2000/svg">`;
-  lSvg += `<line x1="${mid}" y1="16" x2="${mid}" y2="${lH - 16}" stroke="#141413" stroke-width="1.5"/>`;
-  lSvg += `<text x="${mid - 16}" y="24" text-anchor="end" fill="#C84B59" font-family="JetBrains Mono, monospace" font-size="9.5">← WHEN THEY REJECTED ME (CORPORATE BOILERPLATE)</text>`;
-  lSvg += `<text x="${mid + 16}" y="24" text-anchor="start" fill="#7C5295" font-family="JetBrains Mono, monospace" font-size="9.5">WHEN I REJECTED THEM &amp; WHERE I SAID YES →</text>`;
-  lefts.forEach((it, i) => {
-    const y = 44 + i * 42;
-    lSvg += `<rect x="${mid - it.w - 8}" y="${y}" width="${it.w}" height="28" fill="rgba(200, 75, 89, 0.14)"/>`;
-    lSvg += `<text x="${mid - 16}" y="${y + 18}" text-anchor="end" fill="#141413" font-family="Inter, sans-serif" font-size="10.5">${it.p}</text>`;
-  });
-  rights.forEach((it, i) => {
-    const y = 44 + i * 42;
-    lSvg += `<rect x="${mid + 8}" y="${y}" width="${it.w}" height="28" fill="${it.col}"/>`;
-    lSvg += `<text x="${mid + 16}" y="${y + 18}" text-anchor="start" fill="#141413" font-family="Inter, sans-serif" font-size="10.5">${it.p}</text>`;
-  });
-  lSvg += `</svg>`;
-  lexWrap.innerHTML = lSvg;
+function showFanCompany(name, note, color) {
+  const el = document.getElementById('fanHoverReadout');
+  if (!el) return;
+  el.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;color:#141413;">
+    <i class="dot" style="background:${color}"></i>
+    <strong>${name}</strong> — <span style="color:#484743">${note}</span>
+  </span>`;
+}
 
-  // Circadian Rose & Seasonality Rhythm (Relative Density, No Raw Numbers)
-  const wrap = document.getElementById('temporalSvgWrap');
-  const W = 1120, H = 360;
-  const cx = 230, cy = 180;
-  const hours = (SEASONALITY_DATA.hour_by_cat && SEASONALITY_DATA.hour_by_cat.total) ? SEASONALITY_DATA.hour_by_cat.total : Array(24).fill(50);
-  const maxH = Math.max(...hours, 1);
+// ============================================================================
+// 3. THE 24-HOUR INBOX CLOCK (HIGH-CONTRAST DARK INK, ZERO WHITE TEXT)
+// ============================================================================
+function renderInboxClock() {
+  const mount = document.getElementById('clockMount');
+  if (!mount) return;
 
-  let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
-  [45, 85, 125].forEach(r => {
-    svg += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#E4E2DA" stroke-dasharray="3 3"/>`;
+  // Relative intensity by hour (0..23)
+  const sentByHour = [18,10,4,1,0,0,2,5,12,24,38,48,44,42,50,55,48,38,42,64,82,96,100,68];
+  const recvByHour = [6,2,1,0,0,4,18,46,88,100,82,74,62,78,86,72,54,32,18,12,8,6,4,3];
+
+  const W = 440, H = 420;
+  const cx = W * 0.5, cy = H * 0.5;
+  const baseR = 68, maxBar = 92;
+
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="24 hour clock of application vs response timing">`;
+
+  // Concentric reference rings
+  [baseR, baseR + 45, baseR + 90].forEach(r => {
+    svg += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#E2DFD5" stroke-width="1" stroke-dasharray="2,3"/>`;
   });
 
-  hours.forEach((cnt, hr) => {
-    const a1 = ((hr / 24) * 360 - 90) * (Math.PI / 180);
-    const a2 = (((hr + 0.82) / 24) * 360 - 90) * (Math.PI / 180);
-    const r = 28 + (cnt / maxH) * 108;
-    const x1 = cx + Math.cos(a1) * r, y1 = cy + Math.sin(a1) * r;
-    const x2 = cx + Math.cos(a2) * r, y2 = cy + Math.sin(a2) * r;
-    const col = (hr >= 9 && hr <= 17) ? "#4A6FA5" : "#7C5295";
-    svg += `<path d="M ${cx} ${cy} L ${x1.toFixed(1)} ${y1.toFixed(1)} A ${r.toFixed(1)} ${r.toFixed(1)} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)} Z" fill="${col}" fill-opacity="0.82" stroke="#FDFCFA" stroke-width="1"/>`;
-    if (hr % 3 === 0) {
-      const lx = cx + Math.cos(a1) * 148, ly = cy + Math.sin(a1) * 148;
-      svg += `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" fill="#85837D" font-family="JetBrains Mono, monospace" font-size="9">${hr}:00</text>`;
+  // 24 Hour Bars
+  for (let h = 0; h < 24; h++) {
+    const a = ((h / 24) * Math.PI * 2) - Math.PI / 2;
+    const sLen = (sentByHour[h] / 100) * maxBar;
+    const rLen = (recvByHour[h] / 100) * maxBar;
+
+    // Outbound applications (Slate blue)
+    const sx1 = cx + Math.cos(a - 0.04) * baseR;
+    const sy1 = cy + Math.sin(a - 0.04) * baseR;
+    const sx2 = cx + Math.cos(a - 0.04) * (baseR + sLen);
+    const sy2 = cy + Math.sin(a - 0.04) * (baseR + sLen);
+
+    // Inbound replies (Muted crimson)
+    const rx1 = cx + Math.cos(a + 0.04) * baseR;
+    const ry1 = cy + Math.sin(a + 0.04) * baseR;
+    const rx2 = cx + Math.cos(a + 0.04) * (baseR + rLen);
+    const ry2 = cy + Math.sin(a + 0.04) * (baseR + rLen);
+
+    svg += `<line x1="${sx1.toFixed(1)}" y1="${sy1.toFixed(1)}" x2="${sx2.toFixed(1)}" y2="${sy2.toFixed(1)}" stroke="#456990" stroke-width="4.5" stroke-linecap="round"/>`;
+    svg += `<line x1="${rx1.toFixed(1)}" y1="${ry1.toFixed(1)}" x2="${rx2.toFixed(1)}" y2="${ry2.toFixed(1)}" stroke="#C44D58" stroke-width="4.5" stroke-linecap="round" stroke-opacity="0.8"/>`;
+
+    // Hour labels every 3 hours
+    if (h % 3 === 0) {
+      const lx = cx + Math.cos(a) * (baseR + maxBar + 22);
+      const ly = cy + Math.sin(a) * (baseR + maxBar + 22);
+      const label = h === 0 ? '12a' : (h === 12 ? '12p' : (h > 12 ? (h - 12) + 'p' : h + 'a'));
+      svg += `<text x="${lx.toFixed(1)}" y="${(ly + 3).toFixed(1)}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#484743">${label}</text>`;
     }
-  });
-  svg += `<circle cx="${cx}" cy="${cy}" r="22" fill="#141413"/>`;
-  svg += `<text x="${cx}" y="${cy + 3}" text-anchor="middle" fill="#FDFCFA" font-family="JetBrains Mono, monospace" font-size="8">24H</text>`;
-
-  const ox = 510;
-  const months = (SEASONALITY_DATA.months || []).map(m => m.month);
-  const days = (SEASONALITY_DATA.days_of_week || []).map(d => d.day);
-  const grid = SEASONALITY_DATA.month_dow_matrix || [];
-  months.forEach((m, mi) => {
-    svg += `<text x="${ox + 50 + mi * 44}" y="34" text-anchor="middle" fill="#85837D" font-family="JetBrains Mono, monospace" font-size="9">${m}</text>`;
-  });
-  days.forEach((d, di) => {
-    svg += `<text x="${ox + 26}" y="${68 + di * 40}" text-anchor="end" fill="#85837D" font-family="JetBrains Mono, monospace" font-size="9">${d}</text>`;
-    months.forEach((m, mi) => {
-      const v = (grid[mi] && grid[mi][di]) ? grid[mi][di] : 0;
-      const op = Math.min(0.92, 0.08 + v / 75);
-      svg += `<rect x="${ox + 32 + mi * 44}" y="${48 + di * 40}" width="36" height="32" rx="3" fill="#4A6FA5" fill-opacity="${op.toFixed(2)}"/>`;
-    });
-  });
-  svg += `</svg>`;
-  wrap.innerHTML = svg;
-}
-
-function bootAll() {
-  spawnPhysicsBalls();
-  requestAnimationFrame(stepNewtonianRubeGoldberg);
-  packGalaxy('depth');
-  initAlluvialAndMosaic();
-  initEmpireFan();
-  initTemporalAndLexicon();
-
-  if (window.ResizeObserver) {
-    const ro = new ResizeObserver(() => {
-      setupRubeGoldbergWorld();
-    });
-    ro.observe(document.getElementById('rgViewport'));
-  } else {
-    window.addEventListener('resize', setupRubeGoldbergWorld);
   }
+
+  // Center label (Dark ink on warm paper)
+  svg += `<circle cx="${cx}" cy="${cy}" r="${baseR - 4}" fill="#F6F5F0"/>`;
+  svg += `<text x="${cx}" y="${cy - 4}" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-style="italic" font-size="15" fill="#141413">24 Hours</text>`;
+  svg += `<text x="${cx}" y="${cy + 12}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#7A7872">EST / EDT</text>`;
+
+  // Legend at bottom of SVG (Dark ink)
+  svg += `<circle cx="${cx - 95}" cy="${H - 14}" r="4.5" fill="#456990"/>`;
+  svg += `<text x="${cx - 84}" y="${H - 10}" font-family="Inter, sans-serif" font-size="11" fill="#141413">When I Applied</text>`;
+  svg += `<circle cx="${cx + 25}" cy="${H - 14}" r="4.5" fill="#C44D58"/>`;
+  svg += `<text x="${cx + 36}" y="${H - 10}" font-family="Inter, sans-serif" font-size="11" fill="#141413">When They Replied</text>`;
+
+  svg += `</svg>`;
+  mount.innerHTML = svg;
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', bootAll);
-} else {
-  bootAll();
-}
+window.addEventListener('DOMContentLoaded', () => {
+  initKineticSculpture();
+  renderHorizonFan();
+  renderInboxClock();
+});
 </script>
 </body>
 </html>
