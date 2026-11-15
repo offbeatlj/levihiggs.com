@@ -1,0 +1,102 @@
+﻿=== SECTION 1: MONTHLY SEASONALITY (JAN-DEC) ===
+Month,Total_Emails,Applications,Rejections,Interviews,Offers,Mon,Tue,Wed,Thu,Fri,Sat,Sun
+Jan,455,369,47,31,8,53,54,34,253,45,9,7
+Feb,152,65,54,19,14,11,32,37,24,27,18,3
+Mar,43,23,18,1,1,4,14,6,6,12,1,0
+Apr,71,40,20,7,4,7,23,10,21,5,3,2
+May,151,100,47,4,0,27,31,18,25,12,24,14
+Jun,79,28,27,24,0,23,12,17,9,5,6,7
+Jul,189,67,42,47,33,23,38,34,34,41,14,5
+Aug,318,222,61,31,4,53,47,35,87,72,7,17
+Sep,140,93,41,6,0,56,21,15,14,24,3,7
+Oct,194,156,31,7,0,57,38,17,26,46,6,4
+Nov,304,248,47,9,0,38,18,115,20,27,65,21
+Dec,242,175,42,23,2,22,30,116,26,18,21,9
+
+=== SECTION 2: SOURCE CHANNELS / ATS ===
+Channel,Total_Emails,Applications,Rejections,Interviews,Offers
+Direct Company & Recruiter,1278,687,323,207,61
+LinkedIn Jobs,456,415,41,0,0
+Job Boards (Indeed / Zip),171,148,23,0,0
+Greenhouse ATS,166,120,46,0,0
+AngelList / Wellfound,133,129,2,2,0
+Enterprise ATS (Workday / Ashby),103,75,23,0,5
+Lever ATS,35,14,21,0,0
+
+=== SECTION 3: ROLE DOMAINS ===
+Domain,Total_Emails,Applications,Rejections,Interviews,Offers
+"Startups, SaaS & General",1137,806,248,60,23
+Big Tech & AI Labs,395,232,65,88,10
+Education & EdTech,281,172,55,27,27
+"Copywriting, Content & UX",193,154,31,8,0
+"Media, Creator & Marketing",184,119,43,18,4
+"Product, Strategy & Ops",113,88,20,3,2
+Trust & Safety / Policy,39,17,17,5,0
+
+=== SECTION 4: TOP 65 SUBJECT-LINE SEMANTIC TOKENS ===
+Word,Total_Occurrences,Semantic_Cluster,In_Applications,In_Rejections,In_Interviews,In_Offers
+application,707,Application & ATS Pipeline,570,132,4,1
+thank,341,Application & ATS Pipeline,275,65,1,0
+applied,282,Application & ATS Pipeline,282,0,0,0
+applying,267,Application & ATS Pipeline,250,17,0,0
+interview,174,Interview & Scheduling,0,0,174,0
+thanks,104,Application & ATS Pipeline,73,31,0,0
+update,102,Rejection & Status Vernacular,46,50,4,2
+content,90,Role & Craft Identity,68,14,8,0
+successfully,82,Application & ATS Pipeline,82,0,0,0
+marketing,78,Role & Craft Identity,69,8,1,0
+sales,72,Application & ATS Pipeline,64,7,1,0
+received,64,Application & ATS Pipeline,57,6,1,0
+writer,64,Role & Craft Identity,51,13,0,0
+interest,59,Rejection & Status Vernacular,4,55,0,0
+offer,58,Offer & Onboarding,10,7,0,41
+english,55,Rejection & Status Vernacular,34,19,2,0
+manager,54,Rejection & Status Vernacular,31,20,3,0
+indeed,47,Application & ATS Pipeline,47,0,0,0
+account,45,Application & ATS Pipeline,44,1,0,0
+invitation,40,Interview & Scheduling,14,0,26,0
+teacher,38,Rejection & Status Vernacular,19,19,0,0
+status,38,Rejection & Status Vernacular,1,34,1,2
+development,37,Application & ATS Pipeline,34,3,0,0
+confirmation,36,Interview & Scheduling,5,3,28,0
+entry,35,Application & ATS Pipeline,33,2,0,0
+reminder,32,Offer & Onboarding,17,0,10,5
+onboarding,31,Offer & Onboarding,15,1,0,15
+level,29,Application & ATS Pipeline,27,2,0,0
+teaching,28,Role & Craft Identity,21,7,0,0
+assistant,27,Application & ATS Pipeline,26,1,0,0
+follow,26,Rejection & Status Vernacular,7,18,1,0
+safety,25,Rejection & Status Vernacular,14,10,1,0
+information,24,Rejection & Status Vernacular,2,22,0,0
+success,24,Application & ATS Pipeline,22,2,0,0
+appl,23,Rejection & Status Vernacular,3,20,0,0
+school,23,Offer & Onboarding,5,0,0,18
+technical,22,Application & ATS Pipeline,20,2,0,0
+important,22,Rejection & Status Vernacular,2,20,0,0
+copywriter,21,Role & Craft Identity,19,2,0,0
+rep,21,Application & ATS Pipeline,21,0,0,0
+welcome,21,Offer & Onboarding,5,7,0,9
+anthropic,21,Application & ATS Pipeline,20,1,0,0
+associate,20,Role & Craft Identity,17,3,0,0
+viewed,20,Application & ATS Pipeline,20,0,0,0
+lev,20,Interview & Scheduling,1,0,19,0
+book,20,Offer & Onboarding,2,0,0,18
+trust,20,Rejection & Status Vernacular,7,11,2,0
+action,19,Application & ATS Pipeline,15,2,1,1
+teachers,19,Role & Craft Identity,13,2,4,0
+phone,19,Interview & Scheduling,8,0,11,0
+preschool,19,Rejection & Status Vernacular,8,11,0,0
+junior,18,Role & Craft Identity,16,2,0,0
+editor,17,Role & Craft Identity,16,1,0,0
+media,17,Application & ATS Pipeline,16,1,0,0
+executive,17,Application & ATS Pipeline,17,0,0,0
+business,17,Application & ATS Pipeline,12,5,0,0
+summary,17,Rejection & Status Vernacular,10,7,0,0
+product,16,Role & Craft Identity,12,4,0,0
+customer,16,Application & ATS Pipeline,14,2,0,0
+request,16,Interview & Scheduling,2,1,13,0
+opportunity,15,Rejection & Status Vernacular,7,8,0,0
+survey,15,Application & ATS Pipeline,12,0,3,0
+hiring,15,Application & ATS Pipeline,15,0,0,0
+online,15,Application & ATS Pipeline,15,0,0,0
+intern,15,Application & ATS Pipeline,14,1,0,0

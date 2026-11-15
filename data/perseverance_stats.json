@@ -1,0 +1,2893 @@
+{
+  "summary": {
+    "total_emails": 2342,
+    "applications": 1588,
+    "rejections": 479,
+    "interviews": 209,
+    "offers": 66,
+    "active_days": 660,
+    "active_weeks": 286,
+    "max_single_day_burst": 195,
+    "unique_channels": 7,
+    "unique_domains": 7,
+    "unique_employers_touched": 512
+  },
+  "seasonality": {
+    "months": [
+      {
+        "month": "Jan",
+        "applications": 369,
+        "rejections": 47,
+        "interviews": 31,
+        "offers": 8,
+        "total": 455
+      },
+      {
+        "month": "Feb",
+        "applications": 65,
+        "rejections": 54,
+        "interviews": 19,
+        "offers": 14,
+        "total": 152
+      },
+      {
+        "month": "Mar",
+        "applications": 23,
+        "rejections": 18,
+        "interviews": 1,
+        "offers": 1,
+        "total": 43
+      },
+      {
+        "month": "Apr",
+        "applications": 40,
+        "rejections": 20,
+        "interviews": 7,
+        "offers": 4,
+        "total": 71
+      },
+      {
+        "month": "May",
+        "applications": 100,
+        "rejections": 47,
+        "interviews": 4,
+        "offers": 0,
+        "total": 151
+      },
+      {
+        "month": "Jun",
+        "applications": 28,
+        "rejections": 27,
+        "interviews": 24,
+        "offers": 0,
+        "total": 79
+      },
+      {
+        "month": "Jul",
+        "applications": 67,
+        "rejections": 42,
+        "interviews": 47,
+        "offers": 33,
+        "total": 189
+      },
+      {
+        "month": "Aug",
+        "applications": 222,
+        "rejections": 61,
+        "interviews": 31,
+        "offers": 4,
+        "total": 318
+      },
+      {
+        "month": "Sep",
+        "applications": 93,
+        "rejections": 41,
+        "interviews": 6,
+        "offers": 0,
+        "total": 140
+      },
+      {
+        "month": "Oct",
+        "applications": 156,
+        "rejections": 31,
+        "interviews": 7,
+        "offers": 0,
+        "total": 194
+      },
+      {
+        "month": "Nov",
+        "applications": 248,
+        "rejections": 47,
+        "interviews": 9,
+        "offers": 0,
+        "total": 304
+      },
+      {
+        "month": "Dec",
+        "applications": 175,
+        "rejections": 42,
+        "interviews": 23,
+        "offers": 2,
+        "total": 242
+      }
+    ],
+    "days_of_week": [
+      {
+        "day": "Mon",
+        "applications": 266,
+        "rejections": 75,
+        "interviews": 25,
+        "offers": 8,
+        "total": 374
+      },
+      {
+        "day": "Tue",
+        "applications": 223,
+        "rejections": 82,
+        "interviews": 39,
+        "offers": 14,
+        "total": 358
+      },
+      {
+        "day": "Wed",
+        "applications": 288,
+        "rejections": 112,
+        "interviews": 38,
+        "offers": 16,
+        "total": 454
+      },
+      {
+        "day": "Thu",
+        "applications": 405,
+        "rejections": 79,
+        "interviews": 44,
+        "offers": 17,
+        "total": 545
+      },
+      {
+        "day": "Fri",
+        "applications": 206,
+        "rejections": 79,
+        "interviews": 45,
+        "offers": 4,
+        "total": 334
+      },
+      {
+        "day": "Sat",
+        "applications": 137,
+        "rejections": 25,
+        "interviews": 10,
+        "offers": 5,
+        "total": 177
+      },
+      {
+        "day": "Sun",
+        "applications": 61,
+        "rejections": 25,
+        "interviews": 8,
+        "offers": 2,
+        "total": 96
+      }
+    ],
+    "month_dow_matrix": [
+      [
+        53,
+        54,
+        34,
+        253,
+        45,
+        9,
+        7
+      ],
+      [
+        11,
+        32,
+        37,
+        24,
+        27,
+        18,
+        3
+      ],
+      [
+        4,
+        14,
+        6,
+        6,
+        12,
+        1,
+        0
+      ],
+      [
+        7,
+        23,
+        10,
+        21,
+        5,
+        3,
+        2
+      ],
+      [
+        27,
+        31,
+        18,
+        25,
+        12,
+        24,
+        14
+      ],
+      [
+        23,
+        12,
+        17,
+        9,
+        5,
+        6,
+        7
+      ],
+      [
+        23,
+        38,
+        34,
+        34,
+        41,
+        14,
+        5
+      ],
+      [
+        53,
+        47,
+        35,
+        87,
+        72,
+        7,
+        17
+      ],
+      [
+        56,
+        21,
+        15,
+        14,
+        24,
+        3,
+        7
+      ],
+      [
+        57,
+        38,
+        17,
+        26,
+        46,
+        6,
+        4
+      ],
+      [
+        38,
+        18,
+        115,
+        20,
+        27,
+        65,
+        21
+      ],
+      [
+        22,
+        30,
+        116,
+        26,
+        18,
+        21,
+        9
+      ]
+    ],
+    "month_dow_by_cat": {
+      "applications": [
+        [
+          46,
+          37,
+          22,
+          223,
+          36,
+          3,
+          2
+        ],
+        [
+          5,
+          14,
+          13,
+          8,
+          8,
+          16,
+          1
+        ],
+        [
+          2,
+          11,
+          1,
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          2,
+          19,
+          2,
+          12,
+          3,
+          2,
+          0
+        ],
+        [
+          20,
+          24,
+          4,
+          16,
+          5,
+          19,
+          12
+        ],
+        [
+          11,
+          3,
+          3,
+          4,
+          0,
+          3,
+          4
+        ],
+        [
+          11,
+          10,
+          7,
+          22,
+          6,
+          9,
+          2
+        ],
+        [
+          33,
+          34,
+          23,
+          60,
+          58,
+          5,
+          9
+        ],
+        [
+          45,
+          13,
+          7,
+          8,
+          12,
+          3,
+          5
+        ],
+        [
+          51,
+          23,
+          14,
+          22,
+          41,
+          4,
+          1
+        ],
+        [
+          29,
+          16,
+          94,
+          9,
+          22,
+          58,
+          20
+        ],
+        [
+          11,
+          19,
+          98,
+          18,
+          10,
+          14,
+          5
+        ]
+      ],
+      "rejections": [
+        [
+          4,
+          8,
+          6,
+          16,
+          5,
+          4,
+          4
+        ],
+        [
+          4,
+          9,
+          18,
+          6,
+          14,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          5,
+          2,
+          7,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          6,
+          3,
+          2,
+          1,
+          2
+        ],
+        [
+          7,
+          7,
+          12,
+          9,
+          6,
+          4,
+          2
+        ],
+        [
+          8,
+          6,
+          7,
+          1,
+          2,
+          2,
+          1
+        ],
+        [
+          5,
+          12,
+          4,
+          5,
+          15,
+          0,
+          1
+        ],
+        [
+          15,
+          6,
+          10,
+          15,
+          7,
+          1,
+          7
+        ],
+        [
+          11,
+          5,
+          8,
+          5,
+          11,
+          0,
+          1
+        ],
+        [
+          4,
+          12,
+          3,
+          4,
+          3,
+          2,
+          3
+        ],
+        [
+          7,
+          2,
+          19,
+          8,
+          3,
+          7,
+          1
+        ],
+        [
+          6,
+          9,
+          14,
+          5,
+          4,
+          3,
+          1
+        ]
+      ],
+      "interviews": [
+        [
+          2,
+          7,
+          5,
+          13,
+          3,
+          1,
+          0
+        ],
+        [
+          2,
+          7,
+          1,
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          2,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          4,
+          3,
+          7,
+          4,
+          3,
+          1,
+          2
+        ],
+        [
+          1,
+          7,
+          13,
+          3,
+          18,
+          4,
+          1
+        ],
+        [
+          5,
+          6,
+          2,
+          11,
+          6,
+          0,
+          1
+        ],
+        [
+          0,
+          3,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          2,
+          3,
+          2,
+          0,
+          0
+        ],
+        [
+          5,
+          2,
+          4,
+          3,
+          4,
+          2,
+          3
+        ]
+      ],
+      "offers": [
+        [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          5,
+          7,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          9,
+          10,
+          4,
+          2,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      ]
+    },
+    "hour_by_cat": {
+      "applications": [
+        108,
+        79,
+        71,
+        79,
+        75,
+        88,
+        73,
+        37,
+        42,
+        66,
+        35,
+        32,
+        52,
+        44,
+        90,
+        76,
+        86,
+        73,
+        56,
+        62,
+        72,
+        48,
+        88,
+        54
+      ],
+      "rejections": [
+        18,
+        5,
+        5,
+        4,
+        6,
+        9,
+        7,
+        6,
+        15,
+        22,
+        23,
+        23,
+        27,
+        29,
+        34,
+        41,
+        36,
+        26,
+        35,
+        35,
+        18,
+        18,
+        19,
+        16
+      ],
+      "interviews": [
+        1,
+        8,
+        3,
+        13,
+        1,
+        7,
+        1,
+        2,
+        1,
+        9,
+        12,
+        10,
+        10,
+        19,
+        14,
+        20,
+        12,
+        10,
+        8,
+        14,
+        9,
+        11,
+        6,
+        8
+      ],
+      "offers": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1,
+        5,
+        5,
+        11,
+        1,
+        4,
+        6,
+        6,
+        5,
+        1,
+        6,
+        4,
+        1,
+        5,
+        1,
+        0
+      ],
+      "total": [
+        127,
+        92,
+        80,
+        96,
+        83,
+        104,
+        83,
+        45,
+        59,
+        102,
+        75,
+        76,
+        90,
+        96,
+        144,
+        143,
+        139,
+        110,
+        105,
+        115,
+        100,
+        82,
+        114,
+        78
+      ]
+    }
+  },
+  "histograms": {
+    "daily_burst_bins": [
+      {
+        "bin": "1 email/day",
+        "days": 336
+      },
+      {
+        "bin": "2\u20133 emails/day",
+        "days": 180
+      },
+      {
+        "bin": "4\u20136 emails/day",
+        "days": 79
+      },
+      {
+        "bin": "7\u201310 emails/day",
+        "days": 32
+      },
+      {
+        "bin": "11\u201320 emails/day",
+        "days": 20
+      },
+      {
+        "bin": "21+ (Sprint Day)",
+        "days": 13
+      }
+    ],
+    "weekly_distribution": [
+      226,
+      99,
+      97,
+      88,
+      85,
+      74,
+      74,
+      63,
+      60,
+      52,
+      45,
+      43,
+      41,
+      37,
+      26,
+      25,
+      24,
+      24,
+      23,
+      23,
+      23,
+      22,
+      20,
+      20,
+      19,
+      19,
+      18,
+      18,
+      18,
+      16,
+      16,
+      15,
+      15,
+      15,
+      15,
+      14,
+      14,
+      13,
+      13,
+      13,
+      12,
+      12,
+      12,
+      12,
+      12,
+      11,
+      10,
+      10,
+      10,
+      10,
+      9,
+      9,
+      9,
+      9,
+      9,
+      8,
+      8,
+      8,
+      8,
+      7
+    ]
+  },
+  "sankey": {
+    "stage1_to_stage2": [
+      {
+        "source": "Direct Company & Recruiter",
+        "target": "Startups, SaaS & General",
+        "value": 523
+      },
+      {
+        "source": "Direct Company & Recruiter",
+        "target": "Big Tech & AI Labs",
+        "value": 292
+      },
+      {
+        "source": "Direct Company & Recruiter",
+        "target": "Education & EdTech",
+        "value": 250
+      },
+      {
+        "source": "LinkedIn Jobs",
+        "target": "Startups, SaaS & General",
+        "value": 210
+      },
+      {
+        "source": "AngelList / Wellfound",
+        "target": "Startups, SaaS & General",
+        "value": 125
+      },
+      {
+        "source": "LinkedIn Jobs",
+        "target": "Copywriting, Content & UX",
+        "value": 107
+      },
+      {
+        "source": "Job Boards (Indeed / Zip)",
+        "target": "Startups, SaaS & General",
+        "value": 97
+      },
+      {
+        "source": "Enterprise ATS (Workday / Ashby)",
+        "target": "Startups, SaaS & General",
+        "value": 79
+      },
+      {
+        "source": "Direct Company & Recruiter",
+        "target": "Media, Creator & Marketing",
+        "value": 78
+      },
+      {
+        "source": "Greenhouse ATS",
+        "target": "Startups, SaaS & General",
+        "value": 75
+      },
+      {
+        "source": "Greenhouse ATS",
+        "target": "Big Tech & AI Labs",
+        "value": 64
+      },
+      {
+        "source": "Direct Company & Recruiter",
+        "target": "Product, Strategy & Ops",
+        "value": 54
+      },
+      {
+        "source": "LinkedIn Jobs",
+        "target": "Media, Creator & Marketing",
+        "value": 50
+      },
+      {
+        "source": "Direct Company & Recruiter",
+        "target": "Copywriting, Content & UX",
+        "value": 49
+      },
+      {
+        "source": "LinkedIn Jobs",
+        "target": "Product, Strategy & Ops",
+        "value": 41
+      },
+      {
+        "source": "Direct Company & Recruiter",
+        "target": "Trust & Safety / Policy",
+        "value": 32
+      },
+      {
+        "source": "Job Boards (Indeed / Zip)",
+        "target": "Copywriting, Content & UX",
+        "value": 29
+      },
+      {
+        "source": "Job Boards (Indeed / Zip)",
+        "target": "Media, Creator & Marketing",
+        "value": 29
+      },
+      {
+        "source": "Lever ATS",
+        "target": "Startups, SaaS & General",
+        "value": 28
+      },
+      {
+        "source": "LinkedIn Jobs",
+        "target": "Big Tech & AI Labs",
+        "value": 24
+      },
+      {
+        "source": "LinkedIn Jobs",
+        "target": "Education & EdTech",
+        "value": 22
+      },
+      {
+        "source": "Greenhouse ATS",
+        "target": "Media, Creator & Marketing",
+        "value": 13
+      },
+      {
+        "source": "Job Boards (Indeed / Zip)",
+        "target": "Product, Strategy & Ops",
+        "value": 10
+      },
+      {
+        "source": "Enterprise ATS (Workday / Ashby)",
+        "target": "Media, Creator & Marketing",
+        "value": 7
+      },
+      {
+        "source": "Enterprise ATS (Workday / Ashby)",
+        "target": "Copywriting, Content & UX",
+        "value": 6
+      },
+      {
+        "source": "Greenhouse ATS",
+        "target": "Education & EdTech",
+        "value": 6
+      },
+      {
+        "source": "Enterprise ATS (Workday / Ashby)",
+        "target": "Product, Strategy & Ops",
+        "value": 5
+      },
+      {
+        "source": "Enterprise ATS (Workday / Ashby)",
+        "target": "Big Tech & AI Labs",
+        "value": 5
+      },
+      {
+        "source": "Job Boards (Indeed / Zip)",
+        "target": "Big Tech & AI Labs",
+        "value": 4
+      },
+      {
+        "source": "AngelList / Wellfound",
+        "target": "Media, Creator & Marketing",
+        "value": 4
+      },
+      {
+        "source": "AngelList / Wellfound",
+        "target": "Big Tech & AI Labs",
+        "value": 4
+      },
+      {
+        "source": "Greenhouse ATS",
+        "target": "Product, Strategy & Ops",
+        "value": 3
+      },
+      {
+        "source": "Greenhouse ATS",
+        "target": "Trust & Safety / Policy",
+        "value": 3
+      },
+      {
+        "source": "Lever ATS",
+        "target": "Media, Creator & Marketing",
+        "value": 3
+      },
+      {
+        "source": "Greenhouse ATS",
+        "target": "Copywriting, Content & UX",
+        "value": 2
+      },
+      {
+        "source": "Lever ATS",
+        "target": "Big Tech & AI Labs",
+        "value": 2
+      },
+      {
+        "source": "Lever ATS",
+        "target": "Education & EdTech",
+        "value": 2
+      },
+      {
+        "source": "LinkedIn Jobs",
+        "target": "Trust & Safety / Policy",
+        "value": 2
+      },
+      {
+        "source": "Job Boards (Indeed / Zip)",
+        "target": "Education & EdTech",
+        "value": 1
+      },
+      {
+        "source": "Job Boards (Indeed / Zip)",
+        "target": "Trust & Safety / Policy",
+        "value": 1
+      },
+      {
+        "source": "Enterprise ATS (Workday / Ashby)",
+        "target": "Trust & Safety / Policy",
+        "value": 1
+      }
+    ],
+    "stage2_to_stage3": [
+      {
+        "source": "Startups, SaaS & General",
+        "target": "applications",
+        "value": 806
+      },
+      {
+        "source": "Startups, SaaS & General",
+        "target": "rejections",
+        "value": 248
+      },
+      {
+        "source": "Big Tech & AI Labs",
+        "target": "applications",
+        "value": 232
+      },
+      {
+        "source": "Education & EdTech",
+        "target": "applications",
+        "value": 172
+      },
+      {
+        "source": "Copywriting, Content & UX",
+        "target": "applications",
+        "value": 154
+      },
+      {
+        "source": "Media, Creator & Marketing",
+        "target": "applications",
+        "value": 119
+      },
+      {
+        "source": "Product, Strategy & Ops",
+        "target": "applications",
+        "value": 88
+      },
+      {
+        "source": "Big Tech & AI Labs",
+        "target": "interviews",
+        "value": 88
+      },
+      {
+        "source": "Big Tech & AI Labs",
+        "target": "rejections",
+        "value": 65
+      },
+      {
+        "source": "Startups, SaaS & General",
+        "target": "interviews",
+        "value": 60
+      },
+      {
+        "source": "Education & EdTech",
+        "target": "rejections",
+        "value": 55
+      },
+      {
+        "source": "Media, Creator & Marketing",
+        "target": "rejections",
+        "value": 43
+      },
+      {
+        "source": "Copywriting, Content & UX",
+        "target": "rejections",
+        "value": 31
+      },
+      {
+        "source": "Education & EdTech",
+        "target": "interviews",
+        "value": 27
+      },
+      {
+        "source": "Education & EdTech",
+        "target": "offers",
+        "value": 27
+      },
+      {
+        "source": "Startups, SaaS & General",
+        "target": "offers",
+        "value": 23
+      },
+      {
+        "source": "Product, Strategy & Ops",
+        "target": "rejections",
+        "value": 20
+      },
+      {
+        "source": "Media, Creator & Marketing",
+        "target": "interviews",
+        "value": 18
+      },
+      {
+        "source": "Trust & Safety / Policy",
+        "target": "applications",
+        "value": 17
+      },
+      {
+        "source": "Trust & Safety / Policy",
+        "target": "rejections",
+        "value": 17
+      },
+      {
+        "source": "Big Tech & AI Labs",
+        "target": "offers",
+        "value": 10
+      },
+      {
+        "source": "Copywriting, Content & UX",
+        "target": "interviews",
+        "value": 8
+      },
+      {
+        "source": "Trust & Safety / Policy",
+        "target": "interviews",
+        "value": 5
+      },
+      {
+        "source": "Media, Creator & Marketing",
+        "target": "offers",
+        "value": 4
+      },
+      {
+        "source": "Product, Strategy & Ops",
+        "target": "interviews",
+        "value": 3
+      },
+      {
+        "source": "Product, Strategy & Ops",
+        "target": "offers",
+        "value": 2
+      }
+    ]
+  },
+  "channels": [
+    {
+      "channel": "Direct Company & Recruiter",
+      "applications": 687,
+      "rejections": 323,
+      "interviews": 207,
+      "offers": 61,
+      "total": 1278
+    },
+    {
+      "channel": "LinkedIn Jobs",
+      "applications": 415,
+      "rejections": 41,
+      "interviews": 0,
+      "offers": 0,
+      "total": 456
+    },
+    {
+      "channel": "Job Boards (Indeed / Zip)",
+      "applications": 148,
+      "rejections": 23,
+      "interviews": 0,
+      "offers": 0,
+      "total": 171
+    },
+    {
+      "channel": "Greenhouse ATS",
+      "applications": 120,
+      "rejections": 46,
+      "interviews": 0,
+      "offers": 0,
+      "total": 166
+    },
+    {
+      "channel": "AngelList / Wellfound",
+      "applications": 129,
+      "rejections": 2,
+      "interviews": 2,
+      "offers": 0,
+      "total": 133
+    },
+    {
+      "channel": "Enterprise ATS (Workday / Ashby)",
+      "applications": 75,
+      "rejections": 23,
+      "interviews": 0,
+      "offers": 5,
+      "total": 103
+    },
+    {
+      "channel": "Lever ATS",
+      "applications": 14,
+      "rejections": 21,
+      "interviews": 0,
+      "offers": 0,
+      "total": 35
+    }
+  ],
+  "domains": [
+    {
+      "domain": "Startups, SaaS & General",
+      "applications": 806,
+      "rejections": 248,
+      "interviews": 60,
+      "offers": 23,
+      "total": 1137
+    },
+    {
+      "domain": "Big Tech & AI Labs",
+      "applications": 232,
+      "rejections": 65,
+      "interviews": 88,
+      "offers": 10,
+      "total": 395
+    },
+    {
+      "domain": "Education & EdTech",
+      "applications": 172,
+      "rejections": 55,
+      "interviews": 27,
+      "offers": 27,
+      "total": 281
+    },
+    {
+      "domain": "Copywriting, Content & UX",
+      "applications": 154,
+      "rejections": 31,
+      "interviews": 8,
+      "offers": 0,
+      "total": 193
+    },
+    {
+      "domain": "Media, Creator & Marketing",
+      "applications": 119,
+      "rejections": 43,
+      "interviews": 18,
+      "offers": 4,
+      "total": 184
+    },
+    {
+      "domain": "Product, Strategy & Ops",
+      "applications": 88,
+      "rejections": 20,
+      "interviews": 3,
+      "offers": 2,
+      "total": 113
+    },
+    {
+      "domain": "Trust & Safety / Policy",
+      "applications": 17,
+      "rejections": 17,
+      "interviews": 5,
+      "offers": 0,
+      "total": 39
+    }
+  ],
+  "semantic_words": [
+    {
+      "word": "application",
+      "count": 707,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 570,
+        "rejections": 132,
+        "interviews": 4,
+        "offers": 1
+      }
+    },
+    {
+      "word": "thank",
+      "count": 341,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 275,
+        "rejections": 65,
+        "interviews": 1,
+        "offers": 0
+      }
+    },
+    {
+      "word": "applied",
+      "count": 282,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 282,
+        "rejections": 0,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "applying",
+      "count": 267,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 250,
+        "rejections": 17,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "interview",
+      "count": 174,
+      "cluster": "Interview & Scheduling",
+      "breakdown": {
+        "applications": 0,
+        "rejections": 0,
+        "interviews": 174,
+        "offers": 0
+      }
+    },
+    {
+      "word": "thanks",
+      "count": 104,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 73,
+        "rejections": 31,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "update",
+      "count": 102,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 46,
+        "rejections": 50,
+        "interviews": 4,
+        "offers": 2
+      }
+    },
+    {
+      "word": "content",
+      "count": 90,
+      "cluster": "Role & Craft Identity",
+      "breakdown": {
+        "applications": 68,
+        "rejections": 14,
+        "interviews": 8,
+        "offers": 0
+      }
+    },
+    {
+      "word": "successfully",
+      "count": 82,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 82,
+        "rejections": 0,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "marketing",
+      "count": 78,
+      "cluster": "Role & Craft Identity",
+      "breakdown": {
+        "applications": 69,
+        "rejections": 8,
+        "interviews": 1,
+        "offers": 0
+      }
+    },
+    {
+      "word": "sales",
+      "count": 72,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 64,
+        "rejections": 7,
+        "interviews": 1,
+        "offers": 0
+      }
+    },
+    {
+      "word": "received",
+      "count": 64,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 57,
+        "rejections": 6,
+        "interviews": 1,
+        "offers": 0
+      }
+    },
+    {
+      "word": "writer",
+      "count": 64,
+      "cluster": "Role & Craft Identity",
+      "breakdown": {
+        "applications": 51,
+        "rejections": 13,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "interest",
+      "count": 59,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 4,
+        "rejections": 55,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "offer",
+      "count": 58,
+      "cluster": "Offer & Onboarding",
+      "breakdown": {
+        "applications": 10,
+        "rejections": 7,
+        "interviews": 0,
+        "offers": 41
+      }
+    },
+    {
+      "word": "english",
+      "count": 55,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 34,
+        "rejections": 19,
+        "interviews": 2,
+        "offers": 0
+      }
+    },
+    {
+      "word": "manager",
+      "count": 54,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 31,
+        "rejections": 20,
+        "interviews": 3,
+        "offers": 0
+      }
+    },
+    {
+      "word": "indeed",
+      "count": 47,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 47,
+        "rejections": 0,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "account",
+      "count": 45,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 44,
+        "rejections": 1,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "invitation",
+      "count": 40,
+      "cluster": "Interview & Scheduling",
+      "breakdown": {
+        "applications": 14,
+        "rejections": 0,
+        "interviews": 26,
+        "offers": 0
+      }
+    },
+    {
+      "word": "teacher",
+      "count": 38,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 19,
+        "rejections": 19,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "status",
+      "count": 38,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 1,
+        "rejections": 34,
+        "interviews": 1,
+        "offers": 2
+      }
+    },
+    {
+      "word": "development",
+      "count": 37,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 34,
+        "rejections": 3,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "confirmation",
+      "count": 36,
+      "cluster": "Interview & Scheduling",
+      "breakdown": {
+        "applications": 5,
+        "rejections": 3,
+        "interviews": 28,
+        "offers": 0
+      }
+    },
+    {
+      "word": "entry",
+      "count": 35,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 33,
+        "rejections": 2,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "reminder",
+      "count": 32,
+      "cluster": "Offer & Onboarding",
+      "breakdown": {
+        "applications": 17,
+        "rejections": 0,
+        "interviews": 10,
+        "offers": 5
+      }
+    },
+    {
+      "word": "onboarding",
+      "count": 31,
+      "cluster": "Offer & Onboarding",
+      "breakdown": {
+        "applications": 15,
+        "rejections": 1,
+        "interviews": 0,
+        "offers": 15
+      }
+    },
+    {
+      "word": "level",
+      "count": 29,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 27,
+        "rejections": 2,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "teaching",
+      "count": 28,
+      "cluster": "Role & Craft Identity",
+      "breakdown": {
+        "applications": 21,
+        "rejections": 7,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "assistant",
+      "count": 27,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 26,
+        "rejections": 1,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "follow",
+      "count": 26,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 7,
+        "rejections": 18,
+        "interviews": 1,
+        "offers": 0
+      }
+    },
+    {
+      "word": "safety",
+      "count": 25,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 14,
+        "rejections": 10,
+        "interviews": 1,
+        "offers": 0
+      }
+    },
+    {
+      "word": "information",
+      "count": 24,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 2,
+        "rejections": 22,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "success",
+      "count": 24,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 22,
+        "rejections": 2,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "appl",
+      "count": 23,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 3,
+        "rejections": 20,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "school",
+      "count": 23,
+      "cluster": "Offer & Onboarding",
+      "breakdown": {
+        "applications": 5,
+        "rejections": 0,
+        "interviews": 0,
+        "offers": 18
+      }
+    },
+    {
+      "word": "technical",
+      "count": 22,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 20,
+        "rejections": 2,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "important",
+      "count": 22,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 2,
+        "rejections": 20,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "copywriter",
+      "count": 21,
+      "cluster": "Role & Craft Identity",
+      "breakdown": {
+        "applications": 19,
+        "rejections": 2,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "rep",
+      "count": 21,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 21,
+        "rejections": 0,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "welcome",
+      "count": 21,
+      "cluster": "Offer & Onboarding",
+      "breakdown": {
+        "applications": 5,
+        "rejections": 7,
+        "interviews": 0,
+        "offers": 9
+      }
+    },
+    {
+      "word": "anthropic",
+      "count": 21,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 20,
+        "rejections": 1,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "associate",
+      "count": 20,
+      "cluster": "Role & Craft Identity",
+      "breakdown": {
+        "applications": 17,
+        "rejections": 3,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "viewed",
+      "count": 20,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 20,
+        "rejections": 0,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "lev",
+      "count": 20,
+      "cluster": "Interview & Scheduling",
+      "breakdown": {
+        "applications": 1,
+        "rejections": 0,
+        "interviews": 19,
+        "offers": 0
+      }
+    },
+    {
+      "word": "book",
+      "count": 20,
+      "cluster": "Offer & Onboarding",
+      "breakdown": {
+        "applications": 2,
+        "rejections": 0,
+        "interviews": 0,
+        "offers": 18
+      }
+    },
+    {
+      "word": "trust",
+      "count": 20,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 7,
+        "rejections": 11,
+        "interviews": 2,
+        "offers": 0
+      }
+    },
+    {
+      "word": "action",
+      "count": 19,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 15,
+        "rejections": 2,
+        "interviews": 1,
+        "offers": 1
+      }
+    },
+    {
+      "word": "teachers",
+      "count": 19,
+      "cluster": "Role & Craft Identity",
+      "breakdown": {
+        "applications": 13,
+        "rejections": 2,
+        "interviews": 4,
+        "offers": 0
+      }
+    },
+    {
+      "word": "phone",
+      "count": 19,
+      "cluster": "Interview & Scheduling",
+      "breakdown": {
+        "applications": 8,
+        "rejections": 0,
+        "interviews": 11,
+        "offers": 0
+      }
+    },
+    {
+      "word": "preschool",
+      "count": 19,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 8,
+        "rejections": 11,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "junior",
+      "count": 18,
+      "cluster": "Role & Craft Identity",
+      "breakdown": {
+        "applications": 16,
+        "rejections": 2,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "editor",
+      "count": 17,
+      "cluster": "Role & Craft Identity",
+      "breakdown": {
+        "applications": 16,
+        "rejections": 1,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "media",
+      "count": 17,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 16,
+        "rejections": 1,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "executive",
+      "count": 17,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 17,
+        "rejections": 0,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "business",
+      "count": 17,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 12,
+        "rejections": 5,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "summary",
+      "count": 17,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 10,
+        "rejections": 7,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "product",
+      "count": 16,
+      "cluster": "Role & Craft Identity",
+      "breakdown": {
+        "applications": 12,
+        "rejections": 4,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "customer",
+      "count": 16,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 14,
+        "rejections": 2,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "request",
+      "count": 16,
+      "cluster": "Interview & Scheduling",
+      "breakdown": {
+        "applications": 2,
+        "rejections": 1,
+        "interviews": 13,
+        "offers": 0
+      }
+    },
+    {
+      "word": "opportunity",
+      "count": 15,
+      "cluster": "Rejection & Status Vernacular",
+      "breakdown": {
+        "applications": 7,
+        "rejections": 8,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "survey",
+      "count": 15,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 12,
+        "rejections": 0,
+        "interviews": 3,
+        "offers": 0
+      }
+    },
+    {
+      "word": "hiring",
+      "count": 15,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 15,
+        "rejections": 0,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "online",
+      "count": 15,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 15,
+        "rejections": 0,
+        "interviews": 0,
+        "offers": 0
+      }
+    },
+    {
+      "word": "intern",
+      "count": 15,
+      "cluster": "Application & ATS Pipeline",
+      "breakdown": {
+        "applications": 14,
+        "rejections": 1,
+        "interviews": 0,
+        "offers": 0
+      }
+    }
+  ],
+  "scatter_clusters": [
+    {
+      "label": "LinkedIn Easy Apply (Startups, SaaS & General)",
+      "domain": "Startups, SaaS & General",
+      "channel": "LinkedIn Jobs",
+      "total_emails": 401,
+      "applications": 372,
+      "rejections": 29,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.04
+    },
+    {
+      "label": "Direct Hiring Team (Startups, SaaS & General)",
+      "domain": "Startups, SaaS & General",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 393,
+      "applications": 208,
+      "rejections": 136,
+      "interviews": 35,
+      "offers": 14,
+      "depth_score": 1.92
+    },
+    {
+      "label": "AngelList / Wellfound Startup (Startups, SaaS & General)",
+      "domain": "Startups, SaaS & General",
+      "channel": "AngelList / Wellfound",
+      "total_emails": 132,
+      "applications": 128,
+      "rejections": 2,
+      "interviews": 2,
+      "offers": 0,
+      "depth_score": 1.07
+    },
+    {
+      "label": "Greenhouse ATS Employer (Startups, SaaS & General)",
+      "domain": "Startups, SaaS & General",
+      "channel": "Greenhouse ATS",
+      "total_emails": 107,
+      "applications": 85,
+      "rejections": 22,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.1
+    },
+    {
+      "label": "ZipRecruiter Employer (Copywriting, Content & UX)",
+      "domain": "Copywriting, Content & UX",
+      "channel": "Job Boards (Indeed / Zip)",
+      "total_emails": 98,
+      "applications": 88,
+      "rejections": 10,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.05
+    },
+    {
+      "label": "Tier-1 Search & Video Platform",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 75,
+      "applications": 25,
+      "rejections": 20,
+      "interviews": 21,
+      "offers": 9,
+      "depth_score": 3.57
+    },
+    {
+      "label": "Direct Hiring Team (Education & EdTech)",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 70,
+      "applications": 40,
+      "rejections": 16,
+      "interviews": 10,
+      "offers": 4,
+      "depth_score": 2.31
+    },
+    {
+      "label": "Direct Hiring Team (Big Tech & AI Labs)",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 69,
+      "applications": 39,
+      "rejections": 9,
+      "interviews": 21,
+      "offers": 0,
+      "depth_score": 2.28
+    },
+    {
+      "label": "Indeed Employer (Startups, SaaS & General)",
+      "domain": "Startups, SaaS & General",
+      "channel": "Job Boards (Indeed / Zip)",
+      "total_emails": 69,
+      "applications": 56,
+      "rejections": 13,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.09
+    },
+    {
+      "label": "Social & Metaverse Giant",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 50,
+      "applications": 19,
+      "rejections": 4,
+      "interviews": 27,
+      "offers": 0,
+      "depth_score": 3.2
+    },
+    {
+      "label": "Lever ATS Employer (Startups, SaaS & General)",
+      "domain": "Startups, SaaS & General",
+      "channel": "Lever ATS",
+      "total_emails": 44,
+      "applications": 34,
+      "rejections": 10,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.11
+    },
+    {
+      "label": "Workday Enterprise (Startups, SaaS & General)",
+      "domain": "Startups, SaaS & General",
+      "channel": "Enterprise ATS (Workday / Ashby)",
+      "total_emails": 37,
+      "applications": 24,
+      "rejections": 13,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.18
+    },
+    {
+      "label": "Direct Hiring Team (Product, Strategy & Ops)",
+      "domain": "Product, Strategy & Ops",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 31,
+      "applications": 23,
+      "rejections": 7,
+      "interviews": 1,
+      "offers": 0,
+      "depth_score": 1.24
+    },
+    {
+      "label": "Workable Employer (Startups, SaaS & General)",
+      "domain": "Startups, SaaS & General",
+      "channel": "Enterprise ATS (Workday / Ashby)",
+      "total_emails": 28,
+      "applications": 25,
+      "rejections": 3,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.05
+    },
+    {
+      "label": "Global Short-Form Video Platform",
+      "domain": "Product, Strategy & Ops",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 27,
+      "applications": 6,
+      "rejections": 6,
+      "interviews": 6,
+      "offers": 9,
+      "depth_score": 5.67
+    },
+    {
+      "label": "Local / Early-Career Job Board (Education & EdTech)",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 23,
+      "applications": 7,
+      "rejections": 16,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.35
+    },
+    {
+      "label": "Digital Collectibles Marketplace",
+      "domain": "Media, Creator & Marketing",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 23,
+      "applications": 1,
+      "rejections": 17,
+      "interviews": 5,
+      "offers": 0,
+      "depth_score": 2.24
+    },
+    {
+      "label": "Direct Hiring Team (Copywriting, Content & UX)",
+      "domain": "Copywriting, Content & UX",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 22,
+      "applications": 16,
+      "rejections": 6,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.14
+    },
+    {
+      "label": "Global Cloud & E-Commerce Giant",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 22,
+      "applications": 10,
+      "rejections": 8,
+      "interviews": 4,
+      "offers": 0,
+      "depth_score": 1.91
+    },
+    {
+      "label": "Frontier AI Safety Lab #2",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Greenhouse ATS",
+      "total_emails": 21,
+      "applications": 20,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.02
+    },
+    {
+      "label": "Digital Asset Exchange",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Greenhouse ATS",
+      "total_emails": 21,
+      "applications": 11,
+      "rejections": 10,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.24
+    },
+    {
+      "label": "Creator Video SaaS Platform",
+      "domain": "Media, Creator & Marketing",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 19,
+      "applications": 4,
+      "rejections": 10,
+      "interviews": 5,
+      "offers": 0,
+      "depth_score": 2.32
+    },
+    {
+      "label": "Enterprise Cybersecurity Leader",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 18,
+      "applications": 18,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.0
+    },
+    {
+      "label": "RLHF & AI Training Platform",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 18,
+      "applications": 13,
+      "rejections": 3,
+      "interviews": 0,
+      "offers": 2,
+      "depth_score": 2.31
+    },
+    {
+      "label": "Startups, SaaS & General Organization",
+      "domain": "Startups, SaaS & General",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 17,
+      "applications": 15,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.06
+    },
+    {
+      "label": "International ESL Academy #1",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 16,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 15,
+      "depth_score": 11.31
+    },
+    {
+      "label": "Educator Content Marketplace",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 16,
+      "applications": 10,
+      "rejections": 3,
+      "interviews": 3,
+      "offers": 0,
+      "depth_score": 1.84
+    },
+    {
+      "label": "Global Payments Network",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 14,
+      "applications": 10,
+      "rejections": 4,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.14
+    },
+    {
+      "label": "K-12 Instructional Content SaaS",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 14,
+      "applications": 14,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.0
+    },
+    {
+      "label": "EV & Clean Energy Leader",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 13,
+      "applications": 13,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.0
+    },
+    {
+      "label": "Collaborative Entrepreneurship SaaS",
+      "domain": "Startups, SaaS & General",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 13,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 8,
+      "offers": 3,
+      "depth_score": 6.0
+    },
+    {
+      "label": "Creative Commerce Marketplace",
+      "domain": "Trust & Safety / Policy",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 12,
+      "applications": 9,
+      "rejections": 2,
+      "interviews": 1,
+      "offers": 0,
+      "depth_score": 1.42
+    },
+    {
+      "label": "Startups, SaaS & General Organization",
+      "domain": "Startups, SaaS & General",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 11,
+      "applications": 5,
+      "rejections": 6,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.27
+    },
+    {
+      "label": "Career Accelerator EdTech",
+      "domain": "Startups, SaaS & General",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 11,
+      "applications": 5,
+      "rejections": 0,
+      "interviews": 6,
+      "offers": 0,
+      "depth_score": 3.18
+    },
+    {
+      "label": "Direct Hiring Team (Trust & Safety / Policy)",
+      "domain": "Trust & Safety / Policy",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 11,
+      "applications": 6,
+      "rejections": 2,
+      "interviews": 3,
+      "offers": 0,
+      "depth_score": 2.18
+    },
+    {
+      "label": "Live Events & Ticketing Platform",
+      "domain": "Startups, SaaS & General",
+      "channel": "Lever ATS",
+      "total_emails": 10,
+      "applications": 4,
+      "rejections": 6,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.3
+    },
+    {
+      "label": "International Education Recruiting",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 10,
+      "applications": 8,
+      "rejections": 0,
+      "interviews": 2,
+      "offers": 0,
+      "depth_score": 1.8
+    },
+    {
+      "label": "NYC Startup Ecosystem (Product, Strategy & Ops)",
+      "domain": "Product, Strategy & Ops",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 10,
+      "applications": 9,
+      "rejections": 0,
+      "interviews": 1,
+      "offers": 0,
+      "depth_score": 1.4
+    },
+    {
+      "label": "Experiential Educational Travel",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 10,
+      "applications": 0,
+      "rejections": 10,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.5
+    },
+    {
+      "label": "K-12 Assessment EdTech",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 9,
+      "applications": 7,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.11
+    },
+    {
+      "label": "Ad-Tech & Media Verification",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 9,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 7,
+      "offers": 0,
+      "depth_score": 4.17
+    },
+    {
+      "label": "Live Online Tutoring Platform",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 8,
+      "applications": 6,
+      "rejections": 0,
+      "interviews": 2,
+      "offers": 0,
+      "depth_score": 2.0
+    },
+    {
+      "label": "Metro Public Teaching Fellows",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 8,
+      "applications": 5,
+      "rejections": 3,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.19
+    },
+    {
+      "label": "One-Way Video Interview Platform",
+      "domain": "Startups, SaaS & General",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 8,
+      "applications": 0,
+      "rejections": 0,
+      "interviews": 8,
+      "offers": 0,
+      "depth_score": 5.0
+    },
+    {
+      "label": "International ESL Academy #2",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 8,
+      "applications": 0,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 8,
+      "depth_score": 12.0
+    },
+    {
+      "label": "Startups, SaaS & General Organization",
+      "domain": "Startups, SaaS & General",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 6,
+      "applications": 6,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.0
+    },
+    {
+      "label": "ClearCompany ATS (Startups, SaaS & General)",
+      "domain": "Startups, SaaS & General",
+      "channel": "Enterprise ATS (Workday / Ashby)",
+      "total_emails": 6,
+      "applications": 6,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.0
+    },
+    {
+      "label": "Adult & Youth ESL Network",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 6,
+      "applications": 5,
+      "rejections": 0,
+      "interviews": 1,
+      "offers": 0,
+      "depth_score": 1.67
+    },
+    {
+      "label": "Enterprise Cloud CRM",
+      "domain": "Product, Strategy & Ops",
+      "channel": "Enterprise ATS (Workday / Ashby)",
+      "total_emails": 6,
+      "applications": 3,
+      "rejections": 3,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.25
+    },
+    {
+      "label": "Global Streaming Leader",
+      "domain": "Media, Creator & Marketing",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 6,
+      "applications": 6,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.0
+    },
+    {
+      "label": "On-Demand Logistics Platform",
+      "domain": "Trust & Safety / Policy",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 6,
+      "applications": 0,
+      "rejections": 1,
+      "interviews": 5,
+      "offers": 0,
+      "depth_score": 4.42
+    },
+    {
+      "label": "Community & Gaming Comms Platform",
+      "domain": "Media, Creator & Marketing",
+      "channel": "Greenhouse ATS",
+      "total_emails": 5,
+      "applications": 3,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.2
+    },
+    {
+      "label": "Early Education SaaS Platform",
+      "domain": "Startups, SaaS & General",
+      "channel": "Lever ATS",
+      "total_emails": 5,
+      "applications": 3,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.2
+    },
+    {
+      "label": "National Teacher Residency",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 5,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 4,
+      "offers": 0,
+      "depth_score": 4.2
+    },
+    {
+      "label": "Enterprise Healthcare Software",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 5,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 4,
+      "offers": 0,
+      "depth_score": 4.2
+    },
+    {
+      "label": "Online Language EdTech",
+      "domain": "Education & EdTech",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 5,
+      "applications": 5,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.0
+    },
+    {
+      "label": "Direct Hiring Team (Media, Creator & Marketing)",
+      "domain": "Media, Creator & Marketing",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 5,
+      "applications": 4,
+      "rejections": 0,
+      "interviews": 1,
+      "offers": 0,
+      "depth_score": 1.8
+    },
+    {
+      "label": "Global Skills Marketplace",
+      "domain": "Education & EdTech",
+      "channel": "Lever ATS",
+      "total_emails": 5,
+      "applications": 3,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.2
+    },
+    {
+      "label": "Adaptive Writing EdTech",
+      "domain": "Education & EdTech",
+      "channel": "Greenhouse ATS",
+      "total_emails": 5,
+      "applications": 3,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.2
+    },
+    {
+      "label": "Startups, SaaS & General Organization",
+      "domain": "Startups, SaaS & General",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 5,
+      "applications": 5,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.0
+    },
+    {
+      "label": "Startups, SaaS & General Organization",
+      "domain": "Startups, SaaS & General",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 5,
+      "applications": 1,
+      "rejections": 4,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.4
+    },
+    {
+      "label": "Product, Strategy & Ops Organization",
+      "domain": "Product, Strategy & Ops",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 4,
+      "applications": 3,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.12
+    },
+    {
+      "label": "Creative Stock & Media Platform",
+      "domain": "Product, Strategy & Ops",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 4,
+      "applications": 2,
+      "rejections": 1,
+      "interviews": 1,
+      "offers": 0,
+      "depth_score": 2.12
+    },
+    {
+      "label": "Audio Streaming Platform",
+      "domain": "Media, Creator & Marketing",
+      "channel": "Lever ATS",
+      "total_emails": 4,
+      "applications": 2,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.25
+    },
+    {
+      "label": "Consumer Social & Dating Portfolio",
+      "domain": "Startups, SaaS & General",
+      "channel": "Lever ATS",
+      "total_emails": 4,
+      "applications": 3,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.12
+    },
+    {
+      "label": "Big Tech & AI Labs Organization",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 4,
+      "applications": 4,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.0
+    },
+    {
+      "label": "Startups, SaaS & General Organization",
+      "domain": "Startups, SaaS & General",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 4,
+      "applications": 2,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.25
+    },
+    {
+      "label": "Big Tech & AI Labs Organization",
+      "domain": "Big Tech & AI Labs",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 4,
+      "applications": 4,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.0
+    },
+    {
+      "label": "Global Parcel & Ground Logistics",
+      "domain": "Startups, SaaS & General",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 4,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 1,
+      "offers": 2,
+      "depth_score": 7.5
+    },
+    {
+      "label": "Product, Strategy & Ops Organization",
+      "domain": "Product, Strategy & Ops",
+      "channel": "Direct Company & Recruiter",
+      "total_emails": 4,
+      "applications": 3,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "depth_score": 1.12
+    }
+  ]
+}
