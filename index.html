@@ -15,7 +15,6 @@
       --ink-mid: #4A4945;
       --ink-faint: #8C8A84;
       --rule: #E6E4DD;
-      /* Exact Protestopus watercolor pigment palette */
       --c-built: #7ED49E;
       --c-passed: #F9BF7F;
       --c-interview: #8C97D8;
@@ -88,7 +87,7 @@
       border-bottom-color: var(--ink);
     }
 
-    /* Opening Graphic */
+    /* Welcome Note */
     .intro-bar {
       display: flex;
       align-items: baseline;
@@ -99,13 +98,16 @@
     }
     .intro-line {
       font-family: 'Instrument Serif', Georgia, serif;
-      font-size: clamp(1.55rem, 3vw, 2.25rem);
-      line-height: 1.15;
+      font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+      line-height: 1.2;
       letter-spacing: -0.015em;
+      max-width: 720px;
     }
-    .intro-line em {
-      font-style: italic;
-      border-bottom: 2px solid var(--c-built);
+    .intro-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--ink-mid);
+      margin-top: 6px;
     }
     .ink-btn {
       font-family: 'JetBrains Mono', monospace;
@@ -187,7 +189,7 @@
       cursor: crosshair;
     }
 
-    /* Minimal Hover Card (Main Label Only, No Sentence Tags) */
+    /* Minimal Hover Card */
     .ink-card {
       position: fixed;
       pointer-events: none;
@@ -196,8 +198,8 @@
       border: 1.5px solid var(--ink);
       box-shadow: 4px 4px 0 var(--ink);
       padding: 10px 14px;
-      min-width: 210px;
-      max-width: 290px;
+      min-width: 220px;
+      max-width: 300px;
       opacity: 0;
       transform: translateY(4px);
       transition: opacity 0.1s, transform 0.1s;
@@ -215,8 +217,13 @@
     }
     .ink-card-name {
       font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.2rem;
+      font-size: 1.18rem;
       line-height: 1.1;
+    }
+    .ink-card-name.hashed {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
     }
     .ink-card-tag {
       font-family: 'JetBrains Mono', monospace;
@@ -231,101 +238,9 @@
       color: var(--ink-mid);
     }
 
-    /* Protestopus Identity + Workflow Offerings */
-    .identity-section {
-      padding: 44px 0;
-      border-bottom: 1.5px solid var(--ink);
-      display: grid;
-      grid-template-columns: 1fr 1.15fr;
-      gap: 40px;
-      align-items: center;
-    }
-    @media (max-width: 820px) {
-      .identity-section {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-    }
-    .octopus-frame {
-      border: 1.5px solid var(--ink);
-      background: var(--paper-subtle);
-      padding: 14px;
-    }
-    .octopus-frame img {
-      width: 100%;
-      max-height: 360px;
-      object-fit: contain;
-      display: block;
-      background: #fff;
-      border: 1px solid var(--rule);
-    }
-    .octopus-cap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 12px;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .octopus-quote {
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.2rem;
-      font-style: italic;
-    }
-    .palette-strip {
-      display: flex;
-      gap: 5px;
-    }
-    .palette-chip {
-      width: 18px;
-      height: 18px;
-      border: 1px solid var(--ink);
-    }
-
-    .workflow-panel h2 {
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.9rem;
-      font-weight: 400;
-      line-height: 1.15;
-      margin-bottom: 8px;
-    }
-    .workflow-lead {
-      font-size: 0.9rem;
-      color: var(--ink-mid);
-      margin-bottom: 20px;
-      max-width: 480px;
-    }
-    .offering-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 22px;
-    }
-    @media (max-width: 560px) {
-      .offering-list { grid-template-columns: 1fr; }
-    }
-    .offering-item {
-      border: 1px solid var(--rule);
-      border-left: 4px solid var(--ink);
-      padding: 12px 14px;
-      background: var(--paper);
-    }
-    .offering-item strong {
-      display: block;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.74rem;
-      margin-bottom: 4px;
-    }
-    .offering-item span {
-      font-size: 0.8rem;
-      color: var(--ink-mid);
-      line-height: 1.4;
-      display: block;
-    }
-
-    /* Interactive Letter Envelope -> Paper Resume */
+    /* Interactive Letter Envelope -> Paper Resume (Middle Section) */
     .cv-envelope-section {
-      padding: 52px 0;
+      padding: 56px 0;
       border-bottom: 1.5px solid var(--ink);
     }
     .sec-head {
@@ -353,7 +268,7 @@
     }
 
     .envelope-stage {
-      perspective: 1200px;
+      perspective: 1400px;
       max-width: 860px;
       margin: 0 auto;
     }
@@ -367,7 +282,7 @@
       box-shadow: 6px 6px 0 var(--ink);
       cursor: pointer;
       overflow: hidden;
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.55s ease;
     }
     .envelope-closed:hover {
       transform: translate(-2px, -2px);
@@ -383,8 +298,36 @@
       border-bottom: 1.5px solid var(--ink);
       clip-path: polygon(0 0, 100% 0, 50% 100%);
       transform-origin: top center;
-      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
       z-index: 3;
+    }
+    .envelope-closed.opening .envelope-flap {
+      transform: rotateX(175deg);
+    }
+    .envelope-closed.opening .envelope-seal {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    .envelope-closed.opening .envelope-letter-peek {
+      transform: translateY(-42px);
+      opacity: 1;
+    }
+    .envelope-letter-peek {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 0;
+      height: 180px;
+      background: #FFFFFF;
+      border: 1px solid var(--ink);
+      z-index: 2;
+      opacity: 0.4;
+      transform: translateY(80px);
+      transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.18s, opacity 0.6s ease 0.15s;
+      padding: 18px 22px;
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.1rem;
+      color: var(--ink-mid);
     }
     .envelope-flap-line {
       position: absolute;
@@ -408,36 +351,6 @@
       z-index: 5;
       box-shadow: 2px 2px 0 var(--ink);
     }
-    .envelope-stamp {
-      position: absolute;
-      top: 16px;
-      right: 18px;
-      width: 68px;
-      height: 80px;
-      background: #fff;
-      border: 1.5px solid var(--ink);
-      outline: 2px dashed #fff;
-      outline-offset: -4px;
-      box-shadow: 2px 2px 0 var(--ink);
-      padding: 5px;
-      z-index: 5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .envelope-stamp svg {
-      width: 100%;
-      height: 50px;
-      display: block;
-    }
-    .envelope-stamp span {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.52rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--ink);
-    }
     .envelope-seal {
       position: absolute;
       top: 52%;
@@ -457,18 +370,18 @@
       font-style: italic;
       color: var(--ink);
       z-index: 6;
-      transition: transform 0.25s ease;
+      transition: transform 0.3s ease, opacity 0.4s ease;
     }
     .envelope-closed:hover .envelope-seal {
       transform: translate(-50%, -50%) scale(1.07);
     }
     .envelope-front-address {
       position: absolute;
-      bottom: 34px;
+      bottom: 30px;
       left: 0;
       right: 0;
       text-align: center;
-      z-index: 2;
+      z-index: 5;
     }
     .envelope-front-address .to-name {
       font-family: 'Instrument Serif', Georgia, serif;
@@ -483,14 +396,16 @@
 
     .letter-open-wrap {
       display: none;
-      animation: letterSlideUp 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .letter-open-wrap.open {
       display: block;
     }
-    @keyframes letterSlideUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
+    .letter-open-wrap.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     .letter-toolbar {
       display: flex;
@@ -639,6 +554,93 @@
     }
 
 
+    /* Protestopus Identity + Workflow Offerings (Bottom Section) */
+    .identity-section {
+      padding: 48px 0;
+      border-bottom: 1.5px solid var(--ink);
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 820px) {
+      .identity-section {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+    .octopus-frame {
+      border: 1.5px solid var(--ink);
+      background: var(--paper-subtle);
+      padding: 14px;
+    }
+    .octopus-frame img {
+      width: 100%;
+      max-height: 360px;
+      object-fit: contain;
+      display: block;
+      background: #fff;
+      border: 1px solid var(--rule);
+    }
+    .octopus-cap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .palette-strip {
+      display: flex;
+      gap: 5px;
+    }
+    .palette-chip {
+      width: 18px;
+      height: 18px;
+      border: 1px solid var(--ink);
+    }
+
+    .workflow-panel h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.9rem;
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .workflow-lead {
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      margin-bottom: 20px;
+      max-width: 480px;
+    }
+    .offering-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+    @media (max-width: 560px) {
+      .offering-list { grid-template-columns: 1fr; }
+    }
+    .offering-item {
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--ink);
+      padding: 12px 14px;
+      background: var(--paper);
+    }
+    .offering-item strong {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      margin-bottom: 4px;
+    }
+    .offering-item span {
+      font-size: 0.8rem;
+      color: var(--ink-mid);
+      line-height: 1.4;
+      display: block;
+    }
+
     /* Footer */
     footer {
       padding: 28px 0 48px;
@@ -674,23 +676,28 @@
         <span class="brand-sub">New York · AI Product, Policy &amp; Operations</span>
       </div>
       <nav>
-        <a href="#index">267 Companies</a>
-        <a href="workflow.html">Workflow Demo</a>
+        <a href="#index">Audit</a>
         <a href="#cv">CV</a>
+        <a href="workflow.html">Workflow Demo</a>
         <a href="mailto:levijameshiggs@gmail.com">levijameshiggs@gmail.com</a>
       </nav>
     </header>
 
     <div class="intro-bar" id="index">
-      <div class="intro-line">
-        267 companies. <em>8 accepted.</em> 12 I turned down.
+      <div>
+        <div class="intro-line">
+          Welcome. Here’s how I audit my own career data without leaking it.
+        </div>
+        <div class="intro-sub">
+          Accepted offers appear in plaintext · Unaccepted companies are SHA-256 hashed · Scroll to watch the cipher shift
+        </div>
       </div>
       <button class="ink-btn" onclick="replayDrop()">Drop Ink Again ↻</button>
     </div>
 
     <div class="swatch-bar" id="swatchBar">
       <button class="swatch-btn active" data-filter="all" onclick="setOutcomeFilter('all')">
-        <span>All Companies</span>
+        <span>All</span>
         <span class="swatch-count">267</span>
       </button>
       <button class="swatch-btn" data-filter="built" onclick="setOutcomeFilter('built')">
@@ -726,58 +733,7 @@
       </div>
     </section>
 
-    <section class="identity-section" id="workflow">
-      <div class="octopus-frame">
-        <img src="art/protestopus.jpg" alt="Protestopus — India ink and watercolor" />
-        <div class="octopus-cap">
-          <span class="octopus-quote" style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;font-style:normal;color:var(--ink-mid);">Ask me about my art.</span>
-          <div class="palette-strip" title="Site palette pulled from Protestopus">
-            <span class="palette-chip" style="background:#FCE883"></span>
-            <span class="palette-chip" style="background:#F4937A"></span>
-            <span class="palette-chip" style="background:#F9BF7F"></span>
-            <span class="palette-chip" style="background:#C5E089"></span>
-            <span class="palette-chip" style="background:#7ED49E"></span>
-            <span class="palette-chip" style="background:#6CC7F6"></span>
-            <span class="palette-chip" style="background:#8C97D8"></span>
-            <span class="palette-chip" style="background:#F598C4"></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="workflow-panel">
-        <h2>Turn your inbox into this chart.</h2>
-        <p class="workflow-lead">
-          The local <code>.mbox</code> + <code>.csv</code> toolkit that audited two Gmail accounts and surfaced the 267-company amphitheater above.
-        </p>
-        <div class="offering-list">
-          <div class="offering-item" style="border-left-color: var(--c-built)">
-            <strong>01 · ATS Black-Hole Score</strong>
-            <span>See which channels (Direct, Greenhouse, Lever, Easy Apply) convert vs. ghost you.</span>
-          </div>
-          <div class="offering-item" style="border-left-color: var(--c-passed)">
-            <strong>02 · Role-Track Hit Rate</strong>
-            <span>Find which job titles actually land interviews and offers—and which are dead ends.</span>
-          </div>
-          <div class="offering-item" style="border-left-color: var(--c-interview)">
-            <strong>03 · Zero-PII LLM Brief</strong>
-            <span>Export a sanitized <code>.md</code> career dossier ready for Claude/ChatGPT without leaking emails.</span>
-          </div>
-          <div class="offering-item" style="border-left-color: var(--c-rejected)">
-            <strong>04 · Vector &amp; Poster Exports</strong>
-            <span>Download your amphitheater &amp; funnel as PNG, editable SVG, CSV, or 18×24 / 24×36 PDF.</span>
-          </div>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:12px;">
-          <a class="ink-btn" href="workflow.html">
-            More Info &amp; Live Demo →
-          </a>
-          <a class="ink-btn" style="background:var(--c-built);" href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener">
-            Get Everything Included ($19) ↗
-          </a>
-        </div>
-      </div>
-    </section>
-
+    <!-- Middle: Curriculum Vitae Envelope -->
     <section class="cv-envelope-section" id="cv">
       <div class="sec-head">
         <h2 class="sec-title">Curriculum Vitae</h2>
@@ -787,6 +743,7 @@
       <div class="envelope-stage">
         <div class="envelope-closed" id="envelopeClosed" onclick="openLetter()" role="button" tabindex="0" aria-label="Open Levi Higgs CV letter">
           <div class="envelope-flap"></div>
+          <div class="envelope-letter-peek">LEVI J. HIGGS — New York, NY</div>
           <svg class="envelope-flap-line" viewBox="0 0 560 330" preserveAspectRatio="none">
             <polyline points="0,0 280,182 560,0" fill="none" stroke="#0A0A0A" stroke-width="1.5" />
             <line x1="0" y1="330" x2="215" y2="140" stroke="#E6E4DD" stroke-width="1" />
@@ -796,18 +753,6 @@
             <strong>LEVI J. HIGGS</strong><br />
             New York, NY<br />
             levijameshiggs@gmail.com
-          </div>
-          <div class="envelope-stamp" aria-hidden="true">
-            <svg viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="56" height="48" fill="#FAF9F5" stroke="#0A0A0A" stroke-width="1.2"/>
-              <path d="M10 42 A20 20 0 0 1 50 42" stroke="#7ED49E" stroke-width="4" fill="none"/>
-              <path d="M15 42 A15 15 0 0 1 45 42" stroke="#F9BF7F" stroke-width="3.5" fill="none"/>
-              <path d="M20 42 A10 10 0 0 1 40 42" stroke="#8C97D8" stroke-width="3" fill="none"/>
-              <path d="M30 8 L35 20 L30 24 L25 20 Z" fill="#0A0A0A"/>
-              <line x1="30" y1="8" x2="30" y2="17" stroke="#FFFFFF" stroke-width="1.2"/>
-              <circle cx="30" cy="42" r="2.5" fill="#0A0A0A"/>
-            </svg>
-            <span>NYC · INK</span>
           </div>
           <div class="envelope-seal">LH</div>
           <div class="envelope-front-address">
@@ -984,6 +929,59 @@
       </div>
     </section>
 
+    <!-- Bottom: Octopus + Workflow Offerings -->
+    <section class="identity-section" id="workflow">
+      <div class="octopus-frame">
+        <img src="art/protestopus.jpg" alt="Protestopus — India ink and watercolor" />
+        <div class="octopus-cap">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--ink-mid);">Ask me about my art.</span>
+          <div class="palette-strip" title="Site palette pulled from Protestopus">
+            <span class="palette-chip" style="background:#FCE883"></span>
+            <span class="palette-chip" style="background:#F4937A"></span>
+            <span class="palette-chip" style="background:#F9BF7F"></span>
+            <span class="palette-chip" style="background:#C5E089"></span>
+            <span class="palette-chip" style="background:#7ED49E"></span>
+            <span class="palette-chip" style="background:#6CC7F6"></span>
+            <span class="palette-chip" style="background:#8C97D8"></span>
+            <span class="palette-chip" style="background:#F598C4"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-panel">
+        <h2>Turn your inbox into this chart.</h2>
+        <p class="workflow-lead">
+          The local <code>.mbox</code> + <code>.csv</code> toolkit that audited two Gmail accounts and surfaced the 267-company amphitheater above.
+        </p>
+        <div class="offering-list">
+          <div class="offering-item" style="border-left-color: var(--c-built)">
+            <strong>01 · ATS Black-Hole Score</strong>
+            <span>See which channels (Direct, Greenhouse, Lever, Easy Apply) convert vs. ghost you.</span>
+          </div>
+          <div class="offering-item" style="border-left-color: var(--c-passed)">
+            <strong>02 · Role-Track Hit Rate</strong>
+            <span>Find which job titles actually land interviews and offers—and which are dead ends.</span>
+          </div>
+          <div class="offering-item" style="border-left-color: var(--c-interview)">
+            <strong>03 · Zero-PII LLM Brief</strong>
+            <span>Export a sanitized <code>.md</code> career dossier ready for Claude/ChatGPT without leaking emails.</span>
+          </div>
+          <div class="offering-item" style="border-left-color: var(--c-rejected)">
+            <strong>04 · Vector &amp; Poster Exports</strong>
+            <span>Download your amphitheater &amp; funnel as PNG, editable SVG, CSV, or 18×24 / 24×36 PDF.</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <a class="ink-btn" href="workflow.html">
+            More Info &amp; Live Demo →
+          </a>
+          <a class="ink-btn" style="background:var(--c-built);" href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener">
+            Get Everything Included ($19) ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div>
         Levi Higgs · <a href="mailto:levijameshiggs@gmail.com">levijameshiggs@gmail.com</a>
@@ -997,7 +995,7 @@
     </footer>
   </div>
 
-  <!-- Minimal Floating Tooltip (Main Label Only) -->
+  <!-- Minimal Floating Tooltip -->
   <div class="ink-card" id="inkTooltip">
     <div class="ink-card-head">
       <span class="ink-card-name" id="ttName"></span>
@@ -1007,7 +1005,7 @@
   </div>
 
   <script>
-    const COMPANIES = [{"name": "ELC Shanghai", "sector": "EdTech & Education", "role": "Headmaster", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "OMSI", "sector": "EdTech & Education", "role": "Outdoor Science Instructor", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "RebelBase", "sector": "SaaS & Startups", "role": "Content Writer", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "Scale AI", "sector": "Tech & AI", "role": "AI Red-Teaming & Evaluation", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "Teachers Pay Teachers", "sector": "EdTech & Education", "role": "Content Moderation Specialist", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "TikTok (ByteDance)", "sector": "Consumer Social", "role": "Team Lead, Trust & Safety", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "YBM ECC (Seoul)", "sector": "EdTech & Education", "role": "English Instructor", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "YouTube (Google)", "sector": "Tech & AI", "role": "Trust & Safety Policy / Product", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "Amity Corp (Japan)", "sector": "EdTech & Education", "role": "Instructor (Japan)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Berlitz Japan (Tokyo)", "sector": "EdTech & Education", "role": "Instructor (Minato-ku, Tokyo)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Chateau School (Tokyo)", "sector": "EdTech & Education", "role": "Preschool English Teacher (Offer)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "DoubleVerify", "sector": "SaaS & Cyber", "role": "Trust & Safety / Brand Safety", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Epic Systems", "sector": "SaaS & Cyber", "role": "Project Manager / Operations", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "FedEx Ground", "sector": "Operations", "role": "Operations", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "OpenSea", "sector": "Fintech & Web3", "role": "Trust & Safety Policy", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Outlier AI", "sector": "Tech & AI", "role": "Dolphin Genesis Expert", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Pathrise", "sector": "EdTech & Education", "role": "Admissions Operations", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Seocho Avalon (Seoul)", "sector": "EdTech & Education", "role": "English Instructor (Gangnam)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Urban Teachers", "sector": "EdTech & Education", "role": "Teaching Fellow", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Wang Law Office", "sector": "Policy & Legal", "role": "Mandarin-Speaking Paralegal", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Adventure Teaching", "sector": "EdTech & Education", "role": "Instructor Abroad", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Amazon", "sector": "Tech & AI", "role": "Senior Program Manager", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Book Land School (Seoul)", "sector": "EdTech & Education", "role": "English Instructor (Mapo)", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "brightwheel", "sector": "EdTech & Education", "role": "Sales Development", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Catalyst Leadership", "sector": "Operations", "role": "Campaign Development", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "DoorDash", "sector": "Marketplaces", "role": "Manager, Trust & Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Etsy", "sector": "Marketplaces", "role": "Senior Manager, Marketplace Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Gwacheon JLS (Korea)", "sector": "EdTech & Education", "role": "English Instructor", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Interstate Logistics", "sector": "Operations", "role": "Account Executive", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Match Group", "sector": "Consumer Social", "role": "Trust & Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Meta", "sector": "Tech & AI", "role": "Policy / Integrity Operations", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Meten English", "sector": "EdTech & Education", "role": "English Instructor (Shenzhen)", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "micro1", "sector": "Tech & AI", "role": "AI Specialist", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Murfreesboro City Schools", "sector": "EdTech & Education", "role": "Educator", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "New Oriental", "sector": "EdTech & Education", "role": "Instructor", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "NYC Teaching Collaborative", "sector": "EdTech & Education", "role": "Partner Teacher Fellow", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Shutterstock", "sector": "Media & Streaming", "role": "Director, Content & Policy", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Sumdog", "sector": "EdTech & Education", "role": "Marketing Assistant", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Tennessee General Assembly", "sector": "Policy & Legal", "role": "Legislative Bill Clerk / Proofreader", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Trend Micro (Taipei)", "sector": "SaaS & Cyber", "role": "Technical Writer (Taipei)", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Varsity Tutors", "sector": "EdTech & Education", "role": "Instructor / Tutor", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Vimeo", "sector": "Media & Streaming", "role": "Manager, Trust & Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Aeolus Robotics", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Airbnb", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Allure Marketing", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Amobee", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Anthropic", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "ASOS", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "BARK (BarkBox)", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "BetterCloud", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "BigCommerce", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Blink UX", "sector": "Editorial & Agencies", "role": "Content / UX Strategy", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "BMI (Broadcast Music)", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Brainly", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Bridgestone", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Cash App (Block)", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Character.AI", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Coinbase", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Collectively", "sector": "Editorial & Agencies", "role": "Content Strategy", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Cond\u00e9 Nast", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Dailymotion", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Dataiku", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Deezer", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Discord", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Epic Games", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Eventbrite", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "FORTUNE", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Frame.io", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Free Agency", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Gemini", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Genius", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "GoDaddy", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Grailed", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Grammarly", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Hoops HR", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Jellysmack", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "JobEcademy", "sector": "EdTech & Education", "role": "Curriculum / Instruction", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Kahoot!", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Kaplan International", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Kickstarter", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Klaviyo", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Luxe NYC", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "MasterClass", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "McKinsey & Company", "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "MJH Life Sciences", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "ModSquad", "sector": "Tech & AI", "role": "Trust & Safety / Moderation", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Multiverse", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Navan (TripActions)", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "New Sector Alliance", "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "NoRedInk", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "OpenFin", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Public Storage", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "PwC", "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Ramsey Solutions", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Reddit", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Renaissance Learning", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Rev.com", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Riot Games", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Robinhood", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Runway", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Salesforce", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Shane Co.", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Skillshare", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "SmartNews", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Snap Inc.", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "SoFi", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Soltanian & Company", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Spotify", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Superhuman", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Teachable", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "The Motley Fool", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Thumbtack", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "TTEC", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Udemy", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Uncommon Schools", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "VAWAA", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Veriff", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Visa", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Whatnot", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Wieden+Kennedy", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "WorldStrides", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "X (Twitter)", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Zoom", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "360Learning", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Acorns", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Acquia", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "ADP", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Alchemy Worx", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Allbirds", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "American Express", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "AmeriCorps", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Angel Studios", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Arootah LLC", "sector": "Policy & Legal", "role": "Operations / Strategy", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Auth0", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Avochato", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "BASIS International", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Bear Mattress", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "BetterLesson", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Betterworks", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Binance", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Blind", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "BrainPOP", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "BSE Global (Nets)", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Bumble", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Calendly", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Chainalysis", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Chameleon", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Chegg", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Chopra Global", "sector": "Media & Streaming", "role": "Content / Editorial", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Cider", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "CM Group", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "CodeCombat", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Compass", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "ConsenSys", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Council on Foreign Relations", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Creadits", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Crypto.com", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Culture Trip", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Cumul.io", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Curriculum Associates", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Degreed", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Dell Technologies", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Deloitte", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Digify", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Dirty Work Media", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Dotdash Meredith", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "E.W. Scripps", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "EasyLlama", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Eduporium", "sector": "EdTech & Education", "role": "EdTech Content", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "EF Education First", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Figma", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Forbes Media", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "FOX", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Grio", "sector": "SaaS & Cyber", "role": "Product / Content", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Group Nine Media", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Guidepost Montessori", "sector": "EdTech & Education", "role": "Education Operations", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "HackerOne", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Hairstory", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "HBO", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Highwire PR", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Hologram", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Hypebeast", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "IDEMIA", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Indicative", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Insense", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Instacart", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Instnt", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Intuit", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "iTutorGroup", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "IXL Learning", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "JET Program USA", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "JumpCloud", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "KAYAK", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Laundry Service", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "LawTrades", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "LearnCube", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Lime English", "sector": "EdTech & Education", "role": "Instruction", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "LivePerson", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "LogRhythm", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Magic Eden", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Major League Soccer", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "McKinney", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Michael Hyatt & Co.", "sector": "Editorial & Agencies", "role": "Editorial / Copy", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Microsoft", "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "MongoDB", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Morning Brew", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Mozilla", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "MrBeast", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Mystery Science", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Mystery.org", "sector": "EdTech & Education", "role": "Curriculum / Content", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Negotiatus", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Netflix", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Newsela", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Nutrabolt", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Occupier", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "OpenAI", "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Orbiit", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Orthosnap", "sector": "Operations", "role": "Marketing / Operations", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Overtime", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Paladin", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Patreon", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Perfect Day", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Plaid", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Polymarket", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Postlight", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Procore", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "RAPP", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Recidiviz", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Redbubble", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "rednote", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Rent the Runway", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Returnly", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Ricoh", "sector": "SaaS & Cyber", "role": "Communications", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Rockstar Games", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "SayABC", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Scholastic", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Screencastify", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Simply Wall St", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Slab", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Slack", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Smarsh", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Special Olympics", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Staffbase", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Strava", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "SUAVV Magazine", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Synology", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Taika", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "TAL Education", "sector": "EdTech & Education", "role": "Curriculum / Instruction", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "TeePublic", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Tennessee Aquarium", "sector": "EdTech & Education", "role": "Education / Outreach", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Tesla", "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Textline", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "The Hill", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "The Hustle", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "TripleLift", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "UBS", "sector": "Fintech & Web3", "role": "Communications / Policy", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "UiPath", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "United Nations", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Veeva Systems", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "VF Hong Kong Limited", "sector": "Operations", "role": "International Operations", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Vitally", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Wasserman", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "WeTransfer", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "WeWork", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Wise", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Zeta Global", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Zoomo", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}];
+    const COMPANIES = [{"name": "ELC Shanghai", "hash": "468cba0c4ff3f47a", "accepted": true, "sector": "EdTech & Education", "role": "Headmaster", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "OMSI", "hash": "80a52a0a0f96d8e7", "accepted": true, "sector": "EdTech & Education", "role": "Outdoor Science Instructor", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "RebelBase", "hash": "ce2b582650369982", "accepted": true, "sector": "SaaS & Startups", "role": "Content Writer", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "Scale AI", "hash": "3fc0486ec9ebb21c", "accepted": true, "sector": "Tech & AI", "role": "AI Red-Teaming & Evaluation", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "Teachers Pay Teachers", "hash": "3c2af5fc0caf71c9", "accepted": true, "sector": "EdTech & Education", "role": "Content Moderation Specialist", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "TikTok (ByteDance)", "hash": "2016fa5a7f020948", "accepted": true, "sector": "Consumer Social", "role": "Team Lead, Trust & Safety", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "YBM ECC (Seoul)", "hash": "13174110d1486ecd", "accepted": true, "sector": "EdTech & Education", "role": "English Instructor", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "YouTube (Google)", "hash": "b67d9430615fe122", "accepted": true, "sector": "Tech & AI", "role": "Trust & Safety Policy / Product", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "0x492872f61efa", "hash": "492872f61efa3dbc", "accepted": false, "sector": "EdTech & Education", "role": "Instructor (Japan)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x8bedb12082f5", "hash": "8bedb12082f5df3e", "accepted": false, "sector": "EdTech & Education", "role": "Instructor (Minato-ku, Tokyo)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x1b44becf434f", "hash": "1b44becf434fd051", "accepted": false, "sector": "EdTech & Education", "role": "Preschool English Teacher (Offer)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x0681e36b929d", "hash": "0681e36b929d31f9", "accepted": false, "sector": "SaaS & Cyber", "role": "Trust & Safety / Brand Safety", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x731d02877c4d", "hash": "731d02877c4d1a74", "accepted": false, "sector": "SaaS & Cyber", "role": "Project Manager / Operations", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x398d81ed0461", "hash": "398d81ed04616e7b", "accepted": false, "sector": "Operations", "role": "Operations", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x189f9dfa5e3d", "hash": "189f9dfa5e3d0f51", "accepted": false, "sector": "Fintech & Web3", "role": "Trust & Safety Policy", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x72b021bce731", "hash": "72b021bce7317ad1", "accepted": false, "sector": "Tech & AI", "role": "Dolphin Genesis Expert", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x92c90e17b1e1", "hash": "92c90e17b1e147ae", "accepted": false, "sector": "EdTech & Education", "role": "Admissions Operations", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x7e419c40e95b", "hash": "7e419c40e95b1406", "accepted": false, "sector": "EdTech & Education", "role": "English Instructor (Gangnam)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x2643491758cf", "hash": "2643491758cff8ac", "accepted": false, "sector": "EdTech & Education", "role": "Teaching Fellow", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x54628fd8eb90", "hash": "54628fd8eb909252", "accepted": false, "sector": "Policy & Legal", "role": "Mandarin-Speaking Paralegal", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "0x18dd04157a03", "hash": "18dd04157a03ff97", "accepted": false, "sector": "EdTech & Education", "role": "Instructor Abroad", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x43429d15d44d", "hash": "43429d15d44d7df3", "accepted": false, "sector": "Tech & AI", "role": "Senior Program Manager", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x4f4e8672d8cf", "hash": "4f4e8672d8cfba77", "accepted": false, "sector": "EdTech & Education", "role": "English Instructor (Mapo)", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x07f8ec2b7089", "hash": "07f8ec2b70898208", "accepted": false, "sector": "EdTech & Education", "role": "Sales Development", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x44ef01c3dbea", "hash": "44ef01c3dbead784", "accepted": false, "sector": "Operations", "role": "Campaign Development", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x7648ebcc6657", "hash": "7648ebcc6657589a", "accepted": false, "sector": "Marketplaces", "role": "Manager, Trust & Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0xca64c45af587", "hash": "ca64c45af587a810", "accepted": false, "sector": "Marketplaces", "role": "Senior Manager, Marketplace Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0xfa666e31c01e", "hash": "fa666e31c01e7d90", "accepted": false, "sector": "EdTech & Education", "role": "English Instructor", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x2ffb5f57eb46", "hash": "2ffb5f57eb46d2ac", "accepted": false, "sector": "Operations", "role": "Account Executive", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x4fd836d70802", "hash": "4fd836d70802ca61", "accepted": false, "sector": "Consumer Social", "role": "Trust & Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x81f5ec4cf949", "hash": "81f5ec4cf94959e6", "accepted": false, "sector": "Tech & AI", "role": "Policy / Integrity Operations", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x958b9b06ea74", "hash": "958b9b06ea745887", "accepted": false, "sector": "EdTech & Education", "role": "English Instructor (Shenzhen)", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x2666f7dbf4dc", "hash": "2666f7dbf4dc9cd5", "accepted": false, "sector": "Tech & AI", "role": "AI Specialist", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x961c2424a7c6", "hash": "961c2424a7c6f6e9", "accepted": false, "sector": "EdTech & Education", "role": "Educator", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0xf6a84cb5f3ec", "hash": "f6a84cb5f3ecccb4", "accepted": false, "sector": "EdTech & Education", "role": "Instructor", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x3b29c43c221d", "hash": "3b29c43c221d237b", "accepted": false, "sector": "EdTech & Education", "role": "Partner Teacher Fellow", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x1b257f2846c0", "hash": "1b257f2846c0aa6a", "accepted": false, "sector": "Media & Streaming", "role": "Director, Content & Policy", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0xc6bbd366288c", "hash": "c6bbd366288c0644", "accepted": false, "sector": "EdTech & Education", "role": "Marketing Assistant", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x09a7530e35a1", "hash": "09a7530e35a1521b", "accepted": false, "sector": "Policy & Legal", "role": "Legislative Bill Clerk / Proofreader", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0xacfbbb4f559f", "hash": "acfbbb4f559fbf1e", "accepted": false, "sector": "SaaS & Cyber", "role": "Technical Writer (Taipei)", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0xdf398bd4842b", "hash": "df398bd4842bc2f9", "accepted": false, "sector": "EdTech & Education", "role": "Instructor / Tutor", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0x785dc06de20a", "hash": "785dc06de20a259f", "accepted": false, "sector": "Media & Streaming", "role": "Manager, Trust & Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "0xfdffa229852c", "hash": "fdffa229852cba3a", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x3b022b0b693a", "hash": "3b022b0b693a5e80", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x653faa3dc1eb", "hash": "653faa3dc1eb392e", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x695abc49fdcd", "hash": "695abc49fdcd6a80", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x1f5bd62cc483", "hash": "1f5bd62cc4834667", "accepted": false, "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x6b4976c77b19", "hash": "6b4976c77b19b900", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x41c336386bea", "hash": "41c336386bea1931", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x187424fb0b63", "hash": "187424fb0b638510", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xd9a02f05d528", "hash": "d9a02f05d528f8f5", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x159b845e765f", "hash": "159b845e765f62d4", "accepted": false, "sector": "Editorial & Agencies", "role": "Content / UX Strategy", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xa8adf414e72c", "hash": "a8adf414e72cd741", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x9b255310ef56", "hash": "9b255310ef56448f", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xd5f63dada085", "hash": "d5f63dada085ddae", "accepted": false, "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x36a96617485b", "hash": "36a96617485bfca4", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x9d71c2fccbc8", "hash": "9d71c2fccbc81de0", "accepted": false, "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x1015b24c7ac6", "hash": "1015b24c7ac6e9ac", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x7104db919919", "hash": "7104db919919251a", "accepted": false, "sector": "Editorial & Agencies", "role": "Content Strategy", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x190ccbcda9e4", "hash": "190ccbcda9e4f731", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x9b38c3be9775", "hash": "9b38c3be97752153", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xf16f4b36557d", "hash": "f16f4b36557d22f0", "accepted": false, "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xbb163f815bad", "hash": "bb163f815bada54f", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x139ce589f599", "hash": "139ce589f599864a", "accepted": false, "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xc06e4e437d85", "hash": "c06e4e437d85ceeb", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xa75c58a39e04", "hash": "a75c58a39e04fcef", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x4c17797ee800", "hash": "4c17797ee800e911", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xf9ee61949322", "hash": "f9ee6194932288bd", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x4000f7cf2b3e", "hash": "4000f7cf2b3efa86", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xe079a3649bc8", "hash": "e079a3649bc89aeb", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x8975e9dc20db", "hash": "8975e9dc20dbd67c", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xd2709a7ec002", "hash": "d2709a7ec0026a09", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x9bfa5ae01ebb", "hash": "9bfa5ae01ebbf381", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xa9f10e481098", "hash": "a9f10e4810980fff", "accepted": false, "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xf26f02971a82", "hash": "f26f02971a820c90", "accepted": false, "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x9d4886b41c8b", "hash": "9d4886b41c8ba630", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x98966dc1e810", "hash": "98966dc1e810c83d", "accepted": false, "sector": "EdTech & Education", "role": "Curriculum / Instruction", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x26cf87c7daf3", "hash": "26cf87c7daf3c1ac", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x151271c9f2f1", "hash": "151271c9f2f12a5c", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xe436b46c75d9", "hash": "e436b46c75d9465e", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xbe22d0bacb40", "hash": "be22d0bacb40b189", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xbd9ca0298104", "hash": "bd9ca0298104e78e", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xfd43fe6f97c0", "hash": "fd43fe6f97c0fce8", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x0a23e22809ca", "hash": "0a23e22809ca3154", "accepted": false, "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xb9c937e9c1fc", "hash": "b9c937e9c1fc8c57", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x33a156aa8a32", "hash": "33a156aa8a32c362", "accepted": false, "sector": "Tech & AI", "role": "Trust & Safety / Moderation", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x2d2896524e2c", "hash": "2d2896524e2c3b58", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x75355fc98c81", "hash": "75355fc98c818aec", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xa10a7e9265db", "hash": "a10a7e9265db576d", "accepted": false, "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x2ffccadd469d", "hash": "2ffccadd469da47b", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xf38e08640669", "hash": "f38e086406697dd7", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xf39a013f7e9b", "hash": "f39a013f7e9bb6a9", "accepted": false, "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x02731a306822", "hash": "02731a30682280d2", "accepted": false, "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x117b3275365d", "hash": "117b3275365d5d28", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xef79d16604e9", "hash": "ef79d16604e9c9ae", "accepted": false, "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x0ac98f326a66", "hash": "0ac98f326a66f109", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xb52401bbf1a4", "hash": "b52401bbf1a4f9ce", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x0c5da9bead81", "hash": "0c5da9bead813c19", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x8f2603b4b697", "hash": "8f2603b4b697cdc8", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xaeb25027abbf", "hash": "aeb25027abbf7de6", "accepted": false, "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xc744890094bf", "hash": "c744890094bf7e0c", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xef59524cf029", "hash": "ef59524cf0294a44", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x6f1df959e7d6", "hash": "6f1df959e7d68fcd", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xaff711df6c1c", "hash": "aff711df6c1c910f", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x508e213586cf", "hash": "508e213586cfff09", "accepted": false, "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x23b045186aac", "hash": "23b045186aac5962", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x5ec0b0b56e27", "hash": "5ec0b0b56e27f557", "accepted": false, "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x29208c3f10e8", "hash": "29208c3f10e87d57", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xecb016d9f257", "hash": "ecb016d9f257f4df", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x87a869b9cc2a", "hash": "87a869b9cc2ab103", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xfb4b4a18771e", "hash": "fb4b4a18771e8e26", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xf5811f1bca10", "hash": "f5811f1bca104193", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xbf03820f4bdf", "hash": "bf03820f4bdf7507", "accepted": false, "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x54f072ff011a", "hash": "54f072ff011a1848", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x48203639a12d", "hash": "48203639a12d46e4", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x4cc26e87f8fd", "hash": "4cc26e87f8fd8e4e", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x52e4f288b850", "hash": "52e4f288b850c472", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x84a19d39ea24", "hash": "84a19d39ea240df6", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xcc32808aabcd", "hash": "cc32808aabcddf93", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x198a74bfc6a0", "hash": "198a74bfc6a081bb", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x51679e960667", "hash": "51679e960667f5e0", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x93b929e5b27e", "hash": "93b929e5b27e4ad8", "accepted": false, "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0xdcfabf99de27", "hash": "dcfabf99de2745ad", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "0x4091da0b6c5e", "hash": "4091da0b6c5e6139", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x9c24ab34008a", "hash": "9c24ab34008a3cf9", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xf41492420daf", "hash": "f41492420daffabb", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xb1b50a5eee82", "hash": "b1b50a5eee82ba6d", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x985c1d067f41", "hash": "985c1d067f413886", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xaaf65f42af01", "hash": "aaf65f42af011c19", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x57a6ab85bece", "hash": "57a6ab85becefbfd", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xd105ca5bea92", "hash": "d105ca5bea92f213", "accepted": false, "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xd7588fec6dc6", "hash": "d7588fec6dc6e4cc", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xb37b07441214", "hash": "b37b07441214da26", "accepted": false, "sector": "Policy & Legal", "role": "Operations / Strategy", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xc0791346ff61", "hash": "c0791346ff61cb5c", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x288a38770213", "hash": "288a3877021392da", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x7901622e1e8c", "hash": "7901622e1e8cdd34", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x6d200bb9acc6", "hash": "6d200bb9acc668c5", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x90f50ccfed9b", "hash": "90f50ccfed9b7a67", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xe61678a73eb6", "hash": "e61678a73eb65eda", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xd5a1f41b738a", "hash": "d5a1f41b738ad39a", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x0e5e861d7073", "hash": "0e5e861d70737445", "accepted": false, "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x44ab73d5fe46", "hash": "44ab73d5fe46aaf5", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x82d7e5623216", "hash": "82d7e5623216bf17", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x4db360f42cd1", "hash": "4db360f42cd1fe5d", "accepted": false, "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xba4aaafc9fc6", "hash": "ba4aaafc9fc6f101", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x2d6d0d9c856d", "hash": "2d6d0d9c856d102a", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xf2db31adf5a7", "hash": "f2db31adf5a7e07b", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xe7fb1bc8da07", "hash": "e7fb1bc8da07f842", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xee5d0ef907f5", "hash": "ee5d0ef907f5545c", "accepted": false, "sector": "Media & Streaming", "role": "Content / Editorial", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x1e04330e2a89", "hash": "1e04330e2a8900e7", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x56836e7f2f28", "hash": "56836e7f2f285ffe", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xc6588ebdef01", "hash": "c6588ebdef015dfc", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xa8663a7df103", "hash": "a8663a7df1037860", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x483803b3ec28", "hash": "483803b3ec28bcbf", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x2b9e93bba53c", "hash": "2b9e93bba53ce398", "accepted": false, "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xa69f62f04bcf", "hash": "a69f62f04bcfee7b", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x754407ca985d", "hash": "754407ca985dfbf5", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x478e75d95727", "hash": "478e75d957274ede", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xf9dcd0fcf3b7", "hash": "f9dcd0fcf3b720e9", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xeab3b3cfaccd", "hash": "eab3b3cfaccddf45", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x4f87f0ada651", "hash": "4f87f0ada65115c1", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xa669a7939fbe", "hash": "a669a7939fbe555c", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x04478d6323bc", "hash": "04478d6323bcf6f4", "accepted": false, "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x22c63b3b007c", "hash": "22c63b3b007cc757", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x7079686e0bbb", "hash": "7079686e0bbb9c23", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x2c20d4a90162", "hash": "2c20d4a901627959", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xc85cdcd017ad", "hash": "c85cdcd017ad8823", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xfba302eefcd5", "hash": "fba302eefcd57f42", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x785e5bfaf3c6", "hash": "785e5bfaf3c6a5ca", "accepted": false, "sector": "EdTech & Education", "role": "EdTech Content", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xdc0ce01d3680", "hash": "dc0ce01d3680491a", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x1df39c540a58", "hash": "1df39c540a585dd5", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x9af1aa62df45", "hash": "9af1aa62df453594", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xf78148b0fc7d", "hash": "f78148b0fc7d9a15", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x472aacebb033", "hash": "472aacebb033f618", "accepted": false, "sector": "SaaS & Cyber", "role": "Product / Content", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xf050d94ba794", "hash": "f050d94ba794b8cb", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x43b7e10a83c6", "hash": "43b7e10a83c6b885", "accepted": false, "sector": "EdTech & Education", "role": "Education Operations", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xefb418d10712", "hash": "efb418d107126522", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x24c6a8fea8ab", "hash": "24c6a8fea8abfe31", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xd478806e78da", "hash": "d478806e78daa449", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x0911daf5992f", "hash": "0911daf5992f98a5", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x5232b76ab3cb", "hash": "5232b76ab3cb49d4", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xb43d8981c67c", "hash": "b43d8981c67c193e", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x0b93d49d05d3", "hash": "0b93d49d05d39ad7", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x563c3bcdca54", "hash": "563c3bcdca541055", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xd57a2c7077b2", "hash": "d57a2c7077b2730b", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x43d81e36a258", "hash": "43d81e36a2584340", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xce563da18bf1", "hash": "ce563da18bf11158", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x3bfd3d3eef1e", "hash": "3bfd3d3eef1eefd7", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xed199c1cda75", "hash": "ed199c1cda75f7a9", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xe5a8232a999e", "hash": "e5a8232a999ed5e7", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xcbea99c2233c", "hash": "cbea99c2233c8764", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xf504d66106e5", "hash": "f504d66106e5bfa7", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x643a8b995e3f", "hash": "643a8b995e3f1eca", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x97f777639599", "hash": "97f77763959911d8", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x1628a91079bc", "hash": "1628a91079bcd10d", "accepted": false, "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xb9cbd5e8c86f", "hash": "b9cbd5e8c86fee08", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xa51e9b13a376", "hash": "a51e9b13a376e1d4", "accepted": false, "sector": "EdTech & Education", "role": "Instruction", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xc4ac4826a176", "hash": "c4ac4826a176ea35", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xc72b5d1b9685", "hash": "c72b5d1b96858ecd", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xf7088b789664", "hash": "f7088b78966407de", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x9c7d2caced6d", "hash": "9c7d2caced6d87f8", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xbdffe1c04081", "hash": "bdffe1c04081cda6", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x1d071b018b47", "hash": "1d071b018b476721", "accepted": false, "sector": "Editorial & Agencies", "role": "Editorial / Copy", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xe3e06431106a", "hash": "e3e06431106acf7c", "accepted": false, "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x30690657068b", "hash": "30690657068b8625", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x69bdaeb47e37", "hash": "69bdaeb47e375925", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x4685ad3ac1e6", "hash": "4685ad3ac1e6f44f", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xa10c9f20bada", "hash": "a10c9f20badab17d", "accepted": false, "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xa4c224653365", "hash": "a4c2246533652ce2", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x8ea9f80e40e6", "hash": "8ea9f80e40e660e1", "accepted": false, "sector": "EdTech & Education", "role": "Curriculum / Content", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x213b3ebdf42f", "hash": "213b3ebdf42ff4fd", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x88f2ffe62dba", "hash": "88f2ffe62dbacf95", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xecdb2e023a62", "hash": "ecdb2e023a623380", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x42f378982b94", "hash": "42f378982b94a42e", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x4784c67ae404", "hash": "4784c67ae4044ad7", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x8b0436b17eff", "hash": "8b0436b17eff4077", "accepted": false, "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x7ec25a2a082f", "hash": "7ec25a2a082f773c", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x7a9d586f7352", "hash": "7a9d586f7352349a", "accepted": false, "sector": "Operations", "role": "Marketing / Operations", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xe3f4634fb02e", "hash": "e3f4634fb02efda1", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x7f379cf614a0", "hash": "7f379cf614a09a77", "accepted": false, "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x1f368c4c0b25", "hash": "1f368c4c0b25221d", "accepted": false, "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x1b624d160345", "hash": "1b624d1603456d57", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xe5318328ef7e", "hash": "e5318328ef7eee75", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x04ccb7a1daea", "hash": "04ccb7a1daeaee64", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x470b8989b2cc", "hash": "470b8989b2cc3f34", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x17183541b70d", "hash": "17183541b70d1180", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x9cfa381f8144", "hash": "9cfa381f8144c242", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xbd577b81d8c6", "hash": "bd577b81d8c6434f", "accepted": false, "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xb737d030498a", "hash": "b737d030498a38bb", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x0dea29476b87", "hash": "0dea29476b87f840", "accepted": false, "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x586ed584e386", "hash": "586ed584e3863ea5", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x9753495b4947", "hash": "9753495b4947f447", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x7d5dcaccbc31", "hash": "7d5dcaccbc316153", "accepted": false, "sector": "SaaS & Cyber", "role": "Communications", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x9f0ac90014a7", "hash": "9f0ac90014a7520e", "accepted": false, "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xe6b78a0fa6b3", "hash": "e6b78a0fa6b3614e", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xcec3ad7575f7", "hash": "cec3ad7575f7e386", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x90aa93b2613d", "hash": "90aa93b2613dc996", "accepted": false, "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x12ccc0712579", "hash": "12ccc071257961cb", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x307b72564eb9", "hash": "307b72564eb9091f", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x317a6e162c56", "hash": "317a6e162c566cea", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x3ad3fcb30fc0", "hash": "3ad3fcb30fc0663f", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x528dc06501a1", "hash": "528dc06501a13843", "accepted": false, "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x0b33cf4db550", "hash": "0b33cf4db55075fb", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xff79b99af13c", "hash": "ff79b99af13c87b9", "accepted": false, "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x83504e2d3d2e", "hash": "83504e2d3d2e0070", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xa8ff15470c90", "hash": "a8ff15470c90a614", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x4441ad23ed33", "hash": "4441ad23ed33dc6f", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x33ef55999cfa", "hash": "33ef55999cfab873", "accepted": false, "sector": "EdTech & Education", "role": "Curriculum / Instruction", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xcd27fa0ce77d", "hash": "cd27fa0ce77d9756", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xf5c92ceb407a", "hash": "f5c92ceb407a6daf", "accepted": false, "sector": "EdTech & Education", "role": "Education / Outreach", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x85bf19ef7f36", "hash": "85bf19ef7f3609dd", "accepted": false, "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x77d18dd1ec33", "hash": "77d18dd1ec33bbf6", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xd50a63b36456", "hash": "d50a63b36456441a", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xb04e1291ac78", "hash": "b04e1291ac78bf97", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x506dc9e1b973", "hash": "506dc9e1b973f59d", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xb186de830962", "hash": "b186de830962fa60", "accepted": false, "sector": "Fintech & Web3", "role": "Communications / Policy", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xef89bc1a97f4", "hash": "ef89bc1a97f49cb9", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x597314289ae5", "hash": "597314289ae535a9", "accepted": false, "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x73b7836808d0", "hash": "73b7836808d0ee88", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xe48793725490", "hash": "e48793725490abf5", "accepted": false, "sector": "Operations", "role": "International Operations", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x42efbd772d96", "hash": "42efbd772d966336", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0xf51e7585190d", "hash": "f51e7585190deeb0", "accepted": false, "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x6fc0b5ee57a7", "hash": "6fc0b5ee57a78628", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x6c0efae5c9c1", "hash": "6c0efae5c9c14c3b", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x72af53a79dd1", "hash": "72af53a79dd1f6bb", "accepted": false, "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x06c6e07adb25", "hash": "06c6e07adb25258d", "accepted": false, "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "0x44246ed75761", "hash": "44246ed757616263", "accepted": false, "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}];
 
     const COLORS = {
       built: '#7ED49E',
@@ -1018,10 +1016,44 @@
     };
 
     const ORDER = ['built', 'i_passed', 'interviewed', 'they_passed', 'silence'];
+    const HEX_CHARS = '0123456789abcdef';
 
     let activeFilter = 'all';
     let selectedCompany = COMPANIES[0];
     let hoveredNode = null;
+    let isScrolling = false;
+    let scrollTimeout = null;
+    let cipherTick = 0;
+
+    function scrambleHex(seedHash, tickVal) {
+      let out = '0x';
+      for (let i = 0; i < 10; i++) {
+        const code = seedHash.charCodeAt(i % seedHash.length);
+        out += HEX_CHARS[(code + tickVal + i * 3) % 16];
+      }
+      return out;
+    }
+
+    function displayNameFor(c) {
+      if (c.accepted) return c.name;
+      return isScrolling ? scrambleHex(c.hash, cipherTick) : c.name;
+    }
+
+    function displayRoleFor(c) {
+      if (c.accepted) return c.sector + ' · ' + c.role;
+      return isScrolling ? (c.sector + ' · ' + c.role) : ('sha256:' + c.hash.slice(0, 8) + '… (scroll to peek)');
+    }
+
+    window.addEventListener('scroll', () => {
+      isScrolling = true;
+      cipherTick = (cipherTick + 1) % 16;
+      requestAnimationFrame(tick);
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        isScrolling = false;
+        requestAnimationFrame(tick);
+      }, 260);
+    }, { passive: true });
 
     const canvas = document.getElementById('inkStage');
     const ctx = canvas.getContext('2d');
@@ -1156,7 +1188,7 @@
           n.y = cy + (n.ty - cy) * fanEase;
         }
 
-        const isSelOrHov = (selectedCompany && selectedCompany.name === n.data.name) || hoveredNode === n;
+        const isSelOrHov = (selectedCompany && selectedCompany.hash === n.data.hash) || hoveredNode === n;
         if (e > 0.42 && isSelOrHov && match) {
           ctx.save();
           ctx.strokeStyle = 'rgba(10,10,10,0.35)';
@@ -1173,7 +1205,7 @@
       for (let i = nodes.length - 1; i >= 0; i--) {
         const n = nodes[i];
         const match = activeFilter === 'all' || n.data.outcome === activeFilter;
-        const isSel = selectedCompany && selectedCompany.name === n.data.name;
+        const isSel = selectedCompany && selectedCompany.hash === n.data.hash;
         const isHov = hoveredNode === n;
 
         ctx.save();
@@ -1190,7 +1222,7 @@
 
         if (match && (isSel || isHov) && elapsed > 0.85) {
           ctx.font = '500 11px "JetBrains Mono", monospace';
-          const label = n.data.name;
+          const label = displayNameFor(n.data);
           const textW = ctx.measureText(label).width;
           const boxW = textW + 16;
           const boxH = 20;
@@ -1254,11 +1286,13 @@
         requestAnimationFrame(tick);
       }
       if (best) {
-        document.getElementById('ttName').textContent = best.data.name;
+        const ttName = document.getElementById('ttName');
+        ttName.textContent = displayNameFor(best.data);
+        ttName.classList.toggle('hashed', !best.data.accepted);
         const tag = document.getElementById('ttTag');
         tag.textContent = best.data.outcome_label;
         tag.style.background = COLORS[best.data.outcome];
-        document.getElementById('ttRole').textContent = best.data.sector + ' · ' + best.data.role;
+        document.getElementById('ttRole').textContent = displayRoleFor(best.data);
         tooltip.classList.add('visible');
         const tx = Math.min(window.innerWidth - 310, e.clientX + 16);
         const ty = Math.max(16, e.clientY - 20);
@@ -1293,13 +1327,29 @@
     }
 
     function openLetter() {
-      document.getElementById('envelopeClosed').style.display = 'none';
-      document.getElementById('letterOpenWrap').classList.add('open');
+      const env = document.getElementById('envelopeClosed');
+      const wrap = document.getElementById('letterOpenWrap');
+      env.classList.add('opening');
+      setTimeout(() => {
+        env.style.display = 'none';
+        env.classList.remove('opening');
+        wrap.classList.add('open');
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => wrap.classList.add('visible'));
+        });
+      }, 850);
     }
+
     function closeLetter() {
-      document.getElementById('letterOpenWrap').classList.remove('open');
-      document.getElementById('envelopeClosed').style.display = 'block';
+      const env = document.getElementById('envelopeClosed');
+      const wrap = document.getElementById('letterOpenWrap');
+      wrap.classList.remove('visible');
+      setTimeout(() => {
+        wrap.classList.remove('open');
+        env.style.display = 'block';
+      }, 350);
     }
+
     document.getElementById('envelopeClosed').addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
