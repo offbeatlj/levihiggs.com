@@ -1,0 +1,298 @@
+﻿Rank,Company,Highest_Outcome,Sector,Role_Track,Primary_ATS,Total_Emails,Applications,Rejections,Interviews,Offers
+1,Edu Appletree (Seoul),OFFER,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,16,1,0,0,15
+2,Google / YouTube,OFFER,Frontier AI & Big Tech,Trust & Safety / Policy & PM,Direct Recruiter & Referral,75,25,20,21,9
+3,TikTok / ByteDance,OFFER,Consumer Social & Creator,Trust & Safety / Policy & PM,Direct Recruiter & Referral,28,6,6,7,9
+4,Book Land School (Seoul),OFFER,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,8,0,0,0,8
+5,RebelBase,OFFER,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,11,0,0,8,3
+6,FedEx Ground,OFFER,"Consulting, Policy & Ops","Product, Operations & Strategy",Direct Recruiter & Referral,4,1,0,1,2
+7,Outlier AI,OFFER,Frontier AI & Big Tech,"AI Safety, Red-Teaming & GenAI",Direct Recruiter & Referral,18,13,3,0,2
+8,Atrium,OFFER,"Consulting, Policy & Ops",Trust & Safety / Policy & PM,Direct Recruiter & Referral,10,8,0,0,2
+9,State of Tennessee,OFFER,"Consulting, Policy & Ops","Product, Operations & Strategy",Direct Recruiter & Referral,5,4,0,0,1
+10,Meta,INTERVIEW,Frontier AI & Big Tech,Trust & Safety / Policy & PM,Direct Recruiter & Referral,43,19,3,21,0
+11,DoubleVerify,INTERVIEW,Enterprise SaaS & Cyber,Trust & Safety / Policy & PM,Direct Recruiter & Referral,15,2,3,10,0
+12,Amity Corp (Japan),INTERVIEW,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,9,1,0,8,0
+13,Pathrise,INTERVIEW,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,11,5,0,6,0
+14,OpenSea,INTERVIEW,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Direct Recruiter & Referral,23,1,17,5,0
+15,Vimeo,INTERVIEW,"Streaming, Gaming & Media",Trust & Safety / Policy & PM,Direct Recruiter & Referral,19,4,10,5,0
+16,Urban Teachers,INTERVIEW,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,6,2,0,4,0
+17,Epic Systems,INTERVIEW,Enterprise SaaS & Cyber,"Product, Operations & Strategy",Direct Recruiter & Referral,5,1,0,4,0
+18,Interstate Logistics,INTERVIEW,"Consulting, Policy & Ops",Account Strategy & Growth,Direct Recruiter & Referral,5,1,0,4,0
+19,micro1,INTERVIEW,Frontier AI & Big Tech,"AI Safety, Red-Teaming & GenAI",Direct Recruiter & Referral,5,0,1,4,0
+20,Amazon,INTERVIEW,Frontier AI & Big Tech,"Brand, Media & Content Strategy",Direct Recruiter & Referral,16,8,5,3,0
+21,Teachers Pay Teachers,INTERVIEW,EdTech & Global Education,Trust & Safety / Marketplace Integrity,Direct Recruiter & Referral,16,10,3,3,0
+22,Etsy,INTERVIEW,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Direct Recruiter & Referral,14,9,2,3,0
+23,DoorDash,INTERVIEW,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Direct Recruiter & Referral,6,2,1,3,0
+24,Aclipse (Korea),INTERVIEW,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,10,8,0,2,0
+25,Varsity Tutors,INTERVIEW,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,8,6,0,2,0
+26,Berlitz Japan,INTERVIEW,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,3,1,0,2,0
+27,Adventure Teaching,INTERVIEW,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,3,1,0,2,0
+28,NYC Teaching Collaborative,INTERVIEW,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,13,8,4,1,0
+29,Shutterstock,INTERVIEW,"Streaming, Gaming & Media","Brand, Media & Content Strategy",Direct Recruiter & Referral,5,3,1,1,0
+30,Nolej AI,INTERVIEW,EdTech & Global Education,"AI Safety, Red-Teaming & GenAI",Direct Recruiter & Referral,5,4,0,1,0
+31,Sumdog,INTERVIEW,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,4,2,1,1,0
+32,Meten English,INTERVIEW,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,2,1,0,1,0
+33,Upwork,INTERVIEW,"Consulting, Policy & Ops","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,1,0,0,1,0
+34,Anthropic,REJECTION,Frontier AI & Big Tech,"AI Safety, Red-Teaming & GenAI",Greenhouse,21,20,1,0,0
+35,Coinbase,REJECTION,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Direct Recruiter & Referral,21,11,10,0,0
+36,TrendMicro,APPLIED,Enterprise SaaS & Cyber,Account Strategy & Growth,Direct Recruiter & Referral,18,18,0,0,0
+37,Visa,REJECTION,"Fintech, Web3 & Commerce","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,14,10,4,0,0
+38,Newsela,APPLIED,EdTech & Global Education,"Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,14,14,0,0,0
+39,Tesla,APPLIED,Frontier AI & Big Tech,"Product, Operations & Strategy",Direct Recruiter & Referral,13,13,0,0,0
+40,Eventbrite,REJECTION,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Lever,10,4,6,0,0
+41,WorldStrides,REJECTION,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,10,0,10,0,0
+42,Renaissance Learning,REJECTION,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,9,7,2,0,0
+43,UBS,APPLIED,"Fintech, Web3 & Commerce","Product, Operations & Strategy",Direct Recruiter & Referral,8,8,0,0,0
+44,GoDaddy,REJECTION,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,7,2,5,0,0
+45,Match Group,REJECTION,Consumer Social & Creator,Trust & Safety / Policy & PM,Direct Recruiter & Referral,6,4,2,0,0
+46,Salesforce,REJECTION,Enterprise SaaS & Cyber,"Product, Operations & Strategy",Workday / Enterprise ATS,6,3,3,0,0
+47,Dailymotion,REJECTION,"Streaming, Gaming & Media",Trust & Safety / Policy & PM,Direct Recruiter & Referral,6,5,1,0,0
+48,Netflix,APPLIED,"Streaming, Gaming & Media","Brand, Media & Content Strategy",Direct Recruiter & Referral,6,6,0,0,0
+49,Public Storage,REJECTION,"Consulting, Policy & Ops",Account Strategy & Growth,Direct Recruiter & Referral,6,5,1,0,0
+50,Airbnb,REJECTION,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Direct Recruiter & Referral,6,3,3,0,0
+51,Discord,REJECTION,Consumer Social & Creator,Trust & Safety / Policy & PM,Greenhouse,5,3,2,0,0
+52,brightwheel,REJECTION,EdTech & Global Education,"Product, Operations & Strategy",Lever,5,3,2,0,0
+53,iTutorGroup,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,5,5,0,0,0
+54,Reddit,REJECTION,Consumer Social & Creator,Trust & Safety / Policy & PM,Greenhouse,5,3,2,0,0
+55,Udemy,REJECTION,EdTech & Global Education,"EdTech, Curriculum & Teaching",Lever,5,3,2,0,0
+56,Teachable,REJECTION,EdTech & Global Education,"Brand, Media & Content Strategy",Direct Recruiter & Referral,5,3,2,0,0
+57,Grailed,REJECTION,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Greenhouse,5,4,1,0,0
+58,360Learning,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Lever,5,5,0,0,0
+59,NoRedInk,REJECTION,EdTech & Global Education,"Copywriting, Editorial & UX Writing",Greenhouse,5,3,2,0,0
+60,Bridgestone,REJECTION,"Consulting, Policy & Ops","Brand, Media & Content Strategy",Workday / Enterprise ATS,5,3,2,0,0
+61,Gemini,REJECTION,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Direct Recruiter & Referral,5,4,1,0,0
+62,Navan (TripActions),REJECTION,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,5,4,1,0,0
+63,BARK (BarkBox),REJECTION,"Fintech, Web3 & Commerce","Copywriting, Editorial & UX Writing",Greenhouse,4,2,2,0,0
+64,Jellysmack,REJECTION,"Streaming, Gaming & Media","Brand, Media & Content Strategy",Lever,4,3,1,0,0
+65,JET Program USA,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,4,4,0,0,0
+66,Spotify,REJECTION,"Streaming, Gaming & Media",Trust & Safety / Policy & PM,Lever,4,2,2,0,0
+67,FORTUNE,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,4,1,3,0,0
+68,Frame.io,REJECTION,"Streaming, Gaming & Media","Brand, Media & Content Strategy",Greenhouse,4,2,2,0,0
+69,MasterClass,REJECTION,EdTech & Global Education,"Brand, Media & Content Strategy",Greenhouse,4,3,1,0,0
+70,MJH Life Sc,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,4,4,0,0,0
+71,SoFi,REJECTION,"Fintech, Web3 & Commerce","Product, Operations & Strategy",Direct Recruiter & Referral,4,2,2,0,0
+72,Klaviyo,REJECTION,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Greenhouse,4,3,1,0,0
+73,Epic Games,REJECTION,"Streaming, Gaming & Media",Trust & Safety / Policy & PM,Direct Recruiter & Referral,4,3,1,0,0
+74,Whatnot,REJECTION,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Direct Recruiter & Referral,4,2,2,0,0
+75,Snap Inc.,REJECTION,Consumer Social & Creator,Trust & Safety / Policy & PM,Workday / Enterprise ATS,4,3,1,0,0
+76,OpenFin,REJECTION,"Fintech, Web3 & Commerce","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,4,3,1,0,0
+77,Sales Development,REJECTION,"Editorial, Press & Agencies",Account Strategy & Growth,LinkedIn Easy Apply,4,2,2,0,0
+78,Business Developm,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,4,2,2,0,0
+79,D.,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Indeed & ZipRecruiter,4,0,4,0,0
+80,Ramsey Solutions,REJECTION,"Consulting, Policy & Ops","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,3,2,1,0,0
+81,Deezer,REJECTION,"Streaming, Gaming & Media","Brand, Media & Content Strategy",Direct Recruiter & Referral,3,2,1,0,0
+82,SUAVV Magazine,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,3,3,0,0,0
+83,Kaplan International,REJECTION,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,3,1,2,0,0
+84,EF Education First,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,3,3,0,0,0
+85,Scholastic,APPLIED,EdTech & Global Education,"Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,3,3,0,0,0
+86,Chateau School (Tokyo),APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,3,3,0,0,0
+87,Superhuman,REJECTION,Enterprise SaaS & Cyber,"Product, Operations & Strategy",Direct Recruiter & Referral,3,1,2,0,0
+88,Scale AI,APPLIED,Frontier AI & Big Tech,"AI Safety, Red-Teaming & GenAI",Greenhouse,3,3,0,0,0
+89,Dataiku,REJECTION,Frontier AI & Big Tech,"AI Safety, Red-Teaming & GenAI",Lever,3,2,1,0,0
+90,Morning Brew,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,3,3,0,0,0
+91,Redbubble,APPLIED,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Greenhouse,3,3,0,0,0
+92,Multiverse,REJECTION,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,3,2,1,0,0
+93,Chegg,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,3,3,0,0,0
+94,McKinsey & Company,REJECTION,"Consulting, Policy & Ops","Product, Operations & Strategy",Direct Recruiter & Referral,3,2,1,0,0
+95,Screencastify,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",AngelList / Wellfound,3,3,0,0,0
+96,Thumbtack,REJECTION,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Direct Recruiter & Referral,3,2,1,0,0
+97,Uncommon Schools,REJECTION,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,3,2,1,0,0
+98,Skillshare,REJECTION,EdTech & Global Education,"Brand, Media & Content Strategy",Lever,3,1,2,0,0
+99,Condé Nast,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,3,0,3,0,0
+100,N.,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Indeed & ZipRecruiter,3,0,3,0,0
+101,FOX,APPLIED,"Editorial, Press & Agencies","Brand, Media & Content Strategy",Workday / Enterprise ATS,2,2,0,0,0
+102,Amobee,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,2,1,1,0,0
+103,Free Agency,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,2,1,1,0,0
+104,Aerotek,APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,2,2,0,0,0
+105,WWP,REJECTION,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,2,1,1,0,0
+106,Smarsh,APPLIED,Enterprise SaaS & Cyber,"Product, Operations & Strategy",Direct Recruiter & Referral,2,2,0,0,0
+107,Dotdash Meredith,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,2,2,0,0,0
+108,Group Nine Media,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,2,2,0,0,0
+109,AmeriCorps,APPLIED,"Consulting, Policy & Ops","Product, Operations & Strategy",Direct Recruiter & Referral,2,2,0,0,0
+110,The ...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,2,2,0,0,0
+111,WeTransfer,APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,2,2,0,0,0
+112,SayABC,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,2,2,0,0,0
+113,YBM ECC (Seoul),APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,2,2,0,0,0
+114,Riot Games,REJECTION,"Streaming, Gaming & Media",Trust & Safety / Policy & PM,Direct Recruiter & Referral,2,1,1,0,0
+115,HBO,APPLIED,"Streaming, Gaming & Media","Brand, Media & Content Strategy",AngelList / Wellfound,2,2,0,0,0
+116,General Intuition / Medal,APPLIED,Frontier AI & Big Tech,"AI Safety, Red-Teaming & GenAI",Direct Recruiter & Referral,2,2,0,0,0
+117,MrBeast,APPLIED,Consumer Social & Creator,"Brand, Media & Content Strategy",Greenhouse,2,2,0,0,0
+118,Character.AI,REJECTION,Frontier AI & Big Tech,"AI Safety, Red-Teaming & GenAI",Direct Recruiter & Referral,2,1,1,0,0
+119,Mozilla,APPLIED,Enterprise SaaS & Cyber,Trust & Safety / Policy & PM,Direct Recruiter & Referral,2,2,0,0,0
+120,Runway,REJECTION,Frontier AI & Big Tech,"AI Safety, Red-Teaming & GenAI",Greenhouse,2,1,1,0,0
+121,The Motley Fool,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,2,1,1,0,0
+122,Wasserman,APPLIED,"Editorial, Press & Agencies","Brand, Media & Content Strategy",Direct Recruiter & Referral,2,2,0,0,0
+123,ASOS,REJECTION,"Fintech, Web3 & Commerce","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,2,1,1,0,0
+124,Major League Soccer,APPLIED,"Streaming, Gaming & Media","Brand, Media & Content Strategy",Direct Recruiter & Referral,2,2,0,0,0
+125,Cash App (Block),REJECTION,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Direct Recruiter & Referral,2,1,1,0,0
+126,PwC,REJECTION,"Consulting, Policy & Ops","Product, Operations & Strategy",Workday / Enterprise ATS,2,1,1,0,0
+127,Acorns,APPLIED,"Fintech, Web3 & Commerce","Copywriting, Editorial & UX Writing",AngelList / Wellfound,2,2,0,0,0
+128,UiPath,APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",AngelList / Wellfound,2,2,0,0,0
+129,TripleLift,APPLIED,Enterprise SaaS & Cyber,"Product, Operations & Strategy",Greenhouse,2,2,0,0,0
+130,BetterCloud,REJECTION,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Greenhouse,2,1,1,0,0
+131,Genius,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,2,1,1,0,0
+132,Brainly,REJECTION,EdTech & Global Education,"EdTech, Curriculum & Teaching",Greenhouse,2,1,1,0,0
+133,BrainPOP,APPLIED,EdTech & Global Education,"Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,2,2,0,0,0
+134,Highwire PR,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",AngelList / Wellfound,2,2,0,0,0
+135,Mystery Science,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Greenhouse,2,2,0,0,0
+136,Grio,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,2,2,0,0,0
+137,LogRhythm,APPLIED,Enterprise SaaS & Cyber,Enterprise SaaS & Cyber,Greenhouse,2,2,0,0,0
+138,Hologram,APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Greenhouse,2,2,0,0,0
+139,IXL Learning,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,2,2,0,0,0
+140,Chopra Global,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,2,2,0,0,0
+141,"naviHealth, Inc. "" ...",APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,2,2,0,0,0
+142,Microsoft,APPLIED,Frontier AI & Big Tech,"Product, Operations & Strategy",Direct Recruiter & Referral,2,2,0,0,0
+143,PARK SLOPE U...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,2,2,0,0,0
+144,Zoom,REJECTION,Enterprise SaaS & Cyber,"Product, Operations & Strategy",Direct Recruiter & Referral,2,1,1,0,0
+145,Sco,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,2,2,0,0,0
+146,Cur...,APPLIED,"Editorial, Press & Agencies",Account Strategy & Growth,LinkedIn Easy Apply,2,2,0,0,0
+147,BetterLesson,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Greenhouse,2,2,0,0,0
+148,Sense Talen,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,2,2,0,0,0
+149,Forbes Media,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,2,2,0,0,0
+150,Curriculum Associates,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,2,2,0,0,0
+151,TeePublic,APPLIED,"Fintech, Web3 & Commerce","Brand, Media & Content Strategy",LinkedIn Easy Apply,2,2,0,0,0
+152,Postlight,APPLIED,Enterprise SaaS & Cyber,"Product, Operations & Strategy",Greenhouse,2,2,0,0,0
+153,Shane Co.,APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,2,2,0,0,0
+154,rednote,APPLIED,Consumer Social & Creator,Trust & Safety / Policy & PM,Direct Recruiter & Referral,2,2,0,0,0
+155,OpenAI,APPLIED,Frontier AI & Big Tech,"AI Safety, Red-Teaming & GenAI",Direct Recruiter & Referral,2,2,0,0,0
+156,Robinhood,REJECTION,"Fintech, Web3 & Commerce",Trust & Safety / Policy & PM,Direct Recruiter & Referral,2,1,1,0,0
+157,BigCommerce,REJECTION,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,2,1,1,0,0
+158,Citi,REJECTION,"Fintech, Web3 & Commerce","Product, Operations & Strategy",Direct Recruiter & Referral,2,1,1,0,0
+159,New Sales Busines,REJECTION,"Editorial, Press & Agencies",Account Strategy & Growth,LinkedIn Easy Apply,2,1,1,0,0
+160,Content Marketing,REJECTION,"Editorial, Press & Agencies","Brand, Media & Content Strategy",LinkedIn Easy Apply,2,1,1,0,0
+161,Marketing Manager,REJECTION,"Editorial, Press & Agencies","Brand, Media & Content Strategy",LinkedIn Easy Apply,2,1,1,0,0
+162,C.,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,2,1,1,0,0
+163,Technical Proposa,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,2,1,1,0,0
+164,Rev.com,REJECTION,"Consulting, Policy & Ops","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,2,1,1,0,0
+165,Kahoot!,REJECTION,EdTech & Global Education,"EdTech, Curriculum & Teaching",Workday / Enterprise ATS,2,1,1,0,0
+166,A.,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Indeed & ZipRecruiter,2,0,2,0,0
+167,BMI (Broadcast Music),REJECTION,"Streaming, Gaming & Media","Brand, Media & Content Strategy",Direct Recruiter & Referral,2,0,2,0,0
+168,X (Twitter),REJECTION,Consumer Social & Creator,Trust & Safety / Policy & PM,Workday / Enterprise ATS,2,0,2,0,0
+169,Better,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,2,0,2,0,0
+170,Grammarly,REJECTION,Frontier AI & Big Tech,"Copywriting, Editorial & UX Writing",Greenhouse,2,0,2,0,0
+171,Shane Co,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,2,0,2,0,0
+172,CM Group,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,1,1,0,0,0
+173,WeWork,APPLIED,"Fintech, Web3 & Commerce","Brand, Media & Content Strategy",Greenhouse,1,1,0,0,0
+174,Guidepost M,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,1,1,0,0,0
+175,Michael Hya,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,1,1,0,0,0
+176,Auth0,APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+177,LifeWay,APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,1,1,0,0,0
+178,E.W. Scripps,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,1,1,0,0,0
+179,Emory,APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,1,1,0,0,0
+180,Allbirds,APPLIED,"Fintech, Web3 & Commerce","Brand, Media & Content Strategy",Greenhouse,1,1,0,0,0
+181,Zeta Global,APPLIED,Enterprise SaaS & Cyber,"Brand, Media & Content Strategy",Direct Recruiter & Referral,1,1,0,0,0
+182,Hypebeast,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+183,Culture Trip,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+184,Plaid,APPLIED,"Fintech, Web3 & Commerce","Product, Operations & Strategy",Lever,1,1,0,0,0
+185,Laundry Service,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,1,1,0,0,0
+186,Major Leagu,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,1,1,0,0,0
+187,Angel Studios,APPLIED,"Streaming, Gaming & Media","Brand, Media & Content Strategy",AngelList / Wellfound,1,1,0,0,0
+188,Sudowrite,APPLIED,Frontier AI & Big Tech,"Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,1,1,0,0,0
+189,Authorized Instit,APPLIED,"Editorial, Press & Agencies","EdTech, Curriculum & Teaching",Direct Recruiter & Referral,1,1,0,0,0
+190,U.S...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+191,Pat...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+192,Lime English,APPLIED,"Editorial, Press & Agencies","EdTech, Curriculum & Teaching",Direct Recruiter & Referral,1,1,0,0,0
+193,Jo...,APPLIED,"Editorial, Press & Agencies",Account Strategy & Growth,LinkedIn Easy Apply,1,1,0,0,0
+194,Bleav ...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+195,Synology,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+196,Law Bu...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+197,Southwester...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+198,J.M. Ge...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+199,Hudson,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+200,Ad...,APPLIED,"Editorial, Press & Agencies","Product, Operations & Strategy",LinkedIn Easy Apply,1,1,0,0,0
+201,Me...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+202,Tec...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+203,Special Olympics,APPLIED,"Consulting, Policy & Ops","Brand, Media & Content Strategy",Direct Recruiter & Referral,1,1,0,0,0
+204,R...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+205,A...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+206,Pal...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+207,Ricoh,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Indeed & ZipRecruiter,1,1,0,0,0
+208,Mutual of,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Indeed & ZipRecruiter,1,1,0,0,0
+209,BASIS International,APPLIED,EdTech & Global Education,"EdTech, Curriculum & Teaching",Direct Recruiter & Referral,1,1,0,0,0
+210,VF Hong Kong Li,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,1,1,0,0,0
+211,The Education U,APPLIED,"Editorial, Press & Agencies","EdTech, Curriculum & Teaching",Direct Recruiter & Referral,1,1,0,0,0
+212,B...,APPLIED,"Editorial, Press & Agencies","Brand, Media & Content Strategy",LinkedIn Easy Apply,1,1,0,0,0
+213,Natio...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+214,The Hill,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+215,Ch...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+216,C...,APPLIED,"Editorial, Press & Agencies","Brand, Media & Content Strategy",LinkedIn Easy Apply,1,1,0,0,0
+217,TAL E,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+218,Laundry...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+219,T...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+220,In...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+221,Friends,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,1,1,0,0,0
+222,United Nations,APPLIED,"Consulting, Policy & Ops","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,1,1,0,0,0
+223,IDEMIA,APPLIED,Enterprise SaaS & Cyber,"Product, Operations & Strategy",Direct Recruiter & Referral,1,1,0,0,0
+224,Tennessee Aqua,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,1,1,0,0,0
+225,Mod,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+226,BSE Global (Nets),APPLIED,"Streaming, Gaming & Media","Brand, Media & Content Strategy",Greenhouse,1,1,0,0,0
+227,Crypto.com,APPLIED,"Fintech, Web3 & Commerce","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+228,Thr,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+229,Binance,APPLIED,"Fintech, Web3 & Commerce","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+230,Sweet,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,1,1,0,0,0
+231,Rockstar Games,APPLIED,"Streaming, Gaming & Media","Copywriting, Editorial & UX Writing",Greenhouse,1,1,0,0,0
+232,Strava,APPLIED,Consumer Social & Creator,"Brand, Media & Content Strategy",Greenhouse,1,1,0,0,0
+233,Patreon,APPLIED,Consumer Social & Creator,Trust & Safety / Policy & PM,Greenhouse,1,1,0,0,0
+234,Asurion,APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,1,1,0,0,0
+235,Bli,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+236,Blind,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+237,Intuit,APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,1,1,0,0,0
+238,ConsenSys,APPLIED,"Fintech, Web3 & Commerce","Copywriting, Editorial & UX Writing",Greenhouse,1,1,0,0,0
+239,Mom,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+240,Arootah LLC,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,1,1,0,0,0
+241,Simply Wall St,APPLIED,"Fintech, Web3 & Commerce","Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,1,1,0,0,0
+242,Instnt,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,1,1,0,0,0
+243,Wise,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,1,1,0,0,0
+244,College Planning,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,1,1,0,0,0
+245,American Expres,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,1,1,0,0,0
+246,Linke,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+247,Slack,APPLIED,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,1,1,0,0,0
+248,L...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+249,Taika,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+250,Pay,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+251,Neiman...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+252,FAS...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+253,NoRe...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+254,AirDev,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+255,Paladin,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+256,Renais...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+257,Res,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+258,Zoomo,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,1,1,0,0,0
+259,Orthosnap,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,1,1,0,0,0
+260,RAPP,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,1,1,0,0,0
+261,Ede,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,1,0,0,0
+262,Helix ...,APPLIED,"Editorial, Press & Agencies",Account Strategy & Growth,LinkedIn Easy Apply,1,1,0,0,0
+263,LNKDLY,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+264,Ap...,APPLIED,"Editorial, Press & Agencies",Account Strategy & Growth,LinkedIn Easy Apply,1,1,0,0,0
+265,Fly...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+266,Schoo...,APPLIED,"Editorial, Press & Agencies","EdTech, Curriculum & Teaching",LinkedIn Easy Apply,1,1,0,0,0
+267,S...,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,1,0,0,0
+268,Deloitte,APPLIED,"Consulting, Policy & Ops","Product, Operations & Strategy",Direct Recruiter & Referral,1,1,0,0,0
+269,Bumble,APPLIED,Consumer Social & Creator,Trust & Safety / Policy & PM,Workday / Enterprise ATS,1,1,0,0,0
+270,Dell Technologies,APPLIED,Enterprise SaaS & Cyber,"Product, Operations & Strategy",Direct Recruiter & Referral,1,1,0,0,0
+271,ADP,APPLIED,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,1,1,0,0,0
+272,O.,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Indeed & ZipRecruiter,1,0,1,0,0
+273,Technical Copywri,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,0,1,0,0
+274,M.,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Indeed & ZipRecruiter,1,0,1,0,0
+275,Soltanian & Company,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Indeed & ZipRecruiter,1,0,1,0,0
+276,Insurance Sales a,REJECTION,"Editorial, Press & Agencies",Account Strategy & Growth,LinkedIn Easy Apply,1,0,1,0,0
+277,Editor In Chief a,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,0,1,0,0
+278,Junior Copywriter,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,0,1,0,0
+279,J.,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Indeed & ZipRecruiter,1,0,1,0,0
+280,Speechwriter at N,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,0,1,0,0
+281,Digital Advertisi,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,0,1,0,0
+282,Membership Engage,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,0,1,0,0
+283,Government Affair,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",LinkedIn Easy Apply,1,0,1,0,0
+284,Marketing Intern,REJECTION,"Editorial, Press & Agencies","Brand, Media & Content Strategy",LinkedIn Easy Apply,1,0,1,0,0
+285,Marketing Adminis,REJECTION,"Editorial, Press & Agencies","Brand, Media & Content Strategy",LinkedIn Easy Apply,1,0,1,0,0
+286,Creative Marketin,REJECTION,"Editorial, Press & Agencies","Brand, Media & Content Strategy",LinkedIn Easy Apply,1,0,1,0,0
+287,Academic Content,REJECTION,"Editorial, Press & Agencies","EdTech, Curriculum & Teaching",LinkedIn Easy Apply,1,0,1,0,0
+288,Marketing Assista,REJECTION,"Editorial, Press & Agencies","Brand, Media & Content Strategy",LinkedIn Easy Apply,1,0,1,0,0
+289,SmartNews,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Workday / Enterprise ATS,1,0,1,0,0
+290,Thread,REJECTION,Enterprise SaaS & Cyber,"Copywriting, Editorial & UX Writing",Lever,1,0,1,0,0
+291,Wieden+Kennedy,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Greenhouse,1,0,1,0,0
+292,Kickst,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Lever,1,0,1,0,0
+293,Veriff,REJECTION,Enterprise SaaS & Cyber,Trust & Safety / Policy & PM,Greenhouse,1,0,1,0,0
+294,Head of Trust & S,REJECTION,"Editorial, Press & Agencies",Trust & Safety / Policy & PM,Direct Recruiter & Referral,1,0,1,0,0
+295,B.,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",Direct Recruiter & Referral,1,0,1,0,0
+296,VAWAA,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",AngelList / Wellfound,1,0,1,0,0
+297,JobEcademy,REJECTION,"Editorial, Press & Agencies","Copywriting, Editorial & UX Writing",AngelList / Wellfound,1,0,1,0,0

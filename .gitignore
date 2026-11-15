@@ -1,6 +1,5 @@
-# Keep company-named archive local (not deployed to public site)
+# Keep individual raw/subject archives local
 data/sanitized_companies_and_roles.json
 sheets/1_all_2342_job_emails_sanitized.csv
-sheets/2_company_and_employer_summary.csv
 .DS_Store
 __pycache__/

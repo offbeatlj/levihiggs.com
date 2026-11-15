@@ -947,339 +947,364 @@
   "sankey": {
     "stage1_to_stage2": [
       {
-        "source": "Direct Company & Recruiter",
-        "target": "Startups, SaaS & General",
-        "value": 523
+        "source": "Direct Recruiter & Referral",
+        "target": "Copywriting, Editorial & UX Writing",
+        "value": 560
       },
       {
-        "source": "Direct Company & Recruiter",
-        "target": "Big Tech & AI Labs",
-        "value": 292
+        "source": "Direct Recruiter & Referral",
+        "target": "Trust & Safety / Policy & PM",
+        "value": 289
       },
       {
-        "source": "Direct Company & Recruiter",
-        "target": "Education & EdTech",
-        "value": 250
+        "source": "Direct Recruiter & Referral",
+        "target": "EdTech, Curriculum & Teaching",
+        "value": 238
       },
       {
-        "source": "LinkedIn Jobs",
-        "target": "Startups, SaaS & General",
-        "value": 210
+        "source": "LinkedIn Easy Apply",
+        "target": "Copywriting, Editorial & UX Writing",
+        "value": 230
+      },
+      {
+        "source": "Indeed & ZipRecruiter",
+        "target": "Copywriting, Editorial & UX Writing",
+        "value": 127
       },
       {
         "source": "AngelList / Wellfound",
-        "target": "Startups, SaaS & General",
-        "value": 125
+        "target": "Copywriting, Editorial & UX Writing",
+        "value": 121
       },
       {
-        "source": "LinkedIn Jobs",
-        "target": "Copywriting, Content & UX",
-        "value": 107
-      },
-      {
-        "source": "Job Boards (Indeed / Zip)",
-        "target": "Startups, SaaS & General",
-        "value": 97
-      },
-      {
-        "source": "Enterprise ATS (Workday / Ashby)",
-        "target": "Startups, SaaS & General",
+        "source": "LinkedIn Easy Apply",
+        "target": "Account Strategy & Growth",
         "value": 79
       },
       {
-        "source": "Direct Company & Recruiter",
-        "target": "Media, Creator & Marketing",
-        "value": 78
+        "source": "Greenhouse",
+        "target": "Copywriting, Editorial & UX Writing",
+        "value": 66
       },
       {
-        "source": "Greenhouse ATS",
-        "target": "Startups, SaaS & General",
-        "value": 75
+        "source": "Direct Recruiter & Referral",
+        "target": "Product, Operations & Strategy",
+        "value": 66
       },
       {
-        "source": "Greenhouse ATS",
-        "target": "Big Tech & AI Labs",
-        "value": 64
+        "source": "Workday / Enterprise ATS",
+        "target": "Copywriting, Editorial & UX Writing",
+        "value": 53
       },
       {
-        "source": "Direct Company & Recruiter",
-        "target": "Product, Strategy & Ops",
-        "value": 54
+        "source": "LinkedIn Easy Apply",
+        "target": "Brand, Media & Content Strategy",
+        "value": 52
       },
       {
-        "source": "LinkedIn Jobs",
-        "target": "Media, Creator & Marketing",
-        "value": 50
+        "source": "Direct Recruiter & Referral",
+        "target": "Brand, Media & Content Strategy",
+        "value": 47
       },
       {
-        "source": "Direct Company & Recruiter",
-        "target": "Copywriting, Content & UX",
-        "value": 49
+        "source": "Direct Recruiter & Referral",
+        "target": "Account Strategy & Growth",
+        "value": 47
       },
       {
-        "source": "LinkedIn Jobs",
-        "target": "Product, Strategy & Ops",
-        "value": 41
+        "source": "Direct Recruiter & Referral",
+        "target": "AI Safety, Red-Teaming & GenAI",
+        "value": 40
       },
       {
-        "source": "Direct Company & Recruiter",
-        "target": "Trust & Safety / Policy",
-        "value": 32
+        "source": "Lever",
+        "target": "Copywriting, Editorial & UX Writing",
+        "value": 39
       },
       {
-        "source": "Job Boards (Indeed / Zip)",
-        "target": "Copywriting, Content & UX",
-        "value": 29
+        "source": "LinkedIn Easy Apply",
+        "target": "EdTech, Curriculum & Teaching",
+        "value": 33
       },
       {
-        "source": "Job Boards (Indeed / Zip)",
-        "target": "Media, Creator & Marketing",
-        "value": 29
+        "source": "Indeed & ZipRecruiter",
+        "target": "Brand, Media & Content Strategy",
+        "value": 31
       },
       {
-        "source": "Lever ATS",
-        "target": "Startups, SaaS & General",
-        "value": 28
+        "source": "Greenhouse",
+        "target": "Trust & Safety / Policy & PM",
+        "value": 27
       },
       {
-        "source": "LinkedIn Jobs",
-        "target": "Big Tech & AI Labs",
-        "value": 24
+        "source": "Greenhouse",
+        "target": "AI Safety, Red-Teaming & GenAI",
+        "value": 26
       },
       {
-        "source": "LinkedIn Jobs",
-        "target": "Education & EdTech",
-        "value": 22
+        "source": "Workday / Enterprise ATS",
+        "target": "Trust & Safety / Policy & PM",
+        "value": 18
       },
       {
-        "source": "Greenhouse ATS",
-        "target": "Media, Creator & Marketing",
+        "source": "Direct Recruiter & Referral",
+        "target": "Trust & Safety / Marketplace Integrity",
+        "value": 16
+      },
+      {
+        "source": "Greenhouse",
+        "target": "Brand, Media & Content Strategy",
+        "value": 15
+      },
+      {
+        "source": "Workday / Enterprise ATS",
+        "target": "Brand, Media & Content Strategy",
         "value": 13
       },
       {
-        "source": "Job Boards (Indeed / Zip)",
-        "target": "Product, Strategy & Ops",
-        "value": 10
+        "source": "Lever",
+        "target": "EdTech, Curriculum & Teaching",
+        "value": 11
       },
       {
-        "source": "Enterprise ATS (Workday / Ashby)",
-        "target": "Media, Creator & Marketing",
+        "source": "Lever",
+        "target": "Brand, Media & Content Strategy",
+        "value": 9
+      },
+      {
+        "source": "Indeed & ZipRecruiter",
+        "target": "Account Strategy & Growth",
+        "value": 9
+      },
+      {
+        "source": "Lever",
+        "target": "Trust & Safety / Policy & PM",
+        "value": 9
+      },
+      {
+        "source": "Greenhouse",
+        "target": "EdTech, Curriculum & Teaching",
+        "value": 8
+      },
+      {
+        "source": "Workday / Enterprise ATS",
+        "target": "Product, Operations & Strategy",
+        "value": 8
+      },
+      {
+        "source": "LinkedIn Easy Apply",
+        "target": "Product, Operations & Strategy",
         "value": 7
       },
       {
-        "source": "Enterprise ATS (Workday / Ashby)",
-        "target": "Copywriting, Content & UX",
-        "value": 6
-      },
-      {
-        "source": "Greenhouse ATS",
-        "target": "Education & EdTech",
-        "value": 6
-      },
-      {
-        "source": "Enterprise ATS (Workday / Ashby)",
-        "target": "Product, Strategy & Ops",
+        "source": "AngelList / Wellfound",
+        "target": "Brand, Media & Content Strategy",
         "value": 5
       },
       {
-        "source": "Enterprise ATS (Workday / Ashby)",
-        "target": "Big Tech & AI Labs",
+        "source": "Greenhouse",
+        "target": "Product, Operations & Strategy",
         "value": 5
       },
       {
-        "source": "Job Boards (Indeed / Zip)",
-        "target": "Big Tech & AI Labs",
+        "source": "Lever",
+        "target": "Product, Operations & Strategy",
+        "value": 4
+      },
+      {
+        "source": "Workday / Enterprise ATS",
+        "target": "EdTech, Curriculum & Teaching",
         "value": 4
       },
       {
         "source": "AngelList / Wellfound",
-        "target": "Media, Creator & Marketing",
+        "target": "EdTech, Curriculum & Teaching",
         "value": 4
+      },
+      {
+        "source": "Indeed & ZipRecruiter",
+        "target": "Product, Operations & Strategy",
+        "value": 3
+      },
+      {
+        "source": "Lever",
+        "target": "AI Safety, Red-Teaming & GenAI",
+        "value": 2
+      },
+      {
+        "source": "Greenhouse",
+        "target": "Enterprise SaaS & Cyber",
+        "value": 2
       },
       {
         "source": "AngelList / Wellfound",
-        "target": "Big Tech & AI Labs",
-        "value": 4
-      },
-      {
-        "source": "Greenhouse ATS",
-        "target": "Product, Strategy & Ops",
-        "value": 3
-      },
-      {
-        "source": "Greenhouse ATS",
-        "target": "Trust & Safety / Policy",
-        "value": 3
-      },
-      {
-        "source": "Lever ATS",
-        "target": "Media, Creator & Marketing",
-        "value": 3
-      },
-      {
-        "source": "Greenhouse ATS",
-        "target": "Copywriting, Content & UX",
+        "target": "Trust & Safety / Policy & PM",
         "value": 2
       },
       {
-        "source": "Lever ATS",
-        "target": "Big Tech & AI Labs",
-        "value": 2
-      },
-      {
-        "source": "Lever ATS",
-        "target": "Education & EdTech",
-        "value": 2
-      },
-      {
-        "source": "LinkedIn Jobs",
-        "target": "Trust & Safety / Policy",
-        "value": 2
-      },
-      {
-        "source": "Job Boards (Indeed / Zip)",
-        "target": "Education & EdTech",
+        "source": "Indeed & ZipRecruiter",
+        "target": "Trust & Safety / Policy & PM",
         "value": 1
       },
       {
-        "source": "Job Boards (Indeed / Zip)",
-        "target": "Trust & Safety / Policy",
+        "source": "Workday / Enterprise ATS",
+        "target": "Account Strategy & Growth",
         "value": 1
       },
       {
-        "source": "Enterprise ATS (Workday / Ashby)",
-        "target": "Trust & Safety / Policy",
+        "source": "AngelList / Wellfound",
+        "target": "Product, Operations & Strategy",
         "value": 1
       }
     ],
     "stage2_to_stage3": [
       {
-        "source": "Startups, SaaS & General",
+        "source": "Copywriting, Editorial & UX Writing",
         "target": "applications",
-        "value": 806
+        "value": 868
       },
       {
-        "source": "Startups, SaaS & General",
+        "source": "Copywriting, Editorial & UX Writing",
         "target": "rejections",
-        "value": 248
+        "value": 238
       },
       {
-        "source": "Big Tech & AI Labs",
+        "source": "EdTech, Curriculum & Teaching",
         "target": "applications",
-        "value": 232
+        "value": 181
       },
       {
-        "source": "Education & EdTech",
+        "source": "Trust & Safety / Policy & PM",
         "target": "applications",
-        "value": 172
+        "value": 146
       },
       {
-        "source": "Copywriting, Content & UX",
+        "source": "Brand, Media & Content Strategy",
         "target": "applications",
-        "value": 154
+        "value": 138
       },
       {
-        "source": "Media, Creator & Marketing",
+        "source": "Account Strategy & Growth",
         "target": "applications",
-        "value": 119
+        "value": 122
       },
       {
-        "source": "Product, Strategy & Ops",
-        "target": "applications",
-        "value": 88
+        "source": "Trust & Safety / Policy & PM",
+        "target": "rejections",
+        "value": 102
       },
       {
-        "source": "Big Tech & AI Labs",
+        "source": "Trust & Safety / Policy & PM",
         "target": "interviews",
-        "value": 88
+        "value": 78
       },
       {
-        "source": "Big Tech & AI Labs",
-        "target": "rejections",
-        "value": 65
-      },
-      {
-        "source": "Startups, SaaS & General",
+        "source": "Copywriting, Editorial & UX Writing",
         "target": "interviews",
-        "value": 60
+        "value": 72
       },
       {
-        "source": "Education & EdTech",
+        "source": "Product, Operations & Strategy",
+        "target": "applications",
+        "value": 68
+      },
+      {
+        "source": "EdTech, Curriculum & Teaching",
         "target": "rejections",
-        "value": 55
+        "value": 59
       },
       {
-        "source": "Media, Creator & Marketing",
-        "target": "rejections",
-        "value": 43
+        "source": "AI Safety, Red-Teaming & GenAI",
+        "target": "applications",
+        "value": 53
       },
       {
-        "source": "Copywriting, Content & UX",
-        "target": "rejections",
-        "value": 31
-      },
-      {
-        "source": "Education & EdTech",
+        "source": "EdTech, Curriculum & Teaching",
         "target": "interviews",
-        "value": 27
+        "value": 35
       },
       {
-        "source": "Education & EdTech",
-        "target": "offers",
-        "value": 27
+        "source": "Brand, Media & Content Strategy",
+        "target": "rejections",
+        "value": 29
       },
       {
-        "source": "Startups, SaaS & General",
+        "source": "EdTech, Curriculum & Teaching",
         "target": "offers",
         "value": 23
       },
       {
-        "source": "Product, Strategy & Ops",
-        "target": "rejections",
+        "source": "Trust & Safety / Policy & PM",
+        "target": "offers",
         "value": 20
       },
       {
-        "source": "Media, Creator & Marketing",
-        "target": "interviews",
+        "source": "Product, Operations & Strategy",
+        "target": "rejections",
         "value": 18
       },
       {
-        "source": "Trust & Safety / Policy",
-        "target": "applications",
-        "value": 17
-      },
-      {
-        "source": "Trust & Safety / Policy",
-        "target": "rejections",
-        "value": 17
-      },
-      {
-        "source": "Big Tech & AI Labs",
+        "source": "Copywriting, Editorial & UX Writing",
         "target": "offers",
+        "value": 18
+      },
+      {
+        "source": "Trust & Safety / Marketplace Integrity",
+        "target": "applications",
         "value": 10
       },
       {
-        "source": "Copywriting, Content & UX",
-        "target": "interviews",
+        "source": "Account Strategy & Growth",
+        "target": "rejections",
+        "value": 9
+      },
+      {
+        "source": "AI Safety, Red-Teaming & GenAI",
+        "target": "rejections",
         "value": 8
       },
       {
-        "source": "Trust & Safety / Policy",
+        "source": "Account Strategy & Growth",
         "target": "interviews",
         "value": 5
       },
       {
-        "source": "Media, Creator & Marketing",
-        "target": "offers",
-        "value": 4
+        "source": "Product, Operations & Strategy",
+        "target": "interviews",
+        "value": 5
       },
       {
-        "source": "Product, Strategy & Ops",
+        "source": "Brand, Media & Content Strategy",
+        "target": "interviews",
+        "value": 5
+      },
+      {
+        "source": "AI Safety, Red-Teaming & GenAI",
+        "target": "interviews",
+        "value": 5
+      },
+      {
+        "source": "Trust & Safety / Marketplace Integrity",
+        "target": "rejections",
+        "value": 3
+      },
+      {
+        "source": "Trust & Safety / Marketplace Integrity",
         "target": "interviews",
         "value": 3
       },
       {
-        "source": "Product, Strategy & Ops",
+        "source": "Product, Operations & Strategy",
+        "target": "offers",
+        "value": 3
+      },
+      {
+        "source": "Enterprise SaaS & Cyber",
+        "target": "applications",
+        "value": 2
+      },
+      {
+        "source": "AI Safety, Red-Teaming & GenAI",
         "target": "offers",
         "value": 2
       }
@@ -1287,36 +1312,36 @@
   },
   "channels": [
     {
-      "channel": "Direct Company & Recruiter",
-      "applications": 687,
-      "rejections": 323,
-      "interviews": 207,
+      "channel": "Direct Recruiter & Referral",
+      "applications": 700,
+      "rejections": 336,
+      "interviews": 206,
       "offers": 61,
-      "total": 1278
+      "total": 1303
     },
     {
-      "channel": "LinkedIn Jobs",
-      "applications": 415,
-      "rejections": 41,
+      "channel": "LinkedIn Easy Apply",
+      "applications": 372,
+      "rejections": 29,
       "interviews": 0,
       "offers": 0,
-      "total": 456
+      "total": 401
     },
     {
-      "channel": "Job Boards (Indeed / Zip)",
-      "applications": 148,
-      "rejections": 23,
+      "channel": "Indeed & ZipRecruiter",
+      "applications": 147,
+      "rejections": 24,
       "interviews": 0,
       "offers": 0,
       "total": 171
     },
     {
-      "channel": "Greenhouse ATS",
+      "channel": "Greenhouse",
       "applications": 120,
-      "rejections": 46,
+      "rejections": 29,
       "interviews": 0,
       "offers": 0,
-      "total": 166
+      "total": 149
     },
     {
       "channel": "AngelList / Wellfound",
@@ -1327,20 +1352,20 @@
       "total": 133
     },
     {
-      "channel": "Enterprise ATS (Workday / Ashby)",
-      "applications": 75,
+      "channel": "Workday / Enterprise ATS",
+      "applications": 69,
       "rejections": 23,
       "interviews": 0,
       "offers": 5,
-      "total": 103
+      "total": 97
     },
     {
-      "channel": "Lever ATS",
-      "applications": 14,
-      "rejections": 21,
+      "channel": "Lever",
+      "applications": 51,
+      "rejections": 23,
       "interviews": 0,
       "offers": 0,
-      "total": 35
+      "total": 74
     }
   ],
   "domains": [
@@ -2888,6 +2913,1768 @@
       "interviews": 0,
       "offers": 0,
       "depth_score": 1.12
+    }
+  ],
+  "galaxy_companies": [
+    {
+      "name": "Edu Appletree (Seoul)",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 16,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 15,
+      "outcome": "offer"
+    },
+    {
+      "name": "Google / YouTube",
+      "sector": "Frontier AI & Big Tech",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 75,
+      "applications": 25,
+      "rejections": 20,
+      "interviews": 21,
+      "offers": 9,
+      "outcome": "offer"
+    },
+    {
+      "name": "TikTok / ByteDance",
+      "sector": "Consumer Social & Creator",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 28,
+      "applications": 6,
+      "rejections": 6,
+      "interviews": 7,
+      "offers": 9,
+      "outcome": "offer"
+    },
+    {
+      "name": "Book Land School (Seoul)",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 8,
+      "applications": 0,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 8,
+      "outcome": "offer"
+    },
+    {
+      "name": "RebelBase",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 11,
+      "applications": 0,
+      "rejections": 0,
+      "interviews": 8,
+      "offers": 3,
+      "outcome": "offer"
+    },
+    {
+      "name": "FedEx Ground",
+      "sector": "Consulting, Policy & Ops",
+      "track": "Product, Operations & Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 4,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 1,
+      "offers": 2,
+      "outcome": "offer"
+    },
+    {
+      "name": "Outlier AI",
+      "sector": "Frontier AI & Big Tech",
+      "track": "AI Safety, Red-Teaming & GenAI",
+      "ats": "Direct Recruiter & Referral",
+      "total": 18,
+      "applications": 13,
+      "rejections": 3,
+      "interviews": 0,
+      "offers": 2,
+      "outcome": "offer"
+    },
+    {
+      "name": "Atrium",
+      "sector": "Consulting, Policy & Ops",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 10,
+      "applications": 8,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 2,
+      "outcome": "offer"
+    },
+    {
+      "name": "State of Tennessee",
+      "sector": "Consulting, Policy & Ops",
+      "track": "Product, Operations & Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 5,
+      "applications": 4,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 1,
+      "outcome": "offer"
+    },
+    {
+      "name": "Meta",
+      "sector": "Frontier AI & Big Tech",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 43,
+      "applications": 19,
+      "rejections": 3,
+      "interviews": 21,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "DoubleVerify",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 15,
+      "applications": 2,
+      "rejections": 3,
+      "interviews": 10,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Amity Corp (Japan)",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 9,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 8,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Pathrise",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 11,
+      "applications": 5,
+      "rejections": 0,
+      "interviews": 6,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "OpenSea",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 23,
+      "applications": 1,
+      "rejections": 17,
+      "interviews": 5,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Vimeo",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 19,
+      "applications": 4,
+      "rejections": 10,
+      "interviews": 5,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Urban Teachers",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 6,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 4,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Epic Systems",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Product, Operations & Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 5,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 4,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Interstate Logistics",
+      "sector": "Consulting, Policy & Ops",
+      "track": "Account Strategy & Growth",
+      "ats": "Direct Recruiter & Referral",
+      "total": 5,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 4,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "micro1",
+      "sector": "Frontier AI & Big Tech",
+      "track": "AI Safety, Red-Teaming & GenAI",
+      "ats": "Direct Recruiter & Referral",
+      "total": 5,
+      "applications": 0,
+      "rejections": 1,
+      "interviews": 4,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Amazon",
+      "sector": "Frontier AI & Big Tech",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 16,
+      "applications": 8,
+      "rejections": 5,
+      "interviews": 3,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Teachers Pay Teachers",
+      "sector": "EdTech & Global Education",
+      "track": "Trust & Safety / Marketplace Integrity",
+      "ats": "Direct Recruiter & Referral",
+      "total": 16,
+      "applications": 10,
+      "rejections": 3,
+      "interviews": 3,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Etsy",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 14,
+      "applications": 9,
+      "rejections": 2,
+      "interviews": 3,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "DoorDash",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 6,
+      "applications": 2,
+      "rejections": 1,
+      "interviews": 3,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Aclipse (Korea)",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 10,
+      "applications": 8,
+      "rejections": 0,
+      "interviews": 2,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Varsity Tutors",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 8,
+      "applications": 6,
+      "rejections": 0,
+      "interviews": 2,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Berlitz Japan",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 2,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Adventure Teaching",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 2,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "NYC Teaching Collaborative",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 13,
+      "applications": 8,
+      "rejections": 4,
+      "interviews": 1,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Shutterstock",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 5,
+      "applications": 3,
+      "rejections": 1,
+      "interviews": 1,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Nolej AI",
+      "sector": "EdTech & Global Education",
+      "track": "AI Safety, Red-Teaming & GenAI",
+      "ats": "Direct Recruiter & Referral",
+      "total": 5,
+      "applications": 4,
+      "rejections": 0,
+      "interviews": 1,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Sumdog",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 4,
+      "applications": 2,
+      "rejections": 1,
+      "interviews": 1,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Meten English",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 1,
+      "rejections": 0,
+      "interviews": 1,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Upwork",
+      "sector": "Consulting, Policy & Ops",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 1,
+      "applications": 0,
+      "rejections": 0,
+      "interviews": 1,
+      "offers": 0,
+      "outcome": "interview"
+    },
+    {
+      "name": "Anthropic",
+      "sector": "Frontier AI & Big Tech",
+      "track": "AI Safety, Red-Teaming & GenAI",
+      "ats": "Greenhouse",
+      "total": 21,
+      "applications": 20,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Coinbase",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 21,
+      "applications": 11,
+      "rejections": 10,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "TrendMicro",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Account Strategy & Growth",
+      "ats": "Direct Recruiter & Referral",
+      "total": 18,
+      "applications": 18,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Visa",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 14,
+      "applications": 10,
+      "rejections": 4,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Newsela",
+      "sector": "EdTech & Global Education",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 14,
+      "applications": 14,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Tesla",
+      "sector": "Frontier AI & Big Tech",
+      "track": "Product, Operations & Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 13,
+      "applications": 13,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Eventbrite",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Lever",
+      "total": 10,
+      "applications": 4,
+      "rejections": 6,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "WorldStrides",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 10,
+      "applications": 0,
+      "rejections": 10,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Renaissance Learning",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 9,
+      "applications": 7,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "UBS",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Product, Operations & Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 8,
+      "applications": 8,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "GoDaddy",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 7,
+      "applications": 2,
+      "rejections": 5,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Match Group",
+      "sector": "Consumer Social & Creator",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 6,
+      "applications": 4,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Salesforce",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Product, Operations & Strategy",
+      "ats": "Workday / Enterprise ATS",
+      "total": 6,
+      "applications": 3,
+      "rejections": 3,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Dailymotion",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 6,
+      "applications": 5,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Netflix",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 6,
+      "applications": 6,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Public Storage",
+      "sector": "Consulting, Policy & Ops",
+      "track": "Account Strategy & Growth",
+      "ats": "Direct Recruiter & Referral",
+      "total": 6,
+      "applications": 5,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Airbnb",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 6,
+      "applications": 3,
+      "rejections": 3,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Discord",
+      "sector": "Consumer Social & Creator",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Greenhouse",
+      "total": 5,
+      "applications": 3,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "brightwheel",
+      "sector": "EdTech & Global Education",
+      "track": "Product, Operations & Strategy",
+      "ats": "Lever",
+      "total": 5,
+      "applications": 3,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "iTutorGroup",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 5,
+      "applications": 5,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Reddit",
+      "sector": "Consumer Social & Creator",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Greenhouse",
+      "total": 5,
+      "applications": 3,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Udemy",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Lever",
+      "total": 5,
+      "applications": 3,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Teachable",
+      "sector": "EdTech & Global Education",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 5,
+      "applications": 3,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Grailed",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Greenhouse",
+      "total": 5,
+      "applications": 4,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "360Learning",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Lever",
+      "total": 5,
+      "applications": 5,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "NoRedInk",
+      "sector": "EdTech & Global Education",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Greenhouse",
+      "total": 5,
+      "applications": 3,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Bridgestone",
+      "sector": "Consulting, Policy & Ops",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Workday / Enterprise ATS",
+      "total": 5,
+      "applications": 3,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Gemini",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 5,
+      "applications": 4,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Navan (TripActions)",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 5,
+      "applications": 4,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "BARK (BarkBox)",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Greenhouse",
+      "total": 4,
+      "applications": 2,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Jellysmack",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Lever",
+      "total": 4,
+      "applications": 3,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "JET Program USA",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 4,
+      "applications": 4,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Spotify",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Lever",
+      "total": 4,
+      "applications": 2,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "FORTUNE",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 4,
+      "applications": 1,
+      "rejections": 3,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Frame.io",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Greenhouse",
+      "total": 4,
+      "applications": 2,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "MasterClass",
+      "sector": "EdTech & Global Education",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Greenhouse",
+      "total": 4,
+      "applications": 3,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "MJH Life Sc",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 4,
+      "applications": 4,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "SoFi",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Product, Operations & Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 4,
+      "applications": 2,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Klaviyo",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Greenhouse",
+      "total": 4,
+      "applications": 3,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Epic Games",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 4,
+      "applications": 3,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Whatnot",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 4,
+      "applications": 2,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Snap Inc.",
+      "sector": "Consumer Social & Creator",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Workday / Enterprise ATS",
+      "total": 4,
+      "applications": 3,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "OpenFin",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 4,
+      "applications": 3,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Sales Development",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Account Strategy & Growth",
+      "ats": "LinkedIn Easy Apply",
+      "total": 4,
+      "applications": 2,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Business Developm",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "LinkedIn Easy Apply",
+      "total": 4,
+      "applications": 2,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "D.",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Indeed & ZipRecruiter",
+      "total": 4,
+      "applications": 0,
+      "rejections": 4,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Ramsey Solutions",
+      "sector": "Consulting, Policy & Ops",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 2,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Deezer",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 2,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "SUAVV Magazine",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 3,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Kaplan International",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 1,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "EF Education First",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 3,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Scholastic",
+      "sector": "EdTech & Global Education",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 3,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Chateau School (Tokyo)",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 3,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Superhuman",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Product, Operations & Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 1,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Scale AI",
+      "sector": "Frontier AI & Big Tech",
+      "track": "AI Safety, Red-Teaming & GenAI",
+      "ats": "Greenhouse",
+      "total": 3,
+      "applications": 3,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Dataiku",
+      "sector": "Frontier AI & Big Tech",
+      "track": "AI Safety, Red-Teaming & GenAI",
+      "ats": "Lever",
+      "total": 3,
+      "applications": 2,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Morning Brew",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Lever",
+      "total": 3,
+      "applications": 3,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Redbubble",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Greenhouse",
+      "total": 3,
+      "applications": 3,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Multiverse",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 2,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Chegg",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 3,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "McKinsey & Company",
+      "sector": "Consulting, Policy & Ops",
+      "track": "Product, Operations & Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 2,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Screencastify",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "AngelList / Wellfound",
+      "total": 3,
+      "applications": 3,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Thumbtack",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 2,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Uncommon Schools",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 3,
+      "applications": 2,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Skillshare",
+      "sector": "EdTech & Global Education",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Lever",
+      "total": 3,
+      "applications": 1,
+      "rejections": 2,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Cond\u00e9 Nast",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Workday / Enterprise ATS",
+      "total": 3,
+      "applications": 0,
+      "rejections": 3,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "N.",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Indeed & ZipRecruiter",
+      "total": 3,
+      "applications": 0,
+      "rejections": 3,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "FOX",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Workday / Enterprise ATS",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Amobee",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Free Agency",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Aerotek",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Workday / Enterprise ATS",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "WWP",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Workday / Enterprise ATS",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Smarsh",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Product, Operations & Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Dotdash Meredith",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Group Nine Media",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Greenhouse",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "AmeriCorps",
+      "sector": "Consulting, Policy & Ops",
+      "track": "Product, Operations & Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "The ...",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "LinkedIn Easy Apply",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "WeTransfer",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "SayABC",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "YBM ECC (Seoul)",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Riot Games",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "HBO",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "AngelList / Wellfound",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "General Intuition / Medal",
+      "sector": "Frontier AI & Big Tech",
+      "track": "AI Safety, Red-Teaming & GenAI",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "MrBeast",
+      "sector": "Consumer Social & Creator",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Greenhouse",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Character.AI",
+      "sector": "Frontier AI & Big Tech",
+      "track": "AI Safety, Red-Teaming & GenAI",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Mozilla",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Runway",
+      "sector": "Frontier AI & Big Tech",
+      "track": "AI Safety, Red-Teaming & GenAI",
+      "ats": "Greenhouse",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "The Motley Fool",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Wasserman",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "ASOS",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Major League Soccer",
+      "sector": "Streaming, Gaming & Media",
+      "track": "Brand, Media & Content Strategy",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Cash App (Block)",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Trust & Safety / Policy & PM",
+      "ats": "Direct Recruiter & Referral",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "PwC",
+      "sector": "Consulting, Policy & Ops",
+      "track": "Product, Operations & Strategy",
+      "ats": "Workday / Enterprise ATS",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Acorns",
+      "sector": "Fintech, Web3 & Commerce",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "AngelList / Wellfound",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "UiPath",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "AngelList / Wellfound",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "TripleLift",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Product, Operations & Strategy",
+      "ats": "Greenhouse",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "BetterCloud",
+      "sector": "Enterprise SaaS & Cyber",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Greenhouse",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Genius",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Greenhouse",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "Brainly",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Greenhouse",
+      "total": 2,
+      "applications": 1,
+      "rejections": 1,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "rejection"
+    },
+    {
+      "name": "BrainPOP",
+      "sector": "EdTech & Global Education",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "Workday / Enterprise ATS",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Highwire PR",
+      "sector": "Editorial, Press & Agencies",
+      "track": "Copywriting, Editorial & UX Writing",
+      "ats": "AngelList / Wellfound",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    },
+    {
+      "name": "Mystery Science",
+      "sector": "EdTech & Global Education",
+      "track": "EdTech, Curriculum & Teaching",
+      "ats": "Greenhouse",
+      "total": 2,
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "outcome": "applied"
+    }
+  ],
+  "role_tracks": [
+    {
+      "track": "Copywriting, Editorial & UX Writing",
+      "applications": 868,
+      "rejections": 238,
+      "interviews": 72,
+      "offers": 18,
+      "total": 1196
+    },
+    {
+      "track": "Trust & Safety / Policy & PM",
+      "applications": 146,
+      "rejections": 102,
+      "interviews": 78,
+      "offers": 20,
+      "total": 346
+    },
+    {
+      "track": "EdTech, Curriculum & Teaching",
+      "applications": 181,
+      "rejections": 59,
+      "interviews": 35,
+      "offers": 23,
+      "total": 298
+    },
+    {
+      "track": "Brand, Media & Content Strategy",
+      "applications": 138,
+      "rejections": 29,
+      "interviews": 5,
+      "offers": 0,
+      "total": 172
+    },
+    {
+      "track": "Account Strategy & Growth",
+      "applications": 122,
+      "rejections": 9,
+      "interviews": 5,
+      "offers": 0,
+      "total": 136
+    },
+    {
+      "track": "Product, Operations & Strategy",
+      "applications": 68,
+      "rejections": 18,
+      "interviews": 5,
+      "offers": 3,
+      "total": 94
+    },
+    {
+      "track": "AI Safety, Red-Teaming & GenAI",
+      "applications": 53,
+      "rejections": 8,
+      "interviews": 5,
+      "offers": 2,
+      "total": 68
+    },
+    {
+      "track": "Trust & Safety / Marketplace Integrity",
+      "applications": 10,
+      "rejections": 3,
+      "interviews": 3,
+      "offers": 0,
+      "total": 16
+    },
+    {
+      "track": "Enterprise SaaS & Cyber",
+      "applications": 2,
+      "rejections": 0,
+      "interviews": 0,
+      "offers": 0,
+      "total": 2
+    }
+  ],
+  "sectors": [
+    {
+      "sector": "Editorial, Press & Agencies",
+      "applications": 1003,
+      "rejections": 236,
+      "interviews": 68,
+      "offers": 15,
+      "total": 1322
+    },
+    {
+      "sector": "EdTech & Global Education",
+      "applications": 223,
+      "rejections": 70,
+      "interviews": 39,
+      "offers": 23,
+      "total": 355
+    },
+    {
+      "sector": "Frontier AI & Big Tech",
+      "applications": 112,
+      "rejections": 38,
+      "interviews": 49,
+      "offers": 11,
+      "total": 210
+    },
+    {
+      "sector": "Fintech, Web3 & Commerce",
+      "applications": 80,
+      "rejections": 51,
+      "interviews": 11,
+      "offers": 0,
+      "total": 142
+    },
+    {
+      "sector": "Enterprise SaaS & Cyber",
+      "applications": 73,
+      "rejections": 27,
+      "interviews": 22,
+      "offers": 3,
+      "total": 125
+    },
+    {
+      "sector": "Streaming, Gaming & Media",
+      "applications": 38,
+      "rejections": 22,
+      "interviews": 6,
+      "offers": 0,
+      "total": 66
+    },
+    {
+      "sector": "Consumer Social & Creator",
+      "applications": 26,
+      "rejections": 15,
+      "interviews": 7,
+      "offers": 9,
+      "total": 57
+    },
+    {
+      "sector": "Consulting, Policy & Ops",
+      "applications": 33,
+      "rejections": 7,
+      "interviews": 6,
+      "offers": 5,
+      "total": 51
     }
   ]
 }
