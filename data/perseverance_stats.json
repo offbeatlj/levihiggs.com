@@ -4678,42 +4678,32 @@
     }
   ],
   "verified_audit_summary": {
-    "total_unique_companies": 250,
+    "total_unique_companies": 267,
     "total_unique_threads": 1441,
     "built_here_count": 8,
-    "i_passed_count": 11,
+    "i_passed_count": 12,
     "interviewed_count": 22,
-    "they_passed_count": 78,
-    "silence_count": 131,
+    "they_passed_count": 81,
+    "silence_count": 144,
     "audit_note": "100% deduplicated across both Gmail accounts and collapsed across Re:/Fwd: threads so back-and-forth replies are never counted as separate applications or rejections."
   },
   "verified_companies_250": [
     {
-      "name": "YouTube (Google)",
-      "sector": "Tech & AI",
-      "role": "Trust & Safety Policy / Product",
-      "note": "Joined in New York. Scaled Youth, Violent Extremism & Hate Speech enforcement; launched external VVR transparency metric; built GenAI policy red-teaming frameworks.",
-      "url": "https://transparencyreport.google.com/youtube-policy/featured-policies/violent-extremism",
-      "outcome": "built",
-      "outcome_label": "Accepted",
-      "stage_depth": 5
-    },
-    {
-      "name": "TikTok (ByteDance)",
-      "sector": "Consumer Social",
-      "role": "Team Lead, Trust & Safety",
-      "note": "Onboarded via staffing partner, then converted to full-time Team Lead in Trust & Safety. Led an 18-analyst team to 95.38% accuracy.",
-      "url": "https://www.tiktok.com/transparency",
-      "outcome": "built",
-      "outcome_label": "Accepted",
-      "stage_depth": 5
-    },
-    {
-      "name": "Teachers Pay Teachers",
+      "name": "ELC Shanghai",
       "sector": "EdTech & Education",
-      "role": "Content Moderation Specialist",
-      "note": "Audited 5,000+ K-12 marketplace assets and returned for a second contract push in Marketplace Integrity.",
-      "url": "https://www.teacherspayteachers.com/",
+      "role": "Headmaster",
+      "note": "Recruited via WeChat. Co-founded and led a 12-person learning center in Shanghai; grew enrollment 35% in year one.",
+      "url": "https://www.smartshanghai.com/",
+      "outcome": "built",
+      "outcome_label": "Accepted",
+      "stage_depth": 5
+    },
+    {
+      "name": "OMSI",
+      "sector": "EdTech & Education",
+      "role": "Outdoor Science Instructor",
+      "note": "Oregon Museum of Science and Industry. Led multi-day field ecology, geology, and astronomy programs across Oregon.",
+      "url": "https://omsi.edu/",
       "outcome": "built",
       "outcome_label": "Accepted",
       "stage_depth": 5
@@ -4739,11 +4729,21 @@
       "stage_depth": 5
     },
     {
-      "name": "ELC Shanghai",
+      "name": "Teachers Pay Teachers",
       "sector": "EdTech & Education",
-      "role": "Headmaster",
-      "note": "Recruited via WeChat. Co-founded and led a 12-person learning center in Shanghai; grew enrollment 35% in year one.",
-      "url": "https://www.smartshanghai.com/",
+      "role": "Content Moderation Specialist",
+      "note": "Audited 5,000+ K-12 marketplace assets and returned for a second contract push in Marketplace Integrity.",
+      "url": "https://www.teacherspayteachers.com/",
+      "outcome": "built",
+      "outcome_label": "Accepted",
+      "stage_depth": 5
+    },
+    {
+      "name": "TikTok (ByteDance)",
+      "sector": "Consumer Social",
+      "role": "Team Lead, Trust & Safety",
+      "note": "Onboarded via staffing partner, then converted to full-time Team Lead in Trust & Safety. Led an 18-analyst team to 95.38% accuracy.",
+      "url": "https://www.tiktok.com/transparency",
       "outcome": "built",
       "outcome_label": "Accepted",
       "stage_depth": 5
@@ -4759,56 +4759,20 @@
       "stage_depth": 5
     },
     {
-      "name": "OMSI",
-      "sector": "EdTech & Education",
-      "role": "Outdoor Science Instructor",
-      "note": "Oregon Museum of Science and Industry. Led multi-day field ecology, geology, and astronomy programs across Oregon.",
-      "url": "https://omsi.edu/",
+      "name": "YouTube (Google)",
+      "sector": "Tech & AI",
+      "role": "Trust & Safety Policy / Product",
+      "note": "Joined in New York. Scaled Youth, Violent Extremism & Hate Speech enforcement; launched external VVR transparency metric; built GenAI policy red-teaming frameworks.",
+      "url": "https://transparencyreport.google.com/youtube-policy/featured-policies/violent-extremism",
       "outcome": "built",
       "outcome_label": "Accepted",
       "stage_depth": 5
     },
     {
-      "name": "DoubleVerify",
-      "sector": "SaaS & Cyber",
-      "role": "Trust & Safety / Brand Safety",
-      "note": "Received an offer and a revised counter-offer ($160k base + 15% bonus + $120k equity). Declined to join Google.",
-      "outcome": "i_passed",
-      "outcome_label": "I Passed",
-      "stage_depth": 4
-    },
-    {
-      "name": "OpenSea",
-      "sector": "Fintech & Web3",
-      "role": "Trust & Safety Policy",
-      "note": "Received a verbal Trust & Safety offer after the virtual onsite. Declined offer.",
-      "outcome": "i_passed",
-      "outcome_label": "I Passed",
-      "stage_depth": 4
-    },
-    {
-      "name": "Pathrise",
+      "name": "Amity Corp (Japan)",
       "sector": "EdTech & Education",
-      "role": "Admissions Operations",
-      "note": "Invited to a final-round mock offer call and Ops interview. Withdrew after accepting TikTok.",
-      "outcome": "i_passed",
-      "outcome_label": "I Passed",
-      "stage_depth": 4
-    },
-    {
-      "name": "Outlier AI",
-      "sector": "Tech & AI",
-      "role": "Dolphin Genesis Expert",
-      "note": "Matched and onboarded to an expert evaluation track; chose not to proceed.",
-      "outcome": "i_passed",
-      "outcome_label": "I Passed",
-      "stage_depth": 4
-    },
-    {
-      "name": "Seocho Avalon (Seoul)",
-      "sector": "EdTech & Education",
-      "role": "English Instructor (Gangnam)",
-      "note": "Offered a teaching contract with housing in Gangnam after an in-person interview. Declined to lead ELC Shanghai.",
+      "role": "Instructor (Japan)",
+      "note": "Received seven automated video interview invitations; chose not to proceed.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4823,10 +4787,19 @@
       "stage_depth": 4
     },
     {
-      "name": "Urban Teachers",
+      "name": "Chateau School (Tokyo)",
       "sector": "EdTech & Education",
-      "role": "Teaching Fellow",
-      "note": "Invited to Final Interview Day; withdrew application to pursue other offers.",
+      "role": "Preschool English Teacher (Offer)",
+      "outcome": "i_passed",
+      "outcome_label": "I Passed",
+      "stage_depth": 4,
+      "note": "Received full teaching offer and completed Certificate of Eligibility visa paperwork for Tokyo; declined."
+    },
+    {
+      "name": "DoubleVerify",
+      "sector": "SaaS & Cyber",
+      "role": "Trust & Safety / Brand Safety",
+      "note": "Received an offer and a revised counter-offer ($160k base + 15% bonus + $120k equity). Declined to join Google.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4841,10 +4814,55 @@
       "stage_depth": 4
     },
     {
-      "name": "Amity Corp (Japan)",
+      "name": "FedEx Ground",
+      "sector": "Operations",
+      "role": "Operations",
+      "note": "Completed initial onboarding paperwork weeks before accepting TikTok; passed.",
+      "outcome": "i_passed",
+      "outcome_label": "I Passed",
+      "stage_depth": 4
+    },
+    {
+      "name": "OpenSea",
+      "sector": "Fintech & Web3",
+      "role": "Trust & Safety Policy",
+      "note": "Received a verbal Trust & Safety offer after the virtual onsite. Declined offer.",
+      "outcome": "i_passed",
+      "outcome_label": "I Passed",
+      "stage_depth": 4
+    },
+    {
+      "name": "Outlier AI",
+      "sector": "Tech & AI",
+      "role": "Dolphin Genesis Expert",
+      "note": "Matched and onboarded to an expert evaluation track; chose not to proceed.",
+      "outcome": "i_passed",
+      "outcome_label": "I Passed",
+      "stage_depth": 4
+    },
+    {
+      "name": "Pathrise",
       "sector": "EdTech & Education",
-      "role": "Instructor (Japan)",
-      "note": "Received seven automated video interview invitations; chose not to proceed.",
+      "role": "Admissions Operations",
+      "note": "Invited to a final-round mock offer call and Ops interview. Withdrew after accepting TikTok.",
+      "outcome": "i_passed",
+      "outcome_label": "I Passed",
+      "stage_depth": 4
+    },
+    {
+      "name": "Seocho Avalon (Seoul)",
+      "sector": "EdTech & Education",
+      "role": "English Instructor (Gangnam)",
+      "note": "Offered a teaching contract with housing in Gangnam after an in-person interview. Declined to lead ELC Shanghai.",
+      "outcome": "i_passed",
+      "outcome_label": "I Passed",
+      "stage_depth": 4
+    },
+    {
+      "name": "Urban Teachers",
+      "sector": "EdTech & Education",
+      "role": "Teaching Fellow",
+      "note": "Invited to Final Interview Day; withdrew application to pursue other offers.",
       "outcome": "i_passed",
       "outcome_label": "I Passed",
       "stage_depth": 4
@@ -4859,19 +4877,10 @@
       "stage_depth": 4
     },
     {
-      "name": "FedEx Ground",
-      "sector": "Operations",
-      "role": "Operations",
-      "note": "Completed initial onboarding paperwork weeks before accepting TikTok; passed.",
-      "outcome": "i_passed",
-      "outcome_label": "I Passed",
-      "stage_depth": 4
-    },
-    {
-      "name": "Meta",
-      "sector": "Tech & AI",
-      "role": "Policy / Integrity Operations",
-      "note": "Completed multi-round interviews with Trust & Safety / Policy recruiting.",
+      "name": "Adventure Teaching",
+      "sector": "EdTech & Education",
+      "role": "Instructor Abroad",
+      "note": "Completed admissions interview.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4886,55 +4895,10 @@
       "stage_depth": 3
     },
     {
-      "name": "Etsy",
-      "sector": "Marketplaces",
-      "role": "Senior Manager, Marketplace Safety",
-      "note": "Completed Google Meet interview rounds with Talent Acquisition.",
-      "outcome": "interviewed",
-      "outcome_label": "Interviewed",
-      "stage_depth": 3
-    },
-    {
-      "name": "DoorDash",
-      "sector": "Marketplaces",
-      "role": "Manager, Trust & Safety",
-      "note": "Completed phone screen and Marketplace Quality manager interview before they passed.",
-      "outcome": "interviewed",
-      "outcome_label": "Interviewed",
-      "stage_depth": 3
-    },
-    {
-      "name": "Vimeo",
-      "sector": "Media & Streaming",
-      "role": "Manager, Trust & Safety",
-      "note": "Completed Trust & Safety manager interview and a follow-up feedback call.",
-      "outcome": "interviewed",
-      "outcome_label": "Interviewed",
-      "stage_depth": 3
-    },
-    {
-      "name": "Shutterstock",
-      "sector": "Media & Streaming",
-      "role": "Director, Content & Policy",
-      "note": "Completed executive recruiting interview stage.",
-      "outcome": "interviewed",
-      "outcome_label": "Interviewed",
-      "stage_depth": 3
-    },
-    {
-      "name": "Match Group",
-      "sector": "Consumer Social",
-      "role": "Trust & Safety",
-      "note": "Completed initial phone interview before they passed.",
-      "outcome": "interviewed",
-      "outcome_label": "Interviewed",
-      "stage_depth": 3
-    },
-    {
-      "name": "Trend Micro (Taipei)",
-      "sector": "SaaS & Cyber",
-      "role": "Technical Writer (Taipei)",
-      "note": "Submitted a 500-word technical writing essay and joined a 2-hour Taipei Zoom test an hour early due to a Central Standard Time vs. China Standard Time mix-up while traveling.",
+      "name": "Book Land School (Seoul)",
+      "sector": "EdTech & Education",
+      "role": "English Instructor (Mapo)",
+      "note": "Completed Skype interview via an overseas recruiting agency.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -4949,33 +4913,6 @@
       "stage_depth": 3
     },
     {
-      "name": "micro1",
-      "sector": "Tech & AI",
-      "role": "AI Specialist",
-      "note": "Completed AI technical interview.",
-      "outcome": "interviewed",
-      "outcome_label": "Interviewed",
-      "stage_depth": 3
-    },
-    {
-      "name": "NYC Teaching Collaborative",
-      "sector": "EdTech & Education",
-      "role": "Partner Teacher Fellow",
-      "note": "Completed phone interview; not selected for the winter cohort.",
-      "outcome": "interviewed",
-      "outcome_label": "Interviewed",
-      "stage_depth": 3
-    },
-    {
-      "name": "Interstate Logistics",
-      "sector": "Operations",
-      "role": "Account Executive",
-      "note": "Completed a 2-hour on-site interview in Murfreesboro.",
-      "outcome": "interviewed",
-      "outcome_label": "Interviewed",
-      "stage_depth": 3
-    },
-    {
       "name": "Catalyst Leadership",
       "sector": "Operations",
       "role": "Campaign Development",
@@ -4985,19 +4922,19 @@
       "stage_depth": 3
     },
     {
-      "name": "Sumdog",
-      "sector": "EdTech & Education",
-      "role": "Marketing Assistant",
-      "note": "Completed video interview for an education role.",
+      "name": "DoorDash",
+      "sector": "Marketplaces",
+      "role": "Manager, Trust & Safety",
+      "note": "Completed phone screen and Marketplace Quality manager interview before they passed.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
     },
     {
-      "name": "Book Land School (Seoul)",
-      "sector": "EdTech & Education",
-      "role": "English Instructor (Mapo)",
-      "note": "Completed Skype interview via an overseas recruiting agency.",
+      "name": "Etsy",
+      "sector": "Marketplaces",
+      "role": "Senior Manager, Marketplace Safety",
+      "note": "Completed Google Meet interview rounds with Talent Acquisition.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -5012,6 +4949,33 @@
       "stage_depth": 3
     },
     {
+      "name": "Interstate Logistics",
+      "sector": "Operations",
+      "role": "Account Executive",
+      "note": "Completed a 2-hour on-site interview in Murfreesboro.",
+      "outcome": "interviewed",
+      "outcome_label": "Interviewed",
+      "stage_depth": 3
+    },
+    {
+      "name": "Match Group",
+      "sector": "Consumer Social",
+      "role": "Trust & Safety",
+      "note": "Completed initial phone interview before they passed.",
+      "outcome": "interviewed",
+      "outcome_label": "Interviewed",
+      "stage_depth": 3
+    },
+    {
+      "name": "Meta",
+      "sector": "Tech & AI",
+      "role": "Policy / Integrity Operations",
+      "note": "Completed multi-round interviews with Trust & Safety / Policy recruiting.",
+      "outcome": "interviewed",
+      "outcome_label": "Interviewed",
+      "stage_depth": 3
+    },
+    {
       "name": "Meten English",
       "sector": "EdTech & Education",
       "role": "English Instructor (Shenzhen)",
@@ -5021,28 +4985,10 @@
       "stage_depth": 3
     },
     {
-      "name": "Varsity Tutors",
-      "sector": "EdTech & Education",
-      "role": "Instructor / Tutor",
-      "note": "Completed video interview rounds.",
-      "outcome": "interviewed",
-      "outcome_label": "Interviewed",
-      "stage_depth": 3
-    },
-    {
-      "name": "New Oriental",
-      "sector": "EdTech & Education",
-      "role": "Instructor",
-      "note": "Scheduled interview stage in China.",
-      "outcome": "interviewed",
-      "outcome_label": "Interviewed",
-      "stage_depth": 3
-    },
-    {
-      "name": "Tennessee General Assembly",
-      "sector": "Policy & Legal",
-      "role": "Legislative Bill Clerk / Proofreader",
-      "note": "Referred for a legislative research role; resume forwarded to House and Senate leadership.",
+      "name": "micro1",
+      "sector": "Tech & AI",
+      "role": "AI Specialist",
+      "note": "Completed AI technical interview.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
@@ -5057,233 +5003,80 @@
       "stage_depth": 3
     },
     {
-      "name": "Adventure Teaching",
+      "name": "New Oriental",
       "sector": "EdTech & Education",
-      "role": "Instructor Abroad",
-      "note": "Completed admissions interview.",
+      "role": "Instructor",
+      "note": "Scheduled interview stage in China.",
       "outcome": "interviewed",
       "outcome_label": "Interviewed",
       "stage_depth": 3
     },
     {
-      "name": "Anthropic",
-      "sector": "Tech & AI",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
+      "name": "NYC Teaching Collaborative",
+      "sector": "EdTech & Education",
+      "role": "Partner Teacher Fellow",
+      "note": "Completed phone interview; not selected for the winter cohort.",
+      "outcome": "interviewed",
+      "outcome_label": "Interviewed",
+      "stage_depth": 3
     },
     {
-      "name": "Character.AI",
-      "sector": "Tech & AI",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Runway",
-      "sector": "Tech & AI",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Grammarly",
-      "sector": "Tech & AI",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Dataiku",
-      "sector": "Tech & AI",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Coinbase",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Cash App (Block)",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "SoFi",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Visa",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Citi",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Robinhood",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "OpenFin",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Gemini",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Discord",
-      "sector": "Consumer Social",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Reddit",
-      "sector": "Consumer Social",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "X (Twitter)",
-      "sector": "Consumer Social",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Snap Inc.",
-      "sector": "Consumer Social",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Spotify",
+      "name": "Shutterstock",
       "sector": "Media & Streaming",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
+      "role": "Director, Content & Policy",
+      "note": "Completed executive recruiting interview stage.",
+      "outcome": "interviewed",
+      "outcome_label": "Interviewed",
+      "stage_depth": 3
     },
     {
-      "name": "Frame.io",
-      "sector": "Media & Streaming",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
+      "name": "Sumdog",
+      "sector": "EdTech & Education",
+      "role": "Marketing Assistant",
+      "note": "Completed video interview for an education role.",
+      "outcome": "interviewed",
+      "outcome_label": "Interviewed",
+      "stage_depth": 3
     },
     {
-      "name": "Jellysmack",
-      "sector": "Media & Streaming",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
+      "name": "Tennessee General Assembly",
+      "sector": "Policy & Legal",
+      "role": "Legislative Bill Clerk / Proofreader",
+      "note": "Referred for a legislative research role; resume forwarded to House and Senate leadership.",
+      "outcome": "interviewed",
+      "outcome_label": "Interviewed",
+      "stage_depth": 3
     },
     {
-      "name": "Deezer",
-      "sector": "Media & Streaming",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
+      "name": "Trend Micro (Taipei)",
+      "sector": "SaaS & Cyber",
+      "role": "Technical Writer (Taipei)",
+      "note": "Submitted a 500-word technical writing essay and joined a 2-hour Taipei Zoom test an hour early due to a Central Standard Time vs. China Standard Time mix-up while traveling.",
+      "outcome": "interviewed",
+      "outcome_label": "Interviewed",
+      "stage_depth": 3
     },
     {
-      "name": "Epic Games",
-      "sector": "Media & Streaming",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
+      "name": "Varsity Tutors",
+      "sector": "EdTech & Education",
+      "role": "Instructor / Tutor",
+      "note": "Completed video interview rounds.",
+      "outcome": "interviewed",
+      "outcome_label": "Interviewed",
+      "stage_depth": 3
     },
     {
-      "name": "Riot Games",
+      "name": "Vimeo",
       "sector": "Media & Streaming",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
+      "role": "Manager, Trust & Safety",
+      "note": "Completed Trust & Safety manager interview and a follow-up feedback call.",
+      "outcome": "interviewed",
+      "outcome_label": "Interviewed",
+      "stage_depth": 3
     },
     {
-      "name": "BMI (Broadcast Music)",
-      "sector": "Media & Streaming",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Dailymotion",
-      "sector": "Media & Streaming",
+      "name": "Aeolus Robotics",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
@@ -5300,8 +5093,8 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Thumbtack",
-      "sector": "Marketplaces",
+      "name": "Allure Marketing",
+      "sector": "Editorial & Agencies",
       "role": "Applied",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
@@ -5309,8 +5102,8 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Whatnot",
-      "sector": "Marketplaces",
+      "name": "Amobee",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
@@ -5318,7 +5111,16 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Grailed",
+      "name": "Anthropic",
+      "sector": "Tech & AI",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "ASOS",
       "sector": "Marketplaces",
       "role": "Applied",
       "outcome": "they_passed",
@@ -5336,61 +5138,7 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "ASOS",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Salesforce",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Zoom",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Klaviyo",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
       "name": "BetterCloud",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Superhuman",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Navan (TripActions)",
       "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "they_passed",
@@ -5408,161 +5156,17 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Eventbrite",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "GoDaddy",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Veriff",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Amobee",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Aeolus Robotics",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Cond\u00e9 Nast",
+      "name": "Blink UX",
       "sector": "Editorial & Agencies",
-      "role": "Applied",
+      "role": "Content / UX Strategy",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
       "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
+      "note": ""
     },
     {
-      "name": "FORTUNE",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "The Motley Fool",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Wieden+Kennedy",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Genius",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "SmartNews",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Free Agency",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "VAWAA",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Kickstarter",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "MasterClass",
-      "sector": "EdTech & Education",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Skillshare",
-      "sector": "EdTech & Education",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Udemy",
-      "sector": "EdTech & Education",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Multiverse",
-      "sector": "EdTech & Education",
+      "name": "BMI (Broadcast Music)",
+      "sector": "Media & Streaming",
       "role": "Applied",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
@@ -5579,34 +5183,214 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
+      "name": "Bridgestone",
+      "sector": "Operations",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Cash App (Block)",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Character.AI",
+      "sector": "Tech & AI",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Coinbase",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Collectively",
+      "sector": "Editorial & Agencies",
+      "role": "Content Strategy",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": ""
+    },
+    {
+      "name": "Cond\u00e9 Nast",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Dailymotion",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Dataiku",
+      "sector": "Tech & AI",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Deezer",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Discord",
+      "sector": "Consumer Social",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Epic Games",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Eventbrite",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "FORTUNE",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Frame.io",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Free Agency",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Gemini",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Genius",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "GoDaddy",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Grailed",
+      "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Grammarly",
+      "sector": "Tech & AI",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Hoops HR",
+      "sector": "Operations",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Jellysmack",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "JobEcademy",
+      "sector": "EdTech & Education",
+      "role": "Curriculum / Instruction",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": ""
+    },
+    {
       "name": "Kahoot!",
-      "sector": "EdTech & Education",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "NoRedInk",
-      "sector": "EdTech & Education",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Renaissance Learning",
-      "sector": "EdTech & Education",
-      "role": "Applied",
-      "outcome": "they_passed",
-      "outcome_label": "They Passed",
-      "stage_depth": 2,
-      "note": "Application reviewed; automated or recruiter pass without interview."
-    },
-    {
-      "name": "Teachable",
       "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "they_passed",
@@ -5624,8 +5408,8 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Uncommon Schools",
-      "sector": "EdTech & Education",
+      "name": "Kickstarter",
+      "sector": "Marketplaces",
       "role": "Applied",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
@@ -5633,7 +5417,25 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "WorldStrides",
+      "name": "Klaviyo",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Luxe NYC",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "MasterClass",
       "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "they_passed",
@@ -5651,8 +5453,35 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "PwC",
-      "sector": "Policy & Legal",
+      "name": "MJH Life Sciences",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "ModSquad",
+      "sector": "Tech & AI",
+      "role": "Trust & Safety / Moderation",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": ""
+    },
+    {
+      "name": "Multiverse",
+      "sector": "EdTech & Education",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Navan (TripActions)",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
@@ -5669,8 +5498,17 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Bridgestone",
-      "sector": "Operations",
+      "name": "NoRedInk",
+      "sector": "EdTech & Education",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "OpenFin",
+      "sector": "Fintech & Web3",
       "role": "Applied",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
@@ -5687,8 +5525,35 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
+      "name": "PwC",
+      "sector": "Policy & Legal",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
       "name": "Ramsey Solutions",
       "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Reddit",
+      "sector": "Consumer Social",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Renaissance Learning",
+      "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
@@ -5705,8 +5570,80 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
+      "name": "Riot Games",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Robinhood",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Runway",
+      "sector": "Tech & AI",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Salesforce",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
       "name": "Shane Co.",
       "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Skillshare",
+      "sector": "EdTech & Education",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "SmartNews",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Snap Inc.",
+      "sector": "Consumer Social",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "SoFi",
+      "sector": "Fintech & Web3",
       "role": "Applied",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
@@ -5723,8 +5660,44 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "MJH Life Sciences",
+      "name": "Spotify",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Superhuman",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Teachable",
+      "sector": "EdTech & Education",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "The Motley Fool",
       "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Thumbtack",
+      "sector": "Marketplaces",
       "role": "Applied",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
@@ -5741,8 +5714,8 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Hoops HR",
-      "sector": "Operations",
+      "name": "Udemy",
+      "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "they_passed",
       "outcome_label": "They Passed",
@@ -5750,7 +5723,16 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Allure Marketing",
+      "name": "Uncommon Schools",
+      "sector": "EdTech & Education",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "VAWAA",
       "sector": "Editorial & Agencies",
       "role": "Applied",
       "outcome": "they_passed",
@@ -5759,7 +5741,34 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Luxe NYC",
+      "name": "Veriff",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Visa",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Whatnot",
+      "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
+    },
+    {
+      "name": "Wieden+Kennedy",
       "sector": "Editorial & Agencies",
       "role": "Applied",
       "outcome": "they_passed",
@@ -5768,53 +5777,35 @@
       "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "OpenAI",
-      "sector": "Tech & AI",
+      "name": "WorldStrides",
+      "sector": "EdTech & Education",
       "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Netflix",
-      "sector": "Media & Streaming",
+      "name": "X (Twitter)",
+      "sector": "Consumer Social",
       "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Tesla",
-      "sector": "Tech & AI",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Microsoft",
-      "sector": "Tech & AI",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Mozilla",
+      "name": "Zoom",
       "sector": "SaaS & Cyber",
       "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
+      "outcome": "they_passed",
+      "outcome_label": "They Passed",
+      "stage_depth": 2,
+      "note": "Application reviewed; automated or recruiter pass without interview."
     },
     {
-      "name": "Slack",
-      "sector": "SaaS & Cyber",
+      "name": "360Learning",
+      "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -5822,170 +5813,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Figma",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "MongoDB",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Dell Technologies",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Auth0",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "UiPath",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "TripleLift",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "WeTransfer",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "LogRhythm",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Smarsh",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Zeta Global",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Intuit",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "IDEMIA",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Hologram",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Postlight",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Calendly",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "JumpCloud",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "LivePerson",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Procore",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Veeva Systems",
-      "sector": "SaaS & Cyber",
+      "name": "Acorns",
+      "sector": "Fintech & Web3",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6011,8 +5840,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Degreed",
-      "sector": "EdTech & Education",
+      "name": "Alchemy Worx",
+      "sector": "Editorial & Agencies",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6020,8 +5849,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "HackerOne",
-      "sector": "SaaS & Cyber",
+      "name": "Allbirds",
+      "sector": "Marketplaces",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6029,8 +5858,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Slab",
-      "sector": "SaaS & Cyber",
+      "name": "American Express",
+      "sector": "Fintech & Web3",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6038,8 +5867,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Vitally",
-      "sector": "SaaS & Cyber",
+      "name": "AmeriCorps",
+      "sector": "Policy & Legal",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6047,8 +5876,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Textline",
-      "sector": "SaaS & Cyber",
+      "name": "Angel Studios",
+      "sector": "Media & Streaming",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6056,7 +5885,16 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Indicative",
+      "name": "Arootah LLC",
+      "sector": "Policy & Legal",
+      "role": "Operations / Strategy",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "Auth0",
       "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "silence",
@@ -6074,8 +5912,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Chameleon",
-      "sector": "SaaS & Cyber",
+      "name": "BASIS International",
+      "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6083,8 +5921,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Cumul.io",
-      "sector": "SaaS & Cyber",
+      "name": "Bear Mattress",
+      "sector": "Marketplaces",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6092,71 +5930,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Digify",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "EasyLlama",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Instnt",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Negotiatus",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Occupier",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Orbiit",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Staffbase",
-      "sector": "SaaS & Cyber",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Synology",
-      "sector": "SaaS & Cyber",
+      "name": "BetterLesson",
+      "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6173,7 +5948,34 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "HBO",
+      "name": "Binance",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Blind",
+      "sector": "Consumer Social",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "BrainPOP",
+      "sector": "EdTech & Education",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "BSE Global (Nets)",
       "sector": "Media & Streaming",
       "role": "Applied",
       "outcome": "silence",
@@ -6191,8 +5993,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "rednote",
-      "sector": "Consumer Social",
+      "name": "Calendly",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6200,8 +6002,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Patreon",
-      "sector": "Consumer Social",
+      "name": "Chainalysis",
+      "sector": "Fintech & Web3",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6209,8 +6011,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Strava",
-      "sector": "Consumer Social",
+      "name": "Chameleon",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6218,8 +6020,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Blind",
-      "sector": "Consumer Social",
+      "name": "Chegg",
+      "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6227,17 +6029,17 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "MrBeast",
-      "sector": "Consumer Social",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Rockstar Games",
+      "name": "Chopra Global",
       "sector": "Media & Streaming",
+      "role": "Content / Editorial",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "Cider",
+      "sector": "Marketplaces",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6245,43 +6047,7 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Angel Studios",
-      "sector": "Media & Streaming",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "BSE Global (Nets)",
-      "sector": "Media & Streaming",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Major League Soccer",
-      "sector": "Media & Streaming",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Overtime",
-      "sector": "Media & Streaming",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Forbes Media",
+      "name": "CM Group",
       "sector": "Editorial & Agencies",
       "role": "Applied",
       "outcome": "silence",
@@ -6290,7 +6056,124 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Morning Brew",
+      "name": "CodeCombat",
+      "sector": "EdTech & Education",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Compass",
+      "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "ConsenSys",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Council on Foreign Relations",
+      "sector": "Policy & Legal",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Creadits",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Crypto.com",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Culture Trip",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Cumul.io",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Curriculum Associates",
+      "sector": "EdTech & Education",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Degreed",
+      "sector": "EdTech & Education",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Dell Technologies",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Deloitte",
+      "sector": "Policy & Legal",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Digify",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Dirty Work Media",
       "sector": "Editorial & Agencies",
       "role": "Applied",
       "outcome": "silence",
@@ -6308,52 +6191,52 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Group Nine Media",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Wasserman",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Laundry Service",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Hypebeast",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Culture Trip",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
       "name": "E.W. Scripps",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "EasyLlama",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Eduporium",
+      "sector": "EdTech & Education",
+      "role": "EdTech Content",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "EF Education First",
+      "sector": "EdTech & Education",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Figma",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Forbes Media",
       "sector": "Editorial & Agencies",
       "role": "Applied",
       "outcome": "silence",
@@ -6371,7 +6254,16 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Highwire PR",
+      "name": "Grio",
+      "sector": "SaaS & Cyber",
+      "role": "Product / Content",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "Group Nine Media",
       "sector": "Editorial & Agencies",
       "role": "Applied",
       "outcome": "silence",
@@ -6380,287 +6272,17 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "RAPP",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
+      "name": "Guidepost Montessori",
+      "sector": "EdTech & Education",
+      "role": "Education Operations",
       "outcome": "silence",
       "outcome_label": "Silence",
       "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
+      "note": ""
     },
     {
-      "name": "SUAVV Magazine",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "The Hill",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "The Hustle",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "McKinney",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Dirty Work Media",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "CM Group",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Alchemy Worx",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Creadits",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Insense",
-      "sector": "Editorial & Agencies",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Binance",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Crypto.com",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "ConsenSys",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Polymarket",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Plaid",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Chainalysis",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Magic Eden",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Acorns",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Simply Wall St",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Wise",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "American Express",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Returnly",
-      "sector": "Fintech & Web3",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Instacart",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "KAYAK",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Compass",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Allbirds",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Rent the Runway",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Redbubble",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "TeePublic",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "WeWork",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Cider",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Bear Mattress",
-      "sector": "Marketplaces",
+      "name": "HackerOne",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6677,7 +6299,70 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Taika",
+      "name": "HBO",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Highwire PR",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Hologram",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Hypebeast",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "IDEMIA",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Indicative",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Insense",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Instacart",
       "sector": "Marketplaces",
       "role": "Applied",
       "outcome": "silence",
@@ -6686,8 +6371,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Perfect Day",
-      "sector": "Marketplaces",
+      "name": "Instnt",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6695,8 +6380,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Nutrabolt",
-      "sector": "Marketplaces",
+      "name": "Intuit",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6704,97 +6389,7 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Zoomo",
-      "sector": "Marketplaces",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Deloitte",
-      "sector": "Policy & Legal",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Council on Foreign Relations",
-      "sector": "Policy & Legal",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "United Nations",
-      "sector": "Policy & Legal",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "AmeriCorps",
-      "sector": "Policy & Legal",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Special Olympics",
-      "sector": "Policy & Legal",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Recidiviz",
-      "sector": "Policy & Legal",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Paladin",
-      "sector": "Policy & Legal",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "LawTrades",
-      "sector": "Policy & Legal",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Chegg",
-      "sector": "EdTech & Education",
-      "role": "Applied",
-      "outcome": "silence",
-      "outcome_label": "Silence",
-      "stage_depth": 1,
-      "note": "Application confirmation received; no further reply."
-    },
-    {
-      "name": "Newsela",
+      "name": "iTutorGroup",
       "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "silence",
@@ -6812,7 +6407,7 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "360Learning",
+      "name": "JET Program USA",
       "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "silence",
@@ -6821,8 +6416,152 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Curriculum Associates",
+      "name": "JumpCloud",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "KAYAK",
+      "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Laundry Service",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "LawTrades",
+      "sector": "Policy & Legal",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "LearnCube",
       "sector": "EdTech & Education",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Lime English",
+      "sector": "EdTech & Education",
+      "role": "Instruction",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "LivePerson",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "LogRhythm",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Magic Eden",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Major League Soccer",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "McKinney",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Michael Hyatt & Co.",
+      "sector": "Editorial & Agencies",
+      "role": "Editorial / Copy",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "Microsoft",
+      "sector": "Tech & AI",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "MongoDB",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Morning Brew",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Mozilla",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "MrBeast",
+      "sector": "Consumer Social",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6839,7 +6578,34 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "BetterLesson",
+      "name": "Mystery.org",
+      "sector": "EdTech & Education",
+      "role": "Curriculum / Content",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "Negotiatus",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Netflix",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Newsela",
       "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "silence",
@@ -6848,7 +6614,196 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "BrainPOP",
+      "name": "Nutrabolt",
+      "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Occupier",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "OpenAI",
+      "sector": "Tech & AI",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Orbiit",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Orthosnap",
+      "sector": "Operations",
+      "role": "Marketing / Operations",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "Overtime",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Paladin",
+      "sector": "Policy & Legal",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Patreon",
+      "sector": "Consumer Social",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Perfect Day",
+      "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Plaid",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Polymarket",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Postlight",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Procore",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "RAPP",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Recidiviz",
+      "sector": "Policy & Legal",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Redbubble",
+      "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "rednote",
+      "sector": "Consumer Social",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Rent the Runway",
+      "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Returnly",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Ricoh",
+      "sector": "SaaS & Cyber",
+      "role": "Communications",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "Rockstar Games",
+      "sector": "Media & Streaming",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "SayABC",
       "sector": "EdTech & Education",
       "role": "Applied",
       "outcome": "silence",
@@ -6875,8 +6830,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "BASIS International",
-      "sector": "EdTech & Education",
+      "name": "Simply Wall St",
+      "sector": "Fintech & Web3",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6884,8 +6839,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "iTutorGroup",
-      "sector": "EdTech & Education",
+      "name": "Slab",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6893,8 +6848,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "EF Education First",
-      "sector": "EdTech & Education",
+      "name": "Slack",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6902,8 +6857,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "SayABC",
-      "sector": "EdTech & Education",
+      "name": "Smarsh",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6911,8 +6866,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "JET Program USA",
-      "sector": "EdTech & Education",
+      "name": "Special Olympics",
+      "sector": "Policy & Legal",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6920,8 +6875,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "Chateau School (Tokyo)",
-      "sector": "EdTech & Education",
+      "name": "Staffbase",
+      "sector": "SaaS & Cyber",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6929,8 +6884,8 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "CodeCombat",
-      "sector": "EdTech & Education",
+      "name": "Strava",
+      "sector": "Consumer Social",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
@@ -6938,8 +6893,206 @@
       "note": "Application confirmation received; no further reply."
     },
     {
-      "name": "LearnCube",
+      "name": "SUAVV Magazine",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Synology",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Taika",
+      "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "TAL Education",
       "sector": "EdTech & Education",
+      "role": "Curriculum / Instruction",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "TeePublic",
+      "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Tennessee Aquarium",
+      "sector": "EdTech & Education",
+      "role": "Education / Outreach",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "Tesla",
+      "sector": "Tech & AI",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Textline",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "The Hill",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "The Hustle",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "TripleLift",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "UBS",
+      "sector": "Fintech & Web3",
+      "role": "Communications / Policy",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "UiPath",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "United Nations",
+      "sector": "Policy & Legal",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Veeva Systems",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "VF Hong Kong Limited",
+      "sector": "Operations",
+      "role": "International Operations",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": ""
+    },
+    {
+      "name": "Vitally",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Wasserman",
+      "sector": "Editorial & Agencies",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "WeTransfer",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "WeWork",
+      "sector": "Marketplaces",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Wise",
+      "sector": "Fintech & Web3",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Zeta Global",
+      "sector": "SaaS & Cyber",
+      "role": "Applied",
+      "outcome": "silence",
+      "outcome_label": "Silence",
+      "stage_depth": 1,
+      "note": "Application confirmation received; no further reply."
+    },
+    {
+      "name": "Zoomo",
+      "sector": "Marketplaces",
       "role": "Applied",
       "outcome": "silence",
       "outcome_label": "Silence",
