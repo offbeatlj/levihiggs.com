@@ -1,404 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Levi J. Higgs — Product, Policy, AI Safety &amp; Perseverance</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #FAF8F5;
-      --card: #FFFFFF;
-      --ink: #111110;
-      --secondary: #4A4945;
-      --muted: #85827C;
-      --border: #E6E3DC;
-      --pill-bg: #F1EFEA;
-      --pill-hover: #111110;
-      --accent: #FF4F17;
-      --emerald: #059669;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 15px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    .serif { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; }
-    .mono { font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; }
-    .wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px 96px; }
-
-    /* Ian Silber-inspired tactile inline link pills */
-    a.ref-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 1px 8px;
-      margin: 0 2px;
-      border-radius: 999px;
-      background: var(--pill-bg);
-      border: 1px solid var(--border);
-      color: var(--ink);
-      font-size: 13px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: all 0.16s cubic-bezier(0.16, 1, 0.3, 1);
-      vertical-align: baseline;
-    }
-    a.ref-pill:hover {
-      background: var(--pill-hover);
-      color: #FFF;
-      border-color: var(--pill-hover);
-      transform: translateY(-1px);
-    }
-    a.ref-pill .arr {
-      font-size: 11px;
-      opacity: 0.65;
-    }
-
-    .top-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 32px;
-      margin-bottom: 48px;
-      border-bottom: 1px solid var(--border);
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .nav-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 7px 14px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 600;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--ink);
-      transition: all 0.15s;
-    }
-    .nav-pill:hover, .nav-pill.active {
-      background: var(--ink);
-      color: #FFF;
-      border-color: var(--ink);
-    }
-
-    .bio-hero {
-      margin-bottom: 56px;
-    }
-    .bio-hero h1 {
-      font-size: clamp(42px, 6vw, 64px);
-      line-height: 1.02;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
-    .bio-lead {
-      font-size: 18px;
-      line-height: 1.65;
-      color: var(--secondary);
-      max-width: 68ch;
-    }
-
-    .metric-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin: 36px 0 56px;
-    }
-    @media (max-width: 680px) { .metric-row { grid-template-columns: repeat(2, 1fr); } }
-    .metric-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
-    .metric-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px -10px rgba(0,0,0,0.07);
-    }
-
-    .sec-title {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      margin-bottom: 20px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .role-block {
-      padding: 28px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      margin-bottom: 20px;
-      transition: border-color 0.15s;
-    }
-    .role-block:hover {
-      border-color: #C7C2B8;
-    }
-    .role-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
-    .role-org {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-    .role-loc {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .role-sub {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--accent);
-      margin: 14px 0 8px;
-    }
-    ul.impact-list {
-      list-style: none;
-      space-y: 10px;
-    }
-    ul.impact-list li {
-      position: relative;
-      padding-left: 18px;
-      margin-bottom: 10px;
-      color: var(--secondary);
-      font-size: 14.5px;
-    }
-    ul.impact-list li::before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: var(--muted);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Levi J. Higgs — Curriculum Vitae</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F6F5F0;
+  --ink: #141413;
+  --ink-2: #4A4945;
+  --ink-3: #85837D;
+  --ink-4: #B5B3AC;
+  --line: #E4E2DA;
+  --line-strong: #C9C6BC;
+  --c-applied: #4A6FA5;
+  --serif: 'Newsreader', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; -webkit-font-smoothing: antialiased; }
+body { max-width: 880px; margin: 0 auto; padding: 48px 24px 80px; line-height: 1.55; }
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 24px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.82rem;
+}
+.top-nav a {
+  color: var(--ink-2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 1px;
+}
+.top-nav a:hover { color: var(--ink); border-color: var(--ink); }
+.cv-lead {
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 2.5vw, 2.05rem);
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+.cv-meta-line {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--ink-3);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--ink);
+}
+.cv-meta-line a {
+  color: var(--ink-2);
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+}
+.cv-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: rgba(20, 20, 19, 0.3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+.cv-link:hover { color: var(--c-applied); text-decoration-color: var(--c-applied); }
+.cv-link .arr { font-family: var(--sans); font-size: 0.75em; color: var(--ink-3); margin-left: 1px; }
+.cv-section-header {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  padding: 28px 0 12px;
+  border-bottom: 1px solid var(--line);
+}
+.cv-entry {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 32px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.cv-entry:last-child { border-bottom: none; }
+.cv-org { font-size: 0.92rem; font-weight: 500; color: var(--ink); }
+.cv-loc { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-3); margin-top: 3px; }
+.cv-note { font-family: var(--mono); font-size: 0.68rem; color: var(--ink-3); margin-top: 8px; line-height: 1.4; }
+.cv-role-group { margin-bottom: 20px; }
+.cv-role-group:last-child { margin-bottom: 0; }
+.cv-role-title { font-size: 0.92rem; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+.cv-prose-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.cv-prose-list li { font-size: 0.88rem; line-height: 1.62; color: var(--ink-2); padding-left: 14px; position: relative; }
+.cv-prose-list li::before { content: "–"; position: absolute; left: 0; color: var(--ink-4); }
+@media (max-width: 720px) {
+  .cv-entry { grid-template-columns: 1fr; gap: 6px; }
+}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="top-nav">
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span style="width:10px;height:10px;border-radius:50%;background:var(--emerald);display:inline-block;"></span>
-        <strong style="font-size:15px;letter-spacing:-0.01em;">Levi J. Higgs</strong>
-        <span class="mono" style="font-size:12px;color:var(--muted);">New York, NY</span>
-      </div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a href="index.html" class="nav-pill">&larr; The 2,342 Job Email Visualizations</a>
-        <a href="resume.html" class="nav-pill active">Living Resume &amp; Work</a>
-        <a href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener" class="nav-pill" style="background:#FF4F17;color:#FFF;border-color:#FF4F17;">Inbox Visualizer Kit &nearr;</a>
-      </div>
-    </nav>
+<nav class="top-nav">
+  <a href="index.html">← Perseverance Visualized (2,342 Emails)</a>
+  <a href="#" onclick="window.print(); return false;">Print / Save PDF</a>
+</nav>
 
-    <header class="bio-hero">
-      <h1 class="serif">
-        Building safety, policy &amp; AI systems at planetary scale&mdash;after surviving 2,342 job emails.
-      </h1>
-      <p class="bio-lead">
-        I’m a Product Manager, Trust &amp; Safety leader, and <a href="https://engineering.nyu.edu/academics/programs/cybersecurity-ms-online/nyu-cyber-fellows" target="_blank" class="ref-pill">NYU Tandon Cyber Fellow <span class="arr">&nearr;</span></a> in New York. Currently shaping Creator Policy Experience and GenAI safety at <a href="https://www.youtube.com/howyoutubeworks/" target="_blank" class="ref-pill">Google &mdash; YouTube <span class="arr">&nearr;</span></a>. Previously scaled North America Trust &amp; Safety at <a href="https://www.tiktok.com/transparency" target="_blank" class="ref-pill">TikTok <span class="arr">&nearr;</span></a> and marketplace integrity at <a href="https://www.teacherspayteachers.com/" target="_blank" class="ref-pill">Teachers Pay Teachers <span class="arr">&nearr;</span></a>.
-      </p>
+<p class="cv-lead">
+  Levi J. Higgs leads Trust &amp; Safety product, AI policy, and operations in New York—scaling classifier and GenAI policy systems at
+  <a class="cv-link" href="https://transparencyreport.google.com/youtube-policy/removals" target="_blank" rel="noopener">YouTube<span class="arr">↗</span></a>,
+  managing North American Trust &amp; Safety operations at
+  <a class="cv-link" href="https://www.tiktok.com/transparency" target="_blank" rel="noopener">TikTok<span class="arr">↗</span></a>,
+  and safeguarding marketplace integrity for 85% of U.S. educators at
+  <a class="cv-link" href="https://www.teacherspayteachers.com/About-Us" target="_blank" rel="noopener">Teachers Pay Teachers<span class="arr">↗</span></a>.
+</p>
 
-      <div class="metric-row">
-        <div class="metric-card">
-          <div class="mono" style="font-size:11px;color:var(--muted);text-transform:uppercase;">YouTube VVR Impact</div>
-          <div class="serif" style="font-size:40px;line-height:1.05;margin:4px 0;">-87%</div>
-          <div style="font-size:12px;color:var(--secondary);">Vertical Violative View Rate reduction</div>
-        </div>
-        <div class="metric-card">
-          <div class="mono" style="font-size:11px;color:var(--muted);text-transform:uppercase;">Upload Classifiers</div>
-          <div class="serif" style="font-size:40px;line-height:1.05;margin:4px 0;">35M<span style="font-size:20px;">/wk</span></div>
-          <div style="font-size:12px;color:var(--secondary);">Age-appropriate friction triggers</div>
-        </div>
-        <div class="metric-card">
-          <div class="mono" style="font-size:11px;color:var(--muted);text-transform:uppercase;">AI Tooling Saved</div>
-          <div class="serif" style="font-size:40px;line-height:1.05;margin:4px 0;">5,000+</div>
-          <div style="font-size:12px;color:var(--secondary);">FTE hours/yr (2&times; Google 1st Place)</div>
-        </div>
-        <div class="metric-card">
-          <div class="mono" style="font-size:11px;color:var(--muted);text-transform:uppercase;">TikTok US Scale</div>
-          <div class="serif" style="font-size:40px;line-height:1.05;margin:4px 0;">75%</div>
-          <div style="font-size:12px;color:var(--secondary);">Of NA volume (7 Leads, 130 Specialists)</div>
-        </div>
-      </div>
-    </header>
+<div class="cv-meta-line">
+  <span>New York, NY</span>
+  <a href="mailto:lh4252@nyu.edu">lh4252@nyu.edu</a>
+  <a href="https://engineering.nyu.edu/academics/programs/cybersecurity-ms-online/nyu-cyber-fellows" target="_blank" rel="noopener">NYU Tandon Cyber Fellow ↗</a>
+</div>
 
-    <section style="margin-bottom:48px;">
-      <div class="sec-title">01 / Experience &amp; Verified Web Proof</div>
+<div class="cv-section-header">Experience</div>
 
-      <!-- GOOGLE / YOUTUBE -->
-      <div class="role-block">
-        <div class="role-head">
-          <div class="role-org">
-            <a href="https://www.youtube.com/howyoutubeworks/" target="_blank" style="color:inherit;text-decoration:none;">GOOGLE &mdash; YOUTUBE &nearr;</a>
-          </div>
-          <div class="role-loc">New York, NY</div>
-        </div>
-
-        <div class="role-sub">Product Manager Rotation, Creator Policy Experience</div>
-        <ul class="impact-list">
-          <li>
-            Introduced targeted upload frictions using age-appropriate classifiers in the creator flow to reduce <strong>Violative View Rate (VVR)</strong>&mdash;the headline metric in <a href="https://transparencyreport.google.com/youtube-policy/featured-policies/violative-view-rate" target="_blank" class="ref-pill">YouTube’s Transparency Report <span class="arr">&nearr;</span></a>&mdash;scaling to <strong>35M triggers/week</strong>, achieving an <strong>18% enforcement reduction</strong> and <strong>75% positive creator feedback</strong>.
-          </li>
-          <li>
-            Designed evaluation frameworks and launched risk-adjusted GenAI policy snippets for <a href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/#child-safety" target="_blank" class="ref-pill">YouTube Child Safety <span class="arr">&nearr;</span></a>; across verticals, <strong>2M AI snippets in 80+ languages</strong> reduced creator appeals while remaining <strong>100% free from policy leaks</strong>.
-          </li>
-        </ul>
-
-        <div class="role-sub">Policy Enforcement Manager, Adult Content (Promoted with High Rating)</div>
-        <ul class="impact-list">
-          <li>
-            Reduced vertical <a href="https://transparencyreport.google.com/youtube-policy/featured-policies/violative-view-rate" target="_blank" class="ref-pill">Violative View Rate (VVR) <span class="arr">&nearr;</span></a> by <strong>87%</strong> through policy and automation initiatives adopted across the full Trust &amp; Safety organization.
-          </li>
-          <li>
-            Developed policies for humans and machines, iterating on prompts alongside <a href="https://deepmind.google/technologies/gemini/" target="_blank" class="ref-pill">Google GenAI Models <span class="arr">&nearr;</span></a> to optimize precision and recall during global, sensitive escalations.
-          </li>
-          <li>
-            Structured the evaluation framework for a policy change database using AI-generated summary and diff outputs, and built atomic-fact content-classification and labeling systems.
-          </li>
-          <li>
-            Established YouTube’s <strong>Product-Agnostic AI Policies</strong> covering video, image, text, link, and audio fast-launch initiatives.
-          </li>
-          <li>
-            Built and deployed a suite of AI apps and extensions reclaiming <strong>5,000+ FTE hours annually</strong>; won <strong>1st Place in back-to-back Google Innovation Week competitions</strong> for AI products including <em>“Policy as Code”</em>.
-          </li>
-          <li>
-            Served as Global SME for Adult Content, advising Engineering, Legal, Product, and Executive stakeholders on high-profile legal, social, political, and subpoena escalations.
-          </li>
-        </ul>
-
-        <div class="role-sub">AI Principles Pioneer, Google Responsible Innovation</div>
-        <ul class="impact-list">
-          <li>
-            Participated in Red Team and Adversarial testing for <a href="https://ai.google/responsibility/principles/" target="_blank" class="ref-pill">Google’s Frontier AI Models &amp; Robotics <span class="arr">&nearr;</span></a>.
-          </li>
-        </ul>
-      </div>
-
-      <!-- TIKTOK -->
-      <div class="role-block">
-        <div class="role-head">
-          <div class="role-org">
-            <a href="https://www.tiktok.com/transparency" target="_blank" style="color:inherit;text-decoration:none;">TIKTOK (BYTEDANCE) &nearr;</a>
-          </div>
-          <div class="role-loc">New York, NY</div>
-        </div>
-
-        <div class="role-sub">Operations Manager, Trust &amp; Safety</div>
-        <ul class="impact-list">
-          <li>
-            Managed the largest internal team in North America with <strong>7 Team Leads and 130 Content Specialists</strong>, accounting for <strong>75% of the site’s business by volume</strong> (<a href="https://www.tiktok.com/transparency/en-us/community-guidelines-enforcement/" target="_blank" class="ref-pill">TikTok Enforcement Report <span class="arr">&nearr;</span></a>).
-          </li>
-          <li>
-            Verticalized teams by content, language, and quality; launched the firm’s first <strong>Golden Set</strong> quality process and ratified moderator performance reviews across <strong>25+ workflows and 300 moderators</strong>.
-          </li>
-          <li>
-            Directed the integration of 24/7 intellectual property (IP) request tickets into core content moderation operations.
-          </li>
-        </ul>
-
-        <div class="role-sub">Team Lead, Trust &amp; Safety</div>
-        <ul class="impact-list">
-          <li>
-            Led a content engineering cohort curating push notifications to grow Daily Active Users (DAU), and transitioned 40 agents across 4 shifts to a Follow-the-Sun model.
-          </li>
-          <li>
-            Created the training curriculum for new Team Leads, scaling the training organization, and partnered with major brands to protect flagship ad campaigns (<a href="https://www.cbs.com/" target="_blank" class="ref-pill">CBS <span class="arr">&nearr;</span></a> <a href="https://www.ncaa.com/" target="_blank" class="ref-pill">NCAA <span class="arr">&nearr;</span></a> <a href="https://www.buick.com/" target="_blank" class="ref-pill">Buick <span class="arr">&nearr;</span></a>).
-          </li>
-        </ul>
-      </div>
-
-      <!-- TEACHERS PAY TEACHERS -->
-      <div class="role-block">
-        <div class="role-head">
-          <div class="role-org">
-            <a href="https://www.teacherspayteachers.com/" target="_blank" style="color:inherit;text-decoration:none;">TEACHERS PAY TEACHERS (TpT) &nearr;</a>
-          </div>
-          <div class="role-loc">New York, NY</div>
-        </div>
-        <div class="role-sub">Consultant, Marketplace Integrity</div>
-        <ul class="impact-list">
-          <li>
-            Validated a marketplace corpus of over <strong>7M original educational resources</strong> used by <strong>~85% of U.S. PreK–12 educators</strong> on <a href="https://www.teacherspayteachers.com/" target="_blank" class="ref-pill">TpT Marketplace <span class="arr">&nearr;</span></a>, applying child developmental psychology research to author foundational content review guidelines.
-          </li>
-        </ul>
-      </div>
-
-      <!-- OTHER EXPERIENCE -->
-      <div class="role-block">
-        <div class="role-head">
-          <div class="role-org">ADDITIONAL CRAFT &amp; GLOBAL LEADERSHIP</div>
-          <div class="role-loc">New York &bull; Portland &bull; Shanghai &bull; Seoul &bull; Madison</div>
-        </div>
-        <ul class="impact-list" style="margin-top:12px;">
-          <li>
-            <strong>Writer / Content Strategist</strong> &mdash; <a href="https://scale.com/" target="_blank" class="ref-pill">Scale AI <span class="arr">&nearr;</span></a>, <a href="https://www.rebelbase.co/" target="_blank" class="ref-pill">RebelBase <span class="arr">&nearr;</span></a>, Eduland, and 4AM Marketing (New York, NY).
-          </li>
-          <li>
-            <strong>Museum Instructor</strong> &mdash; <a href="https://omsi.edu/" target="_blank" class="ref-pill">Oregon Museum of Science and Industry (OMSI) <span class="arr">&nearr;</span></a> (Portland, OR).
-          </li>
-          <li>
-            <strong>Founding Principal (PreK–8th Grade)</strong> &mdash; Enspired Learning Center (Shanghai, China).
-          </li>
-          <li>
-            <strong>English Teacher (PreK–8th Grade)</strong> &mdash; <a href="https://www.ybmecc.co.kr/" target="_blank" class="ref-pill">YBM ECC <span class="arr">&nearr;</span></a> (Seoul, South Korea).
-          </li>
-          <li>
-            <strong>Legislative Intern</strong> &mdash; <a href="https://legis.wisconsin.gov/assembly/" target="_blank" class="ref-pill">Wisconsin State Assembly <span class="arr">&nearr;</span></a> (Madison, WI).
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <div class="sec-title">02 / Education &amp; Honors</div>
-      <div class="role-block">
-        <div class="role-head">
-          <div class="role-org">
-            <a href="https://engineering.nyu.edu/" target="_blank" style="color:inherit;text-decoration:none;">NEW YORK UNIVERSITY &mdash; TANDON SCHOOL OF ENGINEERING &nearr;</a>
-          </div>
-          <div class="role-loc">New York, NY</div>
-        </div>
-        <div class="role-sub">M.S. in Cybersecurity</div>
-        <ul class="impact-list">
-          <li>
-            <a href="https://engineering.nyu.edu/academics/programs/cybersecurity-ms-online/nyu-cyber-fellows" target="_blank" class="ref-pill">NYU Cyber Fellow <span class="arr">&nearr;</span></a> &mdash; Merit-based scholarship recipient (75% tuition award).
-          </li>
-        </ul>
-      </div>
-
-      <div class="role-block">
-        <div class="role-head">
-          <div class="role-org">
-            <a href="https://www.utc.edu/" target="_blank" style="color:inherit;text-decoration:none;">UNIVERSITY OF TENNESSEE AT CHATTANOOGA &nearr;</a>
-          </div>
-          <div class="role-loc">Chattanooga, TN</div>
-        </div>
-        <div class="role-sub">B.A. English Professional Writing &amp; Rhetoric; Minor in Communications</div>
-        <ul class="impact-list">
-          <li>
-            Editor-in-Chief of <a href="https://www.theutcecho.com/" target="_blank" class="ref-pill">The University Echo <span class="arr">&nearr;</span></a>, Captain of the Soccer Team, and Founding President of the UTC Outdoors Leadership Institute.
-          </li>
-        </ul>
-      </div>
-    </section>
+<div class="cv-entry">
+  <div>
+    <div class="cv-org"><a class="cv-link" href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/" target="_blank" rel="noopener">Google — YouTube<span class="arr">↗</span></a></div>
+    <div class="cv-loc">New York, NY</div>
+    <div class="cv-note">Level promotion with high rating · 2× 1st Place, Google Innovation Week</div>
   </div>
+  <div>
+    <div class="cv-role-group">
+      <div class="cv-role-title">Product Manager Rotation, Creator Policy Experience</div>
+      <ul class="cv-prose-list">
+        <li>Targeted upload frictions using age-appropriate classifiers to reduce <a class="cv-link" href="https://transparencyreport.google.com/youtube-policy/removals" target="_blank" rel="noopener">Violative View Rate (VVR)<span class="arr">↗</span></a>, the primary metric in YouTube’s Transparency Report—scaling to 35M triggers/week with an 18% reduction in enforcement and 75% positive creator feedback.</li>
+        <li>Launched risk-adjusted GenAI policy snippets for <a class="cv-link" href="https://support.google.com/youtube/answer/2801999" target="_blank" rel="noopener">Child Safety<span class="arr">↗</span></a>, delivering 2M AI snippets across 80+ languages, reducing appeals, and maintaining 100% freedom from policy leaks.</li>
+      </ul>
+    </div>
+    <div class="cv-role-group">
+      <div class="cv-role-title">Policy Enforcement Manager, Adult Content</div>
+      <ul class="cv-prose-list">
+        <li>Reduced vertical VVR by 87%, the single largest metric reduction in the Trust &amp; Safety organization, governing <a class="cv-link" href="https://support.google.com/youtube/answer/2802002" target="_blank" rel="noopener">Nudity &amp; Sexual Content policy<span class="arr">↗</span></a>.</li>
+        <li>Developed human and machine enforcement policies and iterated adversarial prompts with internal AI tooling; structured a policy-change evaluation database across multimodal datasets.</li>
+        <li>Established Product-Agnostic AI safety policies across video, image, text, link, and audio surfaces.</li>
+        <li>Built and deployed internal AI applications and extensions that reclaimed 5,000+ FTE hours/year—winning 1st Place in back-to-back Google Innovation Week competitions for <em>“Policy as Code”</em>.</li>
+        <li>Global Subject Matter Expert (SME) for Adult Content across Engineering, Legal, Product, and Executive escalations, including court subpoenas.</li>
+      </ul>
+    </div>
+    <div class="cv-role-group">
+      <div class="cv-role-title">AI Principles Pioneer, Google Responsible Innovation</div>
+      <ul class="cv-prose-list">
+        <li>Conducted adversarial Red Teaming and safety evaluations for <a class="cv-link" href="https://ai.google/responsibility/principles/" target="_blank" rel="noopener">Google’s frontier AI models, products, and robotics<span class="arr">↗</span></a>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="cv-entry">
+  <div>
+    <div class="cv-org"><a class="cv-link" href="https://www.tiktok.com/transparency" target="_blank" rel="noopener">TikTok<span class="arr">↗</span></a></div>
+    <div class="cv-loc">New York, NY</div>
+    <div class="cv-note">75% of North American site volume</div>
+  </div>
+  <div>
+    <div class="cv-role-group">
+      <div class="cv-role-title">Operations Manager, Trust &amp; Safety</div>
+      <ul class="cv-prose-list">
+        <li>Managed the largest internal Trust &amp; Safety team in North America—leading 7 Team Leads and 130 Content Specialists responsible for 75% of site business by volume (<a class="cv-link" href="https://www.tiktok.com/transparency/en-us/community-guidelines-enforcement-2023-4/" target="_blank" rel="noopener">Community Guidelines Enforcement Report<span class="arr">↗</span></a>).</li>
+        <li>Launched the organization’s first Golden Set quality benchmark process, improving moderator accuracy while cutting overhead.</li>
+        <li>Ratified the moderator performance review framework across 25+ workflows and 300 moderators; added 24/7 IP request ticketing workflows.</li>
+      </ul>
+    </div>
+    <div class="cv-role-group">
+      <div class="cv-role-title">Team Lead, Trust &amp; Safety</div>
+      <ul class="cv-prose-list">
+        <li>Led the content engineering cohort for push notifications and DAU growth; launched a Follow-the-Sun operational model managing 40 agents across 4 shifts.</li>
+        <li>Created the Team Lead training curriculum and executed live brand-safety partnerships with <a class="cv-link" href="https://www.cbs.com/" target="_blank" rel="noopener">CBS<span class="arr">↗</span></a>, <a class="cv-link" href="https://www.ncaa.com/march-madness" target="_blank" rel="noopener">NCAA<span class="arr">↗</span></a>, and <a class="cv-link" href="https://www.buick.com/" target="_blank" rel="noopener">Buick<span class="arr">↗</span></a>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="cv-entry">
+  <div>
+    <div class="cv-org"><a class="cv-link" href="https://www.teacherspayteachers.com/About-Us" target="_blank" rel="noopener">Teachers Pay Teachers<span class="arr">↗</span></a></div>
+    <div class="cv-loc">New York, NY</div>
+  </div>
+  <div>
+    <div class="cv-role-title">Consultant, Marketplace Integrity</div>
+    <ul class="cv-prose-list">
+      <li>Validated 7M+ original resources on a marketplace used by ~85% of PreK–12 educators in the United States, ensuring compliance with <a class="cv-link" href="https://www.teacherspayteachers.com/Copyright-Policy" target="_blank" rel="noopener">intellectual property and safety policy<span class="arr">↗</span></a>.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cv-entry">
+  <div>
+    <div class="cv-org">Earlier Experience</div>
+    <div class="cv-loc">NY · OR · Shanghai · Seoul · WI</div>
+  </div>
+  <div>
+    <ul class="cv-prose-list">
+      <li>Writer &amp; Content Strategist — <a class="cv-link" href="https://scale.com/" target="_blank" rel="noopener">Scale AI<span class="arr">↗</span></a>, <a class="cv-link" href="https://www.rebelbase.co/" target="_blank" rel="noopener">RebelBase<span class="arr">↗</span></a>, Eduland, and 4AM Marketing (New York, NY).</li>
+      <li>Instructor — <a class="cv-link" href="https://omsi.edu/" target="_blank" rel="noopener">Oregon Museum of Science and Industry (OMSI)<span class="arr">↗</span></a> (Portland, OR).</li>
+      <li>Founding Principal (PreK–8th Grade) — Enspired Learning Center (Shanghai, China).</li>
+      <li>English Teacher (PreK–8th Grade) — <a class="cv-link" href="https://www.ybmecc.co.kr/" target="_blank" rel="noopener">YBM ECC<span class="arr">↗</span></a> &amp; Edu Appletree (Seoul, South Korea).</li>
+      <li>Legislative Intern — <a class="cv-link" href="https://docs.legis.wisconsin.gov/" target="_blank" rel="noopener">Wisconsin State Assembly<span class="arr">↗</span></a> (Madison, WI).</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cv-section-header">Education</div>
+
+<div class="cv-entry">
+  <div>
+    <div class="cv-org"><a class="cv-link" href="https://engineering.nyu.edu/" target="_blank" rel="noopener">New York University<span class="arr">↗</span></a></div>
+    <div class="cv-loc">Tandon School of Engineering</div>
+  </div>
+  <div>
+    <div class="cv-role-title">M.S. in Cybersecurity — <a class="cv-link" href="https://engineering.nyu.edu/academics/programs/cybersecurity-ms-online/nyu-cyber-fellows" target="_blank" rel="noopener">NYU Cyber Fellow (75% Merit Scholarship)<span class="arr">↗</span></a></div>
+  </div>
+</div>
+
+<div class="cv-entry">
+  <div>
+    <div class="cv-org"><a class="cv-link" href="https://www.utc.edu/" target="_blank" rel="noopener">Univ. of Tennessee at Chattanooga<span class="arr">↗</span></a></div>
+    <div class="cv-loc">Chattanooga, TN</div>
+  </div>
+  <div>
+    <div class="cv-role-title">B.A. in English: Professional Writing &amp; Rhetoric (Minor in Communications)</div>
+    <ul class="cv-prose-list">
+      <li>Editor-in-Chief of the university newspaper (<a class="cv-link" href="https://www.theutcecho.com/" target="_blank" rel="noopener">The University Echo<span class="arr">↗</span></a>), Captain of the Soccer Team, and Founding President of the UTC Outdoors Leadership Institute.</li>
+    </ul>
+  </div>
+</div>
 </body>
 </html>
