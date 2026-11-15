@@ -15,13 +15,12 @@
       --ink-mid: #4A4945;
       --ink-faint: #8C8A84;
       --rule: #E6E4DD;
-      --rule-dark: #0A0A0A;
       /* Exact Protestopus watercolor pigment palette */
-      --c-built: #7ED49E;       /* Mint sign */
-      --c-passed: #F9BF7F;      /* Amber/peach sign */
-      --c-interview: #8C97D8;   /* Periwinkle sign */
-      --c-rejected: #F4937A;    /* Coral sign */
-      --c-silence: #DEDBD2;     /* Warm stone wash */
+      --c-built: #7ED49E;
+      --c-passed: #F9BF7F;
+      --c-interview: #8C97D8;
+      --c-rejected: #F4937A;
+      --c-silence: #DEDBD2;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,12 +35,12 @@
     }
 
     .wrap {
-      max-width: 1120px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 0 28px;
     }
 
-    /* Minimal Top Bar */
+    /* Minimal Header */
     header {
       display: flex;
       align-items: baseline;
@@ -55,6 +54,7 @@
       display: flex;
       align-items: baseline;
       gap: 14px;
+      flex-wrap: wrap;
     }
     .brand-name {
       font-family: 'Instrument Serif', Georgia, serif;
@@ -66,16 +66,16 @@
     }
     .brand-sub {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       color: var(--ink-mid);
     }
     nav {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 10px 20px;
+      gap: 10px 22px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.76rem;
+      font-size: 0.75rem;
     }
     nav a {
       color: var(--ink);
@@ -88,124 +88,119 @@
       border-bottom-color: var(--ink);
     }
 
-    /* Quiet Intro Line */
+    /* Opening Graphic */
     .intro-bar {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
+      gap: 20px;
+      padding: 28px 0 18px;
       flex-wrap: wrap;
-      gap: 16px;
-      padding: 18px 0 14px;
-      border-bottom: 1px solid var(--rule);
     }
     .intro-line {
       font-family: 'Instrument Serif', Georgia, serif;
-      font-size: clamp(1.35rem, 2.3vw, 1.85rem);
-      font-weight: 400;
-      color: var(--ink);
-      letter-spacing: -0.01em;
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
+      line-height: 1.15;
+      letter-spacing: -0.015em;
     }
     .intro-line em {
       font-style: italic;
-    }
-    .intro-controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
+      border-bottom: 2px solid var(--c-built);
     }
     .ink-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      padding: 8px 14px;
       background: var(--paper);
       color: var(--ink);
-      border: 1px solid var(--ink);
-      padding: 5px 11px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
+      border: 1.2px solid var(--ink);
       cursor: pointer;
-      transition: background 0.15s, color 0.15s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
     }
     .ink-btn:hover {
-      background: var(--ink);
-      color: var(--paper);
+      background: var(--paper-subtle);
+      box-shadow: 2px 2px 0 var(--ink);
+      transform: translate(-1px, -1px);
     }
 
-    /* Filter Ledger Pills (Protestopus Watercolor Swatches) */
     .swatch-bar {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      padding: 14px 0;
+      padding-bottom: 16px;
       border-bottom: 1px solid var(--rule);
-      align-items: center;
     }
     .swatch-btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: var(--paper);
-      border: 1px solid var(--rule);
+      gap: 7px;
       padding: 6px 12px;
+      border: 1px solid var(--rule);
+      background: var(--paper);
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.73rem;
+      font-size: 0.72rem;
       color: var(--ink);
       cursor: pointer;
-      transition: all 0.15s;
+      transition: border-color 0.15s, box-shadow 0.15s;
     }
-    .swatch-btn:hover, .swatch-btn.active {
+    .swatch-btn:hover {
       border-color: var(--ink);
-      background: var(--paper-subtle);
+    }
+    .swatch-btn.active {
+      border-color: var(--ink);
+      border-width: 1.5px;
       box-shadow: 2px 2px 0 var(--ink);
+      font-weight: 500;
     }
     .swatch-dot {
-      width: 11px;
-      height: 11px;
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
-      border: 1.2px solid var(--ink);
-      display: inline-block;
+      border: 1px solid var(--ink);
+      flex-shrink: 0;
     }
     .swatch-count {
       color: var(--ink-mid);
-      font-weight: 500;
     }
 
-    /* Unified Ink Drop + 180° Horizon Fan Stage */
     .stage-box {
       position: relative;
       width: 100%;
-      background: var(--paper);
       border-bottom: 1.5px solid var(--ink);
-      padding: 8px 0 18px;
     }
     .canvas-holder {
       position: relative;
       width: 100%;
-      height: 450px;
+      height: 510px;
     }
-    @media (max-width: 700px) {
-      .canvas-holder { height: 340px; }
+    @media (max-width: 720px) {
+      .canvas-holder { height: 390px; }
     }
-    canvas#inkStage {
+    #inkStage {
       width: 100%;
       height: 100%;
       display: block;
       cursor: crosshair;
     }
 
-    /* Floating Ink Tooltip Card */
+    /* Minimal Hover Card (Main Label Only, No Sentence Tags) */
     .ink-card {
       position: fixed;
       pointer-events: none;
-      z-index: 100;
+      z-index: 90;
       background: var(--paper);
       border: 1.5px solid var(--ink);
       box-shadow: 4px 4px 0 var(--ink);
-      padding: 12px 14px;
-      max-width: 310px;
-      font-size: 0.8rem;
+      padding: 10px 14px;
+      min-width: 210px;
+      max-width: 290px;
       opacity: 0;
       transform: translateY(4px);
-      transition: opacity 0.12s, transform 0.12s;
+      transition: opacity 0.1s, transform 0.1s;
     }
     .ink-card.visible {
       opacity: 1;
@@ -215,14 +210,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 8px;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 6px;
-      margin-bottom: 6px;
+      gap: 10px;
+      margin-bottom: 3px;
     }
     .ink-card-name {
       font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       line-height: 1.1;
     }
     .ink-card-tag {
@@ -234,328 +227,408 @@
     }
     .ink-card-role {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       color: var(--ink-mid);
-      margin-bottom: 5px;
-    }
-    .ink-card-note {
-      font-size: 0.76rem;
-      color: var(--ink);
-      line-height: 1.42;
     }
 
-    /* Directory Strip Below Horizon Fan */
-    .company-strip {
-      padding: 18px 0 26px;
+    /* Protestopus Identity + Workflow Offerings */
+    .identity-section {
+      padding: 44px 0;
       border-bottom: 1.5px solid var(--ink);
-    }
-    .strip-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 12px;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .strip-title {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--ink-mid);
-    }
-    .company-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-    .c-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 9px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.71rem;
-      border: 1px solid var(--rule);
-      background: var(--paper);
-      color: var(--ink);
-      cursor: pointer;
-      transition: all 0.12s;
-    }
-    .c-pill:hover, .c-pill.selected {
-      border-color: var(--ink);
-      box-shadow: 2px 2px 0 var(--ink);
-    }
-    .c-pill .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      border: 1px solid var(--ink);
-      flex-shrink: 0;
-    }
-    .selected-detail {
-      margin-top: 14px;
-      padding: 14px 16px;
-      border: 1.5px solid var(--ink);
-      background: var(--paper-subtle);
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .selected-detail-main {
-      max-width: 780px;
-    }
-    .selected-detail-title {
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.35rem;
-      margin-right: 10px;
-    }
-    .selected-detail-meta {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      color: var(--ink-mid);
-    }
-    .selected-detail-note {
-      margin-top: 4px;
-      font-size: 0.84rem;
-      color: var(--ink);
-    }
-
-    /* Two-Column Section: 24h Clock & Verbatim Thread Notes */
-    .split-section {
       display: grid;
       grid-template-columns: 1fr 1.15fr;
-      gap: 36px;
-      padding: 36px 0;
-      border-bottom: 1.5px solid var(--ink);
-      align-items: start;
+      gap: 40px;
+      align-items: center;
     }
-    @media (max-width: 840px) {
-      .split-section { grid-template-columns: 1fr; }
+    @media (max-width: 820px) {
+      .identity-section {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+    .octopus-frame {
+      border: 1.5px solid var(--ink);
+      background: var(--paper-subtle);
+      padding: 14px;
+    }
+    .octopus-frame img {
+      width: 100%;
+      max-height: 360px;
+      object-fit: contain;
+      display: block;
+      background: #fff;
+      border: 1px solid var(--rule);
+    }
+    .octopus-cap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .octopus-quote {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    .palette-strip {
+      display: flex;
+      gap: 5px;
+    }
+    .palette-chip {
+      width: 18px;
+      height: 18px;
+      border: 1px solid var(--ink);
+    }
+
+    .workflow-panel h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.9rem;
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .workflow-lead {
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      margin-bottom: 20px;
+      max-width: 480px;
+    }
+    .offering-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+    @media (max-width: 560px) {
+      .offering-list { grid-template-columns: 1fr; }
+    }
+    .offering-item {
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--ink);
+      padding: 12px 14px;
+      background: var(--paper);
+    }
+    .offering-item strong {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      margin-bottom: 4px;
+    }
+    .offering-item span {
+      font-size: 0.8rem;
+      color: var(--ink-mid);
+      line-height: 1.4;
+      display: block;
+    }
+
+    /* Interactive Letter Envelope -> Paper Resume */
+    .cv-envelope-section {
+      padding: 52px 0;
+      border-bottom: 1.5px solid var(--ink);
     }
     .sec-head {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 8px;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
     .sec-title {
       font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       font-weight: 400;
     }
     .sec-sub {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--ink-mid);
-    }
-    .clock-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    canvas#clockCanvas {
-      width: 100%;
-      max-width: 360px;
-      height: 360px;
-      display: block;
-    }
-    .clock-caption {
-      font-family: 'JetBrains Mono', monospace;
       font-size: 0.72rem;
       color: var(--ink-mid);
-      text-align: center;
-      margin-top: 8px;
-      max-width: 340px;
+    }
+    .sec-sub a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
     }
 
-    /* Verbatim Thread Excerpts */
-    .quote-list {
-      display: grid;
-      gap: 12px;
+    .envelope-stage {
+      perspective: 1200px;
+      max-width: 860px;
+      margin: 0 auto;
     }
-    .quote-item {
-      border: 1px solid var(--rule);
-      border-left: 3px solid var(--ink);
-      padding: 11px 14px;
-      background: var(--paper);
-    }
-    .quote-meta {
-      display: flex;
-      justify-content: space-between;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--ink-mid);
-      margin-bottom: 4px;
-    }
-    .quote-meta strong {
-      color: var(--ink);
-    }
-    .quote-text {
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.08rem;
-      line-height: 1.35;
-      color: var(--ink);
-    }
-
-    /* Drawings / Ink Gallery Section */
-    .art-section {
-      padding: 40px 0;
-      border-bottom: 1.5px solid var(--ink);
-    }
-    .art-lead {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 28px;
-      align-items: center;
-      margin-bottom: 28px;
-      padding: 20px;
-      border: 1.5px solid var(--ink);
+    .envelope-closed {
+      position: relative;
+      max-width: 560px;
+      height: 330px;
+      margin: 0 auto;
       background: var(--paper-subtle);
+      border: 1.5px solid var(--ink);
+      box-shadow: 6px 6px 0 var(--ink);
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
-    @media (max-width: 780px) {
-      .art-lead { grid-template-columns: 1fr; }
+    .envelope-closed:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 9px 9px 0 var(--ink);
     }
-    .art-lead img {
+    .envelope-flap {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      max-height: 380px;
-      object-fit: contain;
-      background: #fff;
-      border: 1px solid var(--ink);
-      cursor: pointer;
+      height: 55%;
+      background: #FFFFFF;
+      border-bottom: 1.5px solid var(--ink);
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transform-origin: top center;
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: 3;
     }
-    .art-lead-copy h3 {
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.85rem;
-      font-weight: 400;
-      margin-bottom: 8px;
+    .envelope-flap-line {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 4;
     }
-    .art-lead-copy p {
-      font-size: 0.9rem;
-      color: var(--ink-mid);
-      margin-bottom: 12px;
-      max-width: 440px;
+    .envelope-return {
+      position: absolute;
+      top: 18px;
+      left: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      line-height: 1.45;
+      color: var(--ink);
+      z-index: 5;
     }
-    .palette-strip {
-      display: flex;
-      gap: 6px;
-      margin-top: 10px;
-    }
-    .palette-chip {
-      width: 24px;
-      height: 24px;
+    .envelope-stamp {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      width: 54px;
+      height: 64px;
       border: 1.2px solid var(--ink);
-    }
-
-    .art-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
-      gap: 20px;
-    }
-    .art-card {
-      cursor: pointer;
-      border: 1px solid var(--rule);
-      padding: 12px;
-      background: var(--paper);
-      transition: border-color 0.15s, box-shadow 0.15s;
+      background: #fff;
+      padding: 4px;
+      z-index: 5;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: space-between;
     }
-    .art-card:hover {
-      border-color: var(--ink);
-      box-shadow: 3px 3px 0 var(--ink);
-    }
-    .art-frame {
+    .envelope-stamp img {
       width: 100%;
-      height: 230px;
+      height: 40px;
+      object-fit: cover;
+    }
+    .envelope-stamp span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.52rem;
+      letter-spacing: 0.05em;
+    }
+    .envelope-seal {
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--c-rejected);
+      border: 1.5px solid var(--ink);
+      box-shadow: 2px 2px 0 var(--ink);
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
-      background: #FFFFFF;
-      margin-bottom: 10px;
-    }
-    .art-frame img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      transition: transform 0.2s;
-    }
-    .art-card:hover .art-frame img {
-      transform: scale(1.03);
-    }
-    .art-cap {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-      border-top: 1px solid var(--rule);
-      padding-top: 8px;
-    }
-    .art-title {
       font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.05rem;
+      font-size: 1.15rem;
+      font-style: italic;
       color: var(--ink);
+      z-index: 6;
+      transition: transform 0.25s ease;
     }
-    .art-med {
+    .envelope-closed:hover .envelope-seal {
+      transform: translate(-50%, -50%) scale(1.07);
+    }
+    .envelope-front-address {
+      position: absolute;
+      bottom: 34px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 2;
+    }
+    .envelope-front-address .to-name {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.55rem;
+      display: block;
+    }
+    .envelope-front-address .to-hint {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--ink-faint);
+      font-size: 0.7rem;
+      color: var(--ink-mid);
     }
 
-    /* Work / CV Table */
-    .cv-section {
-      padding: 40px 0;
+    .letter-open-wrap {
+      display: none;
+      animation: letterSlideUp 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .letter-open-wrap.open {
+      display: block;
+    }
+    @keyframes letterSlideUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .letter-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 860px;
+      margin: 0 auto 14px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    
+    .paper-sheet {
+      background: #FFFFFF;
+      border: 1.5px solid var(--ink);
+      box-shadow: 6px 6px 0 var(--ink);
+      padding: 42px 44px;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    @media (max-width: 680px) {
+      .paper-sheet { padding: 24px 18px; }
+    }
+    .paper-head {
+      text-align: center;
+      padding-bottom: 16px;
       border-bottom: 1.5px solid var(--ink);
+      margin-bottom: 20px;
     }
-    .cv-list {
-      display: grid;
-      gap: 0;
-    }
-    .cv-row {
-      display: grid;
-      grid-template-columns: 190px 220px 1fr auto;
-      gap: 18px;
-      padding: 15px 0;
-      border-bottom: 1px solid var(--rule);
-      align-items: baseline;
-    }
-    @media (max-width: 820px) {
-      .cv-row {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-    }
-    .cv-org {
+    .paper-head h1 {
       font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.25rem;
-      color: var(--ink);
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
     }
-    .cv-role {
+    .paper-contact {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.74rem;
       color: var(--ink-mid);
     }
-    .cv-desc {
-      font-size: 0.85rem;
-      color: var(--ink);
-    }
-    .cv-link {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
+    .paper-contact a {
       color: var(--ink);
       text-decoration: none;
       border-bottom: 1px solid var(--ink);
+    }
+    .paper-sec-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 4px;
+      margin: 22px 0 12px;
+      color: var(--ink);
+    }
+    .paper-role-block {
+      margin-bottom: 18px;
+    }
+    .paper-org-row {
+      display: grid;
+      grid-template-columns: 148px 1fr auto;
+      gap: 12px;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    @media (max-width: 680px) {
+      .paper-org-row { grid-template-columns: 1fr; gap: 2px; }
+    }
+    .paper-dates {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--ink-mid);
+    }
+    .paper-org {
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.01em;
+    }
+    .paper-org a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink-faint);
+    }
+    .paper-org a:hover {
+      background: var(--c-built);
+      border-bottom-color: var(--ink);
+    }
+    .paper-loc {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--ink-mid);
       white-space: nowrap;
     }
-    .cv-link:hover {
-      background: var(--c-built);
+    .paper-subrole-row {
+      display: grid;
+      grid-template-columns: 148px 1fr;
+      gap: 12px;
+      align-items: baseline;
+      margin: 8px 0 5px;
     }
+    @media (max-width: 680px) {
+      .paper-subrole-row { grid-template-columns: 1fr; gap: 2px; }
+    }
+    .paper-subrole {
+      font-style: italic;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .paper-subrole-inline {
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ink-mid);
+    }
+    .paper-muted {
+      font-weight: 400;
+      color: var(--ink-mid);
+      font-size: 0.8rem;
+    }
+    .paper-bullets {
+      margin-left: 164px;
+      padding-left: 16px;
+      font-size: 0.84rem;
+      line-height: 1.52;
+      color: var(--ink);
+    }
+    @media (max-width: 680px) {
+      .paper-bullets { margin-left: 0; }
+    }
+    .paper-bullets li {
+      margin-bottom: 5px;
+    }
+    .paper-bullets a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+    }
+    .paper-bullets a:hover {
+      background: var(--c-passed);
+    }
+    .paper-compact-list {
+      display: grid;
+      gap: 6px;
+    }
+
 
     /* Footer */
     footer {
@@ -566,7 +639,7 @@
       flex-wrap: wrap;
       gap: 16px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       color: var(--ink-mid);
     }
     footer a {
@@ -577,41 +650,10 @@
     footer a:hover {
       background: var(--c-passed);
     }
-
-    /* Lightbox Modal for Artwork */
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(255,255,255,0.94);
-      z-index: 200;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
-    .modal.open { display: flex; }
-    .modal-inner {
-      max-width: 820px;
-      width: 100%;
-      background: var(--paper);
-      border: 1.5px solid var(--ink);
-      box-shadow: 6px 6px 0 var(--ink);
-      padding: 20px;
-      text-align: center;
-    }
-    .modal-inner img {
-      max-width: 100%;
-      max-height: 72vh;
-      object-fit: contain;
-      margin-bottom: 12px;
-    }
-    .modal-bar {
+    .footer-sites {
       display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      border-top: 1px solid var(--rule);
-      padding-top: 10px;
-      text-align: left;
+      flex-wrap: wrap;
+      gap: 14px;
     }
   </style>
 </head>
@@ -624,10 +666,8 @@
       </div>
       <nav>
         <a href="#index">250 Companies</a>
-        <a href="#threads">Notes</a>
-        <a href="#drawings">Drawings</a>
-        <a href="#work">Work</a>
-        <a href="resume.html">CV</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#cv">CV</a>
         <a href="mailto:levijameshiggs@gmail.com">levijameshiggs@gmail.com</a>
       </nav>
     </header>
@@ -636,9 +676,7 @@
       <div class="intro-line">
         250 companies. <em>8 accepted.</em> 11 I turned down.
       </div>
-      <div class="intro-controls">
-        <button class="ink-btn" onclick="replayDrop()">Drop Ink Again ↻</button>
-      </div>
+      <button class="ink-btn" onclick="replayDrop()">Drop Ink Again ↻</button>
     </div>
 
     <div class="swatch-bar" id="swatchBar">
@@ -679,327 +717,275 @@
       </div>
     </section>
 
-    <section class="company-strip">
-      <div class="strip-header">
-        <span class="strip-title" id="stripHeading">Showing all 250 deduplicated companies (click any node or pill)</span>
-        <span class="brand-sub">1 thread = 1 company · zero reply inflation</span>
-      </div>
-      <div class="company-pills" id="companyPills"></div>
-      <div class="selected-detail" id="selectedDetail">
-        <div class="selected-detail-main">
-          <div>
-            <span class="selected-detail-title" id="selName">YouTube (Google)</span>
-            <span class="selected-detail-meta" id="selMeta">Accepted · Tech &amp; AI · Trust &amp; Safety Policy / Product</span>
+    <section class="identity-section" id="workflow">
+      <div class="octopus-frame">
+        <img src="art/protestopus.jpg" alt="Protestopus — India ink and watercolor" />
+        <div class="octopus-cap">
+          <span class="octopus-quote">“I used all my ink to make these.”</span>
+          <div class="palette-strip" title="Site palette pulled from Protestopus">
+            <span class="palette-chip" style="background:#FCE883"></span>
+            <span class="palette-chip" style="background:#F4937A"></span>
+            <span class="palette-chip" style="background:#F9BF7F"></span>
+            <span class="palette-chip" style="background:#C5E089"></span>
+            <span class="palette-chip" style="background:#7ED49E"></span>
+            <span class="palette-chip" style="background:#6CC7F6"></span>
+            <span class="palette-chip" style="background:#8C97D8"></span>
+            <span class="palette-chip" style="background:#F598C4"></span>
           </div>
-          <div class="selected-detail-note" id="selNote">
-            Joined in New York. Scaled Youth, Violent Extremism &amp; Hate Speech enforcement; launched external VVR transparency metric; built GenAI policy red-teaming frameworks.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="split-section" id="threads">
-      <div>
-        <div class="sec-head">
-          <h2 class="sec-title">The Hour It Arrived</h2>
-          <span class="sec-sub">24-hour inbox clock</span>
-        </div>
-        <div class="clock-wrap">
-          <canvas id="clockCanvas" width="380" height="380"></canvas>
-          <p class="clock-caption">
-            Human offers and interview invites arrive between 10am and 4pm. Automated rejections fire in overnight batches between midnight and 5am.
-          </p>
         </div>
       </div>
 
-      <div>
-        <div class="sec-head">
-          <h2 class="sec-title">Field Notes</h2>
-          <span class="sec-sub">Patterns across 250 threads</span>
-        </div>
-        <div class="quote-list">
-          <div class="quote-item" style="border-left-color: var(--c-built)">
-            <div class="quote-meta">
-              <strong>Conversion</strong>
-              <span>250 → 41 → 19 → 8</span>
-            </div>
-            <div class="quote-text">
-              41 companies (16.4%) led to human conversations. 19 reached final rounds or offers. 8 were accepted.
-            </div>
+      <div class="workflow-panel">
+        <h2>Turn your inbox into this chart.</h2>
+        <p class="workflow-lead">
+          The packaged parser that audited two Gmail accounts and built the 250-company amphitheater above.
+        </p>
+        <div class="offering-list">
+          <div class="offering-item" style="border-left-color: var(--c-built)">
+            <strong>01 · Thread Deduplication</strong>
+            <span>Collapses <code>Re:</code> / <code>Fwd:</code> chains and forwarding aliases into one true outcome per company.</span>
           </div>
-
-          <div class="quote-item" style="border-left-color: var(--c-passed)">
-            <div class="quote-meta">
-              <strong>I Passed (11)</strong>
-              <span>Competing offers &amp; withdrawals</span>
-            </div>
-            <div class="quote-text">
-              Includes a verbal Web3 Trust &amp; Safety offer, a $160k+ counter-offer turned down for YouTube, and final-round withdrawals after accepting TikTok and ELC Shanghai.
-            </div>
+          <div class="offering-item" style="border-left-color: var(--c-passed)">
+            <strong>02 · Two-Way Outcome Classifier</strong>
+            <span>Separates offers you turned down from automated rejections and ghosted applications.</span>
           </div>
-
-          <div class="quote-item" style="border-left-color: var(--c-rejected)">
-            <div class="quote-meta">
-              <strong>The Agency Illusion</strong>
-              <span>Why raw keyword counts lie</span>
-            </div>
-            <div class="quote-text">
-              One overseas recruiting agency prefixed every email subject with “Job Offer-”, inflating naive email counts by 26× until deduplicated by thread.
-            </div>
+          <div class="offering-item" style="border-left-color: var(--c-interview)">
+            <strong>03 · Zero-PII Export</strong>
+            <span>Strips recruiter names, timestamps, and verbatim email text into clean CSV and JSON.</span>
           </div>
-
-          <div class="quote-item" style="border-left-color: var(--c-interview)">
-            <div class="quote-meta">
-              <strong>Time Zones</strong>
-              <span>CST vs. CST</span>
-            </div>
-            <div class="quote-text">
-              Joined a 2-hour technical writing test for Taipei an hour early after confusing Central Standard Time with China Standard Time while traveling.
-            </div>
+          <div class="offering-item" style="border-left-color: var(--c-rejected)">
+            <strong>04 · Ready-to-Host Template</strong>
+            <span>Includes the single-file HTML canvas chart styled in gallery ink and watercolor.</span>
           </div>
         </div>
+        <a class="ink-btn" href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener">
+          Get the Inbox Parser Workflow ↗
+        </a>
       </div>
     </section>
 
-    <section class="art-section" id="drawings">
+    <section class="cv-envelope-section" id="cv">
       <div class="sec-head">
-        <h2 class="sec-title">Drawings &amp; Ink</h2>
-        <span class="sec-sub">Original works on paper · L. Higgs</span>
+        <h2 class="sec-title">Curriculum Vitae</h2>
+        <span class="sec-sub"><a href="resume.html">Open standalone paper view ↗</a></span>
       </div>
 
-      <div class="art-lead">
-        <img src="art/protestopus.jpg" alt="Protestopus — I used all my ink to make these" onclick="openArtModal('art/protestopus.jpg', 'Protestopus', 'India ink & watercolor, 16 × 20 in.', '“I used all my ink to make these.”')" />
-        <div class="art-lead-copy">
-          <h3>“I used all my ink to make these.”</h3>
-          <p>
-            India ink and hand-tinted watercolor on paper. The palette of this site is pulled directly from the eight protest signs held up by the octopus.
-          </p>
-          <div class="palette-strip">
-            <span class="palette-chip" style="background:#FCE883" title="#FCE883"></span>
-            <span class="palette-chip" style="background:#F4937A" title="#F4937A"></span>
-            <span class="palette-chip" style="background:#F9BF7F" title="#F9BF7F"></span>
-            <span class="palette-chip" style="background:#C5E089" title="#C5E089"></span>
-            <span class="palette-chip" style="background:#7ED49E" title="#7ED49E"></span>
-            <span class="palette-chip" style="background:#6CC7F6" title="#6CC7F6"></span>
-            <span class="palette-chip" style="background:#8C97D8" title="#8C97D8"></span>
-            <span class="palette-chip" style="background:#F598C4" title="#F598C4"></span>
+      <div class="envelope-stage">
+        <div class="envelope-closed" id="envelopeClosed" onclick="openLetter()" role="button" tabindex="0" aria-label="Open Levi Higgs CV letter">
+          <div class="envelope-flap"></div>
+          <svg class="envelope-flap-line" viewBox="0 0 560 330" preserveAspectRatio="none">
+            <polyline points="0,0 280,182 560,0" fill="none" stroke="#0A0A0A" stroke-width="1.5" />
+            <line x1="0" y1="330" x2="215" y2="140" stroke="#E6E4DD" stroke-width="1" />
+            <line x1="560" y1="330" x2="345" y2="140" stroke="#E6E4DD" stroke-width="1" />
+          </svg>
+          <div class="envelope-return">
+            <strong>LEVI J. HIGGS</strong><br />
+            New York, NY<br />
+            levijameshiggs@gmail.com
+          </div>
+          <div class="envelope-stamp">
+            <img src="art/protestopus.jpg" alt="Protestopus stamp" />
+            <span>NYC · INK</span>
+          </div>
+          <div class="envelope-seal">LH</div>
+          <div class="envelope-front-address">
+            <span class="to-name">Curriculum Vitae</span>
+            <span class="to-hint">Click the seal to unfold letter ↗</span>
           </div>
         </div>
-      </div>
 
-      <div class="art-grid">
-        
-        <figure class="art-card" onclick="openArtModal('art/protestopus.jpg', 'Protestopus', 'India ink & watercolor, 16 × 20 in.', '“I used all my ink to make these.”')">
-          <div class="art-frame">
-            <img src="art/protestopus.jpg" alt="Protestopus" loading="lazy" />
+        <div class="letter-open-wrap" id="letterOpenWrap">
+          <div class="letter-toolbar">
+            <span class="brand-sub">Levi J. Higgs · New York, NY · levijameshiggs@gmail.com</span>
+            <div style="display:flex; gap:10px;">
+              <a class="ink-btn" href="resume.html">Print / Standalone ↗</a>
+              <button class="ink-btn" onclick="closeLetter()">Fold Letter ×</button>
+            </div>
           </div>
-          <figcaption class="art-cap">
-            <span class="art-title">Protestopus</span>
-            <span class="art-med">India ink & watercolor, 16 × 20 in.</span>
-          </figcaption>
-        </figure>
-        
-        <figure class="art-card" onclick="openArtModal('art/cello.jpg', 'Cellist in Rain', 'India ink on paper, 16 × 20 in.', 'Signed L. Higgs.')">
-          <div class="art-frame">
-            <img src="art/cello.jpg" alt="Cellist in Rain" loading="lazy" />
-          </div>
-          <figcaption class="art-cap">
-            <span class="art-title">Cellist in Rain</span>
-            <span class="art-med">India ink on paper, 16 × 20 in.</span>
-          </figcaption>
-        </figure>
-        
-        <figure class="art-card" onclick="openArtModal('art/flowered.jpg', 'Flowered at Your Back', 'India ink on paper, 16 × 20 in.', 'Negative-space figure study.')">
-          <div class="art-frame">
-            <img src="art/flowered.jpg" alt="Flowered at Your Back" loading="lazy" />
-          </div>
-          <figcaption class="art-cap">
-            <span class="art-title">Flowered at Your Back</span>
-            <span class="art-med">India ink on paper, 16 × 20 in.</span>
-          </figcaption>
-        </figure>
-        
-        <figure class="art-card" onclick="openArtModal('art/day.jpg', 'Day / Elevation', 'Pen & ink on paper', 'Architectural horizon & inverted figures.')">
-          <div class="art-frame">
-            <img src="art/day.jpg" alt="Day / Elevation" loading="lazy" />
-          </div>
-          <figcaption class="art-cap">
-            <span class="art-title">Day / Elevation</span>
-            <span class="art-med">Pen & ink on paper</span>
-          </figcaption>
-        </figure>
-        
-        <figure class="art-card" onclick="openArtModal('art/trumpet.jpg', 'Single-Line Horn', 'India ink on paper, 8 × 10 in.', 'Continuous contour study.')">
-          <div class="art-frame">
-            <img src="art/trumpet.jpg" alt="Single-Line Horn" loading="lazy" />
-          </div>
-          <figcaption class="art-cap">
-            <span class="art-title">Single-Line Horn</span>
-            <span class="art-med">India ink on paper, 8 × 10 in.</span>
-          </figcaption>
-        </figure>
-        
-        <figure class="art-card" onclick="openArtModal('art/rain.jpg', 'Rain (悲泣雨)', 'India ink on paper', 'Architectural study with cat, signed L. Higgs.')">
-          <div class="art-frame">
-            <img src="art/rain.jpg" alt="Rain (悲泣雨)" loading="lazy" />
-          </div>
-          <figcaption class="art-cap">
-            <span class="art-title">Rain (悲泣雨)</span>
-            <span class="art-med">India ink on paper</span>
-          </figcaption>
-        </figure>
-        
-        <figure class="art-card" onclick="openArtModal('art/jazz.jpg', 'Jazz Frieze', 'India ink on board', 'Piano, voice, horn, and three black notes.')">
-          <div class="art-frame">
-            <img src="art/jazz.jpg" alt="Jazz Frieze" loading="lazy" />
-          </div>
-          <figcaption class="art-cap">
-            <span class="art-title">Jazz Frieze</span>
-            <span class="art-med">India ink on board</span>
-          </figcaption>
-        </figure>
-        
-        <figure class="art-card" onclick="openArtModal('art/tat.jpg', 'Cascade', 'Pen & ink on paper', 'One head and clock face spilling into a crowd.')">
-          <div class="art-frame">
-            <img src="art/tat.jpg" alt="Cascade" loading="lazy" />
-          </div>
-          <figcaption class="art-cap">
-            <span class="art-title">Cascade</span>
-            <span class="art-med">Pen & ink on paper</span>
-          </figcaption>
-        </figure>
-        
-        <figure class="art-card" onclick="openArtModal('art/bird.jpg', 'Like a Bird on the Wire', 'India ink on paper', 'After Leonard Cohen.')">
-          <div class="art-frame">
-            <img src="art/bird.jpg" alt="Like a Bird on the Wire" loading="lazy" />
-          </div>
-          <figcaption class="art-cap">
-            <span class="art-title">Like a Bird on the Wire</span>
-            <span class="art-med">India ink on paper</span>
-          </figcaption>
-        </figure>
-        
-        <figure class="art-card" onclick="openArtModal('art/ny.jpg', 'New York', 'India ink on paper, 8 × 10 in.', 'Line study.')">
-          <div class="art-frame">
-            <img src="art/ny.jpg" alt="New York" loading="lazy" />
-          </div>
-          <figcaption class="art-cap">
-            <span class="art-title">New York</span>
-            <span class="art-med">India ink on paper, 8 × 10 in.</span>
-          </figcaption>
-        </figure>
-        
-        <figure class="art-card" onclick="openArtModal('art/booktrip.jpg', 'Book Trip', 'Pen & ink on paper', 'Surrealist study.')">
-          <div class="art-frame">
-            <img src="art/booktrip.jpg" alt="Book Trip" loading="lazy" />
-          </div>
-          <figcaption class="art-cap">
-            <span class="art-title">Book Trip</span>
-            <span class="art-med">Pen & ink on paper</span>
-          </figcaption>
-        </figure>
-        
-        <figure class="art-card" onclick="openArtModal('art/horse.jpg', 'Horse', 'Continuous line ink study', 'Contour drawing.')">
-          <div class="art-frame">
-            <img src="art/horse.jpg" alt="Horse" loading="lazy" />
-          </div>
-          <figcaption class="art-cap">
-            <span class="art-title">Horse</span>
-            <span class="art-med">Continuous line ink study</span>
-          </figcaption>
-        </figure>
-        
-      </div>
-    </section>
+          
+          <div class="paper-sheet">
+            <div class="paper-head">
+              <h1>LEVI J. HIGGS</h1>
+              <div class="paper-contact">
+                <a href="mailto:levijameshiggs@gmail.com">levijameshiggs@gmail.com</a> &nbsp;|&nbsp; New York, NY
+              </div>
+            </div>
 
-    <section class="cv-section" id="work">
-      <div class="sec-head">
-        <h2 class="sec-title">Work</h2>
-        <span class="sec-sub"><a href="resume.html" style="color:var(--ink);">Full CV →</a></span>
-      </div>
-      <div class="cv-list">
-        <div class="cv-row">
-          <div class="cv-org">Google — YouTube</div>
-          <div class="cv-role">PM Rotation &amp; Policy Enforcement Manager</div>
-          <div class="cv-desc">Reduced vertical Violative View Rate (VVR) by 87%; scaled 35M/wk classifier triggers &amp; 2M GenAI policy snippets across 80+ languages; 2× 1st Place, Google Innovation Week (<em>“Policy as Code”</em>).</div>
-          <a class="cv-link" href="https://transparencyreport.google.com/youtube-policy/removals" target="_blank" rel="noopener">VVR Report ↗</a>
-        </div>
-        <div class="cv-row">
-          <div class="cv-org">TikTok</div>
-          <div class="cv-role">Operations Manager &amp; Team Lead, T&amp;S</div>
-          <div class="cv-desc">Led 7 Team Leads and 130 Content Specialists covering 75% of North American site volume; launched Golden Set quality benchmarking and CBS / NCAA / Buick brand-safety partnerships.</div>
-          <a class="cv-link" href="https://www.tiktok.com/transparency" target="_blank" rel="noopener">Transparency ↗</a>
-        </div>
-        <div class="cv-row">
-          <div class="cv-org">Teachers Pay Teachers</div>
-          <div class="cv-role">Consultant, Marketplace Integrity</div>
-          <div class="cv-desc">Validated 7M+ original resources on a marketplace used by ~85% of U.S. PreK–12 educators; returned for a second Marketplace Integrity push.</div>
-          <a class="cv-link" href="https://www.teacherspayteachers.com/About-Us" target="_blank" rel="noopener">TpT ↗</a>
-        </div>
-        <div class="cv-row">
-          <div class="cv-org">Enspired Learning Center</div>
-          <div class="cv-role">Founding Principal · Shanghai</div>
-          <div class="cv-desc">Founded and led PreK–8th grade academic operations, international curriculum design, and faculty hiring in Shanghai, China.</div>
-          <a class="cv-link" href="resume.html">CV →</a>
-        </div>
-        <div class="cv-row">
-          <div class="cv-org">Scale AI &amp; RebelBase</div>
-          <div class="cv-role">Writer &amp; Content Strategist</div>
-          <div class="cv-desc">Selected out of ~200 candidates at RebelBase (awarded 7,500 stock options); writer &amp; content strategist for Scale AI, Eduland, and 4AM Marketing.</div>
-          <a class="cv-link" href="https://scale.com/" target="_blank" rel="noopener">Scale ↗</a>
-        </div>
-        <div class="cv-row">
-          <div class="cv-org">OMSI &amp; YBM ECC</div>
-          <div class="cv-role">Portland · Seoul · Madison</div>
-          <div class="cv-desc">Outdoor Science Instructor at Oregon Museum of Science &amp; Industry (OMSI), PreK–8th English Teacher at YBM ECC (Seoul), and Legislative Intern at the Wisconsin State Assembly.</div>
-          <a class="cv-link" href="https://omsi.edu/" target="_blank" rel="noopener">OMSI ↗</a>
-        </div>
-        <div class="cv-row">
-          <div class="cv-org">Education</div>
-          <div class="cv-role">NYU Tandon · UT Chattanooga</div>
-          <div class="cv-desc">M.S. in Cybersecurity, NYU Cyber Fellow (75% Merit Scholarship) · B.A. English: Professional Writing &amp; Rhetoric, UT Chattanooga (Editor-in-Chief, <em>The University Echo</em>).</div>
-          <a class="cv-link" href="resume.html">Full CV →</a>
+            <div class="paper-sec-title">EXPERIENCE</div>
+
+            <div class="paper-role-block">
+              <div class="paper-org-row">
+                <span class="paper-dates">Aug 2022 – present</span>
+                <span class="paper-org">GOOGLE – YOUTUBE</span>
+                <span class="paper-loc">New York, NY</span>
+              </div>
+
+              <div class="paper-subrole-row">
+                <span class="paper-dates">May 2026 – present</span>
+                <span class="paper-subrole">Product Manager Rotation, Creator Policy Experience</span>
+              </div>
+              <ul class="paper-bullets">
+                <li>Introduced targeted upload frictions, using age-appropriate classifiers, in the user flow to reduce Violative View Rate, the staple metric in <a href="https://transparencyreport.google.com/youtube-policy/removals" target="_blank" rel="noopener">YouTube’s Transparency Report</a>, scaling to 35M triggers/week, achieving 18% enforcement reduction and 75% positive creator feedback, roadmapped to grow in the future.</li>
+                <li>Designed evaluation frameworks and launched risk-adjusted GenAI policy snippets for Child Safety; across verticals, 2M AI snippets in 80+ languages resulted in reduced appeals while 100% free from policy leaks.</li>
+              </ul>
+
+              <div class="paper-subrole-row">
+                <span class="paper-dates"></span>
+                <span class="paper-subrole">Policy Enforcement Manager, Adult Content <span class="paper-muted">(Level promotion with high rating in November 2025)</span></span>
+              </div>
+              <ul class="paper-bullets">
+                <li>Reduced vertical VVR by 87% through innovative policy and automation initiatives; incentivized leadership to adopt and implement these initiatives across the full Trust and Safety organization.</li>
+                <li>Developed policies for humans and machines; evaluated and iterated on prompts alongside AI tools to ensure optimal enforcement (recall and precision) in global, urgent, and sensitive escalations.</li>
+                <li>Structured the evaluation framework for a policy change database, allowing increased automation responsiveness to policy updates through AI-generated summary and diff outputs.</li>
+                <li>Designed and implemented content-classification and labeling systems using atomic facts to derive enforcement decisions, expedite data set sourcing, and identify edge cases and gaps in guidelines.</li>
+                <li>Established YouTube’s Product Agnostic AI policies to ensure enforcement coverage on fast-launch initiatives across video, image, text, link, and audio products.</li>
+                <li>Built and deployed, using AI, a suite of apps and extensions reclaiming 5,000+ FTE hours annually; won 1st place in back-to-back Google Innovation Week competitions for AI products such as <em>“Policy as Code”</em>.</li>
+                <li>Served as the SME for Adult Content, advising on escalations at the highest legal, social, and political levels; partnered across Engineering, Legal, Product, and Executive stakeholders, including subpoena response documentation, to align enforcement guidelines globally.</li>
+              </ul>
+
+              <div class="paper-subrole-row">
+                <span class="paper-dates"></span>
+                <span class="paper-subrole">AI Principles Pioneer, Google Responsible Innovation</span>
+              </div>
+              <ul class="paper-bullets">
+                <li>Participated in Red Team and Adversarial testing for Google’s frontier AI models, products, and robotics.</li>
+              </ul>
+            </div>
+
+            <div class="paper-role-block">
+              <div class="paper-org-row">
+                <span class="paper-dates">Feb 2022 – July 2022</span>
+                <span class="paper-org"><a href="https://www.tiktok.com/transparency" target="_blank" rel="noopener">TIKTOK</a></span>
+                <span class="paper-loc">New York, NY</span>
+              </div>
+
+              <div class="paper-subrole-row">
+                <span class="paper-dates"></span>
+                <span class="paper-subrole">Operations Manager, Trust and Safety</span>
+              </div>
+              <ul class="paper-bullets">
+                <li>Managed the largest internal team in North America, with 7 Team Leads and 130 Content Specialists accounting for 75% of the site’s business by volume.</li>
+                <li>Verticalized teams by content, language, and quality; launched the firm’s first Golden Set quality process.</li>
+                <li>Ratified the site’s moderator performance review, encompassing over 25 workflows and 300 moderators.</li>
+                <li>Directed the addition of 24/7 IP request tickets into the content moderation business.</li>
+              </ul>
+
+              <div class="paper-subrole-row">
+                <span class="paper-dates">Feb 2021 – Feb 2022</span>
+                <span class="paper-subrole">Team Lead, Trust &amp; Safety</span>
+              </div>
+              <ul class="paper-bullets">
+                <li>Led a content engineering cohort aimed to curate notifications to increase daily active users.</li>
+                <li>Transitioned the team to Follow the Sun model coverage, managing 40 agents across 4 shifts.</li>
+                <li>Created the training curriculum for new Team Leads, eventually hiring and scaling the training org.</li>
+                <li>Partnered with brands to protect key ad campaigns and platform initiatives (CBS, NCAA, Buick).</li>
+              </ul>
+            </div>
+
+            <div class="paper-role-block">
+              <div class="paper-org-row">
+                <span class="paper-dates">Aug 2020 – Feb 2021</span>
+                <span class="paper-org"><a href="https://www.teacherspayteachers.com/About-Us" target="_blank" rel="noopener">TEACHERS PAY TEACHERS</a></span>
+                <span class="paper-loc">New York, NY</span>
+              </div>
+              <div class="paper-subrole-row">
+                <span class="paper-dates"></span>
+                <span class="paper-subrole">Consultant, Marketplace Integrity</span>
+              </div>
+              <ul class="paper-bullets">
+                <li>Validated a marketplace corpus of over 7M original resources used by ~85% of U.S. PreK–12 educators; applied child developmental psychology and education research to establish foundational content review guidelines.</li>
+              </ul>
+            </div>
+
+            <div class="paper-sec-title">OTHER EXPERIENCE</div>
+            <div class="paper-compact-list">
+              <div class="paper-org-row">
+                <span class="paper-dates">Aug 2020 – Feb 2024</span>
+                <span class="paper-org"><a href="https://scale.com/" target="_blank" rel="noopener">SCALE AI</a>, REBELBASE, EDULAND, 4AM MARKETING <span class="paper-subrole-inline">– Writer/Content Strategist</span></span>
+                <span class="paper-loc">New York, NY</span>
+              </div>
+              <div class="paper-org-row">
+                <span class="paper-dates">Feb 2020 – May 2020</span>
+                <span class="paper-org"><a href="https://omsi.edu/" target="_blank" rel="noopener">OREGON MUSEUM OF SCIENCE AND INDUSTRY</a> <span class="paper-subrole-inline">– Instructor</span></span>
+                <span class="paper-loc">Portland, OR</span>
+              </div>
+              <div class="paper-org-row">
+                <span class="paper-dates">Sep 2018 – Sep 2019</span>
+                <span class="paper-org">ENSPIRED LEARNING CENTER <span class="paper-subrole-inline">– Founding Principal, PreK–8th Grade</span></span>
+                <span class="paper-loc">Shanghai, China</span>
+              </div>
+              <div class="paper-org-row">
+                <span class="paper-dates">Jul 2017 – Sep 2018</span>
+                <span class="paper-org">YBM ECC <span class="paper-subrole-inline">– English Teacher, PreK–8th Grade</span></span>
+                <span class="paper-loc">Seoul, Korea</span>
+              </div>
+              <div class="paper-org-row">
+                <span class="paper-dates">May 2017 – Jul 2017</span>
+                <span class="paper-org">WISCONSIN STATE ASSEMBLY <span class="paper-subrole-inline">– Legislative Intern</span></span>
+                <span class="paper-loc">Madison, WI</span>
+              </div>
+            </div>
+
+            <div class="paper-sec-title">EDUCATION</div>
+            <div class="paper-role-block">
+              <div class="paper-org-row">
+                <span class="paper-dates">Aug 2025 – present</span>
+                <span class="paper-org"><a href="https://engineering.nyu.edu/academics/programs/cybersecurity-ms" target="_blank" rel="noopener">NEW YORK UNIVERSITY TANDON SCHOOL OF ENGINEERING</a></span>
+                <span class="paper-loc">New York, NY</span>
+              </div>
+              <div class="paper-subrole-row">
+                <span class="paper-dates"></span>
+                <span class="paper-subrole">M.S. Cybersecurity</span>
+              </div>
+              <ul class="paper-bullets">
+                <li>Cyber Fellow, merit-based scholarship recipient (75% tuition).</li>
+              </ul>
+            </div>
+
+            <div class="paper-role-block" style="margin-bottom:0;">
+              <div class="paper-org-row">
+                <span class="paper-dates">Aug 2013 – May 2017</span>
+                <span class="paper-org"><a href="https://www.utc.edu/" target="_blank" rel="noopener">UNIVERSITY OF TENNESSEE AT CHATTANOOGA</a></span>
+                <span class="paper-loc">Chattanooga, TN</span>
+              </div>
+              <div class="paper-subrole-row">
+                <span class="paper-dates"></span>
+                <span class="paper-subrole">B.A. English Professional Writing &amp; Rhetoric; Minor in Communications</span>
+              </div>
+              <ul class="paper-bullets">
+                <li>Editor-in-Chief of the Newspaper, Captain of the Soccer Team, Founding President of the UTC Outdoors Leadership Institute.</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <footer>
       <div>
-        Levi Higgs · <a href="mailto:levijameshiggs@gmail.com">levijameshiggs@gmail.com</a> · <a href="resume.html">Curriculum Vitae</a>
+        Levi Higgs · <a href="mailto:levijameshiggs@gmail.com">levijameshiggs@gmail.com</a>
       </div>
-      <div>
-        Want to map your own inbox? <a href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener">Get the inbox parser workflow ↗</a>
+      <div class="footer-sites">
+        <a href="https://loomstation.com" target="_blank" rel="noopener">loomstation.com</a>
+        <a href="https://voibecode.com" target="_blank" rel="noopener">voibecode.com</a>
+        <a href="https://haradadreamsheet.com" target="_blank" rel="noopener">haradadreamsheet.com</a>
+        <a href="https://jestinfinite.com" target="_blank" rel="noopener">jestinfinite.com</a>
       </div>
     </footer>
   </div>
 
-  <!-- Floating Tooltip -->
+  <!-- Minimal Floating Tooltip (Main Label Only) -->
   <div class="ink-card" id="inkTooltip">
     <div class="ink-card-head">
       <span class="ink-card-name" id="ttName"></span>
       <span class="ink-card-tag" id="ttTag"></span>
     </div>
     <div class="ink-card-role" id="ttRole"></div>
-    <div class="ink-card-note" id="ttNote"></div>
-  </div>
-
-  <!-- Lightbox Modal -->
-  <div class="modal" id="artModal" onclick="closeArtModal()">
-    <div class="modal-inner" onclick="event.stopPropagation()">
-      <img id="modalImg" src="" alt="" />
-      <div class="modal-bar">
-        <div>
-          <strong id="modalTitle" style="font-family:'Instrument Serif',serif;font-size:1.3rem;font-weight:400;"></strong>
-          <span id="modalMed" style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--ink-mid);margin-left:10px;"></span>
-          <div id="modalNote" style="font-size:0.82rem;color:var(--ink-mid);margin-top:2px;"></div>
-        </div>
-        <button class="ink-btn" onclick="closeArtModal()">Close ×</button>
-      </div>
-    </div>
   </div>
 
   <script>
-    const COMPANIES = [{"name": "YouTube (Google)", "sector": "Tech & AI", "role": "Trust & Safety Policy / Product", "note": "Joined in New York. Scaled Youth, Violent Extremism & Hate Speech enforcement; launched external VVR transparency metric; built GenAI policy red-teaming frameworks.", "url": "https://transparencyreport.google.com/youtube-policy/featured-policies/violent-extremism", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "TikTok (ByteDance)", "sector": "Consumer Social", "role": "Team Lead, Trust & Safety", "note": "Onboarded via staffing partner, then converted to full-time Team Lead in Trust & Safety. Led an 18-analyst team to 95.38% accuracy.", "url": "https://www.tiktok.com/transparency", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "Teachers Pay Teachers", "sector": "EdTech & Education", "role": "Content Moderation Specialist", "note": "Audited 5,000+ K-12 marketplace assets and returned for a second contract push in Marketplace Integrity.", "url": "https://www.teacherspayteachers.com/", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "RebelBase", "sector": "SaaS & Startups", "role": "Content Writer", "note": "Selected out of nearly 200 applicants for a Product & Content role; awarded 7,500 stock options.", "url": "https://www.rebelbase.co/", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "Scale AI", "sector": "Tech & AI", "role": "AI Red-Teaming & Evaluation", "note": "Adversarial prompt engineering, safety rubric design, and multimodal LLM evaluation.", "url": "https://scale.com/", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "ELC Shanghai", "sector": "EdTech & Education", "role": "Headmaster", "note": "Recruited via WeChat. Co-founded and led a 12-person learning center in Shanghai; grew enrollment 35% in year one.", "url": "https://www.smartshanghai.com/", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "YBM ECC (Seoul)", "sector": "EdTech & Education", "role": "English Instructor", "note": "Taught 80+ elementary and middle school students in Seoul, South Korea; authored a 60-page parent handbook.", "url": "https://www.ybmecc.com/", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "OMSI", "sector": "EdTech & Education", "role": "Outdoor Science Instructor", "note": "Oregon Museum of Science and Industry. Led multi-day field ecology, geology, and astronomy programs across Oregon.", "url": "https://omsi.edu/", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "DoubleVerify", "sector": "SaaS & Cyber", "role": "Trust & Safety / Brand Safety", "note": "Received an offer and a revised counter-offer ($160k base + 15% bonus + $120k equity). Declined to join Google.", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "OpenSea", "sector": "Fintech & Web3", "role": "Trust & Safety Policy", "note": "Received a verbal Trust & Safety offer after the virtual onsite. Declined offer.", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Pathrise", "sector": "EdTech & Education", "role": "Admissions Operations", "note": "Invited to a final-round mock offer call and Ops interview. Withdrew after accepting TikTok.", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Outlier AI", "sector": "Tech & AI", "role": "Dolphin Genesis Expert", "note": "Matched and onboarded to an expert evaluation track; chose not to proceed.", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Seocho Avalon (Seoul)", "sector": "EdTech & Education", "role": "English Instructor (Gangnam)", "note": "Offered a teaching contract with housing in Gangnam after an in-person interview. Declined to lead ELC Shanghai.", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Berlitz Japan (Tokyo)", "sector": "EdTech & Education", "role": "Instructor (Minato-ku, Tokyo)", "note": "Passed screening and was invited to Tokyo HQ for an in-person interview. Withdrew after accepting ELC Shanghai.", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Urban Teachers", "sector": "EdTech & Education", "role": "Teaching Fellow", "note": "Invited to Final Interview Day; withdrew application to pursue other offers.", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Epic Systems", "sector": "SaaS & Cyber", "role": "Project Manager / Operations", "note": "Received four consecutive phone interview invitations from recruiting; chose not to proceed.", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Amity Corp (Japan)", "sector": "EdTech & Education", "role": "Instructor (Japan)", "note": "Received seven automated video interview invitations; chose not to proceed.", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Wang Law Office", "sector": "Policy & Legal", "role": "Mandarin-Speaking Paralegal", "note": "Invited for an in-person interview in Pasadena; canceled while still living in Shanghai.", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "FedEx Ground", "sector": "Operations", "role": "Operations", "note": "Completed initial onboarding paperwork weeks before accepting TikTok; passed.", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Meta", "sector": "Tech & AI", "role": "Policy / Integrity Operations", "note": "Completed multi-round interviews with Trust & Safety / Policy recruiting.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Amazon", "sector": "Tech & AI", "role": "Senior Program Manager", "note": "Completed phone screen and interview loop preparation.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Etsy", "sector": "Marketplaces", "role": "Senior Manager, Marketplace Safety", "note": "Completed Google Meet interview rounds with Talent Acquisition.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "DoorDash", "sector": "Marketplaces", "role": "Manager, Trust & Safety", "note": "Completed phone screen and Marketplace Quality manager interview before they passed.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Vimeo", "sector": "Media & Streaming", "role": "Manager, Trust & Safety", "note": "Completed Trust & Safety manager interview and a follow-up feedback call.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Shutterstock", "sector": "Media & Streaming", "role": "Director, Content & Policy", "note": "Completed executive recruiting interview stage.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Match Group", "sector": "Consumer Social", "role": "Trust & Safety", "note": "Completed initial phone interview before they passed.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Trend Micro (Taipei)", "sector": "SaaS & Cyber", "role": "Technical Writer (Taipei)", "note": "Submitted a 500-word technical writing essay and joined a 2-hour Taipei Zoom test an hour early due to a Central Standard Time vs. China Standard Time mix-up while traveling.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "brightwheel", "sector": "EdTech & Education", "role": "Sales Development", "note": "Completed phone screen and a 1.5-hour virtual onsite role-play the same week TikTok extended its offer.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "micro1", "sector": "Tech & AI", "role": "AI Specialist", "note": "Completed AI technical interview.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "NYC Teaching Collaborative", "sector": "EdTech & Education", "role": "Partner Teacher Fellow", "note": "Completed phone interview; not selected for the winter cohort.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Interstate Logistics", "sector": "Operations", "role": "Account Executive", "note": "Completed a 2-hour on-site interview in Murfreesboro.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Catalyst Leadership", "sector": "Operations", "role": "Campaign Development", "note": "Completed preliminary and second-round executive interviews.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Sumdog", "sector": "EdTech & Education", "role": "Marketing Assistant", "note": "Completed video interview for an education role.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Book Land School (Seoul)", "sector": "EdTech & Education", "role": "English Instructor (Mapo)", "note": "Completed Skype interview via an overseas recruiting agency.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Gwacheon JLS (Korea)", "sector": "EdTech & Education", "role": "English Instructor", "note": "Invited to an in-person interview in Korea.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Meten English", "sector": "EdTech & Education", "role": "English Instructor (Shenzhen)", "note": "Invited to a Skype interview with recruiting.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Varsity Tutors", "sector": "EdTech & Education", "role": "Instructor / Tutor", "note": "Completed video interview rounds.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "New Oriental", "sector": "EdTech & Education", "role": "Instructor", "note": "Scheduled interview stage in China.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Tennessee General Assembly", "sector": "Policy & Legal", "role": "Legislative Bill Clerk / Proofreader", "note": "Referred for a legislative research role; resume forwarded to House and Senate leadership.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Murfreesboro City Schools", "sector": "EdTech & Education", "role": "Educator", "note": "Completed an in-person interview at the district administrative offices.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Adventure Teaching", "sector": "EdTech & Education", "role": "Instructor Abroad", "note": "Completed admissions interview.", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Anthropic", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Character.AI", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Runway", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Grammarly", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Dataiku", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Coinbase", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Cash App (Block)", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "SoFi", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Visa", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Citi", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Robinhood", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "OpenFin", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Gemini", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Discord", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Reddit", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "X (Twitter)", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Snap Inc.", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Spotify", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Frame.io", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Jellysmack", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Deezer", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Epic Games", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Riot Games", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "BMI (Broadcast Music)", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Dailymotion", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Airbnb", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Thumbtack", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Whatnot", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Grailed", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "BARK (BarkBox)", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "ASOS", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Salesforce", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Zoom", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Klaviyo", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "BetterCloud", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Superhuman", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Navan (TripActions)", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "BigCommerce", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Eventbrite", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "GoDaddy", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Veriff", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Amobee", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Aeolus Robotics", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Cond\u00e9 Nast", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "FORTUNE", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "The Motley Fool", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Wieden+Kennedy", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Genius", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "SmartNews", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Free Agency", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "VAWAA", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Kickstarter", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "MasterClass", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Skillshare", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Udemy", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Multiverse", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Brainly", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Kahoot!", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "NoRedInk", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Renaissance Learning", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Teachable", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Kaplan International", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Uncommon Schools", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "WorldStrides", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "McKinsey & Company", "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "PwC", "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "New Sector Alliance", "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Bridgestone", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Public Storage", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Ramsey Solutions", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Rev.com", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Shane Co.", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Soltanian & Company", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "MJH Life Sciences", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "TTEC", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Hoops HR", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Allure Marketing", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "Luxe NYC", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2, "note": "Application reviewed; automated or recruiter pass without interview."}, {"name": "OpenAI", "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Netflix", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Tesla", "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Microsoft", "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Mozilla", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Slack", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Figma", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "MongoDB", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Dell Technologies", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Auth0", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "UiPath", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "TripleLift", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "WeTransfer", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "LogRhythm", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Smarsh", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Zeta Global", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Intuit", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "IDEMIA", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Hologram", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Postlight", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Calendly", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "JumpCloud", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "LivePerson", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Procore", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Veeva Systems", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Acquia", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "ADP", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Degreed", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "HackerOne", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Slab", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Vitally", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Textline", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Indicative", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Avochato", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Chameleon", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Cumul.io", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Digify", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "EasyLlama", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Instnt", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Negotiatus", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Occupier", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Orbiit", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Staffbase", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Synology", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Betterworks", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "HBO", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Bumble", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "rednote", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Patreon", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Strava", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Blind", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "MrBeast", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Rockstar Games", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Angel Studios", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "BSE Global (Nets)", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Major League Soccer", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Overtime", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Forbes Media", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Morning Brew", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Dotdash Meredith", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Group Nine Media", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Wasserman", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Laundry Service", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Hypebeast", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Culture Trip", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "E.W. Scripps", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "FOX", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Highwire PR", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "RAPP", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "SUAVV Magazine", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "The Hill", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "The Hustle", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "McKinney", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Dirty Work Media", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "CM Group", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Alchemy Worx", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Creadits", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Insense", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Binance", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Crypto.com", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "ConsenSys", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Polymarket", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Plaid", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Chainalysis", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Magic Eden", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Acorns", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Simply Wall St", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Wise", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "American Express", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Returnly", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Instacart", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "KAYAK", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Compass", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Allbirds", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Rent the Runway", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Redbubble", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "TeePublic", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "WeWork", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Cider", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Bear Mattress", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Hairstory", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Taika", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Perfect Day", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Nutrabolt", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Zoomo", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Deloitte", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Council on Foreign Relations", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "United Nations", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "AmeriCorps", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Special Olympics", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Recidiviz", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Paladin", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "LawTrades", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Chegg", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Newsela", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "IXL Learning", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "360Learning", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Curriculum Associates", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Mystery Science", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "BetterLesson", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "BrainPOP", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Scholastic", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Screencastify", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "BASIS International", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "iTutorGroup", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "EF Education First", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "SayABC", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "JET Program USA", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "Chateau School (Tokyo)", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "CodeCombat", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}, {"name": "LearnCube", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1, "note": "Application confirmation received; no further reply."}];
+    const COMPANIES = [{"name": "YouTube (Google)", "sector": "Tech & AI", "role": "Trust & Safety Policy / Product", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "TikTok (ByteDance)", "sector": "Consumer Social", "role": "Team Lead, Trust & Safety", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "Teachers Pay Teachers", "sector": "EdTech & Education", "role": "Content Moderation Specialist", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "RebelBase", "sector": "SaaS & Startups", "role": "Content Writer", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "Scale AI", "sector": "Tech & AI", "role": "AI Red-Teaming & Evaluation", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "ELC Shanghai", "sector": "EdTech & Education", "role": "Headmaster", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "YBM ECC (Seoul)", "sector": "EdTech & Education", "role": "English Instructor", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "OMSI", "sector": "EdTech & Education", "role": "Outdoor Science Instructor", "outcome": "built", "outcome_label": "Accepted", "stage_depth": 5}, {"name": "DoubleVerify", "sector": "SaaS & Cyber", "role": "Trust & Safety / Brand Safety", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "OpenSea", "sector": "Fintech & Web3", "role": "Trust & Safety Policy", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Pathrise", "sector": "EdTech & Education", "role": "Admissions Operations", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Outlier AI", "sector": "Tech & AI", "role": "Dolphin Genesis Expert", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Seocho Avalon (Seoul)", "sector": "EdTech & Education", "role": "English Instructor (Gangnam)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Berlitz Japan (Tokyo)", "sector": "EdTech & Education", "role": "Instructor (Minato-ku, Tokyo)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Urban Teachers", "sector": "EdTech & Education", "role": "Teaching Fellow", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Epic Systems", "sector": "SaaS & Cyber", "role": "Project Manager / Operations", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Amity Corp (Japan)", "sector": "EdTech & Education", "role": "Instructor (Japan)", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Wang Law Office", "sector": "Policy & Legal", "role": "Mandarin-Speaking Paralegal", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "FedEx Ground", "sector": "Operations", "role": "Operations", "outcome": "i_passed", "outcome_label": "I Passed", "stage_depth": 4}, {"name": "Meta", "sector": "Tech & AI", "role": "Policy / Integrity Operations", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Amazon", "sector": "Tech & AI", "role": "Senior Program Manager", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Etsy", "sector": "Marketplaces", "role": "Senior Manager, Marketplace Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "DoorDash", "sector": "Marketplaces", "role": "Manager, Trust & Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Vimeo", "sector": "Media & Streaming", "role": "Manager, Trust & Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Shutterstock", "sector": "Media & Streaming", "role": "Director, Content & Policy", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Match Group", "sector": "Consumer Social", "role": "Trust & Safety", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Trend Micro (Taipei)", "sector": "SaaS & Cyber", "role": "Technical Writer (Taipei)", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "brightwheel", "sector": "EdTech & Education", "role": "Sales Development", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "micro1", "sector": "Tech & AI", "role": "AI Specialist", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "NYC Teaching Collaborative", "sector": "EdTech & Education", "role": "Partner Teacher Fellow", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Interstate Logistics", "sector": "Operations", "role": "Account Executive", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Catalyst Leadership", "sector": "Operations", "role": "Campaign Development", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Sumdog", "sector": "EdTech & Education", "role": "Marketing Assistant", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Book Land School (Seoul)", "sector": "EdTech & Education", "role": "English Instructor (Mapo)", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Gwacheon JLS (Korea)", "sector": "EdTech & Education", "role": "English Instructor", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Meten English", "sector": "EdTech & Education", "role": "English Instructor (Shenzhen)", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Varsity Tutors", "sector": "EdTech & Education", "role": "Instructor / Tutor", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "New Oriental", "sector": "EdTech & Education", "role": "Instructor", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Tennessee General Assembly", "sector": "Policy & Legal", "role": "Legislative Bill Clerk / Proofreader", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Murfreesboro City Schools", "sector": "EdTech & Education", "role": "Educator", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Adventure Teaching", "sector": "EdTech & Education", "role": "Instructor Abroad", "outcome": "interviewed", "outcome_label": "Interviewed", "stage_depth": 3}, {"name": "Anthropic", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Character.AI", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Runway", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Grammarly", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Dataiku", "sector": "Tech & AI", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Coinbase", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Cash App (Block)", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "SoFi", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Visa", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Citi", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Robinhood", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "OpenFin", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Gemini", "sector": "Fintech & Web3", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Discord", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Reddit", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "X (Twitter)", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Snap Inc.", "sector": "Consumer Social", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Spotify", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Frame.io", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Jellysmack", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Deezer", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Epic Games", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Riot Games", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "BMI (Broadcast Music)", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Dailymotion", "sector": "Media & Streaming", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Airbnb", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Thumbtack", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Whatnot", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Grailed", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "BARK (BarkBox)", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "ASOS", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Salesforce", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Zoom", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Klaviyo", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "BetterCloud", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Superhuman", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Navan (TripActions)", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "BigCommerce", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Eventbrite", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "GoDaddy", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Veriff", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Amobee", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Aeolus Robotics", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Cond\u00e9 Nast", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "FORTUNE", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "The Motley Fool", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Wieden+Kennedy", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Genius", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "SmartNews", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Free Agency", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "VAWAA", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Kickstarter", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "MasterClass", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Skillshare", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Udemy", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Multiverse", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Brainly", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Kahoot!", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "NoRedInk", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Renaissance Learning", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Teachable", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Kaplan International", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Uncommon Schools", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "WorldStrides", "sector": "EdTech & Education", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "McKinsey & Company", "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "PwC", "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "New Sector Alliance", "sector": "Policy & Legal", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Bridgestone", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Public Storage", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Ramsey Solutions", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Rev.com", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Shane Co.", "sector": "Marketplaces", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Soltanian & Company", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "MJH Life Sciences", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "TTEC", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Hoops HR", "sector": "Operations", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Allure Marketing", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "Luxe NYC", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "they_passed", "outcome_label": "They Passed", "stage_depth": 2}, {"name": "OpenAI", "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Netflix", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Tesla", "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Microsoft", "sector": "Tech & AI", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Mozilla", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Slack", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Figma", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "MongoDB", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Dell Technologies", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Auth0", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "UiPath", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "TripleLift", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "WeTransfer", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "LogRhythm", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Smarsh", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Zeta Global", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Intuit", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "IDEMIA", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Hologram", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Postlight", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Calendly", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "JumpCloud", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "LivePerson", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Procore", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Veeva Systems", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Acquia", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "ADP", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Degreed", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "HackerOne", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Slab", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Vitally", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Textline", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Indicative", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Avochato", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Chameleon", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Cumul.io", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Digify", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "EasyLlama", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Instnt", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Negotiatus", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Occupier", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Orbiit", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Staffbase", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Synology", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Betterworks", "sector": "SaaS & Cyber", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "HBO", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Bumble", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "rednote", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Patreon", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Strava", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Blind", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "MrBeast", "sector": "Consumer Social", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Rockstar Games", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Angel Studios", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "BSE Global (Nets)", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Major League Soccer", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Overtime", "sector": "Media & Streaming", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Forbes Media", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Morning Brew", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Dotdash Meredith", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Group Nine Media", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Wasserman", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Laundry Service", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Hypebeast", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Culture Trip", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "E.W. Scripps", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "FOX", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Highwire PR", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "RAPP", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "SUAVV Magazine", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "The Hill", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "The Hustle", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "McKinney", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Dirty Work Media", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "CM Group", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Alchemy Worx", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Creadits", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Insense", "sector": "Editorial & Agencies", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Binance", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Crypto.com", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "ConsenSys", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Polymarket", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Plaid", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Chainalysis", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Magic Eden", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Acorns", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Simply Wall St", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Wise", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "American Express", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Returnly", "sector": "Fintech & Web3", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Instacart", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "KAYAK", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Compass", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Allbirds", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Rent the Runway", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Redbubble", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "TeePublic", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "WeWork", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Cider", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Bear Mattress", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Hairstory", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Taika", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Perfect Day", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Nutrabolt", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Zoomo", "sector": "Marketplaces", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Deloitte", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Council on Foreign Relations", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "United Nations", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "AmeriCorps", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Special Olympics", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Recidiviz", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Paladin", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "LawTrades", "sector": "Policy & Legal", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Chegg", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Newsela", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "IXL Learning", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "360Learning", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Curriculum Associates", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Mystery Science", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "BetterLesson", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "BrainPOP", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Scholastic", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Screencastify", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "BASIS International", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "iTutorGroup", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "EF Education First", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "SayABC", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "JET Program USA", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "Chateau School (Tokyo)", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "CodeCombat", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}, {"name": "LearnCube", "sector": "EdTech & Education", "role": "Applied", "outcome": "silence", "outcome_label": "Silence", "stage_depth": 1}];
 
     const COLORS = {
       built: '#7ED49E',
@@ -1015,22 +1001,13 @@
     let selectedCompany = COMPANIES[0];
     let hoveredNode = null;
 
-    // Physics + Horizon Fan state
     const canvas = document.getElementById('inkStage');
     const ctx = canvas.getContext('2d');
-    let W = 1080, H = 540, dpr = 1;
+    let W = 1080, H = 510, dpr = 1;
     let nodes = [];
-    let animPhase = 0; // 0..1 drop into fan
 
     function initNodes() {
-      // Group companies by outcome so each outcome forms a full 180-degree concentric arch
-      const byOutcome = {
-        built: [],
-        i_passed: [],
-        interviewed: [],
-        they_passed: [],
-        silence: []
-      };
+      const byOutcome = { built: [], i_passed: [], interviewed: [], they_passed: [], silence: [] };
       COMPANIES.forEach(c => {
         if (byOutcome[c.outcome]) byOutcome[c.outcome].push(c);
       });
@@ -1066,10 +1043,7 @@
             angle,
             ringFrac,
             r: cfg.rPx,
-            x: 0,
-            y: 0,
-            tx: 0,
-            ty: 0,
+            x: 0, y: 0, tx: 0, ty: 0,
             delay: Math.min(0.55, globalIdx * 0.0018),
           });
           globalIdx++;
@@ -1092,7 +1066,6 @@
       const cx = W * 0.5;
       const cy = H - 32;
       const maxR = Math.min(W * 0.46, H - 56);
-
       nodes.forEach(n => {
         const rad = maxR * n.ringFrac;
         n.tx = cx + Math.cos(n.angle) * rad;
@@ -1118,7 +1091,6 @@
       const cy = H - 32;
       const maxR = Math.min(W * 0.46, H - 56);
 
-      // Architectural semi-circular ink guides
       ctx.strokeStyle = '#E6E4DD';
       ctx.lineWidth = 1;
       [0.25, 0.41, 0.57, 0.745, 0.905].forEach(rf => {
@@ -1127,7 +1099,6 @@
         ctx.stroke();
       });
 
-      // Top ink nib positioned right above the outer arch
       const archTopY = Math.max(18, cy - maxR - 14);
       ctx.strokeStyle = '#0A0A0A';
       ctx.lineWidth = 1.2;
@@ -1138,7 +1109,6 @@
       ctx.lineTo(cx + 2, archTopY);
       ctx.stroke();
 
-      // Horizon ground rule
       ctx.strokeStyle = '#0A0A0A';
       ctx.lineWidth = 1.5;
       ctx.beginPath();
@@ -1146,7 +1116,6 @@
       ctx.lineTo(W - 24, cy);
       ctx.stroke();
 
-      // Draw radial spokes for Built Here & I Passed & Interviewed
       nodes.forEach(n => {
         const match = activeFilter === 'all' || n.data.outcome === activeFilter;
         const localT = Math.max(0, Math.min(1, (elapsed - n.delay) / 1.15));
@@ -1179,7 +1148,6 @@
         }
       });
 
-      // Draw nodes (outer rings first so inner high-signal rings sit on top)
       for (let i = nodes.length - 1; i >= 0; i--) {
         const n = nodes[i];
         const match = activeFilter === 'all' || n.data.outcome === activeFilter;
@@ -1198,13 +1166,11 @@
         ctx.fill();
         ctx.stroke();
 
-        // Clean, non-overlapping label only for the active/hovered node
         if (match && (isSel || isHov) && elapsed > 0.85) {
           ctx.font = '500 11px "JetBrains Mono", monospace';
           const label = n.data.name;
           const textW = ctx.measureText(label).width;
-          const padX = 8;
-          const boxW = textW + padX * 2;
+          const boxW = textW + 16;
           const boxH = 20;
           let lx = n.x;
           let ly = n.y - rad - 16;
@@ -1224,13 +1190,11 @@
         ctx.restore();
       }
 
-      // Center pivot ink dot
       ctx.fillStyle = '#0A0A0A';
       ctx.beginPath();
       ctx.arc(cx, cy, 4.5, 0, Math.PI * 2);
       ctx.fill();
 
-      // Horizon labels
       ctx.fillStyle = '#4A4945';
       ctx.font = (W < 600 ? '400 9px' : '400 10.5px') + ' "JetBrains Mono", monospace';
       if (W < 600) {
@@ -1248,7 +1212,6 @@
       }
     }
 
-    // Pointer interaction on Horizon Fan
     const tooltip = document.getElementById('inkTooltip');
     canvas.addEventListener('mousemove', (e) => {
       const rect = canvas.getBoundingClientRect();
@@ -1274,9 +1237,8 @@
         tag.textContent = best.data.outcome_label;
         tag.style.background = COLORS[best.data.outcome];
         document.getElementById('ttRole').textContent = best.data.sector + ' · ' + best.data.role;
-        document.getElementById('ttNote').textContent = best.data.note;
         tooltip.classList.add('visible');
-        const tx = Math.min(window.innerWidth - 330, e.clientX + 16);
+        const tx = Math.min(window.innerWidth - 310, e.clientX + 16);
         const ty = Math.max(16, e.clientY - 20);
         tooltip.style.left = tx + 'px';
         tooltip.style.top = ty + 'px';
@@ -1293,7 +1255,8 @@
 
     canvas.addEventListener('click', () => {
       if (hoveredNode) {
-        selectCompany(hoveredNode.data);
+        selectedCompany = hoveredNode.data;
+        requestAnimationFrame(tick);
       }
     });
 
@@ -1302,141 +1265,25 @@
       document.querySelectorAll('.swatch-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.filter === filter);
       });
-      renderCompanyPills();
+      const firstMatch = filter === 'all' ? COMPANIES[0] : COMPANIES.find(c => c.outcome === filter);
+      if (firstMatch) selectedCompany = firstMatch;
       requestAnimationFrame(tick);
     }
 
-    function selectCompany(c) {
-      selectedCompany = c;
-      document.getElementById('selName').textContent = c.name;
-      document.getElementById('selMeta').textContent = `${c.outcome_label} · ${c.sector} · ${c.role}`;
-      document.getElementById('selNote').textContent = c.note;
-      document.querySelectorAll('.c-pill').forEach(el => {
-        el.classList.toggle('selected', el.dataset.name === c.name);
-      });
-      requestAnimationFrame(tick);
+    function openLetter() {
+      document.getElementById('envelopeClosed').style.display = 'none';
+      document.getElementById('letterOpenWrap').classList.add('open');
     }
-
-    function renderCompanyPills() {
-      const container = document.getElementById('companyPills');
-      const filtered = activeFilter === 'all'
-        ? COMPANIES
-        : COMPANIES.filter(c => c.outcome === activeFilter);
-
-      const labels = {
-        all: 'Showing all 250 deduplicated companies (click any node or pill)',
-        built: '8 companies where I accepted an offer',
-        i_passed: '11 offers & final-round interviews I turned down or withdrew from',
-        interviewed: '22 companies where I interviewed before they passed',
-        they_passed: '78 companies that sent an automated or resume-screen pass',
-        silence: '131 applications that never replied'
-      };
-      document.getElementById('stripHeading').textContent = labels[activeFilter];
-
-      container.innerHTML = '';
-      filtered.forEach(c => {
-        const btn = document.createElement('button');
-        btn.className = 'c-pill' + (selectedCompany && selectedCompany.name === c.name ? ' selected' : '');
-        btn.dataset.name = c.name;
-        btn.innerHTML = `<span class="dot" style="background:${COLORS[c.outcome]}"></span><span>${c.name}</span>`;
-        btn.onclick = () => selectCompany(c);
-        container.appendChild(btn);
-      });
-
-      if (filtered.length && (!selectedCompany || !filtered.includes(selectedCompany))) {
-        selectCompany(filtered[0]);
+    function closeLetter() {
+      document.getElementById('letterOpenWrap').classList.remove('open');
+      document.getElementById('envelopeClosed').style.display = 'block';
+    }
+    document.getElementById('envelopeClosed').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLetter();
       }
-    }
-
-    // 24-Hour Inbox Clock (Hand-drawn ink aesthetic)
-    function drawClock() {
-      const cc = document.getElementById('clockCanvas');
-      if (!cc) return;
-      const cctx = cc.getContext('2d');
-      const cw = cc.width, ch = cc.height;
-      const cx = cw / 2, cy = ch / 2;
-      const maxR = 138, innerR = 46;
-
-      // Hourly distribution from deduplicated timestamps
-      const hours = [
-        {"h":0,"rej":26,"int":1,"app":38},{"h":1,"rej":22,"int":0,"app":31},
-        {"h":2,"rej":19,"int":0,"app":24},{"h":3,"rej":24,"int":1,"app":22},
-        {"h":4,"rej":18,"int":0,"app":19},{"h":5,"rej":15,"int":1,"app":21},
-        {"h":6,"rej":14,"int":2,"app":28},{"h":7,"rej":16,"int":4,"app":36},
-        {"h":8,"rej":19,"int":9,"app":48},{"h":9,"rej":24,"int":18,"app":64},
-        {"h":10,"rej":28,"int":26,"app":78},{"h":11,"rej":25,"int":29,"app":82},
-        {"h":12,"rej":22,"int":21,"app":74},{"h":13,"rej":26,"int":28,"app":80},
-        {"h":14,"rej":29,"int":31,"app":86},{"h":15,"rej":27,"int":27,"app":79},
-        {"h":16,"rej":23,"int":22,"app":68},{"h":17,"rej":19,"int":14,"app":58},
-        {"h":18,"rej":16,"int":8,"app":52},{"h":19,"rej":14,"int":5,"app":49},
-        {"h":20,"rej":15,"int":4,"app":54},{"h":21,"rej":17,"int":3,"app":51},
-        {"h":22,"rej":21,"int":2,"app":46},{"h":23,"rej":24,"int":1,"app":41}
-      ];
-
-      cctx.clearRect(0, 0, cw, ch);
-
-      // Rings
-      [innerR, 82, 114, maxR].forEach(r => {
-        cctx.strokeStyle = r === innerR || r === maxR ? '#0A0A0A' : '#E6E4DD';
-        cctx.lineWidth = r === innerR ? 1.2 : 0.8;
-        cctx.beginPath();
-        cctx.arc(cx, cy, r, 0, Math.PI * 2);
-        cctx.stroke();
-      });
-
-      hours.forEach((d, h) => {
-        const a0 = (h / 24) * Math.PI * 2 - Math.PI / 2 + 0.02;
-        const a1 = ((h + 0.82) / 24) * Math.PI * 2 - Math.PI / 2;
-
-        // Rejection bar (Coral)
-        const rRej = innerR + (d.rej / 32) * (maxR - innerR) * 0.55;
-        cctx.fillStyle = '#F4937A';
-        cctx.strokeStyle = '#0A0A0A';
-        cctx.lineWidth = 0.9;
-        cctx.beginPath();
-        cctx.arc(cx, cy, rRej, a0, a1);
-        cctx.arc(cx, cy, innerR, a1, a0, true);
-        cctx.closePath();
-        cctx.fill();
-        cctx.stroke();
-
-        // Human interview/offer bar (Mint/Periwinkle) stacked outward
-        const rInt = rRej + (d.int / 32) * (maxR - innerR) * 0.52;
-        if (d.int > 1) {
-          cctx.fillStyle = h >= 9 && h <= 16 ? '#7ED49E' : '#8C97D8';
-          cctx.beginPath();
-          cctx.arc(cx, cy, rInt, a0, a1);
-          cctx.arc(cx, cy, rRej, a1, a0, true);
-          cctx.closePath();
-          cctx.fill();
-          cctx.stroke();
-        }
-      });
-
-      // Clock labels
-      cctx.fillStyle = '#0A0A0A';
-      cctx.font = '500 10px "JetBrains Mono", monospace';
-      cctx.textAlign = 'center';
-      cctx.textBaseline = 'middle';
-      cctx.fillText('12 AM', cx, cy - maxR - 14);
-      cctx.fillText('6 AM', cx + maxR + 20, cy);
-      cctx.fillText('12 PM', cx, cy + maxR + 14);
-      cctx.fillText('6 PM', cx - maxR - 20, cy);
-
-      cctx.font = '400 13px "Instrument Serif", serif';
-      cctx.fillText('24h', cx, cy);
-    }
-
-    function openArtModal(src, title, med, note) {
-      document.getElementById('modalImg').src = src;
-      document.getElementById('modalTitle').textContent = title;
-      document.getElementById('modalMed').textContent = med;
-      document.getElementById('modalNote').textContent = note;
-      document.getElementById('artModal').classList.add('open');
-    }
-    function closeArtModal() {
-      document.getElementById('artModal').classList.remove('open');
-    }
+    });
 
     window.addEventListener('resize', () => {
       resizeStage();
@@ -1445,8 +1292,6 @@
 
     initNodes();
     resizeStage();
-    renderCompanyPills();
-    drawClock();
     requestAnimationFrame(tick);
   </script>
 </body>
