@@ -1,8 +1,11 @@
-company,role,sector,date,outcome,days_elapsed,notes
-Acme AI,Product Manager,Tech & AI,2026-01-12,Accepted,24,Offer accepted
-Vanguard Labs,Policy Lead,Tech & AI,2026-01-18,I Passed,19,Withdrew after accepting competing offer
-Northstar Media,Content Strategist,Media & Editorial,2026-01-25,Interviewed,11,Reached final round
-Beacon Health,Operations Manager,Civic & Policy,2026-02-02,They Passed,6,"Unfortunately we are not moving forward with your application at this time after careful consideration"
-Harbor Fintech,Trust & Safety,Fintech & Web3,2026-02-08,They Passed,3,"Thank you for applying. We had a high volume of other candidates and will keep your resume on file."
-Cascade Robotics,AI Policy,Tech & AI,2026-02-14,Silence,,
-Loomworks,Program Manager,EdTech,2026-02-20,Silence,,
+company,role,roleLevel,department,sector,appliedDate,lastTouchDate,outcome,days_elapsed,resume_variant,notes
+Acme AI,Product Manager,Manager,Product Management,Tech & AI,2026-01-12,2026-02-05,Accepted,24,v1_executive_summary,Offer accepted after final round
+Vanguard Labs,Policy Lead,Lead / Staff,Trust & Safety / Policy,Tech & AI,2026-01-18,2026-02-06,I Passed,19,v1_executive_summary,Withdrew after accepting competing offer
+Northstar Media,Content Strategist,Mid / Specialist,Editorial / Education,Media & Editorial,2026-01-25,2026-02-05,Interviewed,11,v3_minimalist,Reached final round
+Beacon Health,Operations Manager,Manager,Operations & Programs,Civic & Policy,2026-02-02,2026-02-08,They Passed,6,v3_minimalist,"Unfortunately we are not moving forward with your application at this time after careful consideration"
+Harbor Fintech,Trust & Safety Architect,Senior IC,Trust & Safety / Policy,Fintech & Risk,2026-02-08,2026-02-11,They Passed,3,v2_technical_deepdive,"Thank you for applying. We had a high volume of other candidates and will keep your resume on file."
+Cipher Cloud,Security Program Manager,Manager,Engineering / Security,Tech & AI,2026-02-10,2026-02-17,Interviewed,7,v2_technical_deepdive,Completed technical risk deep-dive
+Cascade Robotics,AI Policy Specialist,Mid / Specialist,Trust & Safety / Policy,Tech & AI,2026-01-04,2026-01-04,Silence,,v3_minimalist,
+Loomworks,Program Manager,Manager,Operations & Programs,Education & EdTech,2026-01-08,2026-01-08,Silence,,v3_minimalist,
+Sentinel Systems,Technical Product Manager,Manager,Product Management,Tech & AI,2026-02-14,2026-02-19,They Passed,5,v2_technical_deepdive,"Decided to pursue candidates more closely aligned"
+Atlas Civic,Director of Operations,Executive / Director,Operations & Programs,Civic & Policy,2026-02-18,2026-02-27,Interviewed,9,v1_executive_summary,Recruiter screen and hiring manager chat

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Levi J. Higgs — Curriculum Vitae</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -76,10 +77,20 @@
       font-size: 0.74rem;
       color: var(--ink-mid);
     }
-    .paper-contact a {
+    .paper-contact a, .paper-contact-btn {
       color: var(--ink);
       text-decoration: none;
-      border-bottom: 1px solid var(--ink);
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #B5B1A6;
+      font-family: inherit;
+      font-size: inherit;
+      cursor: pointer;
+      padding: 0;
+    }
+    .paper-contact a:hover, .paper-contact-btn:hover {
+      background: var(--c-built);
+      border-bottom-color: var(--ink);
     }
     .paper-sec-title {
       font-family: 'JetBrains Mono', monospace;
@@ -171,10 +182,116 @@
     .paper-bullets a {
       color: var(--ink);
       text-decoration: none;
-      border-bottom: 1px solid var(--ink);
+      border-bottom: 1px solid #B5B1A6;
+      transition: background 0.12s, border-color 0.12s;
     }
     .paper-bullets a:hover {
       background: var(--c-passed);
+      border-bottom-color: var(--ink);
+    }
+    .paper-subrole a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid #B5B1A6;
+    }
+    .paper-subrole a:hover {
+      background: var(--c-passed);
+      border-bottom-color: var(--ink);
+    }
+    .msg-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      background: rgba(10, 10, 10, 0.42);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .msg-modal-backdrop.open { display: flex; }
+    .msg-modal-card {
+      width: 100%;
+      max-width: 460px;
+      background: #FFFFFF;
+      border: 1.5px solid #0A0A0A;
+      box-shadow: 7px 7px 0 #0A0A0A;
+      padding: 24px 26px;
+    }
+    .msg-modal-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+    .msg-modal-head h3 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    .msg-close {
+      background: transparent;
+      border: 1px solid var(--rule);
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+    }
+    .msg-field { margin-bottom: 12px; }
+    .msg-field label {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-mid);
+      margin-bottom: 4px;
+    }
+    .msg-field input, .msg-field textarea {
+      width: 100%;
+      border: 1.2px solid #0A0A0A;
+      background: #FAF8F2;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      padding: 9px 11px;
+    }
+    .msg-submit-btn {
+      width: 100%;
+      padding: 11px 16px;
+      background: var(--c-built);
+      color: var(--ink);
+      border: 1.5px solid #0A0A0A;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .msg-status {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      min-height: 1.3em;
+      margin-top: 8px;
+      color: #047857;
+    }
+    .msg-status.err { color: #B45309; }
+    .msg-copy-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--rule);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--ink-mid);
+    }
+    .msg-copy-btn {
+      background: #FAF8F2;
+      border: 1px solid #0A0A0A;
+      padding: 4px 9px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      cursor: pointer;
     }
     .paper-compact-list {
       display: grid;
@@ -183,7 +300,7 @@
 
     @media print {
       body { background: #fff; padding: 0; }
-      .top-bar { display: none; }
+      .top-bar, .msg-modal-backdrop { display: none !important; }
       .paper-sheet { border: none; box-shadow: none; padding: 0; }
     }
   </style>
@@ -191,14 +308,17 @@
 <body>
   <div class="top-bar">
     <a href="index.html">← Back to Levi Higgs</a>
-    <button onclick="window.print()">Print / Save PDF</button>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <a href="https://www.linkedin.com/in/levi-higgs/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <button onclick="window.print()">Print / Save PDF</button>
+    </div>
   </div>
   
           <div class="paper-sheet">
             <div class="paper-head">
               <h1>LEVI J. HIGGS</h1>
               <div class="paper-contact">
-                <a href="mailto:levijameshiggs@gmail.com">levijameshiggs@gmail.com</a> &nbsp;|&nbsp; New York, NY
+                <button type="button" class="paper-contact-btn" onclick="openResumeModal()">levijameshiggs@gmail.com</button> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/levi-higgs/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(10,10,10,0.35);">linkedin.com/in/levi-higgs</a> &nbsp;|&nbsp; New York, NY
               </div>
             </div>
 
@@ -207,7 +327,7 @@
             <div class="paper-role-block">
               <div class="paper-org-row">
                 <span class="paper-dates">Aug 2022 – present</span>
-                <span class="paper-org">GOOGLE – YOUTUBE</span>
+                <span class="paper-org"><a href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/" target="_blank" rel="noopener">GOOGLE – YOUTUBE</a></span>
                 <span class="paper-loc">New York, NY</span>
               </div>
 
@@ -216,13 +336,13 @@
                 <span class="paper-subrole">Product Manager Rotation, Creator Policy Experience</span>
               </div>
               <ul class="paper-bullets">
-                <li>Introduced targeted upload frictions, using age-appropriate classifiers, in the user flow to reduce Violative View Rate, the staple metric in <a href="https://transparencyreport.google.com/youtube-policy/removals" target="_blank" rel="noopener">YouTube’s Transparency Report</a>, scaling to 35M triggers/week, achieving 18% enforcement reduction and 75% positive creator feedback, roadmapped to grow in the future.</li>
-                <li>Designed evaluation frameworks and launched risk-adjusted GenAI policy snippets for Child Safety; across verticals, 2M AI snippets in 80+ languages resulted in reduced appeals while 100% free from policy leaks.</li>
+                <li>Introduced targeted upload frictions, using age-appropriate classifiers, in the user flow to reduce <a href="https://transparencyreport.google.com/youtube-policy/removals" target="_blank" rel="noopener">Violative View Rate</a>, the staple metric in <a href="https://transparencyreport.google.com/youtube-policy/removals" target="_blank" rel="noopener">YouTube’s Transparency Report</a>, scaling to 35M triggers/week, achieving 18% enforcement reduction and 75% positive creator feedback, roadmapped to grow in the future.</li>
+                <li>Designed evaluation frameworks and launched risk-adjusted GenAI policy snippets for <a href="https://support.google.com/youtube/answer/2801999" target="_blank" rel="noopener">Child Safety</a>; across verticals, 2M AI snippets in 80+ languages resulted in reduced appeals while 100% free from policy leaks.</li>
               </ul>
 
               <div class="paper-subrole-row">
                 <span class="paper-dates"></span>
-                <span class="paper-subrole">Policy Enforcement Manager, Adult Content <span class="paper-muted">(Level promotion with high rating in November 2025)</span></span>
+                <span class="paper-subrole">Policy Enforcement Manager, <a href="https://support.google.com/youtube/answer/2802002" target="_blank" rel="noopener">Adult Content</a> <span class="paper-muted">(Level promotion with high rating in November 2025)</span></span>
               </div>
               <ul class="paper-bullets">
                 <li>Reduced vertical VVR by 87% through innovative policy and automation initiatives; incentivized leadership to adopt and implement these initiatives across the full Trust and Safety organization.</li>
@@ -231,15 +351,15 @@
                 <li>Designed and implemented content-classification and labeling systems using atomic facts to derive enforcement decisions, expedite data set sourcing, and identify edge cases and gaps in guidelines.</li>
                 <li>Established YouTube’s Product Agnostic AI policies to ensure enforcement coverage on fast-launch initiatives across video, image, text, link, and audio products.</li>
                 <li>Built and deployed, using AI, a suite of apps and extensions reclaiming 5,000+ FTE hours annually; won 1st place in back-to-back Google Innovation Week competitions for AI products such as <em>“Policy as Code”</em>.</li>
-                <li>Served as the SME for Adult Content, advising on escalations at the highest legal, social, and political levels; partnered across Engineering, Legal, Product, and Executive stakeholders, including subpoena response documentation, to align enforcement guidelines globally.</li>
+                <li>Served as the SME for <a href="https://support.google.com/youtube/answer/2802002" target="_blank" rel="noopener">Adult Content</a>, advising on escalations at the highest legal, social, and political levels; partnered across Engineering, Legal, Product, and Executive stakeholders, including subpoena response documentation, to align enforcement guidelines globally.</li>
               </ul>
 
               <div class="paper-subrole-row">
                 <span class="paper-dates"></span>
-                <span class="paper-subrole">AI Principles Pioneer, Google Responsible Innovation</span>
+                <span class="paper-subrole"><a href="https://ai.google/responsibility/principles/" target="_blank" rel="noopener">AI Principles Pioneer</a>, Google Responsible Innovation</span>
               </div>
               <ul class="paper-bullets">
-                <li>Participated in Red Team and Adversarial testing for Google’s frontier AI models, products, and robotics.</li>
+                <li>Participated in Red Team and Adversarial testing for <a href="https://ai.google/responsibility/principles/" target="_blank" rel="noopener">Google’s frontier AI models, products, and robotics</a>.</li>
               </ul>
             </div>
 
@@ -255,7 +375,7 @@
                 <span class="paper-subrole">Operations Manager, Trust and Safety</span>
               </div>
               <ul class="paper-bullets">
-                <li>Managed the largest internal team in North America, with 7 Team Leads and 130 Content Specialists accounting for 75% of the site’s business by volume.</li>
+                <li>Managed the largest internal team in North America, with 7 Team Leads and 130 Content Specialists accounting for <a href="https://www.tiktok.com/transparency/en-us/community-guidelines-enforcement-2023-4/" target="_blank" rel="noopener">75% of the site’s business by volume</a>.</li>
                 <li>Verticalized teams by content, language, and quality; launched the firm’s first Golden Set quality process.</li>
                 <li>Ratified the site’s moderator performance review, encompassing over 25 workflows and 300 moderators.</li>
                 <li>Directed the addition of 24/7 IP request tickets into the content moderation business.</li>
@@ -269,7 +389,7 @@
                 <li>Led a content engineering cohort aimed to curate notifications to increase daily active users.</li>
                 <li>Transitioned the team to Follow the Sun model coverage, managing 40 agents across 4 shifts.</li>
                 <li>Created the training curriculum for new Team Leads, eventually hiring and scaling the training org.</li>
-                <li>Partnered with brands to protect key ad campaigns and platform initiatives (CBS, NCAA, Buick).</li>
+                <li>Partnered with brands to protect key ad campaigns and platform initiatives (<a href="https://www.cbs.com/" target="_blank" rel="noopener">CBS</a>, <a href="https://www.ncaa.com/march-madness" target="_blank" rel="noopener">NCAA</a>, <a href="https://www.buick.com/" target="_blank" rel="noopener">Buick</a>).</li>
               </ul>
             </div>
 
@@ -284,7 +404,7 @@
                 <span class="paper-subrole">Consultant, Marketplace Integrity</span>
               </div>
               <ul class="paper-bullets">
-                <li>Validated a marketplace corpus of over 7M original resources used by ~85% of U.S. PreK–12 educators; applied child developmental psychology and education research to establish foundational content review guidelines.</li>
+                <li>Validated a marketplace corpus of over 7M original resources used by ~85% of U.S. PreK–12 educators; applied child developmental psychology and education research to establish foundational <a href="https://www.teacherspayteachers.com/Copyright-Policy" target="_blank" rel="noopener">content review guidelines</a>.</li>
               </ul>
             </div>
 
@@ -292,7 +412,7 @@
             <div class="paper-compact-list">
               <div class="paper-org-row">
                 <span class="paper-dates">Aug 2020 – Feb 2024</span>
-                <span class="paper-org"><a href="https://scale.com/" target="_blank" rel="noopener">SCALE AI</a>, REBELBASE, EDULAND, 4AM MARKETING <span class="paper-subrole-inline">– Writer/Content Strategist</span></span>
+                <span class="paper-org"><a href="https://scale.com/" target="_blank" rel="noopener">SCALE AI</a>, <a href="https://www.rebelbase.co/" target="_blank" rel="noopener">REBELBASE</a>, EDULAND, 4AM MARKETING <span class="paper-subrole-inline">– Writer/Content Strategist</span></span>
                 <span class="paper-loc">New York, NY</span>
               </div>
               <div class="paper-org-row">
@@ -307,12 +427,12 @@
               </div>
               <div class="paper-org-row">
                 <span class="paper-dates">Jul 2017 – Sep 2018</span>
-                <span class="paper-org">YBM ECC <span class="paper-subrole-inline">– English Teacher, PreK–8th Grade</span></span>
+                <span class="paper-org"><a href="https://www.ybmecc.co.kr/" target="_blank" rel="noopener">YBM ECC</a> <span class="paper-subrole-inline">– English Teacher, PreK–8th Grade</span></span>
                 <span class="paper-loc">Seoul, Korea</span>
               </div>
               <div class="paper-org-row">
                 <span class="paper-dates">May 2017 – Jul 2017</span>
-                <span class="paper-org">WISCONSIN STATE ASSEMBLY <span class="paper-subrole-inline">– Legislative Intern</span></span>
+                <span class="paper-org"><a href="https://docs.legis.wisconsin.gov/" target="_blank" rel="noopener">WISCONSIN STATE ASSEMBLY</a> <span class="paper-subrole-inline">– Legislative Intern</span></span>
                 <span class="paper-loc">Madison, WI</span>
               </div>
             </div>
@@ -329,7 +449,7 @@
                 <span class="paper-subrole">M.S. Cybersecurity</span>
               </div>
               <ul class="paper-bullets">
-                <li>Cyber Fellow, merit-based scholarship recipient (75% tuition).</li>
+                <li><a href="https://engineering.nyu.edu/academics/programs/cybersecurity-ms-online/nyu-cyber-fellows" target="_blank" rel="noopener">Cyber Fellow</a>, merit-based scholarship recipient (75% tuition).</li>
               </ul>
             </div>
 
@@ -344,10 +464,124 @@
                 <span class="paper-subrole">B.A. English Professional Writing &amp; Rhetoric; Minor in Communications</span>
               </div>
               <ul class="paper-bullets">
-                <li>Editor-in-Chief of the Newspaper, Captain of the Soccer Team, Founding President of the UTC Outdoors Leadership Institute.</li>
+                <li><a href="https://www.theutcecho.com/" target="_blank" rel="noopener">Editor-in-Chief of the Newspaper</a>, Captain of the Soccer Team, Founding President of the UTC Outdoors Leadership Institute.</li>
               </ul>
             </div>
           </div>
+
+  <div class="msg-modal-backdrop" id="resumeModal" onclick="if (event.target === this) closeResumeModal();">
+    <div class="msg-modal-card" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+      <div class="msg-modal-head">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-mid);">DIRECT TO INBOX</div>
+          <h3 id="resumeModalTitle">Send a note to Levi</h3>
+        </div>
+        <button type="button" class="msg-close" aria-label="Close modal" onclick="closeResumeModal()">×</button>
+      </div>
+      <form onsubmit="submitResumeMessage(event)">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none;" />
+        <div class="msg-field">
+          <label for="rName">Your Name</label>
+          <input id="rName" name="name" type="text" placeholder="Alex Rivera" required />
+        </div>
+        <div class="msg-field">
+          <label for="rEmail">Your Email</label>
+          <input id="rEmail" name="email" type="email" placeholder="alex@company.com" required />
+        </div>
+        <div class="msg-field">
+          <label for="rBody">Message</label>
+          <textarea id="rBody" name="message" rows="4" placeholder="Write your message here — it delivers straight to Levi’s inbox..." required></textarea>
+        </div>
+        <button type="submit" class="msg-submit-btn" id="rSubmitBtn">Send directly to email →</button>
+        <div class="msg-status" id="rStatus"></div>
+      </form>
+      <div class="msg-copy-row">
+        <span>Or email directly: <code>levijameshiggs@gmail.com</code></span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <a class="msg-copy-btn" style="text-decoration:none;color:inherit;" href="mailto:levijameshiggs@gmail.com?subject=CV%20Note" onclick="openResumeMailto(this)">Open Email App ↗</a>
+          <button type="button" class="msg-copy-btn" onclick="copyResumeEmail(this)">Copy email</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function openResumeModal() {
+      const m = document.getElementById('resumeModal');
+      if (m) m.classList.add('open');
+    }
+    function closeResumeModal() {
+      document.getElementById('resumeModal')?.classList.remove('open');
+    }
+    window.addEventListener('keydown', e => { if (e.key === 'Escape') closeResumeModal(); });
+    function copyResumeEmail(btn) {
+      const addr = 'levijameshiggs@gmail.com';
+      const done = () => {
+        const old = btn.textContent;
+        btn.textContent = 'Copied ✓';
+        setTimeout(() => btn.textContent = old, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(done).catch(() => {});
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = addr;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); done(); } finally { ta.remove(); }
+      }
+    }
+    function openResumeMailto(link) {
+      const name = document.getElementById('rName')?.value?.trim() || '';
+      const msg = document.getElementById('rBody')?.value?.trim() || '';
+      const body = name ? `${msg}\n\n— ${name}` : msg;
+      link.href = 'mailto:levijameshiggs@gmail.com?subject=' + encodeURIComponent('CV Note from levihiggs.com/resume.html') + '&body=' + encodeURIComponent(body);
+    }
+    async function submitResumeMessage(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('rSubmitBtn');
+      const st = document.getElementById('rStatus');
+      const fd = new FormData(form);
+      if (window.location.protocol === 'file:') {
+        if (st) {
+          st.className = 'msg-status err';
+          st.textContent = 'Form relay requires the live site (levihiggs.com) — use Open Email App or Copy email below.';
+        }
+        return;
+      }
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+      if (st) { st.className = 'msg-status'; st.textContent = ''; }
+      try {
+        const resp = await fetch('https://formsubmit.co/ajax/levijameshiggs@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name: fd.get('name') || '',
+            email: fd.get('email') || '',
+            message: fd.get('message') || '',
+            _subject: 'CV Note from levihiggs.com/resume.html',
+            _replyto: fd.get('email') || '',
+            _template: 'table',
+            _honey: fd.get('_honey') || ''
+          })
+        });
+        const j = await resp.json().catch(() => ({}));
+        if (resp.ok && (j.success === 'true' || j.success === true)) {
+          if (st) { st.className = 'msg-status'; st.textContent = 'Message sent directly to Levi’s inbox ✓'; }
+          form.reset();
+        } else {
+          throw new Error(j.message || ('Relay error (HTTP ' + resp.status + ')'));
+        }
+      } catch (err) {
+        if (st) {
+          st.className = 'msg-status err';
+          st.textContent = (err && err.message ? err.message : 'Relay unavailable') + ' — use Open Email App or Copy email below.';
+        }
+      } finally {
+        if (btn) { btn.disabled = false; btn.textContent = 'Send directly to email →'; }
+      }
+    }
+  </script>
 
 </body>
 </html>

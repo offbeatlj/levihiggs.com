@@ -8,6 +8,6 @@
 | **US Letter / A4 Handout** | 8.5 × 11 in | 0.50 in all sides | None | Vector PDF / 300 DPI |
 
 ## Paper & Ink Recommendations
-- **Light Theme (Gallery White `#FFFFFF`)**: Uncoated cotton rag or 100 lb matte cover stock (e.g., Mohawk Superfine Eggshell or Hahnemühle Photo Rag 308 gsm).
-- **Dark Theme (Midnight Ink `#111110`)**: Heavyweight matte archival paper (avoid glossy finishes to preserve flat black ink depth).
-- **Vector Workflow**: Use **Export SVG** in `app.html` to open directly in Illustrator, Figma, or Inkscape at infinite resolution, or use **Poster View → Save as PDF** for direct print-shop submission.
+- **Paper Mode (`#FFFFFF`, Default)**: Uncoated cotton rag or 100 lb matte cover stock (e.g., Mohawk Superfine Eggshell or Hahnemühle Photo Rag 308 gsm).
+- **Dark Mode (`#0F172A` Slate)**: Heavyweight matte archival paper (avoid glossy finishes to preserve deep slate tone and pastel ink accents).
+- **Vector Workflow**: Use **SVG ↓** in `app.html` to open directly in Illustrator, Figma, or Inkscape at infinite resolution, or use **Print Layout → Save as PDF** for direct print-shop submission.
