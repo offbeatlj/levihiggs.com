@@ -1131,7 +1131,7 @@
     .footer-sites {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: baseline;
       gap: 16px;
     }
     .site-footer a, .footer-link-btn {
@@ -1147,42 +1147,6 @@
     }
     .site-footer a:hover, .footer-link-btn:hover {
       border-bottom-color: var(--ink);
-    }
-    .footer-art-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-style: italic;
-      font-size: 0.86rem;
-      color: var(--ink-mid);
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-    }
-    .footer-art-label {
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 1px;
-    }
-    .footer-art-face {
-      width: 34px;
-      height: 34px;
-      object-fit: cover;
-      border: 1.2px solid var(--ink);
-      background: #FFFFFF;
-      display: block;
-      transition: transform 0.14s ease, box-shadow 0.14s ease;
-    }
-    .footer-art-btn:hover {
-      color: var(--ink);
-    }
-    .footer-art-btn:hover .footer-art-label {
-      border-bottom-color: var(--ink);
-    }
-    .footer-art-btn:hover .footer-art-face {
-      transform: translate(-1px, -1px);
-      box-shadow: 2px 2px 0 var(--ink);
     }
 
     /* Direct-to-Email Message Modal */
@@ -1313,7 +1277,7 @@
         <div class="site-sub">New York · AI Product, Policy &amp; Operations</div>
       </div>
       <nav class="site-nav">
-        <a href="#offering">Toolkit ($19)</a>
+        <a href="#offering">Toolkit (Free)</a>
         <a href="#telemetry" class="nav-pill">Charts ↓</a>
         <a href="#cv">CV ↓</a>
         <a href="#projects">Projects ↓</a>
@@ -1331,7 +1295,7 @@
         interview conversion rates, and which resume version actually held up — and you can run this exact toolkit on your own inbox with zero cloud uploads.
       </p>
       <div class="hero-actions">
-        <a href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener" class="btn-gumroad">Get Mine Now ($19) ↗</a>
+        <a href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener" class="btn-gumroad">Get Toolkit Free ↗</a>
         <a href="#offering" class="btn-primary">What’s Included ↓</a>
         <a href="#telemetry" class="t-mono" style="font-size:0.74rem;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;">Jump to Charts ↓</a>
       </div>
@@ -1378,7 +1342,7 @@
       <div class="offer-col">
         <div class="offer-head">
           <div class="t-mono" style="font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-mid);">
-            LOCAL TOOLKIT · $19 ONCE
+            LOCAL TOOLKIT · FREE
           </div>
         </div>
         <h2>Run this exact breakdown on your own email archive.</h2>
@@ -1401,7 +1365,7 @@
         </div></div>
         <div class="offer-actions">
           <a href="#telemetry" class="btn-primary">See Charts Below ↓</a>
-          <a href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener" class="btn-gumroad">Get Everything ($19) ↗</a>
+          <a href="https://voibecode.gumroad.com/l/lsiml" target="_blank" rel="noopener" class="btn-gumroad">Get Everything Free ↗</a>
           <a href="workflow.html" class="t-mono" style="font-size:0.72rem;color:var(--ink);">Standalone view ↗</a>
         </div>
       </div>
@@ -1758,10 +1722,6 @@
         <a href="https://haradadreamsheet.com" target="_blank" rel="noopener">haradadreamsheet.com</a>
         <a href="https://jestinfinite.com" target="_blank" rel="noopener">jestinfinite.com</a>
         <a href="resume.html">resume.html</a>
-        <button type="button" class="footer-art-btn" onclick="openContactModal('art')">
-          <span class="footer-art-label">Ask me about my art</span>
-          <img class="footer-art-face" src="art/face.jpg" alt="Ink portrait of Levi Higgs" width="34" height="34" loading="lazy" />
-        </button>
       </div>
     </footer>
   </div>
@@ -3348,20 +3308,15 @@ renderAllTelemetry();
       }, 300);
     }
 
-    function openContactModal(mode) {
+    function openContactModal() {
       const modal = document.getElementById('contactModal');
       const title = document.getElementById('contactModalTitle');
       const subj = document.getElementById('msgSubject');
       const status = document.getElementById('msgStatus');
       if (!modal) return;
       if (status) { status.textContent = ''; status.className = 'msg-status'; }
-      if (mode === 'art') {
-        if (title) title.textContent = 'Ask me about my art';
-        if (subj) subj.value = 'Artwork inquiry — levihiggs.com';
-      } else {
-        if (title) title.textContent = 'Send a note to Levi';
-        if (subj) subj.value = 'Note from levihiggs.com';
-      }
+      if (title) title.textContent = 'Send a note to Levi';
+      if (subj) subj.value = 'Note from levihiggs.com';
       modal.classList.add('open');
       setTimeout(() => document.getElementById('msgName')?.focus(), 60);
     }
